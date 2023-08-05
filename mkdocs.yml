@@ -5,6 +5,7 @@ nav:
   - Home: index.md
   - About Me: about.md
   - Math:
+    - Personal Goal: math/personal_goal.md
     - Binomial Expansion: math/binomial_expansion.md
     - Pythagorean Theorem: math/pythagorean_theorem.md
     - Truncated Cone Volume: math/truncated_cone_volume.md
