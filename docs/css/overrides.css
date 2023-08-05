@@ -1,0 +1,17 @@
+html {
+  --page-width: 70em !important;
+}
+
+h1 {
+  font-size: calc(var(--global-font-size) * 1.5) !important;
+}
+
+.third-width-image {
+  display: block;
+  width: 33%;
+}
+
+.half-width-image {
+  display: block;
+  width: 50%;
+}
