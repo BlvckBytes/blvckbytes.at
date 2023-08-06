@@ -10,6 +10,7 @@ nav:
     - Pythagorean Theorem: math/pythagorean_theorem.md
     - Truncated Cone Volume: math/truncated_cone_volume.md
     - Euklids Theorem Of Sides: math/euklids_theorem_of_sides.md
+    - Archimedes' Pi Approximation: math/archimedes_pi_approximation.md
 
 theme:
   name: terminal
