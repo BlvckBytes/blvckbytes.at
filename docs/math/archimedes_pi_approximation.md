@@ -233,7 +233,7 @@ if __name__ == '__main__':
 
 This is what calculating up to 20 levels of precision looks like. The final value is correct until (including) the 12th place after the decimal point.
 
-```
+```text
 00   1.000000000000000   6         3.000000000000000
 01   0.517638090205042   12        3.105828541230249
 02   0.261052384440103   24        3.132628613281238
