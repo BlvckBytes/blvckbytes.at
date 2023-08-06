@@ -138,3 +138,25 @@ $\frac{n!}{(n-k)!*k!} = \frac{n!}{(n-n+k)!*(n-k)!}$<br>
 $\frac{n!}{(n-k)!*k!} = \frac{n!}{k!*(n-k)!}$<br>
 
 True statement, thus this function is symmetrical around $(n-k)$.
+
+## Graphical Approach
+
+Since $(a+b)^2$ and $(a+b)^3$ are both greatly visualizable, I drew their geometric representations:
+
+<img src="/img/binomial_expansion__1.jpg" class="half-width-image"/>
+
+$(a+b)^2$'s representation is pretty famous, due to it being used a lot to explain to students why $2*a*b$ mustn't be forgotten when expanding. The sliced cube is less known, but seems to also be an interesting way of thinking, even if it's too complicated to unwrap without a pice of paper in my brain.
+
+For $(a+b)^n$, $n$ can be doubled by just wrapping it in another $()^2$ - making another surface.
+
+<img src="/img/binomial_expansion__2.jpg" class="half-width-image"/>
+
+<img src="/img/binomial_expansion__3.jpg" class="half-width-image"/>
+
+Cubing, $()^3$, would also be a valid option, but I personally don't consider it, due to it's mental strain. So, how far can one get with only these tools at their disposal?
+
+Well, $n=2$ and $n=3$ are doable, and can be doubled with enough patience too. This reveals $n=4$, $n=8$, $n=16$, etc., so basically $n=2^x$ where $x \in \mathbb{N}$ and $x \geq 1$. By starting off with $n=3$ and doubling ahead, $n=6$, $n=12$, $n=24$, etc. become available as well, so basically $n=3*2^x$ where $x \in \mathbb{N}$.
+
+There is no way to access $n=5$, $n=7$, $n=9$ (except cubing), etc. These can only be accessed by applying polynomial division to decrease exponents, as in $\frac{(a+b)^6}{a+b}$ for $n=5$, $\frac{(a+b)^8}{a+b}$ for $n=7$ or $\frac{(a+b)^{12}}{(a+b)^3}$ for $n=9$.
+
+While pretty limiting, I'm sure the discoverers of binomial expansion used the graphical approach first in order to build a basic understanding on which later can be abstracted upon.
