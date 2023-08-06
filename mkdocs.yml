@@ -6,6 +6,7 @@ nav:
   - About Me: about.md
   - Math:
     - Personal Goal: math/personal_goal.md
+    - DIN A Paper Sizes: math/din_a_paper_sizes.md
     - Binomial Expansion: math/binomial_expansion.md
     - Pythagorean Theorem: math/pythagorean_theorem.md
     - Truncated Cone Volume: math/truncated_cone_volume.md
