@@ -55,3 +55,19 @@ $\text{IↃↃ}$ means $5,000$ and $\text{IↃↃↃ}$ means $50,000$ while $\te
 A vinculum (modernly called overline) is a horizontal line which - when put over a string of roman numerals - multiplies them by $1,000$. Two vertical lines and a vinculum multiply by $100,000$, likely meant to be $1,000$ worth each line.
 
 $\overline{XIV}$ is equal to $14,000$, while $|\overline{XIV}|$ is equal to $1,400,000$.
+
+## Adding Numbers
+
+Addition is the easiest operation to be performed on the roman number system, since there are no carries to keep track of. A number is the sum of all of it's symbols, so just merging both numbers together, in sorted order, already yields the result.
+
+$\text{LXXII}$ (72) plus $\text{MCXIII}$ (1113) equals $\text{MCLXXXIIIII}$ (1185), which can be compressed by making use of another symbol: $\text{MCLXXXV}$.
+
+## Subtracting Numbers
+
+Let $a$ and $b$ be two numbers written in roman notation, then the subtraction always occurs as follows: $max(a, b) - min(a, b)$. If $b$ was larger than $a$, a negative sign needs to be prepended to the result, but I don't think that the romans even used negative numbers. Symbols occurring in both $a$ and $b$ just cancel out and can be crossed off, while the remaining symbols require disassembly of some of $a$'s symbols to repeat crossing off, repeated until completion.
+
+$\text{MXXVI}$ (1026) minus $\text{CXIII}$ (113) is resolved by first removing all common symbols between both numbers, leaving $\text{MXV}$ (1015) minus $\text{CII}$ (102). In order to subtract $\text{II}$, $\text{V}$ has to be disassembled. The same goes for subtracting $\text{C}$ from $\text{M}$. $\text{CCCCCCCCCCXIIIII}$ (1015) minus $\text{CII}$ is then resolved by removing commons again, leaving $\text{CCCCCCCCCXIII}$ (913) as the result. This number can be compressed again, this time through subtractive notation: $\text{CMXIII}$.
+
+## Multiplication And Division
+
+Any higher operations than to just add or subtract were always performed using an abacus, which essentially had a row for each value ($\text{I, V, X, L, C, D, M}$). The result could then be read out by just counting the number of stones in each row. Multiplication is to be performed as repeated addition, while division is done as repeated subtraction.
