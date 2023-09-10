@@ -13,6 +13,8 @@ nav:
     - Euklids Theorem Of Sides: math/euklids_theorem_of_sides.md
     - Archimedes' Pi Approximation: math/archimedes_pi_approximation.md
     - Roman Numerals: math/roman_numerals.md
+  - Philosophy:
+    - Chained To A Madman: philosophy/chained_to_a_madman.md
 
 theme:
   name: terminal
