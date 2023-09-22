@@ -1,0 +1,77 @@
+em.tus-highlight {
+  $transparency: .3;
+
+  &--blue {
+    background-color: transparentize(rgb(87, 137, 221), $transparency);
+  }
+
+  &--gray {
+    background-color: transparentize(rgb(88, 92, 114), $transparency);
+  }
+}
+
+table.tus-table {
+  background: rgb(202, 206, 222);
+
+  &, p, td, th, em {
+    border-color: black;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+
+  td, th {
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+
+  &--2-col td {
+    width: 50%;
+  }
+
+  &--3-col td {
+    width: calc(100%/3);
+  }
+
+  &--tus-custom {
+    $doorway-width: 3rem;
+
+    table-layout: fixed;
+    width: 100%;
+
+    td, th {
+      padding: 0;
+    }
+
+    tr:nth-of-type(odd) {
+      td:nth-of-type(even) {
+        width: $doorway-width;
+        word-break: break-all;
+      }
+
+      td:nth-of-type(odd) {
+        width: calc((100% - (2 * $doorway-width)) / 3);
+      }
+    }
+
+    tr:nth-of-type(even) {
+      td:nth-of-type(even) {
+        width: $doorway-width;
+        height: $doorway-width;
+      }
+
+      td:nth-of-type(odd) {
+        width: calc((100% - (2 * $doorway-width)) / 3);
+        height: $doorway-width;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.tus-vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  display: inline-block;
+}

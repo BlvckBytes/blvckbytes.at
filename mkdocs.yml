@@ -15,6 +15,7 @@ nav:
     - Roman Numerals: math/roman_numerals.md
   - Philosophy:
     - Chained To A Madman: philosophy/chained_to_a_madman.md
+    - The Ultimate Schematic: philosophy/the_ultimate_schematic.md
 
 theme:
   name: terminal

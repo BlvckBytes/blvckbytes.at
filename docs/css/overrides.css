@@ -6,6 +6,10 @@ h1 {
   font-size: calc(var(--global-font-size) * 1.5) !important;
 }
 
+h2 {
+  margin-top: var(--global-line-height);
+}
+
 .third-width-image {
   display: block;
   width: 33%;

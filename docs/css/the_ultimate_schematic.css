@@ -1,0 +1,58 @@
+em.tus-highlight--blue {
+  background-color: rgba(87, 137, 221, 0.7);
+}
+em.tus-highlight--gray {
+  background-color: rgba(88, 92, 114, 0.7);
+}
+
+table.tus-table {
+  background: rgb(202, 206, 222);
+}
+table.tus-table, table.tus-table p, table.tus-table td, table.tus-table th, table.tus-table em {
+  border-color: black;
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+table.tus-table td, table.tus-table th {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+table.tus-table--2-col td {
+  width: 50%;
+}
+table.tus-table--3-col td {
+  width: 33.3333333333%;
+}
+table.tus-table--tus-custom {
+  table-layout: fixed;
+  width: 100%;
+}
+table.tus-table--tus-custom td, table.tus-table--tus-custom th {
+  padding: 0;
+}
+table.tus-table--tus-custom tr:nth-of-type(odd) td:nth-of-type(even) {
+  width: 3rem;
+  word-break: break-all;
+}
+table.tus-table--tus-custom tr:nth-of-type(odd) td:nth-of-type(odd) {
+  width: calc((100% - 6rem) / 3);
+}
+table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(even) {
+  width: 3rem;
+  height: 3rem;
+}
+table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd) {
+  width: calc((100% - 6rem) / 3);
+  height: 3rem;
+  vertical-align: middle;
+}
+
+.tus-vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=the_ultimate_schematic.css.map */
