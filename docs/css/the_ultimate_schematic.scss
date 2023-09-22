@@ -82,6 +82,10 @@ table.tus-table {
       padding: .5rem;
     }
 
+    p a {
+      color: inherit;
+    }
+
     tr:nth-of-type(odd) {
       td:nth-of-type(even) {
         width: $doorway-width;
@@ -245,6 +249,7 @@ table.tus-table {
 
 .tus-dotted-circle {
   position: relative;
+  z-index: 1;
 
   &::after {
     display: block;
@@ -258,5 +263,12 @@ table.tus-table {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: -1;
   }
+}
+
+.tus-highlighted {
+  background: white;
+  color: black;
+  width: fit-content;
 }

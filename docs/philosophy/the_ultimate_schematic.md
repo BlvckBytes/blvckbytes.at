@@ -114,28 +114,31 @@ The ultimate schematic represents three stages of knowledge on two event horizon
 
 The purpose of this schematic is to help us understand where we are, where we came from, how we got here and how we get back where we need to be. We cannot go back the way we originally came, because we fell down 109, when we applied something we mastered to something we needed.
 
-<table class="tus-table tus-table--tus-custom">
+<p class="tus-highlighted">TIP: Click on pice numbers in order to jump to them.</p>
+<p class="tus-highlighted">TIP: Put two instances of this page next to eachother in order to always see the schematic.</p>
+
+<table id="tus-table-top" class="tus-table tus-table--tus-custom">
   <tr>
     <td>
       <p><em class="tus-highlight--blue">+A</em></p>
       <p><em class="tus-highlight--blue">Knowledge</em></p>
       <br>
-      <p><em class="tus-highlight--blue tus-dotted-circle">1</em></p>
-      <p><em class="tus-highlight--orange">22-35</em></p>
-      <p><em class="tus-highlight--red">36-40</em></p>
-      <p><em class="tus-highlight--blue">41-43</em></p>
-      <p><em class="tus-highlight--blue">44</em></p>
+      <p><em class="tus-highlight--blue tus-dotted-circle"><a href="#pice-1">1</a></em></p>
+      <p><em class="tus-highlight--orange"><a href="#pice-22">22</a>-<a href="#pice-35">35</a></em></p>
+      <p><em class="tus-highlight--red"><a href="#pice-36">36</a>-<a href="#pice-40">40</a></em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-41">41</a>-<a href="#pice-43">43</a></em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-44">44</a></em></p>
       <br>
-      <p><em class="tus-highlight--blue">45</em> - <em class="tus-highlight--blue">114</em></p>
-      <p><em class="tus-highlight--blue">116</em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-45">45</a></em> - <em class="tus-highlight--blue"><a href="#pice-114">114</a></em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-116">116</a></em></p>
       <br>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-bottom-right-down">109</em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-bottom-right-down"><a href="#pice-109">109</a></em></p>
     </td>
     <td>
       <p><em class="tus-highlight--blue">+A+B</em></p>
       <br>
       <p class="tus-vertical-text"><em class="tus-highlight--blue">Doorway</em></p>
-      <p><em class="tus-highlight--gray">51-60</em></p>
+      <p><em class="tus-highlight--gray"><a href="#pice-51">51</a>-<a href="#pice-60">60</a></em></p>
       <br>
       <img class="tus-arrow--right" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
@@ -144,22 +147,22 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <p><em class="tus-highlight--blue">Right Actions</em></p>
       <br>
       <br>
-      <p><em class="tus-highlight--orange">51-74</em></p>
-      <p><em class="tus-highlight--red tus-floating-arrow--left-bottom-right-up">75-79</em></p>
-      <p><em class="tus-highlight--purple">80</em></p>
+      <p><em class="tus-highlight--orange"><a href="#pice-61">61</a>-<a href="#pice-74">74</a></em></p>
+      <p><em class="tus-highlight--red tus-floating-arrow--left-bottom-right-up"><a href="#pice-75">75</a>-<a href="#pice-79">79</a></em></p>
+      <p><em class="tus-highlight--purple"><a href="#pice-80">80</a></em></p>
       <br>
       <br>
-      <p><em class="tus-highlight--blue">113</em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-113">113</a></em></p>
       <br>
       <br>
       <br>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-bottom-right-down">111</em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-bottom-right-down"><a href="#pice-111">111</a></em></p>
     </td>
     <td>
       <p><em class="tus-highlight--blue">+B+C</em></p>
       <br>
       <p class="tus-vertical-text"><em class="tus-highlight--blue">Doorway</em></p>
-      <p><em class="tus-highlight--gray">107</em></p>
+      <p><em class="tus-highlight--gray"><a href="#pice-107">107</a></em></p>
       <br>
       <img class="tus-arrow--right" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
@@ -168,27 +171,27 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <p><em class="tus-highlight--blue">Unlimited Potential</em></p>
       <br>
       <br>
-      <p><em class="tus-highlight--blue">101</em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-101">101</a></em></p>
       <br>
-      <p><em class="tus-highlight--purple">102</em></p>
+      <p><em class="tus-highlight--purple"><a href="#pice-102">102</a></em></p>
       <br>
       <br>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left">113 & 114</em></p>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><em class="tus-floating-arrow--left-bottom-left-down">115</em> & 116</em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><a href="#pice-113">113</a> & <a href="#pice-114">114</a></em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><em class="tus-floating-arrow--left-bottom-left-down"><a href="#pice-115">115</a></em> & <a href="#pice-116">116</a></em></p>
       <br>
-      <p><em class="tus-highlight--blue tus-floating-arrow--left-bottom-right-up">103</em></p>
+      <p><em class="tus-highlight--blue tus-floating-arrow--left-bottom-right-up"><a href="#pice-103">103</a></em></p>
     </td>
   </tr>
   <tr>
     <td>
-      <p><em class="tus-highlight--blue">-A+A Doorway</em> - <em class="tus-highlight--gray">3-21</em></p>
+      <p><em class="tus-highlight--blue">-A+A Doorway</em> - <em class="tus-highlight--gray"><a href="#pice-3">3</a>-<a href="#pice-21">21</a></em></p>
       <img class="tus-arrow--up" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
     <td></td>
     <td></td>
     <td></td>
     <td>
-      <p><em class="tus-highlight--blue">+C-C Doorway</em> - <em class="tus-highlight--blue">108</em></p>
+      <p><em class="tus-highlight--blue">+C-C Doorway</em> - <em class="tus-highlight--blue"><a href="#pice-108">108</a></em></p>
       <img class="tus-arrow--down" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
   </tr>
@@ -197,20 +200,20 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <p><em class="tus-highlight--blue">-A</em></p>
       <p><em class="tus-highlight--blue">False Knowledge</em></p>
       <br>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-top-right-up">110</em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-top-right-up"><a href="#pice-110">110</a></em></p>
       <br>
-      <p><em class="tus-highlight--blue">2</em></p>
-      <p><em class="tus-highlight--red">46-50</em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-2">2</a></em></p>
+      <p><em class="tus-highlight--red"><a href="#pice-46">46</a>-<a href="#pice-50">50</a></em></p>
       <br>
       <br>
-      <p><em class="tus-highlight--blue">118</em>, i.e. <em class="tus-highlight--blue">2</em></p>
-      <p><em class="tus-highlight--blue">120</em>, i.e. <em class="tus-highlight--blue">2</em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-118">118</a></em>, i.e. <em class="tus-highlight--blue"><a href="#pice-2">2</a></em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-120">120</a></em>, i.e. <em class="tus-highlight--blue"><a href="#pice-2">2</a></em></p>
     </td>
     <td>
       <p><em class="tus-highlight--blue">-A-B</em></p>
       <br>
       <p class="tus-vertical-text"><em class="tus-highlight--blue">Doorway</em></p>
-      <p><em class="tus-highlight--gray">105</em></p>
+      <p><em class="tus-highlight--gray"><a href="#pice-105">105</a></em></p>
       <br>
       <img class="tus-arrow--right" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
@@ -218,21 +221,21 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <p><em class="tus-highlight--blue">-B</em></p>
       <p><em class="tus-highlight--blue">Mistakes</em></p>
       <br>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-top-right-up">112</em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-top-right-up"><a href="#pice-112">112</a></em></p>
       <br>
-      <p><em class="tus-highlight--orange">81-94</em></p>
-      <p><em class="tus-highlight--red">95-99</em></p>
-      <p><em class="tus-highlight--purple">100</em></p>
+      <p><em class="tus-highlight--orange"><a href="#pice-81">81</a>-<a href="#pice-94">94</a></em></p>
+      <p><em class="tus-highlight--red"><a href="#pice-95">95</a>-<a href="#pice-99">99</a></em></p>
+      <p><em class="tus-highlight--purple"><a href="#pice-100">100</a></em></p>
       <br>
-      <p><em class="tus-highlight--blue">117</em>, i.e. <em class="tus-highlight--gray">3</em></p>
-      <p><em class="tus-highlight--blue">119</em>, i.e. <em class="tus-highlight--gray">3</em></p>
-      <p><em class="tus-highlight--blue">115</em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-117">117</a></em>, i.e. <em class="tus-highlight--gray"><a href="#pice-3">3</a></em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-119">119</a></em>, i.e. <em class="tus-highlight--gray"><a href="#pice-3">3</a></em></p>
+      <p><em class="tus-highlight--blue"><a href="#pice-115">115</a></em></p>
     </td>
     <td>
       <p><em class="tus-highlight--blue">-B-C</em></p>
       <br>
       <p class="tus-vertical-text"><em class="tus-highlight--blue">Doorway</em></p>
-      <p><em class="tus-highlight--gray">106</em></p>
+      <p><em class="tus-highlight--gray"><a href="#pice-106">106</a></em></p>
       <br>
       <img class="tus-arrow--right" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
@@ -242,12 +245,12 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <br>
       <br>
       <br>
-      <p><em class="tus-highlight--blue tus-floating-arrow--left-top-right-down">103</em></p>
+      <p><em class="tus-highlight--blue tus-floating-arrow--left-top-right-down"><a href="#pice-103">103</a></em></p>
       <br>
-      <p><em class="tus-highlight--purple">104</em></p>
+      <p><em class="tus-highlight--purple"><a href="#pice-104">104</a></em></p>
       <br>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left">117 & 118</em></p>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left">119 & 120</em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><a href="#pice-117">117</a> & <a href="#pice-118">118</a></em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><a href="#pice-119">119</a> & <a href="#pice-120">120</a></em></p>
     </td>
   </tr>
 </table>
@@ -355,635 +358,947 @@ Another way to damage our bodies is by eating a diet which contains nutrients th
 
 ## Pices
 
-### Pice 1
+### Pice 1 {: #pice-1 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Not having the knowledge we need, the knowledge of how to live. This number is surrounded by a dotted circle, because we used to have it within our +A circle of knowledge (inside the circle: the knowledge we have, outside the circle: the knowledge we don't have), but we've lost it.
 
-### Pice 2
+### Pice 2 {: #pice-2 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We have false knowledge in the place of the right knowledge we need. We cannot learn anything if we think we already know. Most of us don't know that we have an inaccurate believe system. We're making mistakes that are causing most of the problems we're facing, which are 100% within our control. These things are hard to accept, because they go against what we are, how we identify, what we've been told, our traditions, and many more things (two forms of ignorance).
 
-### Pice 3
+### Pice 3 {: #pice-3 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The number one source for false knowledge is the dark side of our behavior. We became immensely greedy. The psychopaths who are running this asylum go out of their way to make sure we're staying sick and ignorant. This is the number one obstacle of finding the right knowledge and has many agents all throughout other pices.
 
-### Pice 4
+### Pice 4 {: #pice-4 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Traditions. Society attacked early when the individual was helpless. Before we were even able to walk and talk, our parents taught us the same mistakes that were taught to them. All of our problems begin in childhood and can be traced back to our traditions, making us already start out our life in plato's cave. When you look at your traditions, they include all accumulated wisdom, but also all accumulated mistakes. All the good things about our species can be reflected in the wisdom and all bad things in the mistakes.
 
-### Pice 5
+### Pice 5 {: #pice-5 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 A malfunctioning survival mechanism. We cannot trust our feedback system anymore. See Pice 112.
 
-### Pice 6
+### Pice 6 {: #pice-6 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Fear, due to low biophoton levels (Hypo-Heliosis). It destroys our ability to think clearly, which is the first step anyone must take in order to solve any problem. Fear comes from the very first mistake we made, when we destroyed a nutrient that destroyed one of our senses. Deep down, we know that something is wrong, which is why we turn to the wrong food, or sex, or drugs, or money, or relationships. We're searching for a warm and fuzzy feeling, to make us feel better, but we're looking in the wrong places.
 
-### Pice 7
+### Pice 7 {: #pice-7 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Six subsequent needs, which are a result of being sick and disconnected. There are ten subsequent needs from having a weak connection to everything around us, and six of those can be used against us. All of our needs can be turned into weapon systems, which can be used against us. There is a common link between conquering nations and solving problems that are 100% within our control. How do we solve these problems? We satisfy our needs. How do we conquer nations? We don't let them satisfy their needs. This can be done overtly, like starving them out, or very subtly, as is done in modern civilizations all the time.
 
-### Pice 7.1
+### Pice 7.1 {: #pice-7dot1 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Education
 
-### Pice 7.2
+### Pice 7.2 {: #pice-7dot2 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Money
 
-### Pice 7.3
+### Pice 7.3 {: #pice-7dot3 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Media
 
-### Pice 7.4
+### Pice 7.4 {: #pice-7dot4 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Government
 
-### Pice 7.5
+### Pice 7.5 {: #pice-7dot5 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Religion and spirituality
 
-### Pice 7.6
+### Pice 7.6 {: #pice-7dot6 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Power. The need for power only comes from fear.
 
-### Pice 8
+### Pice 8 {: #pice-8 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Eight ways we use the wrong Approach. Mis-direction.
 
-### Pice 8.1
+### Pice 8.1 {: #pice-8dot1 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Expecting systems to solve our problems that only we can solve
 
-### Pice 8.2
+### Pice 8.2 {: #pice-8dot2 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Looking for logical fallacies in systems with invalid structures and getting lost in the rabbit-hole of the details.
 
-### Pice 8.3
+### Pice 8.3 {: #pice-8dot3 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Our so-called experts study the anatomy, chemistry and medications for lifestyle related problems
 
-### Pice 8.4
+### Pice 8.4 {: #pice-8dot4 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The systems in charge are guilty of putting the cart before the horse for a problem that's 100% within our control.
 
-### Pice 8.5
+### Pice 8.5 {: #pice-8dot5 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We look at our problems individually instead of collectively: we don't apply the concept of totality.
 
-### Pice 8.6
+### Pice 8.6 {: #pice-8dot6 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 When people don't use the parable format. A parable is a story told in a specific way to make a single clear point. If we don't tell the story in a special way, people are going to shut off their frontal lobes, will have a mental processing error and are not going to accept the information.
 
-### Pice 8.7
+### Pice 8.7 {: #pice-8dot7 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 People only use two of the three ways (water fast, organic raw vegan diet) to correct five main mistakes. The problem there is that most of us are not willing and able to do those things, in order to get everyone's attention. The solution that enough of us are willing to do is the juice fast, a modification of what used to be the best preparation for a better way of life.
 
-### Pice 8.8
+### Pice 8.8 {: #pice-8dot8 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 When we focus too much attention on anything else but getting reconnected, and thus are getting distracted.
 
-### Pice 9
+### Pice 9 {: #pice-9 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The combination of our neocortex and our reptilian brain. With all new knowledge comes the potential for evil, when the things we've mastered are applied to the things we need. And that's exactly what we did. The reptilian brain can get addicted to everything that's pleasurable, while our brilliant brain can come up with seemingly infinite ways of creating the illusion of pleasure.
 
-### Pice 9A
+### Pice 9A {: #pice-9a }
 
 Our brilliant brain: the neocortex. About 2 million years ago, our brains nearly doubled in size and gave us the ability to quickly and efficiently gather new knowledge. It slowly kept growing, to a point where we started making mistakes, and now are evolving backwards again.
 
-### Pice 10
+### Pice 10 {: #pice-10 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 A lack of continuity among those of us that understand that we're making mistakes. We end up shooting inside the tent, so to speak.
 
-### Pice 11
+### Pice 11 {: #pice-11 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We've lost our natural instincts. It shouldn't be any harder for us to figure out what to do than it is for any other animals in nature. We shouldn't have to use our brains to figure that out. Now that we've made mistakes, we created another group of needs that we need to satisfy, so we *do* have to use our brains now. As soon as those temporary needs are no longer there and we're healed again, our feedback system should be telling us everything that we need to know. In this state, it's a problem of knowledge, because we cannot rely on our experiences.
 
-### Pice 12
+### Pice 12 {: #pice-12 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 A lack of knowledge of the cleansing reactions. When we correct mistakes, we get these type of reactions, and will feel worse before we feel better. So if we're doing the right thing, we think we're doing the wrong thing, because we're getting a negative effect. Flu-like symptoms, headache, fever, nauseating feeling, diarrhea, caughing, sneezing, aches and pains, etc., when all the body is doing is getting rid of accumulated toxins.
 
-### Pice 13
+### Pice 13 {: #pice-13 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 When we have an emotional reaction before we have an intellectual response to new knowledge. This goes back to our reptilian brain.
 
-### Pice 14
+### Pice 14 {: #pice-14 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Our herd mentality that makes it hard to go against the main stream. The problem with that is that if we're heading off a cliff, we're all going to go off a cliff. Our ship is headed for an iceberg, and our herd mentality is to go right for that iceberg. We can use Pice 14 in combination with Pice 9A, our neocortex, to avoid that iceberg. We can take one of the five main things we've mastered, Pice 39 (Machines), and use that to modify what used to be the best preparation for a better way of life, pice 42. That's Pice 41, the juice feast. We can use what got us in trouble (our brilliant brain, as well as machines) to get us out of trouble. This way, our ship will turn around.
 
-### Pice 15
+### Pice 15 {: #pice-15 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Addictions
 
-### Pice 16
+### Pice 16 {: #pice-16 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Denial
 
-### Pice 17
+### Pice 17 {: #pice-17 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Habits
 
-### Pice 18
+### Pice 18 {: #pice-18 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Apathy
 
-### Pice 18.1
+### Pice 18.1 {: #pice-18dot1 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to admit that we have false knowledge and an inaccurate believe system.
 
-### Pice 18.1.1
+### Pice 18.1.1 {: #pice-18dot1dot1 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to admit that we have false knowledge in the place of the knowledge we need.
 
-### Pice 18.1.2
+### Pice 18.1.2 {: #pice-18dot1dot2 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to admit that we are making mistakes.
 
-### Pice 18.1.3
+### Pice 18.1.3 {: #pice-18dot1dot3 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to admit that most of our problems are 100% within our control.
 
-### Pice 18.2
+### Pice 18.2 {: #pice-18dot2 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to search for information and knowledge.
 
-### Pice 18.3
+### Pice 18.3 {: #pice-18dot3 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to listen to information.
 
-### Pice 18.4
+### Pice 18.4 {: #pice-18dot4 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to believe the information.
 
-### Pice 18.5
+### Pice 18.5 {: #pice-18dot5 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to apply what we know.
 
-### Pice 18.6
+### Pice 18.6 {: #pice-18dot6 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to admit to our new experience.
 
-### Pice 18.7
+### Pice 18.7 {: #pice-18dot7 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to share our new knowledge.
 
-### Pice 19
+### Pice 19 {: #pice-19 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Desires: What we'd like to (like to).
 
-### Pice 20
+### Pice 20 {: #pice-20 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Guilts: What we think and feel we should do (ought to).
 
-### Pice 21
+### Pice 21 {: #pice-21 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Emotional needs: What we'd need to (need to).
 
-### Pice 22
+### Pice 22 {: #pice-22 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Air
 
-### Pice 23
+### Pice 23 {: #pice-23 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Water
 
-### Pice 24
+### Pice 24 {: #pice-24 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Food
 
-### Pice 25
+### Pice 25 {: #pice-25 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Sunshine
 
-### Pice 26
+### Pice 26 {: #pice-26 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Exercise
 
-### Pice 27
+### Pice 27 {: #pice-27 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Sleep
 
-### Pice 28
+### Pice 28 {: #pice-28 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Unconscious as well as conscious thoughts
 
-### Pice 29
+### Pice 29 {: #pice-29 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Feelings and emotions
 
-### Pice 30
+### Pice 30 {: #pice-30 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Community and connectedness
 
-### Pice 31
+### Pice 31 {: #pice-31 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Being free from problems that are outside of our control like accidents and acts of nature & the elements. We also need to be free from problems that we have only limited control over: Acts of war, crime and violence.
 
-### Pice 32
+### Pice 32 {: #pice-32 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We need to procreate in order to keep our species alive and pass on our wisdom.
 
-### Pice 33
+### Pice 33 {: #pice-33 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We need an environment which we can interact with and which provides us with everything we need. Our ideal environment is nature in it's unaltered, non-toxic state.
 
-### Pice 34
+### Pice 34 {: #pice-34 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We have subsequent needs from being on the wrong path.
 
-### Pice 34.1
+### Pice 34.1 {: #pice-34dot1 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Education
 
-### Pice 34.2
+### Pice 34.2 {: #pice-34dot2 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Money
 
-### Pice 34.3
+### Pice 34.3 {: #pice-34dot3 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Media
 
-### Pice 34.4
+### Pice 34.4 {: #pice-34dot4 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Government
 
-### Pice 34.5
+### Pice 34.5 {: #pice-34dot5 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Religion & spirituality
 
-### Pice 34.6
+### Pice 34.6 {: #pice-34dot6 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Power
 
-### Pice 34.7
+### Pice 34.7 {: #pice-34dot7 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Energy
 
-### Pice 34.8
+### Pice 34.8 {: #pice-34dot8 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Infrastructure like plumbing and sewage
 
-### Pice 34.9
+### Pice 34.9 {: #pice-34dot9 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Clothing (man is naturally a nude animal)
 
-### Pice 34.10
+### Pice 34.10 {: #pice-34dot10 }
 
 Shelter
 
-### Pice 35
+### Pice 35 {: #pice-35 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We need to be free of subsequent causes that are still producing negative effects despite the fact that we are satisfying all of our needs. This includes temporary and permanent damage to ourselves and our environment, atrophy and thus dependence on level two nutrients (animal products), the dark side of our behavior, greed, etc.
 
-### Pice 36
+### Pice 36 {: #pice-36 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The first thing we've mastered is fire.
 
-### Pice 37
+### Pice 37 {: #pice-37 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The second thing we've mastered are animals.
 
-### Pice 38
+### Pice 38 {: #pice-38 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The third thing we've mastered is the agricultural revolution.
 
-### Pice 39
+### Pice 39 {: #pice-39 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The fourth thing we've mastered are machines, during the industrial revolution.
 
-### Pice 40
+### Pice 40 {: #pice-40 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The fifth thing we've only recently mastered are chemicals, during the chemical revolution.
 
-### Pice 41
+### Pice 41 {: #pice-41 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The only way to correct five main mistakes that enough people are willing and able to do, so that we can reach the tipping point: a solid food vacation on nothing but juices, also called a juice fast or a juice feast.
 
-### Pice 42
+### Pice 42 {: #pice-42 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 A water fast used to be the best preperation for a better way of life. The best way to stop eating the wrong food is to stop eating at all. However, most people are afraid to death of waterfasting and would never do it. Waterfasting can nowadays be very dangerous due to the fifth mistake, the chemical revolution. There are so many toxins in our environment and thus in us, that, if we don't have the required nutrients in us (like glutathion), our liver cannot complete a two-phase process where it neutralizes and eliminates these environmental toxins. We don't get these nutrients from water, which is why we need to modify this step, using pice 9A (our brilliant brain) and modify the water fast into a juice fast. This way, we get results approximately 10 times faster, we're not hungry, energy levels skyrocket and big improvements are within reach. A waterfast basically requires to take a vacation from live, and most of us sadly do not have this luxury.
 
-### Pice 43
+### Pice 43 {: #pice-43 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Our ideal food: an organic raw vegan diet. Our ideal diet is only ideal in an ideal world, and thus needs to be adapted to compensate for the damage we've done to ourselves and to the environment. Eating this diet right after having made any (or all) of those five main mistakes is going to cause more cleansing reactions than doing a juice fast as a transition, to clean out the colon and use it as an alternative channel of detoxification.
 
-### Pice 44
+### Pice 44 {: #pice-44 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Knowledge of the consequences
 
-### Pice 45
+### Pice 45 {: #pice-45 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Experience of the consequences, see Pice 114
 
-### Pice 46
+### Pice 46 {: #pice-46 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The false believe that cooking is an art, when in reality, it is a sin.
 
-### Pice 47
+### Pice 47 {: #pice-47 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The false believe that we're flesh eaters and need animal products to lead a strong and healthy life.
 
-### Pice 48
+### Pice 48 {: #pice-48 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The false believe that the plants we're not biologically adapted to eat contain essential nutrients we need, ignoring all of their anti nutrients, only made possible through fire.
 
-### Pice 49
+### Pice 49 {: #pice-49 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The false believe that we can add to the perfection and completeness of the foods of nature by refining, combining, processing and thus - in essence - creating our own foods.
 
-### Pice 50
+### Pice 50 {: #pice-50 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The false believe that we need chemicals to artificially fertilize our soil, to spray our produce with, to wash our clothes with and that they are not entoxicating us and do not make our produce less vital.
 
-### Pice 51
+### Pice 51 {: #pice-51 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Addictions
 
-### Pice 52
+### Pice 52 {: #pice-52 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Denial
 
-### Pice 53
+### Pice 53 {: #pice-53 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Habits
 
-### Pice 54
+### Pice 54 {: #pice-54 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Apathy
 
-### Pice 54.5
+### Pice 54.5 {: #pice-54dot5 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to apply what we know.
 
-### Pice 54.6
+### Pice 54.6 {: #pice-54dot6 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to admit to our new experience.
 
-### Pice 54.7
+### Pice 54.7 {: #pice-54dot7 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're unwilling to share this new knowledge.
 
-### Pice 55
+### Pice 55 {: #pice-55 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Desires
 
-### Pice 56
+### Pice 56 {: #pice-56 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Guilts
 
-### Pice 57
+### Pice 57 {: #pice-57 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Needs (7 willingness factors in the +A+B doorway)
 
-### Pice 58
+### Pice 58 {: #pice-58 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Bad luck - no control
 
-### Pice 59
+### Pice 59 {: #pice-59 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Carelessness - limited control
 
-### Pice 60
+### Pice 60 {: #pice-60 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The dark side of our behavior. The darkest of the dark side of our behavior.
 
-### Pice 61
+### Pice 61 {: #pice-61 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Clean air
 
-### Pice 62
+### Pice 62 {: #pice-62 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Pure water
 
-### Pice 63
+### Pice 63 {: #pice-63 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Natural, species specific food
 
-### Pice 64
+### Pice 64 {: #pice-64 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We need adequate, regular sunshine to produce important vitamins (or rather hormones) in our skin in order to function properly.
 
-### Pice 65
+### Pice 65 {: #pice-65 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We need adequate, regular exercise to keep our lymph system moving.
 
-### Pice 66
+### Pice 66 {: #pice-66 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We need adequate, deep enough, undisturbed sleep during the right time of the day: at night.
 
-### Pice 67
+### Pice 67 {: #pice-67 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Our conscious as well as our unconscious thoughts should be as positive as possible, since negative thoughts mostly manifest as negative emotions and create tensions, further restricting bodily functions.
 
-### Pice 68
+### Pice 68 {: #pice-68 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Our feelings and emotions, which are bound to molecules that traverse our bodies and can hinder natural body functions, need to be as positive as possible.
 
-### Pice 69
+### Pice 69 {: #pice-69 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We need an uplifting community, people to share things with that excite us, people to experience connectedness with. In this day and age, finding such a community is especially hard, as the trim tabs are the outcasts of "society".
 
-### Pice 70
+### Pice 70 {: #pice-70 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Free from things that are outside of our control.
 
-### Pice 71
+### Pice 71 {: #pice-71 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Appropriate sex/procreation
 
-### Pice 72
+### Pice 72 {: #pice-72 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 An environment that can fully sustain us
 
-### Pice 73
+### Pice 73 {: #pice-73 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Subsequent needs from being on the wrong path, see 34.1-34.10
 
-### Pice 74
+### Pice 74 {: #pice-74 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Being free of subsequent causes that are still producing negative effects.
 
-### Pice 75
+### Pice 75 {: #pice-75 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Good applications of Pice 36
 
-### Pice 76
+### Pice 76 {: #pice-76 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Good applications of Pice 37
 
-### Pice 77
+### Pice 77 {: #pice-77 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Good applications of Pice 38
 
-### Pice 78
+### Pice 78 {: #pice-78 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Good applications of Pice 39
 
-### Pice 79
+### Pice 79 {: #pice-79 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Good applications of Pice 40
 
-### Pice 80
+### Pice 80 {: #pice-80 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Things outside of our control: acts of love and acts of kindness
 
-### Pice 81
+### Pice 81 {: #pice-81 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Polluted air
 
-### Pice 82
+### Pice 82 {: #pice-82 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Polluted water
 
-### Pice 83
+### Pice 83 {: #pice-83 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Un-natural food
 
-### Pice 84
+### Pice 84 {: #pice-84 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Inadequate sunshine
 
-### Pice 85
+### Pice 85 {: #pice-85 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Inadequate exercise
 
-### Pice 86
+### Pice 86 {: #pice-86 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Inadequate sleep
 
-### Pice 87
+### Pice 87 {: #pice-87 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Negative thoughts
 
-### Pice 88
+### Pice 88 {: #pice-88 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Negative feelings and emotions
 
-### Pice 89
+### Pice 89 {: #pice-89 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Negative community, dis-connection
 
-### Pice 90
+### Pice 90 {: #pice-90 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Irritated by things that are outside of our control or that we only have limited control over
 
-### Pice 91
+### Pice 91 {: #pice-91 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Lack of or inappropriate sex and procreation
 
-### Pice 92
+### Pice 92 {: #pice-92 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Polluted environment
 
-### Pice 93
+### Pice 93 {: #pice-93 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Lack of or inappropriate subsequent needs from being on the wrong path
 
-### Pice 94
+### Pice 94 {: #pice-94 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Subsequent causes that are still producing negative effects despite the fact that we've satisfied all of our needs.
 
-### Pice 95
+### Pice 95 {: #pice-95 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The first bad application was applying it to one of our needs: our food. It alters the food, which in return alters us. This caused Hypoheliosis A and thus a weak connection to everything around us as well as hyper colonic tension: two huge contributing factors to the dark side of our behavior.
 
-### Pice 96
+### Pice 96 {: #pice-96 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We're using fire to hunt down animals. We enslave them, eat their excretions (milk, eggs, etc.) and are eating their flesh, either raw or by applying fire to cook it. We are not biologically adapted to consume animal products either way. This mistake darkened the dark side of our behavior. There is evidence of this all throughout history. All philosophers and historians noticed that grain eating nations (not our species specific food, but still!) surpassed every other culture in every area of life, except two: in their war-like tendencies and their obsession with sex.
 
-### Pice 97
+### Pice 97 {: #pice-97 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The agricultural revolution allowed us to mass-farm and then consume plants we're not biologically adapted to eat. By cooking them, we destroy their anti nutrients and make them "edible".
 
-### Pice 98
+### Pice 98 {: #pice-98 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We consistently started to process our food thanks to machines, which now becomes unnatural and unhealthy.
 
-### Pice 99
+### Pice 99 {: #pice-99 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 We began to bio-engineer plants, use artificial fertilizers, spraying our food with herbicides and pesticides and using chemicals all throughout the household as well as day-to-day life.
 
-### Pice 100
+### Pice 100 {: #pice-100 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Accidents and acts of nature, outside of our control
 
-### Pice 101
+### Pice 101 {: #pice-101 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Positive effects from things within our control (lifestyle choices, etc).
 
-### Pice 102
+### Pice 102 {: #pice-102 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Positive effects from things outside of our control
 
-### Pice 103
+### Pice 103 {: #pice-103 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Problems that are 100% within our control. We don't want to name these problems based on their symptoms (like doctors do), but rather by their causes!
 
-### Pice 104
+### Pice 104 {: #pice-104 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 Problems that we have limited control over, like war, crime, violence, accidents and acts of nature.
 
-### Pice 105
+### Pice 105 {: #pice-105 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The -A-B doorway: Prisons and asylums are where we lock people up in order to keep them from acting out on their impure thoughts. This is also a trick, a magic act, not letting society witness and experience the severity of our degeneration.
 
-### Pice 106
+### Pice 106 {: #pice-106 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The -B-C doorway: This doorway is an automatic. Doctors give us drugs or poisons that interfere with the bodies communication process, things like hormones (insulin, thyroxine, etc.), anti-somethings, blockers as well as inhibitors. Our body uses a lock-and-key communication system. The receptorcites are like the locks and the communication molecules represent the keys. Inhibitors kill the keys or don't allow the body to produce those while blockers occupy the receptorcites and thus block the locks. This is a trick, a magic act. The feedback system is being hindered and mistakes don't manifest as symptoms, leading to more severe dis-ease down the road, as we don't change what we're doing.
 
-### Pice 107
+### Pice 107 {: #pice-107 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The +B+C doorway: An automatic, where we reap what we sow.
 
-### Pice 108
+### Pice 108 {: #pice-108 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The +C-C doorway: We manifest latent diseases, by going from the pleasure (103 in limbo) to the pain and suffering. Good example: cancer. Result of the -B+C gateway from building up a tolerance to our mistakes. Now we have cleansing reactions.
 
-### Pice 109
+### Pice 109 {: #pice-109 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The +A-B doorway (the fall of mankind): happens when we don't apply what we know because we're not willing or able to.
 
-### Pice 110
+### Pice 110 {: #pice-110 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The -A+B doorway: Acts of nature, forced fasting due to droughts, agents for 3 in 105
 
-### Pice 111
+### Pice 111 {: #pice-111 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 The +B-C gateway: Agents for 3 in 107, cleansing reactions 108
 
-### Pice 112
+### Pice 112 {: #pice-112 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 -B+C Doorway, We build up a tolerance to our mistakes and can now derive pleasure out of them instead of getting pain. We now get a 103 "in limbo", +C, instead of down in -C. These are latent diseases, they haven't manifested into pain yet. Agents for 3 in 106: dual effect of pleasure.
 
-### Pice 113
+### Pice 113 {: #pice-113 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 +C+B worm hole: The positive causal loop, effects become causes.
 
-### Pice 114
+### Pice 114 {: #pice-114 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 +C+A worm hole: The positive knowledge loop, effects become knowledge, where we gain experience from doing the right things. The ultimate solution.
 
-### Pice 115
+### Pice 115 {: #pice-115 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 -C-B worm hole: -C's cannot become +B's, so they become -B's instead
 
-### Pice 116
+### Pice 116 {: #pice-116 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 -C+A worm hole: We learn from our mistakes because we don't have pice 2.
 
-### Pice 117
+### Pice 117 {: #pice-117 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 -C-B worm hole: Negative causal loop, negative ripple effect, catch 22 effect, 21 obstacles
 
-### Pice 118
+### Pice 118 {: #pice-118 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 -C-A worm hole: The negative knowledge loop, where we perpetuate false knowledge.
 
-### Pice 119
+### Pice 119 {: #pice-119 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 +C-B worm hole via the -B+C gateway: The negative causal loop, by going up 112: a false interpretation. Dual effect of pleasure via tolerance, caused by a malfunctioning survival mechanism. A 103 in limbo perpetuates pice 3.
 
-### Pice 120
+### Pice 120 {: #pice-120 }
+
+<a class="tus-back-to-tus" href="#tus-table-top">Back to the schematic</a>
 
 +C-A worm hole via the -B+C gateway: Perpetuating false knowledge, false interpretation from -C's or 103's in limbo
 

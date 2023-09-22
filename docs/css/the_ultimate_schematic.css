@@ -59,6 +59,9 @@ table.tus-table--tus-custom td, table.tus-table--tus-custom th {
 table.tus-table--tus-custom td {
   padding: 0.5rem;
 }
+table.tus-table--tus-custom p a {
+  color: inherit;
+}
 table.tus-table--tus-custom tr:nth-of-type(odd) td:nth-of-type(even) {
   width: 4rem;
   word-break: break-all;
@@ -212,6 +215,7 @@ table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd), table.tus-
 
 .tus-dotted-circle {
   position: relative;
+  z-index: 1;
 }
 .tus-dotted-circle::after {
   display: block;
@@ -225,6 +229,13 @@ table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd), table.tus-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.tus-highlighted {
+  background: white;
+  color: black;
+  width: fit-content;
 }
 
 /*# sourceMappingURL=the_ultimate_schematic.css.map */
