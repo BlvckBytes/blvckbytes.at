@@ -1,5 +1,5 @@
 html {
-  --page-width: 70em !important;
+  --page-width: 85em !important;
 }
 
 h1 {
@@ -8,6 +8,17 @@ h1 {
 
 h2 {
   margin-top: var(--global-line-height);
+  font-size: calc(var(--global-font-size) * 1.3) !important;
+}
+
+h2, h3 {
+  font-weight: bolder !important;
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.1)
+}
+
+h3 {
+  font-size: calc(var(--global-font-size) * 1.1) !important;
 }
 
 .third-width-image {
