@@ -27,6 +27,8 @@ theme:
 markdown_extensions: 
   - pymdownx.arithmatex:
       generic: true
+  - toc:
+      toc_depth: "2"
 
 extra_javascript:
   - javascripts/mathjax.js

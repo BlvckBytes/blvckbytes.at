@@ -4,6 +4,27 @@ em.tus-highlight--blue {
 em.tus-highlight--gray {
   background-color: rgba(88, 92, 114, 0.7);
 }
+em.tus-highlight--purple {
+  background-color: rgba(127, 83, 230, 0.7);
+}
+em.tus-highlight--red {
+  background-color: rgba(211, 33, 33, 0.7);
+}
+em.tus-highlight--orange {
+  background-color: rgba(187, 105, 11, 0.7);
+}
+
+.tus-white-wrap {
+  background: rgb(202, 206, 222);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  display: inline-block;
+  border-radius: 0.2rem;
+}
+.tus-white-wrap p, .tus-white-wrap em {
+  margin: 0;
+  color: #000000;
+}
 
 table.tus-table {
   background: rgb(202, 206, 222);
@@ -11,9 +32,11 @@ table.tus-table {
 table.tus-table, table.tus-table p, table.tus-table td, table.tus-table th, table.tus-table em {
   border-color: black;
   color: black;
-  margin: 0;
   padding: 0;
   font-weight: normal;
+}
+table.tus-table p, table.tus-table td, table.tus-table th, table.tus-table em {
+  margin: 0;
 }
 table.tus-table td, table.tus-table th {
   text-align: center;
@@ -27,25 +50,29 @@ table.tus-table--3-col td {
 }
 table.tus-table--tus-custom {
   table-layout: fixed;
-  width: 100%;
+  width: auto;
+  min-width: 100%;
 }
 table.tus-table--tus-custom td, table.tus-table--tus-custom th {
   padding: 0;
 }
+table.tus-table--tus-custom td {
+  padding: 0.5rem;
+}
 table.tus-table--tus-custom tr:nth-of-type(odd) td:nth-of-type(even) {
-  width: 3rem;
+  width: 4rem;
   word-break: break-all;
 }
 table.tus-table--tus-custom tr:nth-of-type(odd) td:nth-of-type(odd) {
-  width: calc((100% - 6rem) / 3);
+  width: calc((100% - 8rem) / 3);
 }
 table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(even) {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
 }
 table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd) {
-  width: calc((100% - 6rem) / 3);
-  height: 3rem;
+  width: calc((100% - 8rem) / 3);
+}
+table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd), table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd) img, table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd) p {
   vertical-align: middle;
 }
 
@@ -53,6 +80,151 @@ table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd) {
   writing-mode: vertical-rl;
   text-orientation: upright;
   display: inline-block;
+  min-height: max-content;
+}
+
+.tus-align--right {
+  text-align: right;
+  width: 100%;
+}
+.tus-align--left {
+  text-align: left;
+  width: 100%;
+}
+
+.tus-arrow--right {
+  height: 2rem;
+  width: 2rem;
+  transform-origin: center center;
+}
+.tus-arrow--up {
+  height: 2rem;
+  width: 2rem;
+  transform-origin: center center;
+  transform: rotate(-90deg);
+}
+.tus-arrow--down {
+  height: 2rem;
+  width: 2rem;
+  transform-origin: center center;
+  transform: rotate(90deg);
+}
+
+.tus-floating-arrow {
+  position: relative;
+}
+.tus-floating-arrow--right-bottom-right-down {
+  position: relative;
+}
+.tus-floating-arrow--right-bottom-right-down::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background: url("/img/the_ultimate_schematic__arrow.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: center center;
+  bottom: 0;
+  right: 0;
+  transform: translate(90%, 90%) rotate(45deg);
+}
+.tus-floating-arrow--right-top-right-up {
+  position: relative;
+}
+.tus-floating-arrow--right-top-right-up::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background: url("/img/the_ultimate_schematic__arrow.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: center center;
+  top: 0;
+  right: 0;
+  transform: translate(90%, -90%) rotate(-45deg);
+}
+.tus-floating-arrow--left-center-left {
+  position: relative;
+}
+.tus-floating-arrow--left-center-left::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background: url("/img/the_ultimate_schematic__arrow.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: center center;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%) rotate(180deg);
+}
+.tus-floating-arrow--left-bottom-right-up {
+  position: relative;
+}
+.tus-floating-arrow--left-bottom-right-up::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background: url("/img/the_ultimate_schematic__arrow.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: center center;
+  bottom: 0;
+  left: 0;
+  transform: translate(-90%, 90%) rotate(-45deg);
+}
+.tus-floating-arrow--left-bottom-left-down {
+  position: relative;
+}
+.tus-floating-arrow--left-bottom-left-down::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background: url("/img/the_ultimate_schematic__arrow.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: center center;
+  bottom: 0;
+  left: 0;
+  transform: translate(-90%, 90%) rotate(135deg);
+}
+.tus-floating-arrow--left-top-right-down {
+  position: relative;
+}
+.tus-floating-arrow--left-top-right-down::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background: url("/img/the_ultimate_schematic__arrow.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: center center;
+  top: 0;
+  left: 0;
+  transform: translate(-90%, -90%) rotate(45deg);
+}
+
+.tus-dotted-circle {
+  position: relative;
+}
+.tus-dotted-circle::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 0.2rem solid black;
+  border-style: dotted;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=the_ultimate_schematic.css.map */

@@ -110,85 +110,170 @@ The things done to us: Accidents and acts of nature (no control), war, crime and
 
 ## The Ultimate Schematic
 
-Disclaimer: This schematic is still very much a WIP and far from being complete, there is still *so much* to do. Please look at it in John's videos in the mean time, and use the pices described on this website to make more sense of it.
-
 The ultimate schematic represents three stages of knowledge on two event horizons: The right path (paradise), where we have no problems within our control, and the wrong path (plato's cave), where we have hundreds of thousands of problems that are 100% within our control. As a species, we don't have the knowledge to know the difference. We have been tricked and fooled into believing that most of our problems are outside of our control.
 
 The purpose of this schematic is to help us understand where we are, where we came from, how we got here and how we get back where we need to be. We cannot go back the way we originally came, because we fell down 109, when we applied something we mastered to something we needed.
-
-18 connections logically connect these boxes together. 281 pices total (might not be the latest count), 69 are in 18 portals, 212 are in six boxes.
-
-212 pices come from 128 main pices, that come from 25 main pices, that come from 5 main categories, where we have 14, 5, 3, 2, 1, respectively. First four groups are in the first stage of knowledge (24 and 24), then we add pices 1 and 2. The second and third stage both on the right and wrong path have the first two groups and the last one, that's 19 and 1.
-
-101 and 103 are there to hide pices in. 19 in 101, 19 in 103, to make things simpler. Either within our control or outside of our control.
-
-24 + 24 + 20 + 20 + 20 + 20 = 128, 128 + 4 + 60 + 20 = 212 Pices in 6 boxes. 4 added pices to hide pices and 80 duplications.
 
 <table class="tus-table tus-table--tus-custom">
   <tr>
     <td>
       <p><em class="tus-highlight--blue">+A</em></p>
       <p><em class="tus-highlight--blue">Knowledge</em></p>
+      <br>
+      <p><em class="tus-highlight--blue tus-dotted-circle">1</em></p>
+      <p><em class="tus-highlight--orange">22-35</em></p>
+      <p><em class="tus-highlight--red">36-40</em></p>
+      <p><em class="tus-highlight--blue">41-43</em></p>
+      <p><em class="tus-highlight--blue">44</em></p>
+      <br>
+      <p><em class="tus-highlight--blue">45</em> - <em class="tus-highlight--blue">114</em></p>
+      <p><em class="tus-highlight--blue">116</em></p>
+      <br>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-bottom-right-down">109</em></p>
     </td>
     <td>
-      <p><em class="tus-highlight--blue">+A</em></p>
-      <p><em class="tus-highlight--blue">+B</em></p>
+      <p><em class="tus-highlight--blue">+A+B</em></p>
       <br>
       <p class="tus-vertical-text"><em class="tus-highlight--blue">Doorway</em></p>
+      <p><em class="tus-highlight--gray">51-60</em></p>
+      <br>
+      <img class="tus-arrow--right" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
     <td>
       <p><em class="tus-highlight--blue">+B</em></p>
-      <p><em class="tus-highlight--blue">Cause</em></p>
+      <p><em class="tus-highlight--blue">Right Actions</em></p>
+      <br>
+      <br>
+      <p><em class="tus-highlight--orange">51-74</em></p>
+      <p><em class="tus-highlight--red tus-floating-arrow--left-bottom-right-up">75-79</em></p>
+      <p><em class="tus-highlight--purple">80</em></p>
+      <br>
+      <br>
+      <p><em class="tus-highlight--blue">113</em></p>
+      <br>
+      <br>
+      <br>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-bottom-right-down">111</em></p>
     </td>
     <td>
-      <p><em class="tus-highlight--blue">+B</em></p>
-      <p><em class="tus-highlight--blue">+C</em></p>
+      <p><em class="tus-highlight--blue">+B+C</em></p>
       <br>
       <p class="tus-vertical-text"><em class="tus-highlight--blue">Doorway</em></p>
+      <p><em class="tus-highlight--gray">107</em></p>
+      <br>
+      <img class="tus-arrow--right" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
     <td>
       <p><em class="tus-highlight--blue">+C</em></p>
-      <p><em class="tus-highlight--blue">Effect</em></p>
+      <p><em class="tus-highlight--blue">Unlimited Potential</em></p>
+      <br>
+      <br>
+      <p><em class="tus-highlight--blue">101</em></p>
+      <br>
+      <p><em class="tus-highlight--purple">102</em></p>
+      <br>
+      <br>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left">113 & 114</em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><em class="tus-floating-arrow--left-bottom-left-down">115</em> & 116</em></p>
+      <br>
+      <p><em class="tus-highlight--blue tus-floating-arrow--left-bottom-right-up">103</em></p>
     </td>
   </tr>
   <tr>
     <td>
-      <p><em class="tus-highlight--blue">-A +A Doorway</em></p>
+      <p><em class="tus-highlight--blue">-A+A Doorway</em> - <em class="tus-highlight--gray">3-21</em></p>
+      <img class="tus-arrow--up" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
     <td></td>
     <td></td>
     <td></td>
     <td>
-      <p><em class="tus-highlight--blue">+C -C Doorway</em></p>
+      <p><em class="tus-highlight--blue">+C-C Doorway</em> - <em class="tus-highlight--blue">108</em></p>
+      <img class="tus-arrow--down" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
   </tr>
   <tr>
     <td>
       <p><em class="tus-highlight--blue">-A</em></p>
       <p><em class="tus-highlight--blue">False Knowledge</em></p>
+      <br>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-top-right-up">110</em></p>
+      <br>
+      <p><em class="tus-highlight--blue">2</em></p>
+      <p><em class="tus-highlight--red">46-50</em></p>
+      <br>
+      <br>
+      <p><em class="tus-highlight--blue">118</em>, i.e. <em class="tus-highlight--blue">2</em></p>
+      <p><em class="tus-highlight--blue">120</em>, i.e. <em class="tus-highlight--blue">2</em></p>
     </td>
     <td>
-      <p><em class="tus-highlight--blue">-A</em></p>
-      <p><em class="tus-highlight--blue">-B</em></p>
+      <p><em class="tus-highlight--blue">-A-B</em></p>
       <br>
       <p class="tus-vertical-text"><em class="tus-highlight--blue">Doorway</em></p>
+      <p><em class="tus-highlight--gray">105</em></p>
+      <br>
+      <img class="tus-arrow--right" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
     <td>
       <p><em class="tus-highlight--blue">-B</em></p>
       <p><em class="tus-highlight--blue">Mistakes</em></p>
+      <br>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--right-top-right-up">112</em></p>
+      <br>
+      <p><em class="tus-highlight--orange">81-94</em></p>
+      <p><em class="tus-highlight--red">95-99</em></p>
+      <p><em class="tus-highlight--purple">100</em></p>
+      <br>
+      <p><em class="tus-highlight--blue">117</em>, i.e. <em class="tus-highlight--gray">3</em></p>
+      <p><em class="tus-highlight--blue">119</em>, i.e. <em class="tus-highlight--gray">3</em></p>
+      <p><em class="tus-highlight--blue">115</em></p>
     </td>
     <td>
-      <p><em class="tus-highlight--blue">-B</em></p>
-      <p><em class="tus-highlight--blue">-C</em></p>
+      <p><em class="tus-highlight--blue">-B-C</em></p>
       <br>
       <p class="tus-vertical-text"><em class="tus-highlight--blue">Doorway</em></p>
+      <p><em class="tus-highlight--gray">106</em></p>
+      <br>
+      <img class="tus-arrow--right" src="/img/the_ultimate_schematic__arrow.svg"/>
     </td>
     <td>
       <p><em class="tus-highlight--blue">-C</em></p>
       <p><em class="tus-highlight--blue">Problems</em></p>
+      <br>
+      <br>
+      <br>
+      <p><em class="tus-highlight--blue tus-floating-arrow--left-top-right-down">103</em></p>
+      <br>
+      <p><em class="tus-highlight--purple">104</em></p>
+      <br>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left">117 & 118</em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left">119 & 120</em></p>
     </td>
   </tr>
 </table>
+<div style="margin: 1rem 0">
+  <div class="tus-white-wrap">
+    <p><em class="tus-highlight--gray">Gray</em> problems of knowledge</p>
+  </div>
+
+  <div class="tus-white-wrap">
+    <p><em class="tus-highlight--orange">Orange</em> our needs</p>
+  </div>
+
+  <div class="tus-white-wrap">
+    <p><em class="tus-highlight--red">Red</em> the things we've mastered</p>
+  </div>
+
+  <div class="tus-white-wrap">
+    <p><em class="tus-highlight--purple">Purple</em> not 100% within our control</p>
+  </div>
+</div>
+
+There are six horizontal/vertical doorways, four diagonal gateways, and eight portals, making up 18 connections between the six boxes. It has 281 pices total (might not be the latest count), 69 are in 18 portals, 212 are in six boxes.
+
+212 pices come from 128 main pices, that come from 25 main pices, that come from 5 main categories, where we have 14, 5, 3, 2, 1, respectively. First four groups are in the first stage of knowledge (24 and 24), then we add pices 1 and 2. The second and third stage both on the right and wrong path have the first two groups and the last one, that's 19 and 1.
+
+101 and 103 are there to hide pices in. 19 in 101, 19 in 103, to make things simpler. Either within our control or outside of our control. 24 + 24 + 20 + 20 + 20 + 20 = 128, 128 + 4 + 60 + 20 = 212 Pices in 6 boxes. 4 added pices to hide pices and 80 duplications.
 
 ## Definitions And Backgrounds
 
@@ -272,7 +357,7 @@ Another way to damage our bodies is by eating a diet which contains nutrients th
 
 ### Pice 1
 
-Not having the knowledge we need. This number is surrounded by a dotted circle, because we used to have it within our +A circle of knowledge (inside the circle: the knowledge we have, outside the circle: the knowledge we don't have), but we've lost it.
+Not having the knowledge we need, the knowledge of how to live. This number is surrounded by a dotted circle, because we used to have it within our +A circle of knowledge (inside the circle: the knowledge we have, outside the circle: the knowledge we don't have), but we've lost it.
 
 ### Pice 2
 
@@ -844,7 +929,7 @@ The -A-B doorway: Prisons and asylums are where we lock people up in order to ke
 
 ### Pice 106
 
-The -B-C doorway: Doctors give us drugs or poisons that interfere with the bodies communication process, things like hormones (insulin, thyroxine, etc.), anti-somethings, blockers as well as inhibitors. Our body uses a lock-and-key communication system. The receptorcites are like the locks and the communication molecules represent the keys. Inhibitors kill the keys or don't allow the body to produce those while blockers occupy the receptorcites and thus block the locks. This is a trick, a magic act. The feedback system is being hindered and mistakes don't manifest as symptoms, leading to more severe dis-ease down the road, as we don't change what we're doing.
+The -B-C doorway: This doorway is an automatic. Doctors give us drugs or poisons that interfere with the bodies communication process, things like hormones (insulin, thyroxine, etc.), anti-somethings, blockers as well as inhibitors. Our body uses a lock-and-key communication system. The receptorcites are like the locks and the communication molecules represent the keys. Inhibitors kill the keys or don't allow the body to produce those while blockers occupy the receptorcites and thus block the locks. This is a trick, a magic act. The feedback system is being hindered and mistakes don't manifest as symptoms, leading to more severe dis-ease down the road, as we don't change what we're doing.
 
 ### Pice 107
 
