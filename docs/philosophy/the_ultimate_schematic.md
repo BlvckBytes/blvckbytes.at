@@ -118,6 +118,8 @@ The purpose of this schematic is to help us understand where we are, where we ca
 <p class="tus-highlighted">TIP: Click on piece numbers in order to jump to them.</p>
 <p class="tus-highlighted">TIP: Put two instances of this page next to eachother in order to always see the schematic.</p>
 
+<a class="tus-back-to-previous">[To Previous]</a>
+
 <table id="tus-table-top" class="tus-table tus-table--tus-custom">
   <tr>
     <td>

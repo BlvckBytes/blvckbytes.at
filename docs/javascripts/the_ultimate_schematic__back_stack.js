@@ -1,91 +1,92 @@
-{
-
-let pollTask;
-
 window.addEventListener('load', () => {
-  const pollIntervalMs = 30;
-  let lastHrefValue;
-  const previousStackSize = 5;
-  let ignoreNextNavigation = false;
 
   const previousButtonClass = 'tus-back-to-previous';
   const previousButtonDisabledClass = 'tus-back-to-previous--disabled';
 
   const previousStack = [];
+  const previousStackSize = 20;
 
+  const anchorElementList = document.querySelectorAll('a');
   const previousButtonList = document.querySelectorAll('.' + previousButtonClass);
+  const origin = new URL(window.location.href).origin;
+
+  const enablePreviousButtons = () => {
+    for (const previousButton of previousButtonList)
+      previousButton.classList.remove(previousButtonDisabledClass);
+  };
+
+  const disablePreviousButtons = () => {
+    for (const previousButton of previousButtonList)
+      previousButton.classList.add(previousButtonDisabledClass);
+  };
 
   const addToPreviousStack = (href) => {
+    enablePreviousButtons();
+
     if (previousStack.length < previousStackSize) {
       previousStack.push(href);
-      console.log('push' + href);
       return;
     }
 
     for (let i = 0; i < previousStackSize - 1; i++)
       previousStack[i] = previousStack[i + 1];
     previousStack[previousStackSize - 1] = href;
-    console.log('shift and set ' + href);
+  };
+
+  const decideAnchorParentHref = (element, testCount = 0) => {
+    let currentElement = element;
+
+    while (currentElement.previousSibling) {
+      currentElement = currentElement.previousSibling;
+
+      // The next-up headline should be within reach... Avoid useless lag spikes.
+      if (++testCount > 100)
+        return null;
+
+      if (/^(h|H)[1-9]$/.test(currentElement.tagName) && currentElement.id) {
+        const currentUrl = new URL(window.location.href);
+        return currentUrl.origin + currentUrl.pathname + '#' + currentElement.id;
+      }
+    }
+
+    if (element.parentElement)
+      return decideAnchorParentHref(element.parentElement, testCount);
+
+    return null;
+  };
+
+  const onAnchorClick = (element) => {
+    if (!(element.href.startsWith(origin)))
+      return;
+
+    const parentHref = decideAnchorParentHref(element);
+    const currentHref = window.location.href;
+
+    if (new URL(currentHref).hash)
+      addToPreviousStack(currentHref);
+
+    // "Came" from this section, so it should also be pushed onto the stack
+    // This type of navigation feels more natural to me
+    if (parentHref && currentHref != parentHref)
+      addToPreviousStack(parentHref);
   };
 
   const onPreviousClick = () => {
     const previousHref = previousStack.pop();
-    console.log('popped ' + previousHref);
 
-    if (previousHref && previousStack.length == 0) {
-      console.log('adding disabled class');
-      for (const previousButton of previousButtonList)
-        previousButton.classList.add(previousButtonDisabledClass);
-    }
+    if (previousHref && previousStack.length == 0)
+      disablePreviousButtons();
 
-    if (previousHref) {
-      ignoreNextNavigation = true;
+    if (previousHref)
       window.location.href = previousHref;
-      console.log('navigate ' + previousHref);
-    }
   };
 
-  for (const previousButton of previousButtonList) {
+  // Initially, the stack starts out empty
+  disablePreviousButtons();
+
+  for (const previousButton of previousButtonList)
     previousButton.addEventListener('click', onPreviousClick);
-    previousButton.classList.add(previousButtonDisabledClass);
-  }
 
-  const onHrefChange = (oldHref, newHref) => {
-    if (ignoreNextNavigation) {
-      ignoreNextNavigation = false;
-      console.log('ignoring navigation');
-      return;
-    }
-
-    addToPreviousStack(oldHref);
-
-    console.log('removing disabled class');
-    for (const previousButton of previousButtonList)
-      previousButton.classList.remove(previousButtonDisabledClass);
-  };
-
-  const pollHandler = () => {
-    const currentHrefValue = window.location.href;
-
-    if (!lastHrefValue) {
-      lastHrefValue = currentHrefValue;
-      return;
-    }
-
-    if (lastHrefValue != currentHrefValue)
-      onHrefChange(lastHrefValue, currentHrefValue);
-
-    lastHrefValue = currentHrefValue;
-  };
-
-  pollTask = setInterval(pollHandler, pollIntervalMs);
+  for (const anchorElement of anchorElementList)
+    anchorElement.addEventListener('click', event => onAnchorClick(event.target));
 });
-
-window.addEventListener('unload', () => {
-  if (pollTask) {
-    clearInterval(pollTask);
-    pollTask = undefined;
-  }
-});
-
-}
