@@ -390,11 +390,9 @@ Denial is shadowing those unwanted aspects of our lives because we'd go crazy ot
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
-We need to understand - on the grand scheme of things - when we started making those mistakes. If we put the human existence on a football field, where there's one hundred yards and three feet and 12 inches:
+We need to understand - on the grand scheme of things - when we started making those mistakes. Let's put the human existence of six million years on a football field, where there's one hundred yards (equals 3600 inches or 300 feet, since one yard has three feet and one feet has 12 inches). Also, let's assume roughly 15 years per generation.
 
-We became civilized on the three inch line, which was all because of the 3rd mistake we made, on the six inch line, about 10k years ago. The very first mistake happened on the one yard line. The second mistake happened on the 2 1/2 foot line. The fourth mistake happened about 10 generations ago, on the 1/14 inch line. The fifth mistake is about 8 generations ago, about the 1/28 inch line.
-
-TODO: Research this and maybe convert it to metric as well. Check the numbers!
+The very first mistake [Piece 95](#piece-95) happened on the one yard line (1 * 6M/100 = 60000 years ago). The second mistake [Piece 96](#piece-96) happened on the 2 1/2 foot line (2.5 * 6M/300 = 50000 years ago). The third mistake [Piece 97](#piece-97) happened on the six inch line (6 * 6M/3600 = 10000 years ago). Because of this, we became civilized on the three inch line (3 * 6M/3600 = 5000 years ago). The fourth mistake [Piece 98](#piece-98) happened about 8 generations ago, on the 1/14 inch line (1/14 * 6M/3600 = 119 years ago). The fifth mistake [Piece 99](#piece-99) is about 4 generations ago, on the 1/28 inch line (1/28 * 6M/3600 = 59.5 years ago).
 
 ### Our Anatomy
 
