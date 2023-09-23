@@ -179,7 +179,7 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <br>
       <br>
       <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><a href="#piece-113">113</a> & <a href="#piece-114">114</a></em></p>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><em class="tus-floating-arrow--left-bottom-left-down"><a href="#piece-115">115</a></em> & <a href="#piece-116">116</a></em></p>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-bottom-left-down"><a href="#piece-119">119</a> & <a href="#piece-120">120</a></em></p>
       <br>
       <p><em class="tus-highlight--blue tus-floating-arrow--left-bottom-right-up"><a href="#piece-103">103</a></em></p>
     </td>
@@ -208,8 +208,9 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <p><em class="tus-highlight--red"><a href="#piece-46">46</a>-<a href="#piece-50">50</a></em></p>
       <br>
       <br>
-      <p><em class="tus-highlight--blue"><a href="#piece-118">118</a></em>, i.e. <em class="tus-highlight--blue"><a href="#piece-2">2</a></em></p>
+      <br>
       <p><em class="tus-highlight--blue"><a href="#piece-120">120</a></em>, i.e. <em class="tus-highlight--blue"><a href="#piece-2">2</a></em></p>
+      <p><em class="tus-highlight--blue"><a href="#piece-118">118</a></em>, i.e. <em class="tus-highlight--blue"><a href="#piece-2">2</a></em></p>
     </td>
     <td>
       <p><em class="tus-highlight--blue">-A-B</em></p>
@@ -230,9 +231,9 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <p><em class="tus-highlight--red"><a href="#piece-95">95</a>-<a href="#piece-99">99</a></em></p>
       <p><em class="tus-highlight--purple"><a href="#piece-100">100</a></em></p>
       <br>
-      <p><em class="tus-highlight--blue"><a href="#piece-117">117</a></em>, i.e. <em class="tus-highlight--gray"><a href="#piece-3">3</a></em></p>
-      <p><em class="tus-highlight--blue"><a href="#piece-119">119</a></em>, i.e. <em class="tus-highlight--gray"><a href="#piece-3">3</a></em></p>
       <p><em class="tus-highlight--blue"><a href="#piece-115">115</a></em></p>
+      <p><em class="tus-highlight--blue"><a href="#piece-119">119</a></em>, i.e. <em class="tus-highlight--gray"><a href="#piece-3">3</a></em></p>
+      <p><em class="tus-highlight--blue"><a href="#piece-117">117</a></em>, i.e. <em class="tus-highlight--gray"><a href="#piece-3">3</a></em></p>
     </td>
     <td>
       <p><em class="tus-highlight--blue">-B-C</em></p>
@@ -253,8 +254,9 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <br>
       <p><em class="tus-highlight--purple"><a href="#piece-104">104</a></em></p>
       <br>
+      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><a href="#piece-115">115</a> & <em class="tus-floating-arrow--left-top-left-up"><a href="#piece-116">116</a></em></em></p>
+      <br>
       <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><a href="#piece-117">117</a> & <a href="#piece-118">118</a></em></p>
-      <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><a href="#piece-119">119</a> & <a href="#piece-120">120</a></em></p>
     </td>
   </tr>
 </table>
@@ -941,7 +943,7 @@ The only way to correct five main mistakes that enough people are willing and ab
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
-A water fast used to be the best preperation for a better way of life. The best way to stop eating the wrong food is to stop eating at all. However, most people are afraid to death of waterfasting and would never do it. Waterfasting can nowadays be very dangerous due to the fifth mistake [Piece 99](#piece-99), the chemical revolution [Piece 40](#piece-40). There are so many toxins in our environment and thus in us, that, if we don't have the required nutrients in us (like glutathion), our liver cannot complete a two-phase process where it neutralizes and eliminates these environmental toxins. We don't get these nutrients from water, which is why we need to modify this step, using [Piece 9A](#piece-9a) (our brilliant brain) and modify the water fast into a juice fast [Piece 41](#piece-41). This way, we get results approximately 10 times faster, we're not hungry, energy levels skyrocket and big improvements are within reach. A waterfast basically requires to take a vacation from live, and most of us sadly do not have this luxury.
+A water fast used to be the best preperation for a better way of life. The best way to stop eating the wrong food is to stop eating at all. However, most people are afraid to death of waterfasting and would never do it. Waterfasting can nowadays be very dangerous due to the fifth mistake [Piece 99](#piece-99), the chemical revolution [Piece 40](#piece-40). There are so many toxins in our environment and thus in us, that, if we don't have the required nutrients in us (like glutathion), our liver cannot complete a two-phase process where it neutralizes and eliminates these environmental toxins. We don't get these nutrients from water, which is why we need to modify this step, using [Piece 9A](#piece-9a) (our brilliant brain) and modify the water fast into a juice fast [Piece 41](#piece-41). This way, we get results approximately 10 times faster, we're not hungry, energy levels skyrocket and big improvements are within reach. A waterfast basically requires to take a vacation from life, and most of us sadly do not have this luxury.
 
 ### Piece 43 {: #piece-43 }
 
@@ -1480,7 +1482,7 @@ The +B-C gateway: Cleansing reactions, see [Piece 108](#piece-108). These are ag
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
--C+A worm hole: We learn from our mistakes because we don't have piece 2.
+-C+A worm hole: We learn from our mistakes because we don't have false knowledge [Piece 2](#piece-2).
 
 ### Piece 117 {: #piece-117 }
 

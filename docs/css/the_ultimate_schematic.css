@@ -128,6 +128,22 @@ table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd), table.tus-
   right: 0;
   transform: translate(90%, 90%) rotate(45deg);
 }
+.tus-floating-arrow--left-top-left-up {
+  position: relative;
+}
+.tus-floating-arrow--left-top-left-up::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background: url("/img/the_ultimate_schematic__arrow.svg");
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform-origin: center center;
+  top: 0;
+  left: 0;
+  transform: translate(-90%, -90%) rotate(-135deg);
+}
 .tus-floating-arrow--right-top-right-up {
   position: relative;
 }

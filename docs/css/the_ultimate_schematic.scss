@@ -186,6 +186,17 @@ table.tus-table {
     }
   }
 
+  &--left-top-left-up {
+    @include base;
+
+    &::after {
+      @include base-after;
+      top: 0;
+      left: 0;
+      transform: translate(-90%, -90%) rotate(-135deg);
+    }
+  }
+
   &--right-top-right-up {
     @include base;
 
