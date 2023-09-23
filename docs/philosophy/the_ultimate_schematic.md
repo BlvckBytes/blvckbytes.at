@@ -978,6 +978,24 @@ The false believe that cooking is an art, when in reality, it is a sin.
 
 The false believe that we're flesh eaters and need animal products to lead a strong and healthy life.
 
+"The only good is knowledge, the only evil is ignorance. Bad men live to eat and drink where as good men eat and drink to live." Socrates
+
+"The time will come, when men such as I will look at the murder of animals as I now look upon the murder of men." - Leonardo da Vinci
+
+"For as long as man continues to be the ruthless destroyer of lower living beings, he will never know health and peace. For as long as man massacres animals, they will kill eachother. Indeed, he who sows the seeds of murder and pain cannot reap joy and love." - Pythagoras
+
+"While we ourselves are the living graveyard of murdered beast, how can we expect any ideal conditions on this earth. The person who is ignorant enough to believe that his nourishment depends on meat is in a horrible dilemma." - George Bernard Shaw
+
+"The person who has been eating the wrong foods - animal products - for decades, that has level two nutrients in it that we're supposed to be making if we're healthy, and becomes dependent on meat, is also in a horrible dilemma." - John Rose
+
+"I believe that every man, who has ever been earnest to preserve his higher or poetic faculties in the best condition, has been particularly inclined to obstain from animal food." - Henry David Thoreau
+
+"One should eat to live, not live to eat. My refusal to eat flesh occasioned an inconvenience. I was frequently chaided for my singularity, but with a slighter repass, I made the greater progress. From greater clearness of head and quicker comprehension." - Benjamin Franklin
+
+"We have made of ourselves living cesspools and have driven doctors to invent names for our diseases." - Plato
+
+"It's easier to change a man's religion than it is their diet." - Margaret Mead
+
 ### Piece 48 {: #piece-48 }
 
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
