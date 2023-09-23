@@ -52,9 +52,12 @@ table.tus-table {
     margin: 0;
   }
 
+  td {
+    padding: .5rem;
+  }
+
   td, th {
     text-align: center;
-    padding: 1.5rem 0;
   }
 
   &--2-col td {
@@ -73,14 +76,6 @@ table.tus-table {
     // Fix for safari, because the table is totally messed up otherwise...
     width: auto;
     min-width: 100%;
-
-    td, th {
-      padding: 0;
-    }
-
-    td {
-      padding: .5rem;
-    }
 
     p a {
       color: inherit;
@@ -271,4 +266,14 @@ table.tus-table {
   background: white;
   color: black;
   width: fit-content;
+}
+
+.tus-back-to-previous--disabled {
+  color: gray;
+
+  &:hover {
+    color: gray;
+    background-color: transparent;
+    cursor: auto;
+  }
 }

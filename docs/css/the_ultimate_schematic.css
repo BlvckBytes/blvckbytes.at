@@ -38,9 +38,11 @@ table.tus-table, table.tus-table p, table.tus-table td, table.tus-table th, tabl
 table.tus-table p, table.tus-table td, table.tus-table th, table.tus-table em {
   margin: 0;
 }
+table.tus-table td {
+  padding: 0.5rem;
+}
 table.tus-table td, table.tus-table th {
   text-align: center;
-  padding: 1.5rem 0;
 }
 table.tus-table--2-col td {
   width: 50%;
@@ -52,12 +54,6 @@ table.tus-table--tus-custom {
   table-layout: fixed;
   width: auto;
   min-width: 100%;
-}
-table.tus-table--tus-custom td, table.tus-table--tus-custom th {
-  padding: 0;
-}
-table.tus-table--tus-custom td {
-  padding: 0.5rem;
 }
 table.tus-table--tus-custom p a {
   color: inherit;
@@ -236,6 +232,15 @@ table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd), table.tus-
   background: white;
   color: black;
   width: fit-content;
+}
+
+.tus-back-to-previous--disabled {
+  color: gray;
+}
+.tus-back-to-previous--disabled:hover {
+  color: gray;
+  background-color: transparent;
+  cursor: auto;
 }
 
 /*# sourceMappingURL=the_ultimate_schematic.css.map */
