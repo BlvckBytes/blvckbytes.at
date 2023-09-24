@@ -250,10 +250,15 @@ table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd), table.tus-
   z-index: -1;
 }
 
-.tus-highlighted {
+.tus-background--white {
   background: white;
   color: black;
   width: fit-content;
+}
+.tus-background--red {
+  background: rgb(229, 67, 67);
+  width: fit-content;
+  color: white;
 }
 
 .tus-back-to-previous--disabled {

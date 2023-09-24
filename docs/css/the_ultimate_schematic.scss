@@ -279,10 +279,22 @@ table.tus-table {
   }
 }
 
-.tus-highlighted {
-  background: white;
-  color: black;
-  width: fit-content;
+.tus-background {
+  @mixin base {
+    width: fit-content;
+  }
+
+  &--white {
+    background: white;
+    color: black;
+    @include base;
+  }
+
+  &--red {
+    background: rgb(229, 67, 67);
+    @include base;
+    color: white;
+  }
 }
 
 .tus-back-to-previous--disabled {

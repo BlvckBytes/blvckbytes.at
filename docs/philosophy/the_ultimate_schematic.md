@@ -3,6 +3,8 @@
 
 ## Introduction
 
+<p class="tus-background--red">This webpage is still being worked on. There are missing pieces, possible misconceptions as well as room for improvement. Please do <strong>not</strong> take this resource as the main source, but rather consult the original videos for that.</p>
+
 This representation of *"The Ultimate Schematic"* (alternatively called *"The Epiphany Maker"*, *"A Six Box System"*, *"Plato's Map On Bottom, Hero's Map On Top"*), as brought into existence by [John Rose](https://www.youtube.com/@JRawRose){: target="_blank" } (see [The Ultimate Schematic Playlist](https://www.youtube.com/playlist?list=PLIWo2dGh9fzkWFLe0CuUzIcxqPwLDa8L8){: target="_blank" } and [The Ultimate Solution Playlist](https://www.youtube.com/playlist?list=PLIWo2dGh9fzmCboXxHwrqq-KCpJ__-0pd){: target="_blank" }), is intended as a reference work, to be shared, talked and thought about. This information has been collected by watching many of the available videos and scratching together what's readable as well as what has been spoken about. On some occasions, I might have augmented this information with my own understanding of it in order to make it more reachable for newcomers. While I gave my best to represent the diagrams in a responsive manner, they are still best viewed on a computer screen. If there are any problems regarding this page, any questions or ideas for improvement, please contact me at my email *blvckbytes@gmail.com*.
 
 People are encouraged to challenge this schematic, to try and either find flaws in it and/or to come up with additional pieces and to put them where they may fit. This webpage is always a WIP, as I'm still working on learning about all the pieces.
@@ -115,11 +117,11 @@ The ultimate schematic represents three stages of knowledge on two event horizon
 
 The purpose of this schematic is to help us understand where we are, where we came from, how we got here and how we get back where we need to be, since we cannot go back the way we originally came.
 
-<p class="tus-highlighted">TIP: Click on piece numbers in order to jump to them.</p>
-<p class="tus-highlighted">TIP: Put two instances of this page next to eachother in order to always see the schematic.</p>
-<p class="tus-highlighted">TIP: Check out the <a href="#walkthrough">walkthrough</a> if you need some help.</p>
-<p class="tus-highlighted">TIP: Check out the <a href="#overview">overview</a> to find patterns.</p>
-<p class="tus-highlighted">Make use of the [To Previous] and [To Schematic] buttons to jump around while exploring.</p>
+<p class="tus-background--white">TIP: Click on piece numbers in order to jump to them.</p>
+<p class="tus-background--white">TIP: Put two instances of this page next to eachother in order to always see the schematic.</p>
+<p class="tus-background--white">TIP: Check out the <a href="#walkthrough">walkthrough</a> if you need some help.</p>
+<p class="tus-background--white">TIP: Check out the <a href="#overview">overview</a> to find patterns.</p>
+<p class="tus-background--white">Make use of the [To Previous] and [To Schematic] buttons to jump around while exploring.</p>
 
 <a class="tus-back-to-previous">[To Previous]</a>
 
