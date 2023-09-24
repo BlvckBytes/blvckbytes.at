@@ -225,6 +225,12 @@ table.tus-table--tus-custom tr:nth-of-type(even) td:nth-of-type(odd), table.tus-
   transform: translate(-90%, -90%) rotate(45deg);
 }
 
+.tus-boxed {
+  outline: 0.15rem solid #000000;
+  outline-offset: 0.2rem;
+  border-radius: 0.2rem;
+}
+
 .tus-dotted-circle {
   position: relative;
   z-index: 1;

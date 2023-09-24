@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This representation of *"The Ultimate Schematic"* (alternatively called *"The Epiphany Maker"*, *"A Six Box System"*, *"Plato's Map On Bottom, Hero's Map On Top"*), as brought into existence by [John Rose](https://www.youtube.com/@JRawRose) (see [The Ultimate Schematic Playlist](https://www.youtube.com/playlist?list=PLIWo2dGh9fzkWFLe0CuUzIcxqPwLDa8L8) and [The Ultimate Solution Playlist](https://www.youtube.com/playlist?list=PLIWo2dGh9fzmCboXxHwrqq-KCpJ__-0pd)), is intended as a reference work, to be shared, talked and thought about. This information has been collected by watching many of the available videos and scratching together what's readable as well as what has been spoken about. On some occasions, I might have augmented this information with my own understanding of it in order to make it more reachable for newcomers. While I gave my best to represent the diagrams in a responsive manner, they are still best viewed on a computer screen. If there are any problems regarding this page, any questions or ideas for improvement, please contact me at my email *blvckbytes@gmail.com*.
+This representation of *"The Ultimate Schematic"* (alternatively called *"The Epiphany Maker"*, *"A Six Box System"*, *"Plato's Map On Bottom, Hero's Map On Top"*), as brought into existence by [John Rose](https://www.youtube.com/@JRawRose){: target="_blank" } (see [The Ultimate Schematic Playlist](https://www.youtube.com/playlist?list=PLIWo2dGh9fzkWFLe0CuUzIcxqPwLDa8L8){: target="_blank" } and [The Ultimate Solution Playlist](https://www.youtube.com/playlist?list=PLIWo2dGh9fzmCboXxHwrqq-KCpJ__-0pd){: target="_blank" }), is intended as a reference work, to be shared, talked and thought about. This information has been collected by watching many of the available videos and scratching together what's readable as well as what has been spoken about. On some occasions, I might have augmented this information with my own understanding of it in order to make it more reachable for newcomers. While I gave my best to represent the diagrams in a responsive manner, they are still best viewed on a computer screen. If there are any problems regarding this page, any questions or ideas for improvement, please contact me at my email *blvckbytes@gmail.com*.
 
 People are encouraged to challenge this schematic, to try and either find flaws in it and/or to come up with additional pieces and to put them where they may fit. This webpage is always a WIP, as I'm still working on learning about all the pieces.
 
@@ -111,12 +111,15 @@ The things done to us: Accidents and acts of nature (no control), war, crime and
 
 ## The Ultimate Schematic
 
-The ultimate schematic represents three stages of knowledge on two event horizons: The right path (paradise), where we have no problems within our control, and the wrong path (plato's cave), where we have hundreds of thousands of problems that are 100% within our control. As a species, we don't have the knowledge to know the difference. We have been tricked and fooled into believing that most of our problems are outside of our control.
+The ultimate schematic represents three stages of knowledge on two event horizons: The right path ([Paradise](#paradise)), where we have no problems within our control, and the wrong path (plato's cave), where we have hundreds of thousands of problems that are 100% within our control. As a species, we don't have the knowledge to know the difference. We have been tricked and fooled into believing that most of our problems are outside of our control.
 
-The purpose of this schematic is to help us understand where we are, where we came from, how we got here and how we get back where we need to be. We cannot go back the way we originally came, because we fell down 109, when we applied something we mastered to something we needed.
+The purpose of this schematic is to help us understand where we are, where we came from, how we got here and how we get back where we need to be, since we cannot go back the way we originally came.
 
 <p class="tus-highlighted">TIP: Click on piece numbers in order to jump to them.</p>
 <p class="tus-highlighted">TIP: Put two instances of this page next to eachother in order to always see the schematic.</p>
+<p class="tus-highlighted">TIP: Check out the <a href="#walkthrough">walkthrough</a> if you need some help.</p>
+<p class="tus-highlighted">TIP: Check out the <a href="#overview">overview</a> to find patterns.</p>
+<p class="tus-highlighted">Make use of the [To Previous] and [To Schematic] buttons to jump around while exploring.</p>
 
 <a class="tus-back-to-previous">[To Previous]</a>
 
@@ -183,7 +186,7 @@ The purpose of this schematic is to help us understand where we are, where we ca
       <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-center-left"><a href="#piece-113">113</a> & <a href="#piece-114">114</a></em></p>
       <p class="tus-align--right"><em class="tus-highlight--blue tus-floating-arrow--left-bottom-left-down"><a href="#piece-119">119</a> & <a href="#piece-120">120</a></em></p>
       <br>
-      <p><em class="tus-highlight--blue tus-floating-arrow--left-bottom-right-up"><a href="#piece-103">103</a></em></p>
+      <p><em class="tus-boxed tus-highlight--blue tus-floating-arrow--left-bottom-right-up"><a href="#piece-103">103</a></em></p>
     </td>
   </tr>
   <tr>
@@ -280,11 +283,53 @@ The purpose of this schematic is to help us understand where we are, where we ca
   </div>
 </div>
 
-There are six horizontal/vertical doorways, four diagonal gateways, and eight portals, making up 18 connections between the six boxes. It has 281 pieces total (might not be the latest count), 69 are in 18 portals, 212 are in six boxes.
+### Walkthrough
 
-212 pieces come from 128 main pieces, that come from 25 main pieces, that come from 5 main categories, where we have 14, 5, 3, 2, 1, respectively. First four groups are in the first stage of knowledge (24 and 24), then we add pieces 1 and 2. The second and third stage both on the right and wrong path have the first two groups and the last one, that's 19 and 1.
+<a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
+<a class="tus-back-to-previous">[To Previous]</a>
 
-101 and 103 are there to hide pieces in. 19 in 101, 19 in 103, to make things simpler. Either within our control or outside of our control. 24 + 24 + 20 + 20 + 20 + 20 = 128, 128 + 4 + 60 + 20 = 212 Pieces in 6 boxes. 4 added pieces to hide pieces and 80 duplications.
+A long time ago, we had the knowledge of how to live ([Piece 1](#piece-1)) and made good applications of it, to land in [Paradise](#paradise). But then, some day, for whatever reason (be it a food shortage, an act of nature or just curiosity - *it doesn't matter*), we didn't apply what we knew and made a mistake, sliding down [Piece 109](#piece-109) into the -B box. This mistake, namely [Piece 95](#piece-95), made us loose one of our senses, causing [Hypoheliosis](#hypoheliosis). We fell in love with it, went down a slippery slope and continued making mistakes ([Piece 96](#piece-96) - [Piece 99](#piece-99)), ending up in [Hell](#hell) with hundreds of thousands of problems that are 100% within our control.
+
+We start our path off in life in the -A box of false knowledge, having false knowledge ([Piece 2](#piece-2)) in the place of the knowledge that we need, due to our traditions ([Piece 4](#piece-4)). We are taking something we've mastered ([Piece 36](#piece-36) - [Piece 40](#piece-40)) and are applying it to our needs ([Piece 22](#piece-22) - [Piece 35](#piece-35)). By doing this, we go through the -A-B doorway and are making mistakes. The bad applications ([Piece 95](#piece-95) - [Piece 99](#piece-99)) of the things we've mastered have now altered our needs ([Piece 81](#piece-81) - [Piece 94](#piece-94)). Next, we pass the -B-C doorway, which is an automatic. We reap what we sow, we've altered our needs and thus altered us, and end up with hundreds of thousands of problems ([Piece 103](#piece-103)) which all are *100%* within our control.
+
+There are many people which are guilty of making one or more of these main mistakes but still behave like saints and look healthy. They did not pass the -B-C doorway, instead they slid up [Piece 112](#piece-112), into the +C box, ending up with [Piece 103](#piece-103) in limbo. They can now derive pleasure out of their mistakes, until - some day - their mistakes get a hold of them and they are sucked into the -C box through the +C-C doorway [Piece 108](#piece-108), now manifesting their latent dis-eases. One reason for this could be a good genetic makeup, another reason could be [Piece 106](#piece-106), which blocked the -B-C doorway for them, creating only the illusion of health. For the part of their lives where they may occupy the +C box, they complete two loops: Firstly, the negative causal loop [Piece 119](#piece-119) through the +C-B wormhole, encouraging them to keep on making their mistakes. Secondly, the negative knowledge loop [Piece 120](#piece-120), which perpetuates their false knowledge, making them believe whole heartedly that cooking is an art, when it really is a *sin*. Once a dis-ease manifested, the negative causal loop [Piece 115](#piece-115) of the -C box is entered, where dis-ease now perpetuates dis-ease, until the person eventually dies due to the sickness they've caused and thus had *100%* control over.
+
+Just as [Piece 106](#piece-106) blocks the -B-C doorway and is responsible for our symptoms to not manifest, [Piece 105](#piece-105) is blocking the -A-B doorway and not allowing most of our impure thoughts to manifest. Society locks morally deranged people into prisons and asylums, not letting them act out on their impure thoughts. This is an illusion too, because it sweeps the severity of our regression as a species under the rug.
+
+The way back to [Paradise](#paradise) is not going to be the same way we came down into [Hell](#hell). First, we need to pass the -A+A doorway, finding the knowledge we need, while overcoming the problems of knowledge [Piece 3](#piece-3) - [Piece 21](#piece-21). Once found, knowledge is still worthless while not being applied, so the next doorway on this path is the +A+B doorway, where we satisfy our needs [Piece 61](#piece-61) - [Piece 74](#piece-74) and make good applications of the things we've mastered [Piece 75](#piece-75) - [Piece 79](#piece-79), all while overcoming the obstacles [Piece 51](#piece-51) - [Piece 60](#piece-60). Now, there are two possible moves, let's start with the positive one: Everything works out, we pass the +B+C doorway and end up in [Paradise](#paradise). On the other hand, if our additional needs [Piece 73](#piece-73) and [Piece 74](#piece-74) are not satisfied, a cleansing reaction ([Piece 111](#piece-111)) can occur, sliding us down into the -C box of problems. If we are aware of these negative effects, we slide back into the +A box, up [Piece 116](#piece-116), learning from these consequences, gaining experience of the consequences, ([Piece 45](#piece-45)) and now either support our body or slow the detoxification process down a bit. On the other hand, if we're unaware of these negative effects, we assume that this information has to be false and run back to our old habits, now perpetuating false knowledge ([Piece 118](#piece-118)) and making mistakes again ([Piece 117](#piece-117)).
+
+If we made it into [Paradise](#paradise), we now got a brand new reference, because we have the experience of the consequences. We made the full trip from [Piece 1](#piece-1) to [Piece 45](#piece-45) by the positive knowledge loop ([Piece 114](#piece-114)), which is what the ultimate solution is all about. Also, the positive causal loop ([Piece 113](#piece-113)) now works in our favor, further perpetuating our wellness. We act right because we feel right and have the knowledge to not make mistakes again.
+
+For further piece explanations, please also read the [Overview](#overview).
+
+### Overview
+
+<a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
+<a class="tus-back-to-previous">[To Previous]</a>
+
+There are **four** horizontal (+A+B and +B+C on the right path, -A-B and -B-C on the wrong path) and **two** vertical (-A+A on our way into [Paradise](#paradise), +C-C on our way into [Hell](#hell)) doorways, **four** diagonal gateways ([Piece 109](#piece-109), [Piece 110](#piece-110), [Piece 111](#piece-111), [Piece 112](#piece-112)), and **eight** portals ([Piece 113](#piece-113), [Piece 114](#piece-114), [Piece 115](#piece-115), [Piece 116](#piece-116), [Piece 117](#piece-117), [Piece 118](#piece-118), [Piece 119](#piece-119), [Piece 120](#piece-120)), making up 4 + 2 + 4 + 8 = 18 connections between the six boxes.
+
+[Piece 3](#piece-3) - [Piece 21](#piece-21) are **19** reasons for why we don't know, which are also obstacles in the -A+A doorway, keeping us from finding the knowledge we need. These are the **12** sources of false knowledge ([Piece 3](#piece-3) - [Piece 14](#piece-14)) and **seven** willingness factors. The willingness factors strike three times, once in the -A+A doorway (obstacles of finding the knowledge) as [Piece 15](#piece-15) - [Piece 21](#piece-21), once in the +A+B doorway (obstacles of applying the knowledge) as [Piece 51](#piece-51) - [Piece 57](#piece-57), and once when turned around and used in our favor (good habits instead of bad habits, for example).
+
+[Piece 22](#piece-22) - [Piece 35](#piece-35) make up our two groups of needs (**14 pieces**), where [Piece 22](#piece-22) - [Piece 33](#piece-33) are our **twelve** primary needs and [Piece 34](#piece-34) & [Piece 35](#piece-35) are our **two** additional temporary needs, that change over time and inbetween individuals. If we satisfy our needs, we get [Piece 61](#piece-61) - [Piece 74](#piece-74), ending up with [Piece 101](#piece-101). Otherwise, we get [Piece 81](#piece-81) - [Piece 94](#piece-94), ending up with [Piece 103](#piece-103).
+
+[Piece 36](#piece-36) - [Piece 40](#piece-40) are the five things we've mastered. [Piece 95](#piece-95) - [Piece 99](#piece-99) are their bad applications, while [Piece 75](#piece-75) - [Piece 79](#piece-79) are their good applications.
+
+[Piece 80](#piece-80) are good things that happen to us outside of our control, yielding [Piece 102](#piece-102), while [Piece 100](#piece-100) are bad things that happen to us outside of our control, or with limited control, yielding [Piece 104](#piece-104).
+
+There are **19 pieces** (**twelve** satisfied essential needs + **two** satisfied additional temporary needs + **five** things we've mastered and made good applications of) hidden in [Piece 101](#piece-101) (to make things simple). The same approach has been taken analogously for [Piece 103](#piece-103) on the bad path.
+
+[Piece 41](#piece-41) - [Piece 43](#piece-43) are **three** ways to correct **five** main mistakes, where only one ([Piece 41](#piece-41)) enough people are willing to do in order to get us to the tipping point.
+
+[Piece 44](#piece-44) is the knowledge of the consequences, [Piece 45](#piece-45) is the experience of the consequences, together called "the two forms of consequences". When a person manages to complete the connection between [Piece 1](#piece-1) and [Piece 45](#piece-45), that represents the ultimate solution. They then have found the knowledge and applied it to a point, where they proved to themselves that it is true, thus having gained a new entry of reference.
+
+[Piece 3](#piece-3) is the number one cause of false believes and is responsible for [Piece 105](#piece-105) and [Piece 106](#piece-106). The status quo wants to remain the status quo and is going to go out of it's way to make sure that an ample supply of patients are available at every point in time, to support their greed.
+
+There are **six** ways that subsequent needs from being on the wrong path are also problems of knowledge: [Piece 7.1](#piece-7dot1) to [Piece 7.6](#piece-7dot6). There are **eight** ways we use the wrong approach: [Piece 8.1](#piece-8dot1) to [Piece 8.8](#piece-8dot8). There are **seven** ways to have apathy: [Piece 18.1](#piece-18dot1) to [Piece 18.7](#piece-18dot7).
+
+There are **ten** ways that we have subsequent needs from being on the wrong path: [Piece 34.1](#piece-34dot1) to [Piece 34.10](#piece-34dot10). **Four** of these are also problems of knowledge: [Piece 7.1](#piece-7dot1) to [Piece 7.4](#piece-7dot4).
+
+For further piece explanations, please also read the [Walkthrough](#walkthrough).
 
 ## Definitions And Backgrounds
 
@@ -293,7 +338,14 @@ There are six horizontal/vertical doorways, four diagonal gateways, and eight po
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
-Paradise is simply the absence of problems which are 100% within our control. Having the right knowledge, making good applications and thus ending up having unlimited potential. It is *not* anything special in the sense of just snapping your fingers and having wishes just manifest out of thin air. We still need to work on our dreams and goals in life.
+Paradise is simply the absence of problems which are 100% within our control, and thus the opposite of [Hell](#hell). Having the right knowledge, making good applications and thus ending up having unlimited potential. It is *not* anything special in the sense of just snapping your fingers and having wishes just manifest out of thin air. We still need to work on our dreams and goals in life.
+
+### Hell
+
+<a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
+<a class="tus-back-to-previous">[To Previous]</a>
+
+Hell is simply the presence of problems which are 100% within our control, and thus the opposite of [Paradise](#paradise). Having the wrong knowledge, making mistakes and thus ending up with hundreds of thousands of problems which are self inflicted. It is *not* anything special in the sense of being tortured and punished by some imaginary devil or being burnt alive (although acidocis comes close to that).
 
 ### Plato's Cave
 
@@ -332,7 +384,7 @@ There are three waves of heroes, where the first wave consists of the trim tabs 
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
-Currently, our ship is steered towards an iceberg, constantly accelerating into hell. On a ship that big (analogous to the world's population), even the rudder used to steer the ship has too much inertia to control it directly. The trim tabs are the rudders on the rudder, which slowly but steadily redirect the main rudder, and thus the over all direction of the ship.
+Currently, our ship is steered towards an iceberg, constantly accelerating into [Hell](#hell). On a ship that big (analogous to the world's population), even the rudder used to steer the ship has too much inertia to control it directly. The trim tabs are the rudders on the rudder, which slowly but steadily redirect the main rudder, and thus the over all direction of the ship.
 
 ### Law Of Cause And Effect
 
@@ -424,7 +476,7 @@ Not having the knowledge we need, the knowledge of how to live. This number is s
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
-We have false knowledge in the place of the right knowledge we need. We cannot learn anything if we think we already know. Most of us don't know that we have an inaccurate believe system. We're making mistakes that are causing most of the problems we're facing, which are 100% within our control. These things are hard to accept, because they go against what we are, how we identify, what we've been told, our traditions, and many more things (two forms of ignorance).
+We have false knowledge in the place of the right knowledge we need. We cannot learn anything if we think we already know. Most of us don't know that we have an inaccurate believe system. We're making mistakes that are causing most of the problems we're facing, which are 100% within our control. These things are hard to accept, because they go against what we are, how we identify, what we've been told, our traditions, and many more things.
 
 ### Piece 3 {: #piece-3 }
 
@@ -887,6 +939,9 @@ Clothing (man is naturally a nude animal)
 
 ### Piece 34.10 {: #piece-34dot10 }
 
+<a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
+<a class="tus-back-to-previous">[To Previous]</a>
+
 Shelter
 
 ### Piece 35 {: #piece-35 }
@@ -1087,7 +1142,7 @@ Guilts
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
-Needs (7 willingness factors in the +A+B doorway, [Piece 51](#piece-51)-[Piece 60](#piece-60))
+Needs
 
 ### Piece 58 {: #piece-58 }
 
@@ -1353,7 +1408,7 @@ Subsequent causes that are still producing negative effects despite the fact tha
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
-The first bad application of [Piece 36](#piece-36) was applying it to one of our needs: our food. It alters the food, which in return alters us. This caused Hypoheliosis A and thus a weak connection to everything around us as well as hyper colonic tension: two huge contributing factors to the dark side of our behavior.
+The first bad application of [Piece 36](#piece-36) was applying it to one of our needs: our food. It alters the food, which in return alters us. This caused [Hypoheliosis A](#hypoheliosis) and thus a weak connection to everything around us as well as hyper colonic tension: two huge contributing factors to the dark side of our behavior.
 
 ### Piece 96 {: #piece-96 }
 
@@ -1451,14 +1506,14 @@ The +C-C doorway: We manifest latent diseases, by going from the pleasure ([Piec
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
-The +A-B doorway (the fall of mankind): happens when we don't apply what we know because we're not willing or able to.
+The +A-B gateway (the fall of mankind): happens when we don't apply what we know because we're not willing or able to.
 
 ### Piece 110 {: #piece-110 }
 
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
-The -A+B doorway: Acts of nature, forced fasting due to droughts, etc. These are agents for [Piece 3](#piece-3) in [Piece 105](#piece-105).
+The -A+B gateway: Acts of nature, forced fasting due to droughts, etc. These are agents for [Piece 3](#piece-3) in [Piece 105](#piece-105).
 
 ### Piece 111 {: #piece-111 }
 
@@ -1472,7 +1527,7 @@ The +B-C gateway: Cleansing reactions, see [Piece 108](#piece-108). These are ag
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
--B+C Doorway, We build up a tolerance to our mistakes and can now derive pleasure out of them instead of getting pain. We now get a [Piece 103](#piece-103) "in limbo", +C, instead of down in -C. These are latent diseases, they haven't manifested into pain yet. These are agents for [Piece 3](#piece-3) in [Piece 106](#piece-106): dual effect of pleasure.
+-B+C gateway: We build up a tolerance to our mistakes and can now derive pleasure out of them instead of getting pain. We now get a [Piece 103](#piece-103) "in limbo", +C, instead of down in -C. These are latent diseases, they haven't manifested into pain yet. These are agents for [Piece 3](#piece-3) in [Piece 106](#piece-106): dual effect of pleasure.
 
 ### Piece 113 {: #piece-113 }
 
@@ -1507,7 +1562,7 @@ The +B-C gateway: Cleansing reactions, see [Piece 108](#piece-108). These are ag
 <a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
 <a class="tus-back-to-previous">[To Previous]</a>
 
--C-B worm hole: Negative causal loop, negative ripple effect, catch 22 effect, 21 obstacles
+-C-B worm hole: Negative causal loop, negative ripple effect, catch 22 effect, 21 obstacles. Negative effects become negative causes.
 
 ### Piece 118 {: #piece-118 }
 
@@ -1562,7 +1617,7 @@ The condition of all four of our current status factors.
 
 ### Story 8
 
-About the 21 main problems of knowledge.
+About the 21 main problems of knowledge, [Piece 1](#piece-1) to [Piece 21](#piece-21).
 
 ### Story 9
 

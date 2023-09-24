@@ -253,6 +253,12 @@ table.tus-table {
   }
 }
 
+.tus-boxed {
+  outline: .15rem solid $black;
+  outline-offset: .2rem;
+  border-radius: .2rem;
+}
+
 .tus-dotted-circle {
   position: relative;
   z-index: 1;
