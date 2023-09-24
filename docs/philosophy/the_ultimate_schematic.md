@@ -464,6 +464,18 @@ There are about a dozen anatomical characteristics that determine where all anim
 
 Another way to damage our bodies is by eating a diet which contains nutrients that would only be in our diet in it's precursor form, as it's a level two nutrient. If that's going on for long enough, our bodies can atrophy and not make it anymore. People of norwegian ancestory have been eating so much fish that they got so much DHA that they no longer make it on their own and are now dependent.
 
+### Status Factors
+
+<a class="tus-back-to-tus" href="#tus-table-top">[To Schematic]</a>
+<a class="tus-back-to-previous">[To Previous]</a>
+
+Everything we do and have done as well as what is and has been done to us affects us. Those effects accumulate and are reflected in all four of our current status factors, which are as follows:
+
+1. Genetics: The quality of sperm and egg of father and mother
+2. Constitution: What our mother did while we were in her womb and on her tit (if we were that lucky)
+3. Environment: The environment in which we grew up as well as the environment we are currently residing in
+4. Lifestyle Choices: What we think, what we do, what we get. This is the most important factor, but still not a magic bullet.
+
 ## Pieces
 
 ### Piece 1 {: #piece-1 }
@@ -1615,7 +1627,7 @@ Step 3: Once we've added these mistakes onto our list of mistakes to correct, th
 
 ### Story 7
 
-The condition of all four of our current status factors.
+The condition of all four of our current [Status Factors](#status-factors).
 
 ### Story 8
 
