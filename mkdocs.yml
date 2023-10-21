@@ -16,6 +16,7 @@ nav:
   - Philosophy:
     - Chained To A Madman: philosophy/chained_to_a_madman.md
     - The Ultimate Schematic: philosophy/the_ultimate_schematic.md
+    - The Agonizing Reach For Greatness: philosophy/the_agonizing_reach_for_greatness.md
 
 theme:
   name: terminal

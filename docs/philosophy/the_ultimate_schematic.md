@@ -113,7 +113,7 @@ The things done to us: Accidents and acts of nature (no control), war, crime and
 
 ## The Ultimate Schematic
 
-The ultimate schematic represents three stages of knowledge on two event horizons: The right path ([Paradise](#paradise)), where we have no problems within our control, and the wrong path (plato's cave), where we have hundreds of thousands of problems that are 100% within our control. As a species, we don't have the knowledge to know the difference. We have been tricked and fooled into believing that most of our problems are outside of our control.
+The ultimate schematic represents three stages of knowledge on two event horizons: The right path ([Paradise](#paradise)), where we have no problems within our control, and the wrong path ([Plato's Cave](#platos-cave)), where we have hundreds of thousands of problems that are 100% within our control. As a species, we don't have the knowledge to know the difference. We have been tricked and fooled into believing that most of our problems are outside of our control.
 
 The purpose of this schematic is to help us understand where we are, where we came from, how we got here and how we get back where we need to be, since we cannot go back the way we originally came.
 
