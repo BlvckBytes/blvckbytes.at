@@ -134,3 +134,11 @@ $C = r_1 * \alpha + r_2 * \beta$<br>
 $C = r_1 * \alpha + r_2 * (\frac{\pi}{2} - \alpha)$
 
 $C = r_1 * arctan(\frac{r_2}{r_1}) + r_2 * (\frac{\pi}{2} - arctan(\frac{r_2}{r_1}))$<br>
+
+## Single Intersection Point
+
+In order to end up with a single intersection point, the distance of the circles' center points needs to be exactly equal to the sum of their radii:
+
+$\mathrm{I}$: $d = r_1 + r_2$
+
+The tangent of a point on a circle's circumference is just a line orthogonal to it's radius-line, connecting said point to it's origin. If two circles touch because of $\mathrm{I}$, then they both share a single point, and with that, a single tangent line, which is why their radii are parallel. Since the radii connect, they are also colinear.
