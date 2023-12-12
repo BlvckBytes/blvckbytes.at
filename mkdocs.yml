@@ -14,6 +14,8 @@ nav:
     - Archimedes' Pi Approximation: math/archimedes_pi_approximation.md
     - Roman Numerals: math/roman_numerals.md
     - Orthogonal Circles: math/orthogonal_circles.md
+  - Puzzles:
+    - Three Circles In A Square: puzzles/three_circles_in_a_square.md
   - Philosophy:
     - Chained To A Madman: philosophy/chained_to_a_madman.md
     - The Ultimate Schematic: philosophy/the_ultimate_schematic.md
