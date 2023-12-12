@@ -1,10 +1,10 @@
-# Euklids Theorem Of Sides
+# Euclids Theorem Of Sides
 
 ## Introduction
 
 Let there be a right-angled triangle $\triangle{ABC}$, with it's angles being the greek equivalent letter of it's three points ($\alpha, \beta, \gamma$) and it's sides being named the lower equivalent latin letter of it's opposite point. A straight line is projected down from point $C$ onto side $c$, being orthogonal to it. The intersection is called $C'$, which splits side $c$ into two parts, the LHS called $p$ and the RHS called $q$. $\gamma$ is split into the LHS called $\gamma_1$ and the RHS called $\gamma_2$ by said line.
 
-<img src="/img/euklids_theorem_of_sides__1.jpg" class="third-width-image"/>
+<img src="/img/euclids_theorem_of_sides__1.jpg" class="third-width-image"/>
 
 Making use of basic visual deductions as well as pythagoras' theorem, there are a multitude of relations that can be derived:
 
@@ -46,7 +46,7 @@ $\gamma_2 = \alpha \land \gamma_1 = \beta \Rightarrow \triangle{AC'C} \sim \tria
 
 This statement says that because $\gamma_2 = \alpha$ and $\gamma_1 = \beta$, the LHS triangle and the RHS triangle are similar, from which follows that the side lengths $h_c$ and $q$ are in the same relation as $p$ and $h_c$. From these equal ratio follows the same fact as previously proven through substitution of equations.
 
-<img src="/img/euklids_theorem_of_sides__2.jpg" class="third-width-image"/>
+<img src="/img/euclids_theorem_of_sides__2.jpg" class="third-width-image"/>
 
 ## Sides
 
