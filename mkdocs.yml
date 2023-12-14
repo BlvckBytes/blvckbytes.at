@@ -14,6 +14,9 @@ nav:
     - Archimedes' Pi Approximation: math/archimedes_pi_approximation.md
     - Roman Numerals: math/roman_numerals.md
     - Orthogonal Circles: math/orthogonal_circles.md
+    - Triangles: math/triangles.md
+    - Angles: math/angles.md
+    - Thales' Half Circle Theorem: math/thales_half_circle_theorem.md
   - Puzzles:
     - Three Circles In A Square: puzzles/three_circles_in_a_square.md
     - Circle Sectors Intersect In A Square: puzzles/circle_sectors_intersect_in_a_square.md
