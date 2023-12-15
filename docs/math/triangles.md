@@ -2,13 +2,105 @@
 
 This page tries to summarize knowledge that directly applies to triangles.
 
+## Right Triangle
+
+A triangle is considered to be right-angled if one of it's angles is exactly of measure $\pi$. Then, the [Pythagorean Theorem](./pythagorean_theorem.md) applies to it's side-lengths.
+
+### Construction
+
+Any right triangle may easily be constructed by making use of [Thales' Half Circle Theorem](./thales_half_circle_theorem.md).
+
+### Circumference
+
+The circumference of a right-angled triangle is simply
+
+$C_\triangle = a + b + c$
+
+### Area
+
+When mirroring the triangle about it's hypothenuse $c$, it extends itself into a rectangle of height $b$ and width $a$, which will have the following surface-area:
+
+<img src="/img/triangles__13.jpg" class="third-width-image"/>
+
+$A_\rectangle = a * b$
+
+So the surface area of one triangle is $\frac{A_\rectangle}{2}$, which yields the final equation:
+
+$A_\triangle = \frac{a*b}{2}$
+
 ## Equilateral Triangle
 
 A triangle is considered to be equilateral if all three of its sides are of equal length.
 
+### Construction
+
+To construct an equilateral triangle with side-length $a$, start by drawing a line-segment of length $a$, starting in point $A$ and ending in point $B$. Then, set the compass to the distance of $a$, draw a partial circle above the line segement's center with origin $A$ and repeat the same procedure for $B$. Then, connect two more line-segments from $A$ and $B$ to the intersection-point of those circle-segments, called $C$.
+
+<img src="/img/triangles__12.jpg" class="third-width-image"/>
+
+### Circumference
+
+The circumference of an equilateral triangle is simply
+
+$C_\triangle = 3 * a$
+
+### Area
+
+The triangle can be split into two congruent [Right Triangle](#right-triangle)s, who's sum of surface areas is the equilateral triangle's surface area.
+
+<img src="/img/triangles__14.jpg" class="third-width-image"/>
+
+$\mathrm{I}$: $A_\triangle = 2 * \frac{\frac{a}{2} * h}{2} = \frac{a}{2} * h$
+
+$h$ can be expressed in terms of $a$ by the [Pythagorean Theorem](./pythagorean_theorem.md):
+
+$a^2 = h^2 + (\frac{a}{2})^2$<br>
+$a^2 = h^2 + \frac{a^2}{4}$<br>
+$h^2 = a^2 - \frac{a^2}{4}$<br>
+$h^2 = \frac{3}{4} * a^2$<br>
+$h = \sqrt{\frac{3}{4} * a^2}$<br>
+$\mathrm{II}$: $h = \frac{\sqrt{3}}{2} * a$<br>
+
+Substituting $\mathrm{II}$ into $\mathrm{I}$:
+
+$A_\triangle = \frac{a}{2} * \frac{\sqrt{3}}{2} * a$<br>
+$A_\triangle = \frac{\sqrt{3}}{4} * a^2$
+
 ## Isosceles Triangle
 
 A triangle is considered to be isosceles if two of it's sides are of equal length.
+
+### Construction
+
+The construction can be accomplished analogously to the [Equilateral Triangle](#equilateral-triangle) by just varying the base's side-length.
+
+<img src="/img/triangles__15.jpg" class="third-width-image"/>
+
+### Circumference
+
+The circumference of an isosceles triangle is simply
+
+$C_\triangle = a + 2 * b$
+
+### Area
+
+The triangle can be split into two congruent [Right Triangle](#right-triangle)s, who's sum of surface areas is the equilateral triangle's surface area.
+
+<img src="/img/triangles__16.jpg" class="third-width-image"/>
+
+$\mathrm{I}$: $A_\triangle = 2 * \frac{\frac{a}{2} * h}{2} = \frac{a}{2} * h$
+
+$h$ can be expressed in terms of $a$ and $b$ by the [Pythagorean Theorem](./pythagorean_theorem.md):
+
+$b^2 = h^2 + (\frac{a}{2})^2$<br>
+$b^2 = h^2 + \frac{a^2}{4}$<br>
+$h^2 = b^2 - \frac{a^2}{4}$<br>
+$\mathrm{II}$: $h = \sqrt{b^2 - \frac{a^2}{4}}$
+
+Substituting $\mathrm{II}$ into $\mathrm{I}$:
+
+$A_\triangle = \frac{a}{2} * \sqrt{b^2 - \frac{a^2}{4}}$<br>
+$A_\triangle = \frac{a}{2} * \sqrt{b^2 - \frac{a^2}{4}}$<br>
 
 ## Sum Of Angles
 
