@@ -17,6 +17,7 @@ nav:
     - Triangles: math/triangles.md
     - Angles: math/angles.md
     - Thales' Half Circle Theorem: math/thales_half_circle_theorem.md
+    - Triangle-Line Intersection Theorem: math/triangle_line_intersection_theorem.md
   - Puzzles:
     - Three Circles In A Square: puzzles/three_circles_in_a_square.md
     - Circle Sectors Intersect In A Square: puzzles/circle_sectors_intersect_in_a_square.md

@@ -7,7 +7,17 @@ window.MathJax = {
     macros: {
       // Sorry, but I really just want to get on with life...
       rectangle: '{\\sqsubset \\! \\sqsupset}'
+    },
+    packages: {
+      '[+]': [
+        'mathtools'
+      ]
     }
+  },
+  loader: {
+    load: [
+      '[tex]/mathtools'
+    ]
   },
   options: {
     ignoreHtmlClass: ".*|",
