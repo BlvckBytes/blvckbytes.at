@@ -194,6 +194,50 @@ Let there be two triangles, $\triangle{ABC}$ with angles $\alpha$, $\beta$ and $
 
 If they are similar, it's noted as $\triangle{ABC} \sim \triangle{A'B'C}$, while the negated case is written as $\triangle{ABC} \nsim \triangle{A'B'C'}$
 
+If two triangles are similar, all three of their corresponding angles are congruent, and the following theorem applies:
+
+In equiangular triangles, the sides about equal angles are proportional to their corresponding sides in the other triangle.
+
+Let $\triangle{ABC}$ and $\triangle{DCE}$ be equiangular triangles, having the angles $\beta = \angle{ABC} = \beta' = \angle{DCE}$, $\alpha = \angle{BAC} = \alpha' = \angle{CDE}$ and $\gamma = \angle{ACB} = \gamma' = \angle{DEC}$. Let $\overline{BC}$ be placed in a straight line with $\overline{CD}$:
+
+<img src="/img/triangles__17.jpg" class="third-width-image"/>
+
+Since $\beta$ and $\gamma$ are less than two [Right Angle](./angles.md#right-angle)s, and $\beta = \beta'$ and $\gamma = \gamma'$, $\beta'$ and $\gamma'$ are less than two [Right Angle](./angles.md#right-angle)s as well. Therefore, $\overline{BA}$ and $\overline{ED}$, when produced, will meet at $F$:
+
+<img src="/img/triangles__18.jpg" class="third-width-image"/>
+
+Now, since $\beta = \beta' \Rightarrow \overline{BF} \parallel \overline{CD}$, and since $\gamma = \gamma' \Rightarrow \overline{CA} \parallel \overline{FE}$. Therefore, $FACD$ is a parallelogram. Therefore, $\overline{AF} = \overline{CD}$ and $\overline{CA} = \overline{DF}$.
+
+Stated simply, $\overline{AF}$ is an extension of $\overline{BA}$, making up $\overline{BF}$ and $\overline{DF}$ is an extension of $\overline{ED}$, making up $\overline{EF}$.
+
+At this point, the scene depicts $\triangle{FBE}$, which is intersected parallel to it's side $\overline{EF}$ by $\overline{CA}$, as generally described by the [Triangle-Line Intersection Theorem](./triangle_line_intersection_theorem.md).
+
+It thus follows, that:
+
+$\frac{\overline{BA}}{\overline{AF}} = \frac{\overline{BC}}{\overline{CE}}$
+
+But since
+
+$\overline{AF} = \overline{CD}$
+
+the proportionality can be expressed only in terms of the sides of the original triangles:
+
+$\mathrm{I}$: $\frac{\overline{BA}}{\overline{CD}} = \frac{\overline{BC}}{\overline{CE}}$
+
+$\triangle{FBE}$ is intersected by $\overline{CD}$ parallel to it's side $\overline{BF}$, which is why it again follows, that:
+
+$\frac{\overline{BC}}{\overline{CE}} = \frac{\overline{DF}}{\overline{ED}}$
+
+But since
+
+$\overline{DF} = \overline{CA}$
+
+the proportionality can be expressed only in terms of the sides of the original triangles:
+
+$\mathrm{II}$: $\frac{\overline{BC}}{\overline{CE}} = \frac{\overline{CA}}{\overline{ED}}$
+
+$\xRightarrow{\mathrm{I},\mathrm{II}} \frac{\overline{BA}}{\overline{CD}} = \frac{\overline{BC}}{\overline{CE}} = \frac{\overline{CA}}{\overline{ED}}$
+
 The following cases may mark similarity:
 
 ### AAA

@@ -24,18 +24,10 @@ Since $\triangle{AED}$ and $\triangle{BED}$ share the segment $\overline{DE}$, a
 
 $\mathrm{IV}$: $\triangle{AED} \cong \triangle{BED}$
 
-Equals have the same ratio to the same, therefore $\triangle{AED}$ is to $\triangle{DEC}$ as $\triangle{BED}$ is to $\triangle{DEC}$. But as $\triangle{AED}$ is to $\triangle{DEC}$, so is $\overline{AD}$ to $\overline{DC}$. Also, as $\triangle{BED}$ is to $\triangle{DEC}$, so is $\overline{BE}$ to $\overline{EC}$
+Equals have the same ratio to the same, therefore $\triangle{AED}$ is to $\triangle{DEC}$ as $\triangle{BED}$ is to $\triangle{DEC}$. But as $\triangle{AED}$ is to $\triangle{DEC}$, so is $\overline{AD}$ to $\overline{DC}$, for being under the same height $\overline{DE}$, they are to one another as their bases ([Triangles Base Relations](./triangles_parallelograms_base_relations.md)). Similarly, as $\triangle{BED}$ is to $\triangle{DEC}$, so is $\overline{BE}$ to $\overline{EC}$.
 
 $\mathrm{V}$: $\xRightarrow{\mathrm{IV}} \frac{\overline{AD}}{\overline{DC}} = \frac{\overline{BE}}{\overline{EC}}$
 
 Analogously, since $\triangle{ABD}$ and $\triangle{ABE}$ share the segment $\overline{AB}$, as well as because of $\mathrm{II}$ and $\mathrm{III}$:
 
 $\mathrm{VI}$: $\triangle{ABD} \cong \triangle{ABE}$
-
-Equals have the same ratio to the same, therefore $\triangle{ABD}$ is to $\triangle{DEC}$ as $\triangle{ABE}$ is to $\triangle{DEC}$. But as $\triangle{ABD}$ is to $\triangle{DEC}$, so is $\overline{AD}$ to $\overline{DC}$. Also, as $\triangle{ABE}$ is to $\triangle{DEC}$, so is $\overline{AB}$ to $\overline{DE}$.
-
-$\mathrm{VII}$: $\xRightarrow{\mathrm{VI}} \frac{\overline{AD}}{\overline{DC}} = \frac{\overline{AB}}{\overline{DE}}$
-
-So that, finally, through $\mathrm{V}$ and $\mathrm{VII}$, follows:
-
-$\frac{\overline{AD}}{\overline{DC}} = \frac{\overline{BE}}{\overline{EC}} = \frac{\overline{AB}}{\overline{DE}}$
