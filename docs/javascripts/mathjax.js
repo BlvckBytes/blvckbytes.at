@@ -14,6 +14,7 @@ window.MathJax = {
       ]
     }
   },
+  chtml: { displayAlign: 'left' },
   loader: {
     load: [
       '[tex]/mathtools'

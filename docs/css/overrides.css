@@ -30,3 +30,8 @@ h3 {
   display: block;
   width: 50%;
 }
+
+table tbody td:first-child {
+  color: inherit !important;
+  font-weight: inherit !important;
+}
