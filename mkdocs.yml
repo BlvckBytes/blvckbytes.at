@@ -26,6 +26,8 @@ nav:
     - Chained To A Madman: philosophy/chained_to_a_madman.md
     - The Ultimate Schematic: philosophy/the_ultimate_schematic.md
     - The Agonizing Reach For Greatness: philosophy/the_agonizing_reach_for_greatness.md
+  - Miscellaneous:
+    - Minified URL-Safe UUIDs: misc/minified_url_safe_uuids.md
 
 theme:
   name: terminal
