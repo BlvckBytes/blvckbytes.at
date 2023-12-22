@@ -2,6 +2,55 @@
 
 This page tries to summarize knowledge that directly applies to triangles.
 
+## Generic Triangle
+
+### Circumference
+
+The circumference of a generic triangle is simply
+
+$C_\triangle = a + b + c$
+
+### Area
+
+Let there be a triangle $\triangle{ABC}$ with base $b$ and height $h = \overline{FC}$. Parallely shift $\overline{AB}$ up into $C$ and connect $\overline{AE}$ and $\overline{BD}$ (which are both of the same length as $h$), to embox said triangle into a rectangle of side-lengths $b$ and $h$.
+
+<img src="/img/triangles__19.jpg" class="third-width-image"/>
+
+The area of the rectangle will be
+
+$\mathrm{I}$: $A_{\rectangle} = b * h$
+
+The height $\overline{FC}$ splits the rectangle $\rectangle{ABDE}$ into $\rectangle{AFCE}$ and $\rectangle{FBDC}$.
+
+$\mathrm{II}$: $A_{\rectangle} = A_{\rectangle{AFCE}} + A_{\rectangle{FBDC}}$
+
+The side $\overline{AC}$ of the triangle is also the diagonal of $\rectangle{AFCE}$ and thus bisects it's area. The same reasoning can be carried out for the right-hand-side analogously.
+
+The total area of the triangle will be
+
+$A_{\triangle} = \frac{1}{2} * A_{\rectangle{AFCE}} + \frac{1}{2} * A_{\rectangle{FBDC}}$<br>
+$A_{\triangle} = \frac{1}{2} * (A_{\rectangle{AFCE}} + A_{\rectangle{FBDC}})$
+
+Substituting in $\mathrm{II}$ yields:
+
+$A_{\triangle} = \frac{1}{2} * A_{\rectangle}$
+
+In combination with $\mathrm{I}$, the above results in the final equation:
+
+$\mathrm{III}$: $A_{\triangle} = \frac{1}{2} * b * h$
+
+If only an angle $\alpha$ and it's touching sides are known ($b$ and $c$ in this example), there's also a simple way to obtain the triangle's area.
+
+<img src="/img/triangles__20.jpg" class="third-width-image"/>
+
+By making use of the [Trigonometric Functions](./trigonometric_functions.md), $h_c$ is defined as
+
+$h_c = b * sin(\alpha)$
+
+With the base being $c$ and the height being $h_c$, $\mathrm{III}$ can now be applied.
+
+$A_{\triangle} = \frac{1}{2} * c * b * sin(\alpha)$
+
 ## Right Triangle
 
 A triangle is considered to be right-angled if one of it's angles is exactly of measure $\pi$. Then, the [Pythagorean Theorem](./pythagorean_theorem.md) applies to it's side-lengths.
