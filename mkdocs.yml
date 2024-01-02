@@ -30,6 +30,7 @@ nav:
     - The Agonizing Reach For Greatness: philosophy/the_agonizing_reach_for_greatness.md
   - Engineering:
     - Minified URL-Safe UUIDs: engineering/minified_url_safe_uuids.md
+    - Customizable Tool Wall: engineering/customizable_tool_wall.md
 
 theme:
   name: terminal
