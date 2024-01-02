@@ -31,6 +31,7 @@ nav:
   - Engineering:
     - Minified URL-Safe UUIDs: engineering/minified_url_safe_uuids.md
     - Customizable Tool Wall: engineering/customizable_tool_wall.md
+    - SLA PCB Exposure: engineering/sla_pcb_exposure.md
 
 theme:
   name: terminal
