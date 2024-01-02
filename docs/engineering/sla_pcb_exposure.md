@@ -61,6 +61,34 @@ If I ever need to 3D-print something, the whole thing comes off with just the tw
 
 <img src="/img/sla_pcb_exposure__12.jpg" class="half-width-image"/>
 
+### Calibration
+
+I started by putting a post-it on the LCD and drew a line closely to where the first pixels of the display are located at.
+
+<img src="/img/sla_pcb_exposure__17.jpg" class="half-width-image"/>
+
+Then, I ensured that the rails were parallel to the housing, as that's parallel to the display, and noted the distance to repeat it equally on the other side.
+
+<img src="/img/sla_pcb_exposure__16.jpg" class="half-width-image"/>
+
+Using the rail as a ruler, I drew another line.
+
+<img src="/img/sla_pcb_exposure__18.jpg" class="half-width-image"/>
+
+The lines were parallel, and their distance came down to $4.5\mathrm{mm}$.
+
+<img src="/img/sla_pcb_exposure__14.jpg" class="half-width-image"/>
+
+After calibrating the left rail analogously, I set the mounting screws at a calculated distance, so that the horizontal stops will end up at the same distance from the first pixels of the display.
+
+<img src="/img/sla_pcb_exposure__15.jpg" class="half-width-image"/>
+
+In the end, all measurements lined up well enough for what I'm trying to do.
+
+<img src="/img/sla_pcb_exposure__13.jpg" class="half-width-image"/>
+
+With these stops mounted, the final usable space of the display comes to be roughly `210x114mm`. Since standardized blank boards are around `160x100mm`, I can still expose full PCBs, if I ever need to.
+
 ## Projecting A Layout
 
 The mainboards of these printers, along with their firmware, have been designed by `ChiTu Systems!`, which went above and beyond to make sure that their product is as locked down as possible. There is no straight-forward way to project a bitmap onto the built-in LCD, as the printer seems to only accept `.ctb` files, which are the result of slicing a 3D-Model with the `Chitubox` software.
