@@ -51,6 +51,38 @@ With the base being $c$ and the height being $h_c$, $\mathrm{III}$ can now be ap
 
 $A_{\triangle} = \frac{1}{2} * c * b * sin(\alpha)$
 
+### Side Length Inequality
+
+In any triangle, the sum of any two sides will exceed the remaining third side. Let there be a triangle $\triangle{ABC}$, whose side $\overline{BA}$ has been extended into point $D$ such that
+
+$\mathrm{I}$: $\overline{AD} = \overline{AC}$
+
+and $\triangle{ACD}$ ends up being [isosceles](#isosceles-triangle).
+
+<img src="/img/triangles__21.jpg" class="third-width-image"/>
+
+Since $\angle{DCB} = \angle{ACB} + \angle{DCA}$ and $\angle{ACB} > 0$ for all triangles of non-zero area, it follows that $\angle{DCB} > \angle{ACB}$ and $\angle{DCB} > \angle{DCA}$. But $\angle{DCA} = \angle{ADC}$ ($\mathrm{I}$), and therefore
+
+$\angle{DCB} > \angle{ADC}$
+
+which both lie within $\triangle{BCD}$. The greater angle is subtended by the greater side, so
+
+$\overline{BD} > \overline{BC}$
+
+but $\overline{BD} = \overline{BA} + \overline{AD}$, so
+
+$\overline{BA} + \overline{AD} > \overline{BC} \xRightarrow{\mathrm{I}} \overline{BA} + \overline{AC} > \overline{BC}$
+
+Analogously, the inequalities for the remaining two permutations can be proven as well. So, for any triangle $\triangle{ABC}$ with side-lengths $a$, $b$ and $c$, as in the following scene,
+
+<img src="/img/triangles__22.jpg" class="third-width-image"/>
+
+these relations hold:
+
+$a + b > c \Leftrightarrow b + a > c$<br>
+$a + c > b \Leftrightarrow c + a > b$<br>
+$b + c > a \Leftrightarrow c + b > a$<br>
+
 ## Right Triangle
 
 A triangle is considered to be right-angled if one of it's angles is exactly of measure $\pi$. Then, the [Pythagorean Theorem](./pythagorean_theorem.md) applies to it's side-lengths.
