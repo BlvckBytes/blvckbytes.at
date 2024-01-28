@@ -26,6 +26,7 @@ nav:
     - Shifted Radian Measurement: math/shifted_radian_measurement.md
     - Rules Of Divisibility: math/rules_of_divisibility.md
     - Loan Interests: math/loan_interests.md
+    - Shortest Path Between Two Points: math/shortest_path_between_two_points.md
   - Puzzles:
     - Three Circles In A Square: puzzles/three_circles_in_a_square.md
     - Circle Sectors Intersect In A Square: puzzles/circle_sectors_intersect_in_a_square.md
