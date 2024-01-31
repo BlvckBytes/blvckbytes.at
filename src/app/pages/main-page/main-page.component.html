@@ -1,0 +1,21 @@
+<div class="navigation">
+  <app-navigation
+    [navigationData]="navigationData"
+    (navigationChanged)="onNavigationEntryClick($event)"
+  ></app-navigation>
+</div>
+
+<div class="content">
+  @if (currentSource(); as currentSource) {
+    <markdown
+      #markdown
+      lineNumbers
+      katex
+      [katexOptions]="katexOptions"
+      (load)="onMarkdownLoad()"
+      [src]="currentSource"
+      [disableSanitizer]="true"
+    >
+    </markdown>
+  }
+</div>

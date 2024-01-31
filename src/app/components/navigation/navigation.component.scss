@@ -1,0 +1,43 @@
+:host {
+  user-select: none;
+  overflow-y: scroll;
+}
+
+.navigation-link {
+  color: var(--primary-color);
+
+  &:hover:not(&--active) {
+    color: black;
+    cursor: pointer;
+    background-color: var(--primary-color);
+  }
+
+  &--categorized {
+    margin-left: 1rem;
+  }
+
+  &--active {
+    padding-left: 1rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: .8rem;
+      height: .8rem;
+      border-radius: .1rem;
+      display: block;
+      background-color: var(--primary-color);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.navigation-headline {
+  margin-top: .5rem;
+  cursor: default;
+  font-style: italic;
+  color: var(--secondary-color);
+}

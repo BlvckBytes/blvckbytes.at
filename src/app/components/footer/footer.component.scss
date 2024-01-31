@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #111;
+  padding: 2rem;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

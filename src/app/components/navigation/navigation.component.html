@@ -1,0 +1,21 @@
+@if (navigationData != null) {
+  @for (topLevelEntry of navigationData.topLevelEntries; track topLevelEntry.src) {
+    <p
+      [class.navigation-link--active]="currentlyActiveEntry == topLevelEntry"
+      class="navigation-link"
+      (click)="navigateTo(null, topLevelEntry)"
+    >{{ topLevelEntry.title }}</p>
+  }
+
+  @for (category of navigationData.categories; track category.title) {
+    <p class="navigation-headline">{{ category.title }}</p>
+
+    @for (categoryEntry of category.entries; track categoryEntry.src) {
+      <p
+        [class.navigation-link--active]="currentlyActiveEntry == categoryEntry"
+        class="navigation-link navigation-link--categorized"
+        (click)="navigateTo(category, categoryEntry)"
+      >{{ categoryEntry.title }}</p>
+    }
+  }
+}
