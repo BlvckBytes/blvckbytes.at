@@ -63,6 +63,112 @@ Since $6 = 2 * 3$ and $2$ and $3$ are prime numbers, for any number to be divisi
 
 **A number is divisible by six if its last digit is divisible by two and the sum of its digits is divisible by three.**
 
+## Divisibility By 7
+
+(This derivation is very much analogous to [Divisibility By 11](#divisibility-by-11)).
+
+$7 \mid 999\,999$, since $999\,999 = 3^3 * 7 * 11 * 13 * 37$. Let $m, n \in \mathbb{N_0}$, then
+
+$7 \mid 10^n * 999\,999$<br>
+$\mathrm{I}$: $7 \mid 10^n * (10^6 - 1)$
+
+Further,
+
+$\mathrm{II}$: $7 \mid \displaystyle \sum_{k=0}^{n} 10^{6*k} * (10^6 - 1)$
+
+because each summand is divisible by 7 (see $\mathrm{I}$), so the sum is also divisible by 7. The expression above depicts numbers with only nines as their digits, who's lengths are multiples of six (6, 12, 18, ...).
+
+Due to $\mathrm{I}$, the following is also true:
+
+$\mathrm{III}$: $7 \mid 10^m * \displaystyle \sum_{k=0}^{n} 10^{6*k} * (10^6 - 1)$
+
+The expression above depicts numbers, starting with a count of nines that's a multiple of six and an arbitrary amount of trailing zeroes.
+
+$1000 \bmod 7 = 6$ since $142 * 7 = 994$ and $1000 - 994 = 6$ and $6 < 7$. To find all powers of ten, which cause a remainder of $6$ when dividing with $7$, the following congruence equation can be considered.
+
+Let $x \in \mathbb{N_0}$, then
+
+$1000 \equiv 1000 + 7*x \pmod{7}$
+
+The above is true, as only multiples of $7$ are added to the number. Let's look at two examples.
+
+$1\,000\,000\,000 \bmod 7 = 6$ since
+
+$1000 + 7*x = 1\,000\,000\,000$<br>
+$7*x = 999\,999\,000$<br>
+$x = 142\,857\,000$<br>
+
+$1\,000\,000\,000\,000\,000 \bmod 7 = 6$ since
+
+$1000 + 7*x = 1\,000\,000\,000\,000\,000$<br>
+$7*x = 999\,999\,999\,999\,000$<br>
+$x = 142\,857\,142\,857\,000$<br>
+
+Due to $1000 = 10^3$, $1\,000\,000\,000 = 10^9$ and $1\,000\,000\,000\,000\,000 = 10^{15}$, it looks like the following should be true
+
+$\mathrm{IV}$: $1000 + 7*x = 10^{(2*n + 1) * 3}$<br>
+$10^3 + 7*x = 10^{6*n + 3}$<br>
+$10^3 + 7*x = 10^3 * 10^{6*n}$<br>
+$7*x = 10^3 * 10^{6*n} - 10^3$<br>
+$7*x = 10^3 * (10^{6*n} - 1)$
+
+If it can now be shown, that
+
+$\mathrm{V}$: $10^{6*n} - 1$
+
+is evenly divisible by $7$, then $\forall\,x\,\exists!\,n$, so that $\mathrm{IV}$ is satisfied.
+
+I now claim, that
+
+$\displaystyle \sum_{k=0}^{n} 10^{6*k} * (10^6 - 1) = 10^{6*n} - 1$
+
+which can be shown as follows
+
+$(10^0 * (10^6 - 1)) + (10^6 * (10^6 - 1)) + (10^{12} * (10^6 - 1)) + \dotsm + (10^{6*n} * (10^6 - 1))$<br>
+$(10^0 * 10^6 - 10^0) + (10^6 * 10^6 - 10^6) + (10^{12} * 10^6 - 10^{12}) + \dotsm + (10^{6*n} * 10^6 - 10^{6*n})$<br>
+$(10^{0 + 6} - 10^0) + (10^{6 + 6} - 10^6) + (10^{12 + 6} - 10^{12}) + \dotsm + (10^{6*n + 6} - 10^{6*n})$<br>
+$(10^6 - 10^0) + (10^{12} - 10^6) + (10^{18} - 10^{12}) + \dotsm + (10^{6*n + 6} - 10^{6*n})$
+
+It now becomes apparent that the first term within each pair of parentheses is cancelled out by the second term of its successor, as follows:
+
+$(\cancel{10^6} - 10^0) + (10^{12} - \cancel{10^6}) + (10^{18} - 10^{12}) + \dotsm + (10^{6*n + 6} - 10^{6*n})$<br>
+$(-10^0) + (\cancel{10^{12}}) + (10^{18} - \cancel{10^{12}}) + \dotsm + (10^{6*n + 6} - 10^{6*n})$<br>
+$(-10^0) + (\cancel{10^{18}}) + \dotsm + (10^{6*n + 6} - \cancel{10^{6*n}})$<br>
+$(-10^0) + 10^{6*n + 6}$<br>
+$10^{6*n + 6} - 1$<br>
+$10^{6*(n + 1)} - 1$
+
+So, $\mathrm{V}$ is now proven to be divisible by $7$, just not for the base-case of $n = 1$, which is trivial:
+
+$10^{6*1} - 1$<br>
+$1\,000\,000 - 1 = 999\,999 = 7 * 142\,857$
+
+Due to the established validity of $\mathrm{IV}$
+
+$1000 \equiv 10^{(2*n + 1) * 3} \pmod{7}$
+
+which states, that all powers of ten that are an odd multiple of three, starting from $10^3$ have the same remainder when divided by $7$ as $1000$ has, which is $6$. From this follows, that
+
+$\mathrm{VI}$: $7 \mid 10^{(2*n + 1) * 3} + 1$ for $n \in \mathbb N_0$
+
+From $\mathrm{V}$ follows
+
+$\mathrm{VII}$: $7 \mid 10^{6*n} - 1$
+
+Let the groups of three digits each, $a_n$, represent any number. Let's assume that $n$ is even, as the opposite is analogous and not necessary to be shown.
+
+$a_0 * 10^0 + a_1 * 10^3 + a_2 * 10^6 + a_3 * 10^9 \dotsm + a_n * 10^{3*n}$<br>
+$a_0 * 10^0 + a_1 * ([10^3 + 1] - 1) + a_2 * ([10^6 - 1] + 1) + a_3 * ([10^9 + 1] - 1) \dotsm + a_n * ([10^{3*n} - 1] + 1)$<br>
+$a_0 * 1 + a_1 * [10^3 + 1] - a_1 + a_2 * [10^6 - 1] + a_2 + a_3 * [10^9 + 1] - a_3 \dotsm + a_n * [10^{3*n} - 1] + a_n$<br>
+
+The divisibility of all square bracketed terms is ensured by $\mathrm{VI}$ and $\mathrm{VII}$. Let's separate the above into terms of ensured divisibility and terms that are left to be checked.
+
+$a_0 - a_1 + a_2 - a_3 + \dotsm + a_n + [a_1 * (10^3 + 1) + a_2 * (10^6 - 1) + a_3 * (10^9 + 1) \dotsm + a_n * (10^{3*n} - 1)]$<br>
+
+The term within square brackets is now a sum of terms that are each divisible by $7$, and it itself is thus divisible by $7$. What's left is the sum of the original number's groups of three digits each, with alternating signs, where the last group starts out with a positive sign.
+
+**A number is divisible by seven if the sum of its pairs of digits with size three and with alternating signs, starting positive at the last group, is divisible by 7.**
+
 ## Divisibility By 8
 
 Since $8 = 2 * 2 * 2 = 2^3$, a number is only divisible by eight if it has $2^3$ as a prime factor. Due to $10 = 2 * 5$, for each power of ten, an additional prime factor of $2$ enters the scene. So, all numbers $\ge 10^3$ are divisible by eight, as they're multiples of a thousand. So the only part of the number that may fail divisibility by eight is its ones-, tens- and hundreds place.
