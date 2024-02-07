@@ -6,7 +6,7 @@ The base case of this statement is made up by two lines, passing through a third
 
 <img src="/assets/images/shortest_path_between_two_points__2.jpg" class="third-width-image"/>
 
-As described in [Triangle Side Length Inequality](./triangles.md#side-length-inequality), $\overline{P_1A} + \overline{P_2A} > \overline{P_1P_2}$. Any other path, no matter how complicated, can be described by an arbitrarily high number of straight lines. For the following visualization, a circular arc is being used, to keep the scene as clean as possible.
+As described in [Triangle Side Length Inequality](/math/triangles#generic-triangle_side-length-inequality), $\overline{P_1A} + \overline{P_2A} > \overline{P_1P_2}$. Any other path, no matter how complicated, can be described by an arbitrarily high number of straight lines. For the following visualization, a circular arc is being used, to keep the scene as clean as possible.
 
 <img src="/assets/images/shortest_path_between_two_points__3.jpg" class="third-width-image"/>
 
