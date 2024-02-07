@@ -2,12 +2,26 @@
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: space-between;
   background: #111;
   padding: 2rem;
 }
 
-.copyright {
+.copyright, .source-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+@media screen and (max-width: 600px) {
+  :host {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .copyright {
+    align-items: center;
+  }
 }
