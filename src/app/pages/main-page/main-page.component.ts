@@ -40,7 +40,6 @@ export class MainPageComponent {
       {
         title: 'Math',
         entries: [
-          { "title": "Personal Goal", src: "/assets/markdown/math/personal_goal.md" },
           { "title": "DIN A Paper Sizes", src: "/assets/markdown/math/din_a_paper_sizes.md" },
           { "title": "Binomial Expansion", src: "/assets/markdown/math/binomial_expansion.md" },
           { "title": "Pythagorean Theorem", src: "/assets/markdown/math/pythagorean_theorem.md" },
