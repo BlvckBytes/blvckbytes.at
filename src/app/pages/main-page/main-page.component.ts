@@ -81,6 +81,7 @@ export class MainPageComponent {
           { "title": "No Man Is An Island", src: "/assets/markdown/philosophy/no_man_is_an_island.md" },
           { "title": "The Nature Of Thinking", src: "/assets/markdown/philosophy/the_nature_of_thinking.md" },
           { "title": "The Lens Of Approximation", src: "/assets/markdown/philosophy/the_lens_of_approximation.md" },
+          { "title": "The State Of Mathematics", src: "/assets/markdown/philosophy/the_state_of_mathematics.md" },
         ],
       },
       {
