@@ -3,7 +3,7 @@ import { NavigationData } from './navigation-data.interface';
 import { NavigationEntry } from './navigation-entry.interface';
 import { CommonModule } from '@angular/common';
 import { NavigationCategory } from './navigation-category.interface';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { SubSink } from 'subsink';
 import { filter } from 'rxjs/operators';
 import { sanitizeForUrl } from '../../utilities';
@@ -11,7 +11,7 @@ import { sanitizeForUrl } from '../../utilities';
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
 })
@@ -92,11 +92,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
     this.subs.unsubscribe();
   }
 
-  navigateTo(category: NavigationCategory | null, entry: NavigationEntry) {
-    this.router.navigateByUrl(this.makePath(category, entry));
-  }
-
-  private makePath(category: NavigationCategory | null, entry: NavigationEntry): string {
+  makePath(category: NavigationCategory | null, entry: NavigationEntry): string {
     if (category == null)
       return `/${sanitizeForUrl(entry.title)}`;
     return `/${sanitizeForUrl(category.title)}/${sanitizeForUrl(entry.title)}`;

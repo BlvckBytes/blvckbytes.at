@@ -1,23 +1,21 @@
-<!-- TODO: These should really be anchor-tags, to allow for "open in new tab" and the like... -->
-
 @if (navigationData != null) {
   @for (topLevelEntry of navigationData.topLevelEntries; track topLevelEntry.src) {
-    <p
+    <a
+      [routerLink]="makePath(null, topLevelEntry)"
       [class.navigation-link--active]="currentlyActiveEntry == topLevelEntry"
       class="navigation-link"
-      (click)="navigateTo(null, topLevelEntry)"
-    >{{ topLevelEntry.title }}</p>
+    >{{ topLevelEntry.title }}</a>
   }
 
   @for (category of navigationData.categories; track category.title) {
     <p class="navigation-headline">{{ category.title }}</p>
 
     @for (categoryEntry of category.entries; track categoryEntry.src) {
-      <p
+      <a
+        [routerLink]="makePath(category, categoryEntry)"
         [class.navigation-link--active]="currentlyActiveEntry == categoryEntry"
         class="navigation-link navigation-link--categorized"
-        (click)="navigateTo(category, categoryEntry)"
-      >{{ categoryEntry.title }}</p>
+      >{{ categoryEntry.title }}</a>
     }
   }
 }

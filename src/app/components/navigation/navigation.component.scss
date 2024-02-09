@@ -4,7 +4,20 @@
 }
 
 .navigation-link {
+  display: block;
   color: var(--primary-color);
+
+  &:hover {
+    background-color: transparent;
+    cursor: default;
+    color: var(--primary-color);
+
+    &:not(&--active) {
+      color: black;
+      cursor: pointer;
+      background-color: var(--primary-color);
+    }
+  }
 
   &:hover:not(&--active) {
     color: black;
