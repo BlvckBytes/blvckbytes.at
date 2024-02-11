@@ -1,9 +1,11 @@
-import { Component, ViewChild, signal } from '@angular/core';
+import { Component, OnDestroy, ViewChild, signal } from '@angular/core';
 import { KatexOptions, MarkdownComponent } from 'ngx-markdown';
 import { NavigationData } from '../../components/navigation/navigation-data.interface';
 import { NavigationEntry } from '../../components/navigation/navigation-entry.interface';
 import { NavigationComponent } from '../../components/navigation/navigation.component';
 import { sanitizeForUrl } from '../../utilities';
+import { HttpClient } from '@angular/common/http';
+import { SubSink } from 'subsink';
 
 type HeadingWithIndex = [HTMLHeadingElement, number];
 type HeadingsBySize = { [key: number]: HeadingWithIndex[] };
@@ -16,7 +18,7 @@ type TOCNode = { self: HeadingWithIndex, members: TOCNode[] };
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })
-export class MainPageComponent {
+export class MainPageComponent implements OnDestroy {
 
   katexOptions: KatexOptions = {
     macros: {
@@ -30,74 +32,21 @@ export class MainPageComponent {
 
   private currentEntry: NavigationEntry | null = null;
   private temporaryScriptTags: HTMLScriptElement[] = []
+  private subs = new SubSink();
 
-  // TODO: This information should be requested from an endpoint on the server and not be
-  //       hard-coded within the application itself, even if it's only a serverside JSON file at first
+  navigationData = signal<NavigationData | null>(null)
 
-  navigationData: NavigationData = {
-    topLevelEntries: [
-      { title: 'Home', src: '/assets/markdown/home.md', doNotGenerateHeadline: true },
-      { title: 'About Me', src: '/assets/markdown/about_me.md' },
-    ],
-    categories: [
-      {
-        title: 'Math',
-        entries: [
-          { "title": "DIN A Paper Sizes", src: "/assets/markdown/math/din_a_paper_sizes.md" },
-          { "title": "Binomial Expansion", src: "/assets/markdown/math/binomial_expansion.md" },
-          { "title": "Pythagorean Theorem", src: "/assets/markdown/math/pythagorean_theorem.md" },
-          { "title": "Truncated Cone Volume", src: "/assets/markdown/math/truncated_cone_volume.md" },
-          { "title": "Euclids Theorem Of Sides", src: "/assets/markdown/math/euclids_theorem_of_sides.md" },
-          { "title": "Archimedes' Pi Approximation", src: "/assets/markdown/math/archimedes_pi_approximation.md" },
-          { "title": "Roman Numerals", src: "/assets/markdown/math/roman_numerals.md" },
-          { "title": "Orthogonal Circles", src: "/assets/markdown/math/orthogonal_circles.md" },
-          { "title": "Triangles", src: "/assets/markdown/math/triangles.md" },
-          { "title": "Angles", src: "/assets/markdown/math/angles.md" },
-          { "title": "Thales' Half Circle Theorem", src: "/assets/markdown/math/thales_half_circle_theorem.md" },
-          { "title": "Trigonometric Functions", src: "/assets/markdown/math/trigonometric_functions.md" },
-          { "title": "Triangle-Line Intersection Theorem", src: "/assets/markdown/math/triangle_line_intersection_theorem.md" },
-          { "title": "Triangles Parallelograms Base Relations", src: "/assets/markdown/math/triangles_parallelograms_base_relations.md" },
-          { "title": "Triangle Angle-Bisection Theorem", src: "/assets/markdown/math/triangle_angle_bisection_theorem.md" },
-          { "title": "Construction", src: "/assets/markdown/math/construction.md" },
-          { "title": "Circle Circle Intersection", src: "/assets/markdown/math/circle_circle_intersection.md" },
-          { "title": "Shifted Radian Measurement", src: "/assets/markdown/math/shifted_radian_measurement.md" },
-          { "title": "Rules Of Divisibility", src: "/assets/markdown/math/rules_of_divisibility.md" },
-          { "title": "Loan Interests", src: "/assets/markdown/math/loan_interests.md" },
-          { "title": "Shortest Path Between Two Points", src: "/assets/markdown/math/shortest_path_between_two_points.md" },
-        ],
-      },
-      {
-        title: 'Puzzles',
-        entries: [
-          { "title": "Three Circles In A Square", src: "/assets/markdown/puzzles/three_circles_in_a_square.md" },
-          { "title": "Circle Sectors Intersect In A Square", src: "/assets/markdown/puzzles/circle_sectors_intersect_in_a_square.md" },
-          { "title": "Circle In Rectangle With Tangent Lines", src: "/assets/markdown/puzzles/circle_in_rectangle_with_tangent_lines.md" },
-          { "title": "Isosceles Triangle Slices Percentage", src: "/assets/markdown/puzzles/isosceles_triangle_slices_percentage.md" },
-        ],
-      },
-      {
-        title: 'Philosophy',
-        entries: [
-          { "title": "Chained To A Madman", src: "/assets/markdown/philosophy/chained_to_a_madman.md" },
-          { "title": "The Ultimate Schematic", src: "/assets/markdown/philosophy/the_ultimate_schematic.md" },
-          { "title": "The Agonizing Reach For Greatness", src: "/assets/markdown/philosophy/the_agonizing_reach_for_greatness.md" },
-          { "title": "No Man Is An Island", src: "/assets/markdown/philosophy/no_man_is_an_island.md" },
-          { "title": "The Nature Of Thinking", src: "/assets/markdown/philosophy/the_nature_of_thinking.md" },
-          { "title": "The Lens Of Approximation", src: "/assets/markdown/philosophy/the_lens_of_approximation.md" },
-          { "title": "The State Of Mathematics", src: "/assets/markdown/philosophy/the_state_of_mathematics.md" },
-          { "title": "Connecting Minorities", src: "/assets/markdown/philosophy/connecting_minorities.md" },
-        ],
-      },
-      {
-        title: 'Engineering',
-        entries: [
-          { "title": "Minified URL-Safe UUIDs", src: "/assets/markdown/engineering/minified_url_safe_uuids.md" },
-          { "title": "Customizable Tool Wall", src: "/assets/markdown/engineering/customizable_tool_wall.md" },
-          { "title": "SLA PCB Exposure", src: "/assets/markdown/engineering/sla_pcb_exposure.md" },
-        ],
-      }
-    ]
-  };
+  constructor(
+    httpClient: HttpClient,
+  ) {
+    this.subs.sink = httpClient
+      .get<NavigationData>('/assets/navigation_data.json')
+      .subscribe(data => this.navigationData.set(data));
+  }
+
+  ngOnDestroy(): void {
+    this.subs.unsubscribe();
+  }
 
   onNavigationEntryClick(entry: NavigationEntry) {
     this.currentEntry = entry;
@@ -118,8 +67,13 @@ export class MainPageComponent {
     // Generating the table of contents (even without a placeholder element) causes
     // headlines to receive fully qualified IDs to jump to. As these are available at
     // this point and weren't when loading the page, scrolling has to be invoked manually.
-    const jumpedToElement = markdownElement.querySelector(window.location.hash)
-    jumpedToElement?.scrollIntoView();
+
+    const currentHash = window.location.hash;
+
+    if (currentHash != '') {
+      const jumpedToElement = markdownElement.querySelector(window.location.hash);
+      jumpedToElement?.scrollIntoView();
+    }
   }
 
   private generateTableOfContents(

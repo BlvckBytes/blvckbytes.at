@@ -65,6 +65,8 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
       this.navigationEntryByPath[path] = [category, entry];
     }
+
+    this.onRouterNavigation(window.location.pathname);
   }
 
   @Output() navigationChanged = new EventEmitter<NavigationEntry>();
@@ -81,11 +83,6 @@ export class NavigationComponent implements OnInit, OnDestroy {
       .subscribe(event => {
         this.onRouterNavigation(event.url);
       });
-
-    // Since the router event stream is only subscribed to after initializing the component
-    // (as the navigation data isn't present any earlier anyways), the initial path has to be
-    // "simulated", so that the page becomes selected
-    this.onRouterNavigation(window.location.pathname);
   }
 
   ngOnDestroy(): void {
