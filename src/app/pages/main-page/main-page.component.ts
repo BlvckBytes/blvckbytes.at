@@ -85,6 +85,7 @@ export class MainPageComponent {
           { "title": "The Nature Of Thinking", src: "/assets/markdown/philosophy/the_nature_of_thinking.md" },
           { "title": "The Lens Of Approximation", src: "/assets/markdown/philosophy/the_lens_of_approximation.md" },
           { "title": "The State Of Mathematics", src: "/assets/markdown/philosophy/the_state_of_mathematics.md" },
+          { "title": "Connecting Minorities", src: "/assets/markdown/philosophy/connecting_minorities.md" },
         ],
       },
       {
