@@ -31,6 +31,9 @@ export class MainPageComponent {
   private currentEntry: NavigationEntry | null = null;
   private temporaryScriptTags: HTMLScriptElement[] = []
 
+  // TODO: This information should be requested from an endpoint on the server and not be
+  //       hard-coded within the application itself, even if it's only a serverside JSON file at first
+
   navigationData: NavigationData = {
     topLevelEntries: [
       { title: 'Home', src: '/assets/markdown/home.md', doNotGenerateHeadline: true },

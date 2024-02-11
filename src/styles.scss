@@ -101,26 +101,13 @@ markdown {
   }
 
   pre {
-    background-color: var(--background-color);
-    word-break: break-all;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    padding: .6rem;
     border: 1px solid var(--secondary-color);
-    margin: 1rem 0;
-
-    &::after, &::before {
-      content: "";
-      display: inline;
-    }
+    margin: 1rem 0 !important;
   }
 
   code {
-    color: var(--font-color);
-    display: inline-block;
-    font-family: monospace;
-    font-size: 1em;
     background-color: var(--code-bg-color);
+    padding: .1rem;
   }
 
   p {
@@ -168,6 +155,11 @@ markdown {
     position: relative;
     display: block;
     padding-left: 1.3rem;
+
+    // Nested lists
+    ol, ul {
+      margin: 0;
+    }
   }
 
   img {
