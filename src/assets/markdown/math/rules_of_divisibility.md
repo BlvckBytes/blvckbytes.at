@@ -1,8 +1,10 @@
-Let there be two whole numbers $a$ and $b$, while $a$ is to be divided by $b$. The following rules then provide a way to quickly check whether $a$ can be divided by $b$ into even and whole parts.
-
 ## Table Of Contents {: #toc }
 
-## Preamble
+## Digit Rules
+
+Let there be two whole numbers $a$ and $b$, while $a$ is to be divided by $b$. The following rules then provide a way to quickly check whether $a$ can be divided by $b$ into even and whole parts.
+
+### Preamble
 
 In contrast to [Roman Numerals](./roman_numerals.md), a system of positional notation provides a simple way to add or subtract powers of its base. It has been globally agreed upon that the standard base for inter-human communication is $10$. We have assigned names to these places, as follows: Ones ($10^0$), Tens ($10^1$), Hundreds ($10^2$), Thousands ($10^3$), etc. Thus, the value of a number within a place-value system is the sum of its parts.
 
@@ -19,13 +21,13 @@ If a number $a$ is represented through the sum of other numbers $b_n$, and if ea
 $a = b_1 + b_2 + b_3 + \dotsm + b_n$<br>
 $a = m * (\frac{b_1}{m} + \frac{b_2}{m} + \frac{b_3}{m} + \dotsm + \frac{b_n}{m})$
 
-## Divisibility By 2
+### Divisibility By 2
 
 Since $2 \mid 10 \Rightarrow 2 \mid 10^n$ for $n \in \mathbb N_{> 0}$, so the only part of the number that may fail divisibility by two is its ones place, which ranges from zero to nine, of which only $0$, $2$, $4$, $6$ and $8$ are evenly divisible by $2$.
 
 **A number is divisible by two if its last digit is divisible by two.**
 
-## Divisibility By 3 And 9
+### Divisibility By 3 And 9
 
 Let $n \in \mathbb N_{> 0}$, then
 
@@ -45,25 +47,25 @@ The number within square brackets is now a multiple of nine, and is thereby guar
 
 **A number is divisible by three or nine if the sum of its digits is divisible by three or nine respectively.**
 
-## Divisibility By 4
+### Divisibility By 4
 
 Since $4 \nmid 10$, the next power of ten that *is* divisible is $2$ ($4 \mid 100$), thus $4 \mid 10^n$ for $n \in \mathbb N : n \ge 2$. So the only parts of the number that may fail divisibility by four are its ones- and tens places, effectively the number represented by its last two digits.
 
 **A number is divisible by four if the number represented by its last two digits is divisible by four.**
 
-## Divisibility By 5
+### Divisibility By 5
 
 Since $5 \mid 10 \Rightarrow 5 \mid 10^n$ for $n \in \mathbb N_{> 0}$, so the only part of the number that may fail divisibility by five is its ones place, which ranges from zero to nine, of which only $0$ and $5$ are evenly divisible by $5$.
 
 **A number is divisible by five if its last digit is either zero or five.**
 
-## Divisibility By 6
+### Divisibility By 6
 
 Since $6 = 2 * 3$ and $2$ and $3$ are prime numbers, for any number to be divisible by $6$, it has to be divisible by both $2$ and $3$.
 
 **A number is divisible by six if its last digit is divisible by two and the sum of its digits is divisible by three.**
 
-## Divisibility By 7
+### Divisibility By 7
 
 (This derivation is very much analogous to [Divisibility By 11](#divisibility-by-11)).
 
@@ -169,19 +171,19 @@ The term within square brackets is now a sum of terms that are each divisible by
 
 **A number is divisible by seven if the sum of its pairs of digits with size three and with alternating signs, starting positive at the last group, is divisible by 7.**
 
-## Divisibility By 8
+### Divisibility By 8
 
 Since $8 = 2 * 2 * 2 = 2^3$, a number is only divisible by eight if it has $2^3$ as a prime factor. Due to $10 = 2 * 5$, for each power of ten, an additional prime factor of $2$ enters the scene. So, all numbers $\ge 10^3$ are divisible by eight, as they're multiples of a thousand. So the only part of the number that may fail divisibility by eight is its ones-, tens- and hundreds place.
 
 **A number is divisible by eight if the number represented by its last three digits is divisible by eight.**
 
-## Divisibility By 10
+### Divisibility By 10
 
 Since $10 \mid 10 \Rightarrow 10 \mid 10^n$ for $n \in \mathbb N_{> 0}$, so the only part of the number that may fail divisibility by ten is its ones place, which ranges from zero to nine, of which only $0$ is evenly divisible by $10$.
 
 **A number is divisible by ten if its last digit is zero.**
 
-## Divisibility By 11
+### Divisibility By 11
 
 (This derivation is very much analogous to [Divisibility By 7](#divisibility-by-7)).
 
@@ -300,3 +302,80 @@ $a_0 - a_1 + a_2 - a_3 + \dotsm + a_n + [a_1 * 11 + a_2 * (10^2 - 1) + a_3 * (10
 The term within square brackets is now a sum of terms that are each divisible by $11$, and it itself is thus divisible by $11$. What's left is the sum of the original number's digits with alternating signs, where the last digit starts out with a positive sign.
 
 **A number is divisible by eleven if the sum of its digits with alternating signs, starting positive at the last digit, is divisible by 11.**
+
+## Expression Rules
+
+### Three Consecutive Cubes Sum
+
+The sum of three consecutive natural numbers, each raised to the third power, will always be divisible by three and nine.
+
+Let $x \in \mathbb{N}$, then
+
+$\mathrm{I}$: $s = x^3 + (x + 1)^3 + (x + 2)^3$
+
+so that
+
+$\mathrm{II}$: $9 \mid s \Rightarrow 3 \mid s$.
+
+$s = x^3 + (x + 1)^3 + (x + 2)^3$<br>
+$s = x^3 + x^3 + 3*x^2 + 3*x + 1 + x^3 + 3*x^2*2 + 3*x^2*2^2 + 2^3$<br>
+$s = x^3 + x^3 + 3*x^2 + 3*x + 1 + x^3 + 6*x^2 + 12*x + 8$<br>
+$s = 3 * x^3 + 9*x^2 + 15*x + 9$<br>
+$s = 9 + 9*x^2 + 3 * x^3 + 15*x$<br>
+$s = 9 * (1 + x^2) + 3 * x^3 + 15*x$
+
+$s$ is divisible by $9$ if and only if each summand is divisible by $9$. What remains to be analyzed is as follows:
+
+$\mathrm{III}$: $3*x^3 + 15*x$
+
+By checking a few cases manually, it becomes apparent that this term is also divisible by nine.
+
+$x = 1$: $3 * 1^3 + 15*1 = 3 + 15 = 18$, $9 \mid 18$<br>
+$x = 2$: $3 * 2^3 + 15*2 = 24 + 30 = 54$, $9 \mid 54$<br>
+$x = 3$: $3 * 3^3 + 15*3 = 81 + 45 = 126$, $9 \mid 126$
+
+Thus follows, that $\exists x \in \mathbb{N}: 9 \mid \mathrm{III}(x)$. I claim that if $\mathrm{III}$ holds for one $x$, then it will also hold for $x + 1$:
+
+$3 * (x + 1)^3 + 15*(x + 1)$<br>
+$3 * (x^3 + 3*x^2 + 3*x + 1) + 15*x + 15$<br>
+$3*x^3 + 3*3*x^2 + 3*3*x + 3 + 15*x + 15$<br>
+$3*x^3 + 9*x^2 + 9*x + 15*x + 18$<br>
+$[3*x^3 + 15*x] + 9*(x^2 + x + 2)$
+
+The square-bracketed term now represents the induction assumption, while the remaining three terms are divisible by nine since nine can be factored out.
+
+$(\mathrm{III}(x_0) \land (\mathrm{III}(x) \Rightarrow \mathrm{III}(x + 1))) \Rightarrow \forall x \in \mathbb{N}: \mathrm{III}(n)$
+
+Thus, $\mathrm{II}$ has been proven. There is another way to argue the divisibility of $s$ by nine, which is as follows:
+
+Since three consecutive numbers are raised to the third power, one of them will always be a multiple of three, which then contains 9 as a factor after having been cubed.
+
+$x = 1$: $(1^3, 2^3, \circled{3}^3)$<br>
+$x = 2$: $(2^3, \circled{3}^3, 4^3)$<br>
+$x = 3$: $(\circled{3}^3, 4^3, 5^3)$<br>
+$x = 4$: $(4^3, 5^3, \circled{6}^3)$<br>
+$x = 5$: $(5^3, \circled{6}^3, 7^3)$<br>
+$x = 6$: $(\circled{6}^3, 7^3, 8^3)$
+
+It becomes apparent, that while one of the three numbers, call it $a$, will always be divisible by three, and thus its cube by nine, two won't. There are three cases to consider. Let's go through the full reasoning on the first:
+
+$(a - 2)^3 + (a - 1)^3$<br>
+$(a^3 + 3*a^2*(-2) + 3*a*(-2)^2 + (-2)^3) + (a^3 + 3*a^2*(-1) + 3*a*(-1)^2 + (-1)^3)$<br>
+$(a^3 - 6*a^2 + 12*a - 8) + (a^3 - 3*a^2 + 3*a - 1)$<br>
+$2*a^3 - 9*a^2 + 15*a - 8 - 1$
+
+Since $a$ is a multiple of three, all terms which are raised to a power $\ge 2$ are thereby divisible by nine. $15 = 3 * 5$, so $9 \mid 15*a$. Stated differently, due to the binomial coefficents of $(1, 3, 3, 1)$, all terms of $a$ will always be divisible by nine, as the only occurence of $a^1$ is multiplied by three. What remains, is as follows:
+
+$(-8) + (-1) = -9$
+
+The remainder of the first term and that of the second complement each other in such a way that the total remainder will be divisible by nine again. While this remainder comes out as negative, it will just lessen or cancel out other terms of $a$ by a multiple of nine, and thereby keep the remainder unchanged, at zero.
+
+The last two cases can be argued analogously, in fast-forward mode:
+
+$(a - 1)^3 + (a + 1)^3$<br>
+$(-1) + (1) = 0$
+
+$(a + 1)^3 + (a + 2)^3$<br>
+$(1) + (8) = 9$
+
+Again, $\mathrm{II}$ has been proven.

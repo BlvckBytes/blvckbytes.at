@@ -22,7 +22,8 @@ export class MainPageComponent implements OnDestroy {
 
   katexOptions: KatexOptions = {
     macros: {
-      "\\rectangle": '{\\sqsubset \\! \\sqsupset}',
+      "\\rectangle": "{\\sqsubset \\! \\sqsupset}",
+      "\\circled": "{\\raisebox{.5pt}{\\textcircled{\\raisebox{-.9pt} {#1}}}}",
     }
   }
 
