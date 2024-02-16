@@ -27,7 +27,8 @@
         { "title": "Shifted Radian Measurement", "src": "/assets/markdown/math/shifted_radian_measurement.md" },
         { "title": "Rules Of Divisibility", "src": "/assets/markdown/math/rules_of_divisibility.md" },
         { "title": "Loan Interests", "src": "/assets/markdown/math/loan_interests.md" },
-        { "title": "Shortest Path Between Two Points", "src": "/assets/markdown/math/shortest_path_between_two_points.md" }
+        { "title": "Shortest Path Between Two Points", "src": "/assets/markdown/math/shortest_path_between_two_points.md" },
+        { "title": "Archimedes' Circle Area Proof", "src": "/assets/markdown/math/archimedes_circle_area_proof.md" }
       ]
     },
     {

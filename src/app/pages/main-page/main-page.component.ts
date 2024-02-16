@@ -1,4 +1,4 @@
-import { Component, OnDestroy, ViewChild, signal } from '@angular/core';
+import { Component, ComponentRef, OnDestroy, Renderer2, ViewChild, ViewContainerRef, signal } from '@angular/core';
 import { KatexOptions, MarkdownComponent } from 'ngx-markdown';
 import { NavigationData } from '../../components/navigation/navigation-data.interface';
 import { NavigationEntry } from '../../components/navigation/navigation-entry.interface';
@@ -6,6 +6,7 @@ import { NavigationComponent } from '../../components/navigation/navigation.comp
 import { sanitizeForUrl } from '../../utilities';
 import { HttpClient } from '@angular/common/http';
 import { SubSink } from 'subsink';
+import { CanvasWrapperComponent } from '../../components/canvas/canvas-wrapper/canvas-wrapper.component';
 
 type HeadingWithIndex = [HTMLHeadingElement, number];
 type HeadingsBySize = { [key: number]: HeadingWithIndex[] };
@@ -27,18 +28,20 @@ export class MainPageComponent implements OnDestroy {
     }
   }
 
-  @ViewChild('markdown') markdownComponent?: MarkdownComponent;
+  @ViewChild('markdown', { read: ViewContainerRef }) markdownRef?: ViewContainerRef;
 
   currentSource = signal<string | null>(null);
 
   private currentEntry: NavigationEntry | null = null;
   private temporaryScriptTags: HTMLScriptElement[] = []
+  private canvasWrappers: ComponentRef<CanvasWrapperComponent>[] = [];
   private subs = new SubSink();
 
   navigationData = signal<NavigationData | null>(null)
 
   constructor(
     httpClient: HttpClient,
+    private renderer: Renderer2,
   ) {
     this.subs.sink = httpClient
       .get<NavigationData>('/assets/navigation_data.json')
@@ -54,12 +57,19 @@ export class MainPageComponent implements OnDestroy {
     this.currentSource.set(entry.src);
   }
 
+  private destroyCanvasWrappers() {
+    for (const canvasWrapper of this.canvasWrappers)
+      canvasWrapper.destroy();
+    this.canvasWrappers = [];
+  }
+
   onMarkdownLoad() {
-    if (!this.markdownComponent)
+    if (!this.markdownRef)
       return;
 
-    const markdownElement = this.markdownComponent.element.nativeElement;
+    const markdownElement = this.markdownRef.element.nativeElement;
 
+    this.destroyCanvasWrappers();
     this.patchScriptTags(markdownElement);
     this.patchAnchorTags(markdownElement);
     this.generateMainHeadline(markdownElement);
@@ -75,6 +85,72 @@ export class MainPageComponent implements OnDestroy {
       const jumpedToElement = markdownElement.querySelector(window.location.hash);
       jumpedToElement?.scrollIntoView();
     }
+
+    this.attachToCanvases(markdownElement);
+  }
+
+  onMarkdownError(message: string | Error) {
+    console.error(`Could not load markdown from src "${this.currentSource()}":`);
+    console.error(message);
+  }
+
+  private attachToCanvases(
+    markdownElement: HTMLElement
+  ) {
+    if (!this.markdownRef)
+      return;
+
+    const canvasElements = markdownElement.querySelectorAll('canvas')
+
+    for (let i = 0; i < canvasElements.length; ++i) {
+      const canvasElement = canvasElements.item(i);
+      const canvasParent = canvasElement.parentElement;
+
+      if (canvasParent == null)
+        continue;
+
+      const scriptPath = canvasElement.getAttribute("script")?.trim()
+
+      // Leave other canvases alone, they might be used for something else
+      if (scriptPath == null || scriptPath == "")
+        continue;
+
+      const canvasWrapper = this.markdownRef.createComponent(CanvasWrapperComponent);
+
+      canvasWrapper.instance.scriptPath = scriptPath;
+      canvasWrapper.instance.canvasWidth = canvasElement.getAttribute("width");
+      canvasWrapper.instance.canvasClass = canvasElement.getAttribute("class");
+      this.tryGetNumericAttribute(canvasElement, "scaling-factor", v => canvasWrapper.instance.scalingFactor = v);
+      this.tryGetNumericAttribute(canvasElement, "sharpness", v => canvasWrapper.instance.sharpness = v);
+
+      let targetElement: HTMLElement;
+
+      // Markdown seems to encapsulate the canvas in a paragraph for whatever odd reason
+      if (canvasParent.tagName == "P")
+        targetElement = canvasParent;
+      else
+        targetElement = canvasElement;
+
+      const targetParent = targetElement.parentElement!
+
+      this.renderer.insertBefore(targetParent, canvasWrapper.location.nativeElement, targetElement);
+      this.renderer.removeChild(targetParent, targetElement);
+      this.canvasWrappers.push(canvasWrapper);
+    }
+  }
+
+  private tryGetNumericAttribute(element: Element, name: string, success: (value: number) => void) {
+    const attributeValue = element.getAttribute(name)
+
+    if (attributeValue === null)
+      return;
+
+    const numericAttributeValue = parseInt(attributeValue);
+
+    if (isNaN(numericAttributeValue))
+      return;
+
+    success(numericAttributeValue);
   }
 
   private generateTableOfContents(
@@ -268,8 +344,6 @@ export class MainPageComponent implements OnDestroy {
         newScriptTag.innerText = scriptTag.innerText;
 
       scriptTag.parentElement?.removeChild(scriptTag);
-      document.head.appendChild(newScriptTag);
-      this.temporaryScriptTags.push(newScriptTag);
     }
   }
 }

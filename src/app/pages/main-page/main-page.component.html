@@ -13,6 +13,7 @@
       katex
       [katexOptions]="katexOptions"
       (load)="onMarkdownLoad()"
+      (error)="onMarkdownError($event)"
       [src]="currentSource"
       [disableSanitizer]="true"
     >

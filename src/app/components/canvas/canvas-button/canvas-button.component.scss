@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  border: 1px solid var(--secondary-color);
+  width: 100%;
+  padding: .5rem;
+  border-radius: .3rem;
+  user-select: none;
+  cursor: default;
+}
+
+p {
+  margin: 0;
+}
+
+.button {
+  background-color: var(--secondary-color);
+  padding: .5rem 1rem;
+  border-radius: .3rem;
+  color: var(--background-color);
+
+  &--active {
+    background-color: var(--primary-color);
+  }
+}
