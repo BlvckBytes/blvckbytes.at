@@ -6,7 +6,7 @@ import { NavigationComponent } from '../../components/navigation/navigation.comp
 import { sanitizeForUrl } from '../../utilities';
 import { HttpClient } from '@angular/common/http';
 import { SubSink } from 'subsink';
-import { CanvasWrapperComponent } from '../../components/canvas/canvas-wrapper/canvas-wrapper.component';
+import { CanvasScriptLoader, CanvasWrapperComponent } from '../../components/canvas/canvas-wrapper/canvas-wrapper.component';
 
 type HeadingWithIndex = [HTMLHeadingElement, number];
 type HeadingsBySize = { [key: number]: HeadingWithIndex[] };
@@ -36,6 +36,7 @@ export class MainPageComponent implements OnDestroy {
   private temporaryScriptTags: HTMLScriptElement[] = []
   private canvasWrappers: ComponentRef<CanvasWrapperComponent>[] = [];
   private subs = new SubSink();
+  private queuedCanvasScriptLoaders: CanvasScriptLoader[] = [];
 
   navigationData = signal<NavigationData | null>(null)
 
@@ -120,6 +121,14 @@ export class MainPageComponent implements OnDestroy {
       canvasWrapper.instance.scriptPath = scriptPath;
       canvasWrapper.instance.canvasWidth = canvasElement.getAttribute("width");
       canvasWrapper.instance.canvasClass = canvasElement.getAttribute("class");
+
+      this.subs.sink = canvasWrapper.instance.loaderEmitter.subscribe(loader => {
+        this.queuedCanvasScriptLoaders.push(loader);
+
+        if (this.queuedCanvasScriptLoaders.length == 1)
+          this.executeCanvasScriptLoader(loader);
+      });
+
       this.tryGetNumericAttribute(canvasElement, "scaling-factor", v => canvasWrapper.instance.scalingFactor = v);
       this.tryGetNumericAttribute(canvasElement, "sharpness", v => canvasWrapper.instance.sharpness = v);
 
@@ -137,6 +146,17 @@ export class MainPageComponent implements OnDestroy {
       this.renderer.removeChild(targetParent, targetElement);
       this.canvasWrappers.push(canvasWrapper);
     }
+  }
+
+  private executeCanvasScriptLoader(loader: CanvasScriptLoader) {
+    loader()
+      .catch(error => console.error(error))
+      .finally(() => {
+        this.queuedCanvasScriptLoaders.splice(0, 1);
+
+        if (this.queuedCanvasScriptLoaders.length > 0)
+          this.executeCanvasScriptLoader(this.queuedCanvasScriptLoaders[0]);
+      });
   }
 
   private tryGetNumericAttribute(element: Element, name: string, success: (value: number) => void) {

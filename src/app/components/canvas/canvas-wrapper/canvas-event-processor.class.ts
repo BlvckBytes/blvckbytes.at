@@ -43,6 +43,7 @@ export class CanvasEventProcessor {
   unbind() {
     this.subs.unsubscribe();
     this.unbindObservers();
+    this.hammer.destroy();
   }
 
   private bindObservers() {

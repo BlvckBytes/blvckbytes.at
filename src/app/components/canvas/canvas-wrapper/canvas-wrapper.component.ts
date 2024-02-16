@@ -1,9 +1,11 @@
-import { AfterViewInit, Component, ComponentRef, ElementRef, HostBinding, Input, OnDestroy, Renderer2, Type, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Component, ComponentRef, ElementRef, EventEmitter, HostBinding, Input, OnDestroy, Output, Renderer2, Type, ViewChild, ViewContainerRef } from '@angular/core';
 import { ButtonHandle, Canvas, ControlRegistry, SliderHandle } from 'canvas-draw';
 import { CanvasSliderComponent } from '../canvas-slider/canvas-slider.component';
 import { CanvasButtonComponent } from '../canvas-button/canvas-button.component';
 import { HammerModule } from '@angular/platform-browser';
 import { CanvasEventProcessor } from './canvas-event-processor.class';
+
+export type CanvasScriptLoader = () => Promise<void>;
 
 @Component({
   selector: 'app-canvas-wrapper',
@@ -25,6 +27,8 @@ export class CanvasWrapperComponent implements OnDestroy, AfterViewInit, Control
   @HostBinding('class')
   @Input() canvasClass: string | null = null;
 
+  @Output() loaderEmitter = new EventEmitter<CanvasScriptLoader>();
+
   @ViewChild('canvas', { read: ElementRef }) canvasRef!: ElementRef<HTMLCanvasElement>;
   @ViewChild('controlsContainer', { read: ViewContainerRef }) controlsContainer!: ViewContainerRef;
 
@@ -44,20 +48,20 @@ export class CanvasWrapperComponent implements OnDestroy, AfterViewInit, Control
 
     const canvasElement = this.canvasRef.nativeElement;
 
-    window.LastLoadedDrawingFactory = null;
+    this.loaderEmitter.emit(async () => {
+      window.LastLoadedDrawingFactory = null;
 
-    this.loadJSFile(this.scriptPath)
-      .then(() => {
-        const drawingFactory = window.LastLoadedDrawingFactory;
+      await this.loadJSFile(this.scriptPath!!);
+      const drawingFactory = window.LastLoadedDrawingFactory;
 
-        if (drawingFactory != null) {
-          this.canvas = new Canvas(this, drawingFactory, canvasElement, this.scalingFactor, this.sharpness);
-          this.eventProcessor = new CanvasEventProcessor(this.canvas, canvasElement, this.renderer);
-          this.eventProcessor.bind();
-          this.canvas.start();
-        }
-      })
-      .catch(error => console.error(error));
+      if (drawingFactory == null)
+        throw `Script ${this.scriptPath} did not set the drawing factory`;
+
+      this.canvas = new Canvas(this, drawingFactory, canvasElement, this.scalingFactor, this.sharpness);
+      this.eventProcessor = new CanvasEventProcessor(this.canvas, canvasElement, this.renderer);
+      this.eventProcessor.bind();
+      this.canvas.start();
+    });
   }
 
   ngOnDestroy(): void {
