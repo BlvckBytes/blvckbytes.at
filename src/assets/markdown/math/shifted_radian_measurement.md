@@ -6,7 +6,7 @@ There are two degrees of freedom, one being the offset along one of the rays, $x
 
 If $r$ has been choosen too small, relative to $x_{off}$, the circle will not intersect with the ray.
 
-NOTE: At least for now, the requirement of $\theta \in \left[0;\frac{\pi}{2}\right[$ is assumed, due to the nature of $tan$, so that it *is* defined and $tan(\theta) \ge 0$. Also, $x_{off} \ge 0$.
+INFO: At least for now, the requirement of $\theta \in \left[0;\frac{\pi}{2}\right[$ is assumed, due to the nature of $tan$, so that it *is* defined and $tan(\theta) \ge 0$. Also, $x_{off} \ge 0$.
 
 All points along the circumference of the circle at $(x_{off}, 0)$ are of distance $r$ from the origin. Let $C$ be the function of the circle.
 

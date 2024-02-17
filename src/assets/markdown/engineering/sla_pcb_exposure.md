@@ -95,10 +95,10 @@ The mainboards of these printers, along with their firmware, have been designed 
 
 This means that I need to extrude my bitmap into a 3D STL to then slice it into layers, so that the printer accepts the data. What a time to be alive! If this whole idea pans out, I'm going to try to come up with a proper solution for this tedious process.
 
-// TODO: Go into the details of the process
+TODO: Go into the details of the process
 
 ## Exposure Time
 
-// TODO: Conduct experiments to approximate the right exposure duration
+TODO: Conduct experiments to approximate the right exposure duration
 
-// TODO: Showcase first results
+TODO: Showcase first results

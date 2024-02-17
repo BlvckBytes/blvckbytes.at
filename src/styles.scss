@@ -53,6 +53,9 @@ body, html {
   --font-color: #e8e9ed;
   --code-bg-color: #3f3f44;
   --background-color: #222225;
+  --highlight-todo-color: #FFCA3A;
+  --highlight-warning-color: #FF595E;
+  --highlight-info-color: #8AC926;
 
   --canvas-primary-color: rgba(239, 0, 255, .3);
   --canvas-secondary-color: rgba(0, 255, 234, .3);
@@ -306,6 +309,53 @@ markdown {
 
     &--expanded {
       display: block;
+    }
+  }
+
+  .highlighted-paragraph {
+    background-color: transparentize($color: #000, $amount: .75);
+    padding: .8rem .5rem .8rem 1.1rem;
+    border-radius: .1rem;
+    position: relative;
+
+    &::before {
+      border-radius: .1rem 0 0 .1rem;
+      content: '';
+      height: 100%;
+      width: .5rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &--info {
+      &::before {
+        background-color: var(--highlight-info-color);
+      }
+
+      .highlighted-paragraph__marker {
+        color: var(--highlight-info-color);
+      }
+    }
+
+    &--warning {
+      &::before {
+        background-color: var(--highlight-warning-color);
+      }
+
+      .highlighted-paragraph__marker {
+        color: var(--highlight-warning-color);
+      }
+    }
+
+    &--todo {
+      &::before {
+        background-color: var(--highlight-todo-color);
+      }
+
+      .highlighted-paragraph__marker {
+        color: var(--highlight-todo-color);
+      }
     }
   }
 }

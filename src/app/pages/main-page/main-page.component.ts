@@ -27,6 +27,14 @@ export class MainPageComponent implements OnDestroy {
   private static COLLAPSIBLE_CONTAINER_CLASS_EXPANDED = "collapsible-container--expanded";
   private static IMAGE_DEACTIVATED_SRC_ATTRIBUTE = "x-src";
   private static TOC_IGNORE_CLASS = "toc-ignore";
+  private static HIGHLIGHTED_PARAGRAPH_CLASS = "highlighted-paragraph";
+  private static HIGHLIGHTED_PARAGRAPH_MARKER_CLASS = `${MainPageComponent.HIGHLIGHTED_PARAGRAPH_CLASS}__marker`;
+
+  private static PARAGRAPH_HIGHLIGHT_MARKER_CLASSES: { [key: string]: string } = {
+    'TODO: ': `${MainPageComponent.HIGHLIGHTED_PARAGRAPH_CLASS}--todo`,
+    'WARNING: ': `${MainPageComponent.HIGHLIGHTED_PARAGRAPH_CLASS}--warning`,
+    'INFO: ': `${MainPageComponent.HIGHLIGHTED_PARAGRAPH_CLASS}--info`,
+  };
 
   katexOptions: KatexOptions = {
     macros: {
@@ -82,6 +90,7 @@ export class MainPageComponent implements OnDestroy {
     this.patchAnchorTags(markdownElement);
     this.generateMainHeadline(markdownElement);
     this.generateTableOfContentsAndCollapsibles(markdownElement);
+    this.addParagraphHighlighting(markdownElement);
 
     // Generating the table of contents (even without a placeholder element) causes
     // headlines to receive fully qualified IDs to jump to. As these are available at
@@ -507,6 +516,32 @@ export class MainPageComponent implements OnDestroy {
         newScriptTag.innerText = scriptTag.innerText;
 
       scriptTag.parentElement?.removeChild(scriptTag);
+    }
+  }
+
+  private addParagraphHighlighting(markdownElement: HTMLElement) {
+    const paragraphs = markdownElement.querySelectorAll("p");
+
+    for (let paragraphIndex = 0; paragraphIndex < paragraphs.length; ++paragraphIndex) {
+      const paragraph = paragraphs[paragraphIndex];
+      const paragraphContent = paragraph.innerHTML;
+
+      for (const highlightMarker in MainPageComponent.PARAGRAPH_HIGHLIGHT_MARKER_CLASSES) {
+        if (!paragraphContent.startsWith(highlightMarker))
+          continue;
+
+        const highlightClass = MainPageComponent.PARAGRAPH_HIGHLIGHT_MARKER_CLASSES[highlightMarker];
+
+        paragraph.classList.add(MainPageComponent.HIGHLIGHTED_PARAGRAPH_CLASS);
+        paragraph.classList.add(highlightClass);
+
+        paragraph.innerHTML = (
+          `<span class="${MainPageComponent.HIGHLIGHTED_PARAGRAPH_MARKER_CLASS}">${highlightMarker}</span>` +
+          paragraph.innerHTML.substring(highlightMarker.length)
+        );
+
+        break;
+      }
     }
   }
 }

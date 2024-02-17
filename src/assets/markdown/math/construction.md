@@ -1,6 +1,6 @@
 This page tries to summarize knowledge about how to geometrically construct using only a straight edge and a compass.
 
-NOTE: In general, it is not recommended to draw out the full circles, as they tend to clutter the scene beyond readability. For these examples, though, the circles are drawn fully by intention, in order to visualize what's really going on.
+INFO: In general, it is not recommended to draw out the full circles, as they tend to clutter the scene beyond readability. For these examples, though, the circles are drawn fully by intention, in order to visualize what's really going on.
 
 ## Table Of Contents {: #toc }
 
@@ -54,7 +54,7 @@ This process is very similar to [Dropping A Perpendicular](#dropping-a-perpendic
 
 Let there be a line $\overline{AB}$, as well as a point $P$ that's not on said line, through which a parallel line, relative to $\overline{AB}$ is to be constructed. Start by setting the compass to span a distance which is greater than the distance between $P$ and $\overline{AB}$, so that two new points of intersection are formed: $C$ and $D$. If the distance has been chosen too small, the circle won't intersect with the line. Draw a line through $P$ and $C$. Do not alter the compass and draw another circle at $C$, to produce the intersection $P'$, which is a mirror of $P$ about $C$ on this line. Draw a line through $P'$ and $D$. Now, set the compass to span the distance $\overline{P'D}$ and draw a circle with it's center at $D$, which produces the intersection $P''$, which is a mirror of $P'$ about $D$ on this line. Connecting $P$ and $P''$ will yield a line that satisfies $\overline{PP''} \parallel \overline{AB}$.
 
-NOTE: The points $C$ and $D$ can be at arbitrary positions on the line $\overline{AB}$, all other steps are executed as described. The reason that a circle on $P$ has been chosen is to remove the burden which one more decision attaches to the process.
+INFO: The points $C$ and $D$ can be at arbitrary positions on the line $\overline{AB}$, all other steps are executed as described. The reason that a circle on $P$ has been chosen is to remove the burden which one more decision attaches to the process.
 
 <img src="/assets/images/construction__6.jpg" class="half-width-image"/>
 
