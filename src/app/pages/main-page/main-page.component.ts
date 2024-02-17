@@ -26,6 +26,7 @@ export class MainPageComponent implements OnDestroy {
   private static COLLAPSIBLE_CONTAINER_CLASS = "collapsible-container";
   private static COLLAPSIBLE_CONTAINER_CLASS_EXPANDED = "collapsible-container--expanded";
   private static IMAGE_DEACTIVATED_SRC_ATTRIBUTE = "x-src";
+  private static TOC_IGNORE_CLASS = "toc-ignore";
 
   katexOptions: KatexOptions = {
     macros: {
@@ -365,6 +366,12 @@ export class MainPageComponent implements OnDestroy {
     for (let i = 0; i < tocNodes.length; ++i) {
       const node = tocNodes[i];
       const element = node.self[0];
+
+      // Skip ignored headlines from being rendered as an anchor tag, and don't assign a
+      // qualified ID to it, as it should never be jumped to anyways
+      if (element.classList.contains(MainPageComponent.TOC_IGNORE_CLASS))
+        continue;
+
       const currentPredecessorElements = [...predecessorElements, element];
 
       let anchorId = element.id;
