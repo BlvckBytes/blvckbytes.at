@@ -21,6 +21,12 @@ type TOCNode = { self: HeadingWithIndex, members: TOCNode[] };
 })
 export class MainPageComponent implements OnDestroy {
 
+  private static COLLAPSIBLE_HEADLINE_CLASS = "collapsible";
+  private static COLLAPSIBLE_HEADLINE_CLASS_EXPANDED = "collapsible--expanded";
+  private static COLLAPSIBLE_CONTAINER_CLASS = "collapsible-container";
+  private static COLLAPSIBLE_CONTAINER_CLASS_EXPANDED = "collapsible-container--expanded";
+  private static IMAGE_DEACTIVATED_SRC_ATTRIBUTE = "x-src";
+
   katexOptions: KatexOptions = {
     macros: {
       "\\rectangle": "{\\sqsubset \\! \\sqsupset}",
@@ -74,7 +80,7 @@ export class MainPageComponent implements OnDestroy {
     this.patchScriptTags(markdownElement);
     this.patchAnchorTags(markdownElement);
     this.generateMainHeadline(markdownElement);
-    this.generateTableOfContents(markdownElement);
+    this.generateTableOfContentsAndCollapsibles(markdownElement);
 
     // Generating the table of contents (even without a placeholder element) causes
     // headlines to receive fully qualified IDs to jump to. As these are available at
@@ -173,7 +179,7 @@ export class MainPageComponent implements OnDestroy {
     success(numericAttributeValue);
   }
 
-  private generateTableOfContents(
+  private generateTableOfContentsAndCollapsibles(
     markdownElement: HTMLElement
   ) {
     const placeholderElement = markdownElement.querySelector('#toc')
@@ -202,12 +208,142 @@ export class MainPageComponent implements OnDestroy {
     const tocNodes = this.collectTOCNodes(headingsBySize, headingSizes, placeholderElement);
     const tocElement = this.renderTOCNodes(tocNodes);
 
+    const collapsibleContainedImages: HTMLImageElement[] = [];
+    this.generateCollapsibles(markdownElement, tocNodes, collapsibleContainedImages);
+
+    const markdownImages = markdownElement.querySelectorAll("img");
+
+    // Restore all images which are not contained within a collapsible to allow them getting rendered
+    for (let markdownImageIndex = 0; markdownImageIndex < markdownImages.length; ++markdownImageIndex) {
+      const markdownImage = markdownImages[markdownImageIndex];
+
+      if (collapsibleContainedImages.includes(markdownImage))
+        continue;
+
+      this.restoreSourceAttributeIfApplicable(markdownImage);
+    }
+
     // Skip at this point, as rendering will cause all of these headlines to receive IDs
     // which are required to jump by href-hashes
     if (!placeholderElement)
       return;
 
     markdownElement.insertBefore(tocElement, placeholderElement.nextSibling);
+  }
+
+  private generateCollapsibles(
+    markdownElement: Element,
+    tocNodes: TOCNode[],
+    collapsibleContainedImages: HTMLImageElement[],
+  ) {
+    for (let tocNodeIndex = 0; tocNodeIndex < tocNodes.length; ++tocNodeIndex) {
+      const currentTocNode = tocNodes[tocNodeIndex];
+      const nextTocNode = tocNodeIndex == tocNodes.length - 1 ? null : tocNodes[tocNodeIndex + 1];
+      this.generateCollapsiblesSub(markdownElement, currentTocNode, nextTocNode, collapsibleContainedImages);
+    }
+  }
+
+  private generateCollapsiblesSub(
+    markdownElement: Element,
+    currentNode: TOCNode,
+    nextSibling: TOCNode | null,
+    collapsibleContainedImages: HTMLImageElement[],
+  ) {
+    this.generateCollapsibles(markdownElement, currentNode.members, collapsibleContainedImages);
+
+    const currentElement = currentNode.self[0]
+
+    if (!currentElement.classList.contains(MainPageComponent.COLLAPSIBLE_HEADLINE_CLASS))
+      return;
+
+    const childList = Array.from(markdownElement.children);
+    const currentElementIndex = childList.indexOf(currentElement);
+
+    if (currentElementIndex < 0) {
+      console.error(`Could not determine index of ${currentElement} within child list`);
+      return;
+    }
+
+    const nextSiblingIndex = nextSibling == null ? null : childList.indexOf(nextSibling.self[0]);
+    const lastContainedElementIndex = nextSiblingIndex == null ? childList.length - 1 : nextSiblingIndex - 1;
+
+    const collapsibleContainer = document.createElement("div");
+    collapsibleContainer.className = MainPageComponent.COLLAPSIBLE_CONTAINER_CLASS;
+    markdownElement.insertBefore(collapsibleContainer, currentElement.nextSibling);
+
+    // Empty collapsible, nothing to move
+    if (lastContainedElementIndex == currentElementIndex)
+      return;
+
+    let lastMovedElement: Element | null = null;
+
+    const currentContainedImages: HTMLImageElement[] = [];
+
+    // Iterate backwards as the childList is modified while being iterated
+    for (let movedElementIndex = lastContainedElementIndex; movedElementIndex > currentElementIndex; --movedElementIndex) {
+      const movedElement = childList[movedElementIndex];
+
+      this.walkChildrenAndAppendImageElements(movedElement, currentContainedImages);
+
+      markdownElement.removeChild(movedElement);
+      collapsibleContainer.insertBefore(movedElement, lastMovedElement);
+      lastMovedElement = movedElement;
+    }
+
+    this.attachCollapsibleClickListener(currentElement, collapsibleContainer, currentContainedImages);
+    collapsibleContainedImages.push(...currentContainedImages);
+  }
+
+  private walkChildrenAndAppendImageElements(element: Element, list: HTMLImageElement[]) {
+    if (element.tagName == "IMG" && element.hasAttribute(MainPageComponent.IMAGE_DEACTIVATED_SRC_ATTRIBUTE))
+      list.push(element as HTMLImageElement);
+
+    const children = element.children;
+    for (let childIndex = 0; childIndex < children.length; ++childIndex) {
+      const child = children.item(childIndex);
+
+      if (child != null)
+        this.walkChildrenAndAppendImageElements(child, list);
+    }
+  }
+
+  private restoreSourceAttributeIfApplicable(element: HTMLImageElement) {
+    const sourceValue = element.getAttribute(MainPageComponent.IMAGE_DEACTIVATED_SRC_ATTRIBUTE);
+
+    if (sourceValue == null)
+      return;
+
+    element.removeAttribute(MainPageComponent.IMAGE_DEACTIVATED_SRC_ATTRIBUTE);
+    element.setAttribute("src", sourceValue);
+  }
+
+  private attachCollapsibleClickListener(
+    headlineElement: Element,
+    collapsibleContainer: Element,
+    containedImages: HTMLImageElement[],
+  ) {
+    let isFirstExpansion = true;
+    let isCollapsed = true;
+
+    const unlistenFunction = this.renderer.listen(headlineElement, 'click', () => {
+      isCollapsed = !isCollapsed;
+
+      if (isCollapsed) {
+        headlineElement.classList.remove(MainPageComponent.COLLAPSIBLE_HEADLINE_CLASS_EXPANDED);
+        collapsibleContainer.classList.remove(MainPageComponent.COLLAPSIBLE_CONTAINER_CLASS_EXPANDED);
+      } else {
+        if (isFirstExpansion) {
+          for (const containedImage of containedImages)
+            this.restoreSourceAttributeIfApplicable(containedImage);
+        }
+
+        headlineElement.classList.add(MainPageComponent.COLLAPSIBLE_HEADLINE_CLASS_EXPANDED);
+        collapsibleContainer.classList.add(MainPageComponent.COLLAPSIBLE_CONTAINER_CLASS_EXPANDED);
+        isFirstExpansion = false;
+      }
+    });
+
+    this.subs.sink = { unsubscribe: unlistenFunction };
   }
 
   private renderTOCNodes(tocNodes: TOCNode[]): Element {
