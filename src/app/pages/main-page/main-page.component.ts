@@ -45,7 +45,8 @@ export class MainPageComponent implements OnDestroy {
 
   @ViewChild('markdown', { read: ViewContainerRef }) markdownRef?: ViewContainerRef;
 
-  currentSource = signal<string | null>(null);
+  currentData = signal<string | null>(null);
+  currentError = signal<string | null>(null);
 
   private currentEntry: NavigationEntry | null = null;
   private temporaryScriptTags: HTMLScriptElement[] = []
@@ -70,7 +71,56 @@ export class MainPageComponent implements OnDestroy {
 
   onNavigationEntryClick(entry: NavigationEntry) {
     this.currentEntry = entry;
-    this.currentSource.set(entry.src);
+    this.fetchCurrentEntryContent();
+  }
+
+  private fetchCurrentEntryContent() {
+    if (this.currentEntry == null)
+      return;
+
+    this.currentData.set(null);
+
+    const url = window.location.origin + this.currentEntry.src;
+    const request = new XMLHttpRequest();
+
+    request.ontimeout = () => {
+      this.currentError.set(`The request to ${url} timed out`);
+    };
+
+    request.onerror = () => {
+      this.currentError.set(`An internal error occurred while requesting ${url}`);
+    };
+
+    request.onload = () => {
+      if (request.status != 200) {
+        this.currentError.set(`Received non-200 status-code ${request.status} while requesting ${url}`);
+        return;
+      }
+
+      const contentType = request.getResponseHeader("Content-Type");
+
+      // This is especially useful while the custom CMS is not yet in place, as angular (.htaccess or
+      // ng serve) just responds with the index.html for non-existing resource requests, which most
+      // definitely shouldn't be rendered within the markdown container.
+      if (contentType != 'text/markdown') {
+        this.currentError.set(`Received non-markdown content-type ${contentType} while requesting ${url}`);
+        return;
+      }
+
+      this.currentError.set(null);
+      this.currentData.set(request.responseText);
+    };
+
+    this.subs.sink = {
+      unsubscribe() {
+        request.ontimeout = null;
+        request.onerror = null;
+        request.onload = null;
+      }
+    };
+
+    request.open('GET', url, true);
+    request.send(null);
   }
 
   private destroyCanvasWrappers() {
@@ -79,7 +129,7 @@ export class MainPageComponent implements OnDestroy {
     this.canvasWrappers = [];
   }
 
-  onMarkdownLoad() {
+  onMarkdownReady() {
     if (!this.markdownRef)
       return;
 
@@ -107,8 +157,7 @@ export class MainPageComponent implements OnDestroy {
   }
 
   onMarkdownError(message: string | Error) {
-    console.error(`Could not load markdown from src "${this.currentSource()}":`);
-    console.error(message);
+    console.error(`Could not render markdown: ${message}`);
   }
 
   private attachToCanvases(
@@ -405,7 +454,7 @@ export class MainPageComponent implements OnDestroy {
       this.renderTOCNodesAnchors(container, node.members, indentLevel + 1, currentPredecessorElements);
     }
   }
-  
+
   private collectTOCNodes(
     headingsBySize: HeadingsBySize,
     headingSizes: number[],
@@ -481,7 +530,7 @@ export class MainPageComponent implements OnDestroy {
           anchorTag.href = anchorUrl.toString()
         }
       }
-      
+
       // TypeError for URL-constructor if the href is blank, mailto, etc.
       catch(error) {
         continue
@@ -509,7 +558,7 @@ export class MainPageComponent implements OnDestroy {
 
       const newScriptTag = document.createElement("script");
       newScriptTag.type = "text/javascript";
-      
+
       if (scriptTag.src)
         newScriptTag.src = scriptTag.src;
       else

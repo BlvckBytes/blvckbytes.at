@@ -16,6 +16,26 @@
   // Text can get a bit hard to read otherwise, when spread out too widely...
   flex-grow: 1;
   max-width: 840px;
+
+  &__error {
+    $padding: 1.5rem;
+
+    border-radius: .5rem;
+    border: 2px solid var(--highlight-warning-color);
+    background-color: var(--highlight-warning-color--o);
+    padding: $padding;
+    padding-top: 4rem;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: 'Request Error';
+      top: $padding;
+      left: $padding;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+  }
 }
 
 @media print {

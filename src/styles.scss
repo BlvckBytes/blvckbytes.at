@@ -55,6 +55,7 @@ body, html {
   --background-color: #222225;
   --highlight-todo-color: #FFCA3A;
   --highlight-warning-color: #FF595E;
+  --highlight-warning-color--o: #{transparentize(#FF595E, .85)};
   --highlight-info-color: #8AC926;
 
   --canvas-primary-color: rgba(239, 0, 255, .3);

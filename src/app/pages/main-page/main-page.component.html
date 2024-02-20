@@ -6,15 +6,21 @@
 </div>
 
 <div class="content">
-  @if (currentSource(); as currentSource) {
+  @if (currentError(); as currentError) {
+    <div class="content__error">
+      <p>{{currentError}}</p>
+    </div>
+  }
+
+  @if (currentData(); as currentData) {
     <markdown
       #markdown
       lineNumbers
       katex
       [katexOptions]="katexOptions"
-      (load)="onMarkdownLoad()"
+      (ready)="onMarkdownReady()"
       (error)="onMarkdownError($event)"
-      [src]="currentSource"
+      [data]="currentData"
       [disableSanitizer]="true"
     >
     </markdown>
