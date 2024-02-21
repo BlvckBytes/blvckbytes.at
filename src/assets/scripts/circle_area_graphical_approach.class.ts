@@ -92,7 +92,7 @@ class CircleAreaGraphicalApproach implements Drawing {
           circlePosition,
           this.radius,
           alpha,
-          alpha * i
+          { angleOffset: alpha * i }
         )
           .configureStyle(style => style.fillColor = isEvenSlice ? this.FILL_COLOR_FACING_DOWN : this.FILL_COLOR_FACING_UP)
       );
@@ -103,7 +103,8 @@ class CircleAreaGraphicalApproach implements Drawing {
       drawables.push(
         this.provider.makeCircleSlice(
           rectanglePosition.copy().addValues(0, rectangleHeight),
-          this.radius, alpha / 2, 3/2 * Math.PI
+          this.radius, alpha / 2,
+          { angleOffset: 3/2 * Math.PI },
         )
         .configureStyle(style => style.fillColor = this.FILL_COLOR_FACING_UP)
       );
@@ -128,7 +129,8 @@ class CircleAreaGraphicalApproach implements Drawing {
               ),
               0
             ),
-            this.radius, alpha, (Math.PI/2 - alpha / 2)
+            this.radius, alpha,
+            { angleOffset: Math.PI/2 - alpha / 2 },
           )
           .configureStyle(style => style.fillColor = this.FILL_COLOR_FACING_DOWN)
         );
@@ -145,7 +147,8 @@ class CircleAreaGraphicalApproach implements Drawing {
             ),
             rectangleHeight
           ),
-          this.radius, alpha, Math.PI + (Math.PI/2 - alpha / 2)
+          this.radius, alpha,
+          { angleOffset: Math.PI + (Math.PI/2 - alpha / 2) },
         )
         .configureStyle(style => style.fillColor = this.FILL_COLOR_FACING_UP)
       );
@@ -161,7 +164,8 @@ class CircleAreaGraphicalApproach implements Drawing {
           // of slices between both half slices at the beginning and the end
           this.provider.makeCircleSlice(
             rectanglePosition.copy().addValues(rectangleWidth, rectangleHeight),
-            this.radius, alpha / 2, Math.PI + (Math.PI/2 - alpha / 2)
+            this.radius, alpha / 2,
+            { angleOffset: Math.PI + (Math.PI/2 - alpha / 2) },
           )
           .configureStyle(style => style.fillColor = this.FILL_COLOR_FACING_UP)
         );
@@ -171,7 +175,8 @@ class CircleAreaGraphicalApproach implements Drawing {
         drawables.push(
           this.provider.makeCircleSlice(
             rectanglePosition.copy().addValues(rectangleWidth, 0),
-            this.radius, alpha / 2, Math.PI / 2
+            this.radius, alpha / 2,
+            { angleOffset: Math.PI / 2 },
           )
           .configureStyle(style => style.fillColor = this.FILL_COLOR_FACING_DOWN)
         );

@@ -57,7 +57,7 @@ var CircleAreaGraphicalApproach = /** @class */ (function () {
         var circlePosition = coordinateSystem.accountForOrigin(this.provider.makeVector2(0, (totalRectangleHeight + figureDistance) / -2));
         var _loop_1 = function (i) {
             var isEvenSlice = i % 2 == 0;
-            drawables.push(this_1.provider.makeCircleSlice(circlePosition, this_1.radius, alpha, alpha * i)
+            drawables.push(this_1.provider.makeCircleSlice(circlePosition, this_1.radius, alpha, { angleOffset: alpha * i })
                 .configureStyle(function (style) { return style.fillColor = isEvenSlice ? _this.FILL_COLOR_FACING_DOWN : _this.FILL_COLOR_FACING_UP; }));
         };
         var this_1 = this;
@@ -66,7 +66,7 @@ var CircleAreaGraphicalApproach = /** @class */ (function () {
         }
         // First half slice
         if (this.useHalfSlices) {
-            drawables.push(this.provider.makeCircleSlice(rectanglePosition.copy().addValues(0, rectangleHeight), this.radius, alpha / 2, 3 / 2 * Math.PI)
+            drawables.push(this.provider.makeCircleSlice(rectanglePosition.copy().addValues(0, rectangleHeight), this.radius, alpha / 2, { angleOffset: 3 / 2 * Math.PI })
                 .configureStyle(function (style) { return style.fillColor = _this.FILL_COLOR_FACING_UP; }));
         }
         for (var i = 0; i < this.nSlices; ++i) {
@@ -76,11 +76,11 @@ var CircleAreaGraphicalApproach = /** @class */ (function () {
             if (this.useHalfSlices && i == this.nSlices - 1)
                 continue;
             if (isEvenSlice) {
-                drawables.push(this.provider.makeCircleSlice(rectanglePosition.copy().addValues(this.useHalfSlices ? (isFirstSlice ? 1 / 2 * l : (i + 1) / 2 * l) : (i / 2 * l), 0), this.radius, alpha, (Math.PI / 2 - alpha / 2))
+                drawables.push(this.provider.makeCircleSlice(rectanglePosition.copy().addValues(this.useHalfSlices ? (isFirstSlice ? 1 / 2 * l : (i + 1) / 2 * l) : (i / 2 * l), 0), this.radius, alpha, { angleOffset: Math.PI / 2 - alpha / 2 })
                     .configureStyle(function (style) { return style.fillColor = _this.FILL_COLOR_FACING_DOWN; }));
                 continue;
             }
-            drawables.push(this.provider.makeCircleSlice(rectanglePosition.copy().addValues(this.useHalfSlices ? ((i + 1) / 2 * l) : (i / 2 * l), rectangleHeight), this.radius, alpha, Math.PI + (Math.PI / 2 - alpha / 2))
+            drawables.push(this.provider.makeCircleSlice(rectanglePosition.copy().addValues(this.useHalfSlices ? ((i + 1) / 2 * l) : (i / 2 * l), rectangleHeight), this.radius, alpha, { angleOffset: Math.PI + (Math.PI / 2 - alpha / 2) })
                 .configureStyle(function (style) { return style.fillColor = _this.FILL_COLOR_FACING_UP; }));
         }
         // Second half slice
@@ -90,11 +90,11 @@ var CircleAreaGraphicalApproach = /** @class */ (function () {
                 drawables.push(
                 // Whether the second half slice points up or down depends on the number
                 // of slices between both half slices at the beginning and the end
-                this.provider.makeCircleSlice(rectanglePosition.copy().addValues(rectangleWidth, rectangleHeight), this.radius, alpha / 2, Math.PI + (Math.PI / 2 - alpha / 2))
+                this.provider.makeCircleSlice(rectanglePosition.copy().addValues(rectangleWidth, rectangleHeight), this.radius, alpha / 2, { angleOffset: Math.PI + (Math.PI / 2 - alpha / 2) })
                     .configureStyle(function (style) { return style.fillColor = _this.FILL_COLOR_FACING_UP; }));
             }
             else {
-                drawables.push(this.provider.makeCircleSlice(rectanglePosition.copy().addValues(rectangleWidth, 0), this.radius, alpha / 2, Math.PI / 2)
+                drawables.push(this.provider.makeCircleSlice(rectanglePosition.copy().addValues(rectangleWidth, 0), this.radius, alpha / 2, { angleOffset: Math.PI / 2 })
                     .configureStyle(function (style) { return style.fillColor = _this.FILL_COLOR_FACING_DOWN; }));
             }
         }
@@ -126,24 +126,26 @@ var CircleAreaGraphicalApproach = /** @class */ (function () {
     CircleAreaGraphicalApproach.prototype.onCanvasSetup = function () {
         var _this = this;
         this.canvas.setZoomConstraints(this.DRAWING_MIN_ZOOM, this.DRAWING_MAX_ZOOM);
+        var makeNumberOfSlicesText = function (value) { return "Number Of Slices (".concat(value, ")"); };
         this.canvas.controlRegistry.registerSlider(function (handle) {
             handle.setMinMax(_this.MIN_N_SLICES, _this.MAX_N_SLICES);
             handle.setValue(_this.nSlices);
-            handle.setText("Number Of Slices (".concat(handle.getValue(), ")"));
+            handle.setText(makeNumberOfSlicesText(handle.getValue()));
         }, function (handle) {
             var value = handle.getValue();
             _this.nSlices = value;
-            handle.setText("Number Of Slices (".concat(value, ")"));
+            handle.setText(makeNumberOfSlicesText(value));
             _this.canvas.draw(false);
         });
+        var makeRadiusText = function (value) { return "Radius (".concat(value, ")"); };
         this.canvas.controlRegistry.registerSlider(function (handle) {
             handle.setMinMax(_this.MIN_RADIUS, _this.MAX_RADIUS);
             handle.setValue(_this.radius);
-            handle.setText("Radius (".concat(handle.getValue(), ")"));
+            handle.setText(makeRadiusText(handle.getValue()));
         }, function (handle) {
             var value = handle.getValue();
             _this.radius = value;
-            handle.setText("Radius (".concat(value, ")"));
+            handle.setText(makeRadiusText(value));
             _this.canvas.draw(false);
         });
         this.canvas.controlRegistry.registerButton(function (handle) {
