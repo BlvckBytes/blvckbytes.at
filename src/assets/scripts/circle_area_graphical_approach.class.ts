@@ -178,7 +178,7 @@ class CircleAreaGraphicalApproach implements Drawing {
             this.radius, alpha / 2,
             { angleOffset: Math.PI / 2 },
           )
-          .configureStyle(style => style.fillColor = this.FILL_COLOR_FACING_DOWN)
+          .configureStyle(style => style.fillColor = this.FILL_COLOR_FACING_UP)
         );
       }
     }

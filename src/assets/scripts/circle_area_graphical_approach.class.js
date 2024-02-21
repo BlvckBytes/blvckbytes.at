@@ -95,7 +95,7 @@ var CircleAreaGraphicalApproach = /** @class */ (function () {
             }
             else {
                 drawables.push(this.provider.makeCircleSlice(rectanglePosition.copy().addValues(rectangleWidth, 0), this.radius, alpha / 2, { angleOffset: Math.PI / 2 })
-                    .configureStyle(function (style) { return style.fillColor = _this.FILL_COLOR_FACING_DOWN; }));
+                    .configureStyle(function (style) { return style.fillColor = _this.FILL_COLOR_FACING_UP; }));
             }
         }
         return drawables;
