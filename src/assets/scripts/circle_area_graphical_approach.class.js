@@ -126,7 +126,7 @@ var CircleAreaGraphicalApproach = /** @class */ (function () {
     CircleAreaGraphicalApproach.prototype.onCanvasSetup = function () {
         var _this = this;
         this.canvas.setZoomConstraints(this.DRAWING_MIN_ZOOM, this.DRAWING_MAX_ZOOM);
-        var makeNumberOfSlicesText = function (value) { return "Number Of Slices (".concat(value, ")"); };
+        var makeNumberOfSlicesText = function (value) { return "# Slices $n=".concat(value, "$"); };
         this.canvas.controlRegistry.registerSlider(function (handle) {
             handle.setMinMax(_this.MIN_N_SLICES, _this.MAX_N_SLICES);
             handle.setValue(_this.nSlices);
@@ -137,7 +137,7 @@ var CircleAreaGraphicalApproach = /** @class */ (function () {
             handle.setText(makeNumberOfSlicesText(value));
             _this.canvas.draw(false);
         });
-        var makeRadiusText = function (value) { return "Radius (".concat(value, ")"); };
+        var makeRadiusText = function (value) { return "Radius $r=".concat(value, "$"); };
         this.canvas.controlRegistry.registerSlider(function (handle) {
             handle.setMinMax(_this.MIN_RADIUS, _this.MAX_RADIUS);
             handle.setValue(_this.radius);

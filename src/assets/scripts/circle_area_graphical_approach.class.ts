@@ -222,7 +222,7 @@ class CircleAreaGraphicalApproach implements Drawing {
   onCanvasSetup(): void {
     this.canvas.setZoomConstraints(this.DRAWING_MIN_ZOOM, this.DRAWING_MAX_ZOOM);
 
-    const makeNumberOfSlicesText = (value: number) => `Number Of Slices (${value})`;
+    const makeNumberOfSlicesText = (value: number) => `# Slices $n=${value}$`;
 
     this.canvas.controlRegistry.registerSlider(
       handle => {
@@ -238,7 +238,7 @@ class CircleAreaGraphicalApproach implements Drawing {
       }
     );
 
-    const makeRadiusText = (value: number) => `Radius (${value})`;
+    const makeRadiusText = (value: number) => `Radius $r=${value}$`;
 
     this.canvas.controlRegistry.registerSlider(
       handle => {

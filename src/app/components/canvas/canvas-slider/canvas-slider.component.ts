@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SliderHandle } from 'canvas-draw';
+import { MarkdownService } from 'ngx-markdown';
 
 @Component({
   selector: 'app-canvas-slider',
@@ -9,14 +10,36 @@ import { SliderHandle } from 'canvas-draw';
   templateUrl: './canvas-slider.component.html',
   styleUrl: './canvas-slider.component.scss'
 })
-export class CanvasSliderComponent implements SliderHandle {
+export class CanvasSliderComponent implements SliderHandle, AfterViewChecked {
 
   @Input() updateCallback: (() => void) | null = null;
+
+  @ViewChild('text', { read: ElementRef }) textElement?: ElementRef<HTMLDivElement>;
+
+  private isTextDirty = false;
 
   min = 1;
   max = 1;
   value = 1;
   text = "";
+
+  constructor(
+    private markdownService: MarkdownService,
+  ) {}
+
+  ngAfterViewChecked(): void {
+    if (this.isTextDirty) {
+      if (this.textElement) {
+        const virtualParagraph = document.createElement("p");
+        virtualParagraph.innerHTML = this.text;
+
+        this.markdownService.render(virtualParagraph, { katex: true });
+        this.textElement.nativeElement.innerHTML = virtualParagraph.innerHTML;
+      }
+
+      this.isTextDirty = false;
+    }
+  }
 
   setValue(value: number): SliderHandle {
 
@@ -52,6 +75,7 @@ export class CanvasSliderComponent implements SliderHandle {
 
   setText(text: string): SliderHandle {
     this.text = text;
+    this.isTextDirty = true;
     return this;
   }
 
