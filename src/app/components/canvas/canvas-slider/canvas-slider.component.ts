@@ -14,14 +14,15 @@ export class CanvasSliderComponent implements SliderHandle, AfterViewChecked {
 
   @Input() updateCallback: (() => void) | null = null;
 
-  @ViewChild('text', { read: ElementRef }) textElement?: ElementRef<HTMLDivElement>;
+  @ViewChild('textElement', { read: ElementRef }) textElement?: ElementRef<HTMLDivElement>;
 
   private isTextDirty = false;
 
   min = 1;
   max = 1;
   value = 1;
-  text = "";
+  step = 1;
+  text = "Slider";
 
   constructor(
     private markdownService: MarkdownService,

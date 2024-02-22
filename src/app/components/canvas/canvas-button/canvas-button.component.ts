@@ -13,12 +13,12 @@ export class CanvasButtonComponent implements ButtonHandle, AfterViewChecked {
 
   @Input() clickCallback: (() => void) | null = null;
 
-  @ViewChild('text', { read: ElementRef }) textElement?: ElementRef<HTMLDivElement>;
+  @ViewChild('textElement', { read: ElementRef }) textElement?: ElementRef<HTMLDivElement>;
 
   private isTextDirty = false;
 
   active = false;
-  text = "";
+  text = "Button";
 
   constructor(
     private markdownService: MarkdownService,

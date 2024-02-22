@@ -1,10 +1,10 @@
 <div class="slider-and-labels">
   <p>{{min}}</p>
-  <input [min]="min" [max]="max" [(ngModel)]="value" (input)="onSliderChange()" type="range"/>
+  <input [step]="step" [min]="min" [max]="max" [(ngModel)]="value" (input)="onSliderChange()" type="range"/>
   <p>{{max}}</p>
 </div>
 <div class="text-and-buttons">
-  <p class="slider-text" #text>{{text}}</p>
+  <p class="slider-text" #textElement>{{text}}</p>
   <div class="slider-buttons">
     <div class="slider-button slider-button--first" (click)="onFirstClick()">
       <img src="/assets/icons/fast-forward.svg" alt="first">
