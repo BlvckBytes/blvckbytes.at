@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ComponentRef, ElementRef, EventEmitter, HostBinding, Input, OnDestroy, Output, Renderer2, Type, ViewChild, ViewContainerRef } from '@angular/core';
+import { AfterViewInit, Component, ComponentRef, ElementRef, EnvironmentInjector, EventEmitter, HostBinding, Input, OnDestroy, Output, Renderer2, Type, ViewChild, ViewContainerRef, createComponent } from '@angular/core';
 import { ButtonHandle, Canvas, ControlRegistry, SliderHandle, TexRendererOptions } from 'canvas-draw';
 import { CanvasSliderComponent } from '../canvas-slider/canvas-slider.component';
 import { CanvasButtonComponent } from '../canvas-button/canvas-button.component';
@@ -8,6 +8,7 @@ import { TexRenderer } from 'canvas-draw/dist/types/tex-renderer.interface';
 import { MarkdownService } from 'ngx-markdown';
 import { TextboxHandle } from 'canvas-draw/dist/types/controls/textbox-handle.interface';
 import { CanvasTextboxComponent } from '../canvas-textbox/canvas-textbox.component';
+import { CanvasInlineContainerComponent } from '../canvas-inline-container/canvas-inline-container.component';
 
 export type CanvasScriptLoader = () => Promise<void>;
 
@@ -45,6 +46,7 @@ export class CanvasWrapperComponent implements OnDestroy, AfterViewInit, Control
   constructor(
     private renderer: Renderer2,
     private markdownService: MarkdownService,
+    private environmentInjector: EnvironmentInjector,
   ) {}
 
   ngAfterViewInit(): void {
@@ -149,9 +151,35 @@ export class CanvasWrapperComponent implements OnDestroy, AfterViewInit, Control
   }
 
   private createAndRegisterControl<C>(component: Type<C>): C {
-    const control = this.controlsContainer.createComponent(component);
+    const containerSize = this.controlsContainer.length;
 
-    this.controlsContainer.insert(control.hostView);
+    if (component == CanvasButtonComponent && containerSize > 0) {
+      const previousControlIndex = containerSize - 1;
+      const previousControl = this.controlComponents[previousControlIndex];
+
+      // Current is a button and previous was a button, inline them to save space
+      if (previousControl?.instance instanceof CanvasButtonComponent) {
+        this.controlsContainer.detach(previousControlIndex);
+        this.controlComponents.splice(previousControlIndex, 1);
+
+        const container = this.controlsContainer.createComponent(CanvasInlineContainerComponent);
+
+        this.controlsContainer.insert(container.hostView);
+        this.controlComponents.push(container);
+
+        container.instance.insertComponent(previousControl);
+
+        // Create the control component in the absence of any concrete container and insert
+        // it manually, as the container's ViewContainerRef is not yet ready and this control
+        // instance should be returned synchronously in order to accomodate the canvas-draw API
+        const control = createComponent(component, { environmentInjector: this.environmentInjector });
+        container.instance.insertComponent(control);
+
+        return control.instance;
+      }
+    }
+
+    const control = this.controlsContainer.createComponent(component);
     this.controlComponents.push(control);
 
     return control.instance;
