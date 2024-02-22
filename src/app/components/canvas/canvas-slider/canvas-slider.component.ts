@@ -42,6 +42,11 @@ export class CanvasSliderComponent implements SliderHandle, AfterViewChecked {
     }
   }
 
+  setStep(step: number): SliderHandle {
+    this.step = step;
+    return this;
+  }
+
   setValue(value: number): SliderHandle {
 
     if (value < this.min) {
@@ -91,12 +96,12 @@ export class CanvasSliderComponent implements SliderHandle, AfterViewChecked {
   }
 
   onPreviousClick() {
-    this.setValue(this.value - 1);
+    this.setValue(this.value - this.step);
     this.onSliderChange();
   }
 
   onNextClick() {
-    this.setValue(this.value + 1);
+    this.setValue(this.value + this.step);
     this.onSliderChange();
   }
 
