@@ -1,0 +1,13 @@
+<input
+  type="text"
+  [class.--invalid]="invalidityMessage != null"
+  [placeholder]="placeholder"
+  [(ngModel)]="value"
+  (input)="onValueChange()"
+>
+
+<p #textElement>{{text}}</p>
+
+@if (invalidityMessage) {
+  <p class="invalidity-message">{{ invalidityMessage }}</p>
+}

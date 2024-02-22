@@ -6,6 +6,8 @@ import { HammerModule } from '@angular/platform-browser';
 import { CanvasEventProcessor } from './canvas-event-processor.class';
 import { TexRenderer } from 'canvas-draw/dist/types/tex-renderer.interface';
 import { MarkdownService } from 'ngx-markdown';
+import { TextboxHandle } from 'canvas-draw/dist/types/controls/textbox-handle.interface';
+import { CanvasTextboxComponent } from '../canvas-textbox/canvas-textbox.component';
 
 export type CanvasScriptLoader = () => Promise<void>;
 
@@ -93,6 +95,13 @@ export class CanvasWrapperComponent implements OnDestroy, AfterViewInit, Control
     onChange: (button: SliderHandle) => void,
   ): SliderHandle {
     const component = this.createAndRegisterControl(CanvasSliderComponent);
+    component.updateCallback = () => onChange(component);
+    onSetup(component);
+    return component;
+  }
+
+  registerTextbox(onSetup: (button: TextboxHandle) => void, onChange: (button: TextboxHandle) => void): TextboxHandle {
+    const component = this.createAndRegisterControl(CanvasTextboxComponent);
     component.updateCallback = () => onChange(component);
     onSetup(component);
     return component;
