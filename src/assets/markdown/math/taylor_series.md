@@ -40,6 +40,7 @@ thereby
 
 $f(x) = \displaystyle \sum_{n = 0}^{\infty}{\frac{1}{n!} * f^{(n)}(0) * x^n}$
 
-From this relation, the insight arises, that any given function $f(x)$ can be fully described by only knowing its derivatives at $x = 0$. This fact is very, very useful to bring various mental constructs into the world of computation, in the form of an approximation.
+From this relation, the insight arises, that any given function $f(x)$ can be described by only knowing its derivatives at $x_0$. This fact is very useful to bring various mental constructs into the world of computation, in the form of an approximation. There are many cases where a taylor expansion only manages to approximate a small radius, relative to $x_0$, so not every function can be expanded this way.
 
 If, at any point in the derivation chain, $f^{(n)}(x) = 0$, then $n - 1$ is the last summand that's required to fully express $f(x)$, as $\frac{\mathrm{d}}{\mathrm{d}x} 0 = 0$, and each further summand is multiplied by this derivative, and thus vanishes.
+
