@@ -1,15 +1,5 @@
 import { MarkedRenderer } from 'ngx-markdown';
 
-(window as any)["markdownScrollToTop"] = () => {
-  window.scrollTo(0, 0);
-  history.replaceState("", document.title, window.location.pathname + window.location.search);
-};
-
-(window as any)["markdownScrollToBottom"] = () => {
-  window.scrollTo(0, document.body.scrollHeight);
-  history.replaceState("", document.title, window.location.pathname + window.location.search);
-};
-
 const makeHeadline = (
   text: string,
   level: number,
@@ -20,8 +10,8 @@ const makeHeadline = (
   const classString = `class="markdown-headline ${classes.join(' ')}"`;
 
   const memberString = level <= 1 ? "" : (
-    `<img class="markdown-headline__to-top" src="/assets/icons/arrow-up.svg" onclick="markdownScrollToTop()"/>` +
-    `<img class="markdown-headline__to-bottom" src="/assets/icons/arrow-up.svg" onclick="markdownScrollToBottom()"/>`
+    `<img class="markdown-headline__to-top" src="/assets/icons/arrow-up.svg"/>` +
+    `<img class="markdown-headline__to-bottom" src="/assets/icons/arrow-up.svg"/>`
   );
 
   return `<h${level} ${idString} ${classString}>${text}${memberString}</h${level}>`

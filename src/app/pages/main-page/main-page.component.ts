@@ -7,6 +7,8 @@ import { sanitizeForUrl } from '../../utilities';
 import { HttpClient } from '@angular/common/http';
 import { SubSink } from 'subsink';
 import { CanvasScriptLoader, CanvasWrapperComponent } from '../../components/canvas/canvas-wrapper/canvas-wrapper.component';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 type HeadingWithIndex = [HTMLHeadingElement, number];
 type HeadingsBySize = { [key: number]: HeadingWithIndex[] };
@@ -29,6 +31,10 @@ export class MainPageComponent implements OnDestroy {
   private static TOC_IGNORE_CLASS = "toc-ignore";
   private static HIGHLIGHTED_PARAGRAPH_CLASS = "highlighted-paragraph";
   private static HIGHLIGHTED_PARAGRAPH_MARKER_CLASS = `${MainPageComponent.HIGHLIGHTED_PARAGRAPH_CLASS}__marker`;
+  private static HEADLINE_CLASS = "markdown-headline";
+  private static HEADLINE_CLASS_ACTIVE = "markdown-headline--active";
+  private static HEADLINE_CLASS_TO_TOP = "markdown-headline__to-top";
+  private static HEADLINE_CLASS_TO_BOTTOM = "markdown-headline__to-bottom";
 
   private static PARAGRAPH_HIGHLIGHT_MARKER_CLASSES: { [key: string]: string } = {
     'TODO: ': `${MainPageComponent.HIGHLIGHTED_PARAGRAPH_CLASS}--todo`,
@@ -59,10 +65,29 @@ export class MainPageComponent implements OnDestroy {
   constructor(
     httpClient: HttpClient,
     private renderer: Renderer2,
+    router: Router
   ) {
     this.subs.sink = httpClient
       .get<NavigationData>('/assets/navigation_data.json')
       .subscribe(data => this.navigationData.set(data));
+
+    this.subs.sink = router.events
+      .pipe(filter((event: any): event is NavigationEnd => event instanceof NavigationEnd))
+      .subscribe(_ => {
+        const markdownElement = this.markdownRef?.element?.nativeElement;
+
+        if (!markdownElement)
+          return;
+
+        const hash = window.location.hash;
+
+        if (hash == '') {
+          this.onHashJump(null);
+          return;
+        }
+
+        this.onHashJump(markdownElement.querySelector(window.location.hash) || null);
+      });
   }
 
   ngOnDestroy(): void {
@@ -141,6 +166,7 @@ export class MainPageComponent implements OnDestroy {
     this.generateMainHeadline(markdownElement);
     this.generateTableOfContentsAndCollapsibles(markdownElement);
     this.addParagraphHighlighting(markdownElement);
+    this.attachHeadlineButtons(markdownElement);
 
     // Generating the table of contents (even without a placeholder element) causes
     // headlines to receive fully qualified IDs to jump to. As these are available at
@@ -150,10 +176,35 @@ export class MainPageComponent implements OnDestroy {
 
     if (currentHash != '') {
       const jumpedToElement = markdownElement.querySelector(window.location.hash);
-      jumpedToElement?.scrollIntoView();
+
+      if (jumpedToElement) {
+        jumpedToElement.scrollIntoView();
+        this.onHashJump(jumpedToElement);
+      }
+
+      else
+        this.onHashJump(null);
     }
 
     this.attachToCanvases(markdownElement);
+  }
+
+  private onHashJump(element: Element | null) {
+    const markdownElement = this.markdownRef?.element?.nativeElement;
+
+    if (!markdownElement)
+      return;
+
+    const headlines = markdownElement.querySelectorAll("." +  MainPageComponent.HEADLINE_CLASS);
+
+    for (let i = 0; i < headlines.length; ++i) {
+      const headline: Element = headlines.item(i);
+
+      if (headline == element)
+        headline.classList.add(MainPageComponent.HEADLINE_CLASS_ACTIVE);
+      else
+        headline.classList.remove(MainPageComponent.HEADLINE_CLASS_ACTIVE);
+    }
   }
 
   onMarkdownError(message: string | Error) {
@@ -592,5 +643,29 @@ export class MainPageComponent implements OnDestroy {
         break;
       }
     }
+  }
+
+  private onPageJumpButtonClick(toTop: boolean) {
+    if (toTop) {
+      window.scrollTo(0, 0);
+      history.replaceState("", document.title, window.location.pathname + window.location.search);
+    }
+    else {
+      window.scrollTo(0, document.body.scrollHeight);
+      history.replaceState("", document.title, window.location.pathname + window.location.search);
+    }
+
+    this.onHashJump(null);
+  }
+
+  private attachHeadlineButtons(markdownElement: HTMLElement) {
+    const toTopButtons = markdownElement.querySelectorAll("." + MainPageComponent.HEADLINE_CLASS_TO_TOP);
+    const toBottomButtons = markdownElement.querySelectorAll("." + MainPageComponent.HEADLINE_CLASS_TO_BOTTOM);
+
+    for (let i = 0; i < toTopButtons.length; ++i)
+      this.subs.sink = { unsubscribe: this.renderer.listen(toTopButtons.item(i), 'click', () => this.onPageJumpButtonClick(true)) };
+
+    for (let i = 0; i < toBottomButtons.length; ++i)
+      this.subs.sink = { unsubscribe: this.renderer.listen(toBottomButtons.item(i), 'click', () => this.onPageJumpButtonClick(false)) };
   }
 }

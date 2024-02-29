@@ -49,6 +49,7 @@ body, html {
   --global-font-size: 15px;
   --global-line-height: 1.4em;
   --primary-color: #62c4ff;
+  --primary-color--o: #{transparentize(#62c4ff, .65)};
   --secondary-color: #a3abba;
   --font-color: #e8e9ed;
   --code-bg-color: #3f3f44;
@@ -91,7 +92,7 @@ markdown {
     padding: 1.33rem 0 1.33rem;
   }
 
-  h2, h3 {
+  h2, h3, h4 {
     font-weight: bolder !important;
     text-decoration: underline;
     background: rgba(255, 255, 255, 0.1);
@@ -109,7 +110,7 @@ markdown {
 
   h4 {
     margin: var(--global-line-height) 0 var(--global-line-height);
-    font-size: calc(var(--global-font-size) * 1);
+    font-size: calc(var(--global-font-size) * .9);
   }
 
   pre {
@@ -279,6 +280,10 @@ markdown {
     &__to-bottom {
       transform: translateY(-50%) rotate(180deg);
       right: 1.4rem;
+    }
+
+    &--active {
+      background-color: var(--primary-color--o);
     }
 
     &.collapsible {
