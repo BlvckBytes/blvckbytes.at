@@ -54,6 +54,8 @@ To structure text efficiently, only a few features are required, which are as fo
 
 Headlines always act as anchors which can be referenced from anywhere, while a table of contents will be automatically generated.
 
+Elements, like headlines or paragraphs, can be attached with properties, by appending them the property syntax: `{: .this-is-a-class #this-is-an-id }`. Classes and IDs may then control behavior, like where to insert the TOC, which headlines to exclude from the TOC, custom hash-anchors, etc.
+
 ### LaTeX
 
 In order to express domain specific symbols uniformly, the gold standard of TeX will be made use of. TeX expressions can be inlined with plain text by the `$` start and end marker, while multiline expressions are enclosed by `$$`.
