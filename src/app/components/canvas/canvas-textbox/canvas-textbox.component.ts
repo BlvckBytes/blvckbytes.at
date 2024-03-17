@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, ElementRef, HostBinding, Input, ViewChild } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { TextboxHandle } from 'canvas-draw/dist/types/controls/textbox-handle.interface';
 import { MarkdownService } from 'ngx-markdown';
 import { FormsModule } from '@angular/forms';
@@ -24,9 +24,21 @@ export class CanvasTextboxComponent implements TextboxHandle, AfterViewChecked {
   value = "";
   placeholder = "";
 
+  private debounceTimeMs = 0;
+  private debounceTimer: ReturnType<typeof setTimeout> | null = null;
+
   constructor(
     private markdownService: MarkdownService,
   ) {}
+
+  setDebounceTime(timeMs: number): TextboxHandle {
+    this.debounceTimeMs = timeMs;
+    return this;
+  }
+
+  getDebounceTime(): number {
+    return this.debounceTimeMs;
+  }
 
   setPlaceholder(placeholder: string): TextboxHandle {
     this.placeholder = placeholder;
@@ -76,7 +88,22 @@ export class CanvasTextboxComponent implements TextboxHandle, AfterViewChecked {
   }
 
   onValueChange() {
-    if (this.updateCallback)
+    if (!this.updateCallback)
+      return;
+
+    if (this.debounceTimeMs == 0) {
       this.updateCallback();
+      return;
+    }
+
+    if (this.debounceTimer != null)
+      clearTimeout(this.debounceTimer);
+
+    this.debounceTimer = setTimeout(() => {
+      this.debounceTimer = null;
+
+      if (this.updateCallback)
+        this.updateCallback();
+    }, this.debounceTimeMs);
   }
 }
