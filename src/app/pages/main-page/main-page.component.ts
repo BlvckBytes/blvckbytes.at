@@ -91,6 +91,7 @@ export class MainPageComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.removeTemporaryScriptTags();
     this.subs.unsubscribe();
   }
 
@@ -597,10 +598,7 @@ export class MainPageComponent implements OnDestroy {
       why a fresh carbon-copy is created, which is then injected into the dom temporarily.
     */
 
-    for (const temporaryScriptTag of this.temporaryScriptTags)
-      document.head.removeChild(temporaryScriptTag);
-
-    this.temporaryScriptTags = [];
+    this.removeTemporaryScriptTags();
 
     const scriptTags = markdownElement.querySelectorAll("script");
 
@@ -610,13 +608,23 @@ export class MainPageComponent implements OnDestroy {
       const newScriptTag = document.createElement("script");
       newScriptTag.type = "text/javascript";
 
+      this.temporaryScriptTags.push(newScriptTag);
+
       if (scriptTag.src)
         newScriptTag.src = scriptTag.src;
       else
         newScriptTag.innerText = scriptTag.innerText;
 
       scriptTag.parentElement?.removeChild(scriptTag);
+      document.head.appendChild(newScriptTag);
     }
+  }
+
+  private removeTemporaryScriptTags() {
+    for (const temporaryScriptTag of this.temporaryScriptTags)
+      document.head.removeChild(temporaryScriptTag);
+
+    this.temporaryScriptTags = [];
   }
 
   private addParagraphHighlighting(markdownElement: HTMLElement) {
