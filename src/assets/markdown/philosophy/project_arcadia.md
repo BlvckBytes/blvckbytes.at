@@ -110,6 +110,8 @@ External resources of interest, which may not be accessible forever, should be d
 
 Thanks to modern OCR as well as to flatbed scanners, books can be scanned and transcribed rather quickly, so that page-, line- and column numbers become available. To refer a passage of a book, one just needs to provide the book ID, as well as a start- and endpoint made up of page-, line- and column numbers. Through this pointer, the content within that range may be inlined into the page as a citation, while a click can take you right to that page within the book.
 
+Images (charts, sketches, graphs, etc.) on pages are kept track of as a sprite, that being their x-,y-offset, as well as their width and height. Per page, sprites are assigned an incrementing number, so they can later be referenced by page- and sprite-number.
+
 #### Video And Audio
 
 The same as for books also holds true for video (YT, etc.) and audio (podcasts, etc.), while the transcriptive process may fall a bit more onto the manual side of things, as ML-detection of voice is still highly erroneous. To refer to a passage of these media, a start- and end-timestamp are provided, which again may inline the spoken content directly into the page, with a hyperlink to the resource at that point.
