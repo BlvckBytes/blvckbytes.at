@@ -59,6 +59,7 @@ export class MainPageComponent implements OnDestroy {
   private canvasWrappers: ComponentRef<CanvasWrapperComponent>[] = [];
   private subs = new SubSink();
   private queuedCanvasScriptLoaders: CanvasScriptLoader[] = [];
+  private vanillaTitle: string = document.title;
 
   navigationData = signal<NavigationData | null>(null)
 
@@ -95,8 +96,18 @@ export class MainPageComponent implements OnDestroy {
     this.subs.unsubscribe();
   }
 
+  setDocumentTitle() {
+    if (!this.currentEntry) {
+      document.title = this.vanillaTitle;
+      return;
+    }
+
+    document.title = `${this.currentEntry.title} - ${this.vanillaTitle}`;
+  }
+
   onNavigationEntryClick(entry: NavigationEntry) {
     this.currentEntry = entry;
+    this.setDocumentTitle();
     this.fetchCurrentEntryContent();
   }
 
