@@ -30,9 +30,11 @@ So, to make a long story short... If you read what I wrote on this page, if you 
 
 ## Favourite Quotes And Inspirations
 
-These are in no particular order, and I'd have many more around... If it wasn't for these people, I wouldn't know where else to draw my inspiration from. If I've left a quote untranslated, within the German language, it is because I feel like it would loose it's potency otherwise. Feel free to use a translator though.
+These are in no particular order, and I'd have many more around... If it wasn't for these people, I wouldn't know where else to draw my inspiration from. Quotes which only unfold their full potency within the German language have been kept as such and were translated and parenthesized immediately afterwards.
 
 "Is there any valid construction of irrational number? Hint: NO. Since there is no valid construction of irrational number, can there be any valid mathematical concept for real number? Hint: NO." - John Gabriel
+
+"Since my earliest memories I have been depressed, both due to my suffering and that of others. I cannot begin to imagine how anyone can claim to be normal and never have suffered depression. No deep thinker can avoid experiencing many bouts of depression during life’s journey. The world is a very miserable place whether one is rich or poor. In my opinion, someone who does not experience Weltschmerz is abnormal." - John Gabriel
 
 "Future inventions have always existed, only we cannot realise them all." - ?
 
@@ -58,13 +60,15 @@ These are in no particular order, and I'd have many more around... If it wasn't 
 
 "It is the unwise use of fire, which is the reason for why we live in hell right now, today!" - John Rose
 
-"The person who has been eating the wrong foods - animal products - for decades, that has level two nutrients in it that we're supposed to be making if we're healthy, and becomes dependent on meat, is also in a horrible dilemma." - John Rose
-
 "Only thru a mucus-free diet can we expect to eliminate the accumulation of waste and obstructions deposited in the body tissues during a lifetime of wrong eating." - Arnold Ehret
 
 "Auf hohem Berggipfel lag verborgen, das Leben ohne Leid, Schmerz und Sorgen. Durch Nebel, Wolken und an düstern Gründen, ward wenigen vergönnt, den rechten Pfad zu finden. Gar manche stürzten ab und viele geh'n zurück: in Angst verzichtend auf des Lebens höchstes Glück. Auf halber Höhe und mit halben Lehren, will jeder dann die Welt bekehren. Und alle rufen sie im Chor vereint: Wir glauben nicht, dass oben Sonne scheint!" - Arnold Ehret
 
+("On a high mountain peek lays hidden, a life without suffering, pain and worries. Through fog, clouds and grim depths it was only granted a few, to find the right path. Some fall off, many turn around and go back: in fear, renouncing and giving up life's highest bliss and happiness. Halfway up, and with half insights, everybody wants to convince and convert the world. And they all get together and shout in the choir: we do not believe, that there's sunshine up there!" - Arnold Ehret)
+
 "Der Mensch hält nur das für schädlich, woran er direkt stirbt, daß aber jahrelange Schädigungen sich endlich zum Verhängnis aufstauen können, daran glaubt der moralische Dickhäuter, genannt Mensch, nicht, obgleich ein degeneriertes, bebrilltes, zahnarmes, kahlköpfiges, unschönes, trottelhaftes Geschlecht eine deutliche Sprache redet." - Heinrich Lahmann
+
+("The human only considers that as harmful, of which he instantaneously dies, but that years of repeated damage may ultimatively accumulate into one's doom, that, the moral pachyderm, called human, does not want to believe, although a degenerated, bespectacled, almost toothless, bald, ugly, stupid lineage speaks rather clear volumes." - Heinrich Lahmann)
 
 "The only good is knowledge, the only evil is ignorance. Bad men live to eat and drink where as good men eat and drink to live." - Socrates
 
@@ -74,6 +78,8 @@ These are in no particular order, and I'd have many more around... If it wasn't 
 
 "While we ourselves are the living graveyard of murdered beast, how can we expect any ideal conditions on this earth. The person who is ignorant enough to believe that his nourishment depends on meat is in a horrible dilemma." - George Bernard Shaw
 
+"The person who has been eating the wrong foods - animal products - for decades, that has level two nutrients in it that we're supposed to be making if we're healthy, and becomes dependent on meat, is also in a horrible dilemma." - John Rose
+
 "I believe that every man, who has ever been earnest to preserve his higher or poetic faculties in the best condition, has been particularly inclined to obstain from animal food." - Henry David Thoreau
 
 "One should eat to live, not live to eat. My refusal to eat flesh occasioned an inconvenience. I was frequently chaided for my singularity, but with a slighter repass, I made the greater progress. From greater clearness of head and quicker comprehension." - Benjamin Franklin
@@ -81,6 +87,42 @@ These are in no particular order, and I'd have many more around... If it wasn't 
 "We have made of ourselves living cesspools and have driven doctors to invent names for our diseases." - Plato
 
 "It's easier to change a man's religion than it is their diet." - Margaret Mead
+
+"He who has a strong enough why can bear almost any how." - Friedrich Nietzsche
+
+"Die Ehe ist für die zwanziger Jahre ein nöthiges, für die dreissiger ein nützliches, aber nicht nöthiges Institut: für das spätere Leben wird sie oft schädlich und befördert die geistige Rückbildung des Mannes." - Friedrich Nietzsche
+
+("Marriage is for ones twenties a necessity, useful for their thirties, bot not a required facility: later on in life, it often becomes harmful and promotes mental regression in men." - Friedrich Nietzsche)
+
+"Dass mir der Hund das Liebste sei, sagst du, o Mensch, sei Sünde? Der Hund blieb mir im Sturme treu, der Mensch nicht mal im Winde." - Arthur Schopenhauer
+
+("That my dog is my dearest, you call, oh human, a sin? The dog stays true to me even throughout a storm, the human not even during the slightest wind." - Arthur Schopenhauer)
+
+"Man kann auch die Gesellschaft mit einem Feuer vergleichen, an welchem der Kluge sich in gehöriger Entfernung wärmt; nicht aber hineingreift wie der Tor, der dann, nachdem er sich verbrannt hat, in die Kälte der Einsamkeit flieht und jammert, daß das Feuer brennt." - Arthur Schopenhauer
+
+("Society is comparable to a fire, a fire through which the wise derive their warmth adequately distanced, not reaching in like a fool, who, after having been burnt, flees back into the cold, whining about the fact that fire may burn." - Arthur Schopenhauer)
+
+"Sit down before fact like a little child, and be prepared to give up every preconceived notion, follow humbly wherever and to whatever abyss Nature leads or you shall learn nothing." - Thomas Henry Huxley
+
+"Men who are occupied in the restoration of health to other men, by the joint exertion of skill and humanity, are above all the great of the earth. They even partake of divinity, since to preserve and renew is almost as noble as to create." - Voltaire
+
+"Whatever deceives men seems to produce a magical enchantment." - Plato
+
+"When you believe in things that you don't understand, then you suffer. Superstition ain't the way." - Stevie Wonder
+
+"Those who tell the stories rule society." - Plato
+
+"People do not decide their futures, they decide their habits and their habits decide their futures." - F.M. Alexander
+
+"Men's natures are alike. It is their habits that carry them far apart." - Confucius
+
+"Good habits are worth being fanatical about." - John Irving
+
+"Watch your actions; they become habit. Watch your habits; they become character. Watch your character; it becomes your destiny." - Lao Tzu
+
+"Never suffer an exception to occur till the new habit is securely rooted in your life. Each lapse is like the letting fall of a ball of string which one is carefully winding up; a single slip undoes more than a great many turns will wind again." - William James
+
+"Every day of our lives, we are on the verge of making those slight changes that would make all the difference." - Mignon McLaughlin
 
 ## Interests
 
