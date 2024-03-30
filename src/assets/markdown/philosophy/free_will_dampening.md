@@ -85,3 +85,13 @@ No matter how much wisdom has been accumulated, how much sharpening one's intell
 Mental clarity can be dampened by a body that's not up to task, as consciousness always relies on a vehicle. This could be the case through so-called "*dis-ease*" brought upon by the wrong way of living, which includes behavior-altering substances like alcohol, drugs and the wrong food.
 
 On the other hand, mental clarity may be thought of similar to a muscle: it needs to be regularly exercised to keep its potency. Indulging in escapism and thereby fleeing from- and denying one's own purpose in life will slowly reverse any prior invested effort of mental exercise.
+
+## Induced Uncertainty
+
+It's very challenging for the individual to rise above the ideas of its time, because one is constantly bombarded with so many references, so many beliefs and dogmas, as well as the effects of peer pressure and the pain received through socal exclusion.
+
+People who go against the mainstream, for example by practising abstinence, namely from sexual activity and or from gluttony, act as a mirror to those who still indulge in these distractions; a mirror which provokes the implicit question of "Why are you depending on it, why do you need it?". As soon as the revolutionary reap what they've sown, as soon as their life starts getting better, those who initially questioned their decisions are now proven otherwise, and start to feel jealous and ashamed.
+
+If the message cannot be attacked, the messager is to be taken down. People become ridiculed, alienated, libelled and excluded from society: misguided fools do not want to dwell next to a living and breathing reminder of their own shortcomings.
+
+While there are many who still manage to unfold a lot of their potential in complete isolation and in spite of this mental suffering, others are crushed by it; people who are desperately needed as helping hands to push through a revolution, one which has been long overdue. This is the exact reason for why it is of paramount importance for those who are strong enough to shine their light, to become beacons of hope and inspiration, to stand like a rock in the surf in a world that has been flooded by conflicting opinions, lies, deception and misinformation. Through pillars like these, beings who are still held back by the chains of uncertainty may derive a feeling of validation, of valuable acceptance and, in the end, of empowerment to finally act out on their intuitions.
