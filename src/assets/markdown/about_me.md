@@ -124,6 +124,12 @@ These are in no particular order, and I'd have many more around... If it wasn't 
 
 "Every day of our lives, we are on the verge of making those slight changes that would make all the difference." - Mignon McLaughlin
 
+"An idiot admires complexity, a genius admires simplicity. A physicist tries to make it simple. An idiot, the more complicated it is, the more he will admire it. If you make something so clusterfucked he can't understand it, he's gonna think you're a god, because you made it so complicated, nobody can understand it. That's how they write academic journals; they try to make it so complicated, people think you're a genius." - Terry Davis
+
+"Anregung von außen geben ihm die Werke der Natur und der Anblick des menschlichen Treibens, sodann die so verschiedenen Leistungen der Hochbegabten aller Zeiten und Länder, als welche eigentlich nur ihm ganz genießbar, weil nur ihm ganz verständlich und fühlbar sind. Für ihn demnach haben jene wirklich gelebt, an ihn haben sie sich eigentlich gewendet; während die Uebrigen nur als zufällige Zuhörer Eines und das Andere halb auffassen." - Arthur Schopenhauer
+
+("Stimulations from the outside he receives from the works of nature and the scene of human effort, the most diverse achievements of the highly gifted of all times and countries, which are only fully enjoyable to him, since only he entirely understands and feels them. For him, they (their authors) have really lived, to him they have really turned to; while all others acted as mere random witnesses, which have perceived some partials here and there." - Arthur Schopenhauer)
+
 ## Interests
 
 I consider myself a *world-jumper*, as I call it. There's no single interest I'm chasing all the time, but I'm rather going for "sprints" in various worlds of topics. Sometimes, these take only a few days or weeks, sometimes months. I don't constrain myself in any way, shape or form. If I don't feel inspired and motivated to work on something, I just don't do it, as I'd otherwise pollute that world with negative experiences.
