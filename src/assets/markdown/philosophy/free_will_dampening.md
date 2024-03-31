@@ -64,6 +64,8 @@ Our anatomical limitations dictate which food we are supposed to eat, as describ
 
 As soon as we molest our tastebuds as well as our whole food-tube with the wrong food, with addictive substances, with flavors and scents which have never existed before, we will enevitably become addicted to this way of living, and thereby become gluttons. By knowing what these bodyparts were intended for originally, one can reverse their degeneration, and once again live as nature intended them to, in effect liberating themselves from the drive to make their whole existence revolve around culinary perversions.
 
+Yet another mighty inside would be [Piece 112 of The Ultimate Schematic](philosophy/the-ultimate-schematic#piece-112), as it tells us that we have to first undergo a process of reversing the tolerance we've built up to our mistakes, before any unadulterated judgment may take place.
+
 #### Reproduction
 
 Every species on this planet aims to not go extinct, and thereby has an inherent interest in reproducing itself. Since natural selection also manifests within what an individual feels attracted by, namely by others of high aesthetics, their strength, their endurance, their social status, etc., these expectations have irreversibly taken root within our subconscious a long time ago.
