@@ -1,4 +1,4 @@
-import { Component, ComponentRef, OnDestroy, Renderer2, ViewChild, ViewContainerRef, signal } from '@angular/core';
+import { Component, ComponentRef, ElementRef, OnDestroy, Renderer2, ViewChild, ViewContainerRef, signal } from '@angular/core';
 import { KatexOptions, MarkdownComponent } from 'ngx-markdown';
 import { NavigationData } from '../../components/navigation/navigation-data.interface';
 import { NavigationEntry } from '../../components/navigation/navigation-entry.interface';
@@ -35,6 +35,7 @@ export class MainPageComponent implements OnDestroy {
   private static HEADLINE_CLASS_ACTIVE = "markdown-headline--active";
   private static HEADLINE_CLASS_TO_TOP = "markdown-headline__to-top";
   private static HEADLINE_CLASS_TO_BOTTOM = "markdown-headline__to-bottom";
+  private static NAVIGATION_TOGGLE_CLASS_ACTIVE = "navigation__toggle--active";
 
   private static PARAGRAPH_HIGHLIGHT_MARKER_CLASSES: { [key: string]: string } = {
     'TODO: ': `${MainPageComponent.HIGHLIGHTED_PARAGRAPH_CLASS}--todo`,
@@ -105,10 +106,17 @@ export class MainPageComponent implements OnDestroy {
     document.title = `${this.currentEntry.title} - ${this.vanillaTitle}`;
   }
 
-  onNavigationEntryClick(entry: NavigationEntry) {
+  onNavigationEntryClick(entry: NavigationEntry, toggleElement: HTMLDivElement, contentElement: HTMLDivElement) {
+    contentElement.scrollTop = 0;
+    toggleElement.classList.remove(MainPageComponent.NAVIGATION_TOGGLE_CLASS_ACTIVE)
+
     this.currentEntry = entry;
     this.setDocumentTitle();
     this.fetchCurrentEntryContent();
+  }
+
+  onNavigationToggle(toggleElement: HTMLDivElement) {
+    toggleElement.classList.toggle(MainPageComponent.NAVIGATION_TOGGLE_CLASS_ACTIVE)
   }
 
   private fetchCurrentEntryContent() {

@@ -1,8 +1,14 @@
 <div class="navigation">
-  <app-navigation
-    [navigationData]="navigationData()"
-    (navigationChanged)="onNavigationEntryClick($event)"
-  ></app-navigation>
+  <div #navigationToggle (click)="onNavigationToggle(navigationToggle)" class="navigation__toggle">
+    <img src="/assets/icons/menu.svg" alt="menu">
+  </div>
+
+  <div #navigationContent class="navigation__content">
+    <app-navigation
+      [navigationData]="navigationData()"
+      (navigationChanged)="onNavigationEntryClick($event, navigationToggle, navigationContent)"
+    ></app-navigation>
+  </div>
 </div>
 
 <div class="content">
