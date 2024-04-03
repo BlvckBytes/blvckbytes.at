@@ -124,7 +124,7 @@ markdown {
     padding: .1rem;
   }
 
-  p {
+  p, hr {
     margin-bottom: var(--global-line-height);
   }
 
@@ -364,5 +364,10 @@ markdown {
         color: var(--highlight-todo-color);
       }
     }
+  }
+
+  blockquote {
+    border-left: .4rem solid var(--secondary-color);
+    padding-left: .8rem;
   }
 }
