@@ -80,6 +80,16 @@ The same ID system should apply to headlines as well, where a headline is unique
 
 References to other pages may or may not contain a specific headline, but either way need to be tracked, so that each page becomes aware of it's referrers and malformed or non-existing references are detected and rejected. Pages which are referred to may also no longer be deleted, without deciding how to handle these sites of references first.
 
+### Multilingual Support
+
+It very much is challenging to express thought and emotion using language with attention to detail and in a way that another mental being will construct these impressions so that they may only deviate within an acceptable range from their corresponding original. If the other party is not able to communicate in English at all, or has only very little experience and or vocabulary at their disposal, true understanding will remain an impossible goal.
+
+There are many such individuals all around the globe, who should also be able to access important knowledge, as they make up a part of the population which cannot be left behind if matters are ever to be changed long-term.
+
+While it adds a lot of administrative overhead to manage translations and to keep them in sync with their English counterpart, I'd argue that even an incomplete or an out-of-date translation may still aid understandment. Whenever a page is being updated, its translations become marked as out-of-sync, until updated as well. It should be easy to propose and add new translations, so volunteers may easily offer their help with as little friction as possible.
+
+Since words and even sentences never map one-to-one, translations cannot be validated systematically, but rather depend on trust, and on plausibility-checks based on publicly accessible means of translation.
+
 ### Global Map
 
 Pages are spawned within a 2D coordinate system, where an administrator can alter their location to position them in a manner that's visually appealing. References are visualized as lines drawn between pages, where waypoints on lines can be managed manually, as to avoid them becoming a ratsnest. Each page may have a thumbnail as well as a short description which is being shown when hovering the item.
