@@ -134,6 +134,8 @@ These are in no particular order, and I'd have many more around... If it wasn't 
 
 "All paid employment absorbs and degrades the mind." - Aristotle
 
+"It is the mark of an educated mind to be able to entertain a thought without accepting it." - Aristotle
+
 ## Interests
 
 I consider myself a *world-jumper*, as I call it. There's no single interest I'm chasing all the time, but I'm rather going for "sprints" in various worlds of topics. Sometimes, these take only a few days or weeks, sometimes months. I don't constrain myself in any way, shape or form. If I don't feel inspired and motivated to work on something, I just don't do it, as I'd otherwise pollute that world with negative experiences.
