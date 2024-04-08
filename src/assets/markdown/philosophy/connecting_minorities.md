@@ -106,6 +106,8 @@ CoordinatesTag { name: String, longitude: Double, latitude: Double }
 
 With the above, it should already be possible to depict a great deal of information, while the `CoordinatesTag` may be used to provide a nearby location that the author is comfortable sharing with others, which represents their approximate place of residence. This system is always extendable with new tag-types, if the need arises.
 
+A user who attaches tags to their profile can add references to tags in their free-text profile description, so that further elaboration and clarification may take place. If a tag is referenced within free-text, it cannot be removed until that reference has been deleted again.
+
 ### Templates And Generation
 
 While these tags can quickly be dragged and dropped, in a terminal-block like manner, it may still take some time and be confusing at first, which is where templates and auto-generation through natural language, using a LLM, could come in handy. Next to that, auto-completion as well as context aware suggestions are going to be key for efficiently entering these trees into the system.
