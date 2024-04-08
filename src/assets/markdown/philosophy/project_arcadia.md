@@ -78,6 +78,8 @@ A page consists of a single text file stored within the filesystem of the server
 
 The same ID system should apply to headlines as well, where a headline is uniquely identified by it's size (1-4) and it's sequence number from the very top of the page. This feature will require serverside diffing on updates, to detect inserted or deleted headlines and synchronize the database accordingly.
 
+While pages and headlines are referenced by ID, they may still be searched for by their textual titles manually for reasons of quick and ad-hoc access. Once renamed, somebody else might still hold pieces of the former headline in their head, using them as a mental anchor, and thereby may no longer have quick and easy access to the resource in question. Due to this, it is important to keep a title history, through which a search may then comb to yield results. À la "formerly known as ...", where such results can be ranked lower than current matches, but should still be directly visible.
+
 References to other pages may or may not contain a specific headline, but either way need to be tracked, so that each page becomes aware of it's referrers and malformed or non-existing references are detected and rejected. Pages which are referred to may also no longer be deleted, without deciding how to handle these sites of references first.
 
 ### Multilingual Support
