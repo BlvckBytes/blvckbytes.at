@@ -178,7 +178,7 @@ export class MainPageComponent implements OnDestroy {
     if (!this.markdownRef)
       return;
 
-    const markdownElement = this.markdownRef.element.nativeElement;
+    const markdownElement = this.markdownRef.element.nativeElement as HTMLDivElement;
 
     this.destroyCanvasWrappers();
     this.patchScriptTags(markdownElement);
@@ -198,7 +198,36 @@ export class MainPageComponent implements OnDestroy {
       const jumpedToElement = markdownElement.querySelector(window.location.hash);
 
       if (jumpedToElement) {
-        jumpedToElement.scrollIntoView();
+        const imageTags = markdownElement.querySelectorAll("img");
+        const numberOfImageTags = imageTags.length;
+        let imagesLoaded = 0;
+
+        const incrementImagesLoaded = () => {
+          if (++imagesLoaded == numberOfImageTags)
+            jumpedToElement.scrollIntoView();
+        };
+
+        for (let i = 0; i < numberOfImageTags; ++i) {
+          const imageTag = imageTags[i];
+
+          if (imageTag.complete) {
+            incrementImagesLoaded();
+            continue;
+          }
+
+          let unsubscribeFunction: (() => void) | null = null;
+
+          unsubscribeFunction = this.renderer.listen(imageTag, 'load', () => {
+            incrementImagesLoaded();
+            unsubscribeFunction?.();
+          });
+
+          this.subs.sink = { unsubscribe: unsubscribeFunction };
+        }
+
+        if (numberOfImageTags == 0)
+          jumpedToElement.scrollIntoView();
+
         this.onHashJump(jumpedToElement);
       }
 
