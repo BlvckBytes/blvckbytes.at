@@ -220,6 +220,90 @@ cos(\alpha) = \left\{\begin{array}{lr}
 \end{array}\right\}
 $$
 
+## Angle Sum
+
+<img src="/assets/images/trigonometric_functions__10.jpg" class="third-width-image"/>
+
+Let there be a unit-circle of radius 1, with an angle $\alpha$ spanned by the line $\overline{AC}$ and the $x$-axis, then drop a perpendicular from point $C$ relative to the $x$-axis into point $B$. The resulting triangle $\triangle{ABC}$ now has a hypothenuse $\overline{AC} = 1$ and sides $\overline{AB} = \cos(\alpha)$, $\overline{BC} = \sin(\alpha)$.
+
+Next, the line $\overline{AE}$ spans an angle $\beta$ relative to the line $\overline{AC}$, with a perpendicular dropped at point $E$ relative to the $x$-axis into point $D$. The resulting triangle $\triangle{ADE}$ now has a hypothenuse $\overline{AE} = 1$ and sides $\overline{AD} = \cos(\alpha + \beta)$, $\overline{DE} = \sin(\alpha + \beta)$.
+
+By dropping a perpendicular from point $E$ relative to line $\overline{AC}$ into point $F$, another right triangle $\triangle{AFE}$ emerges with a hypothenuse $\overline{AE} = 1$ and thereby sides $\overline{AF} = \cos(\beta)$, $\overline{FE} = \sin(\beta)$.
+
+By extending the line $\overline{FE}$ until it intersects with the $x$-axis in point $H$, yet another right triangle is formed, namely $\triangle{AHF}$, with a complementary angle relative to $\alpha$, $\gamma = \frac{\pi}{2} - \alpha$.
+
+### Sine
+
+Since $\triangle{AGF} \sim \triangle{ABC}$ it follows that $\frac{\overline{GF}}{\overline{BC}} = \frac{\overline{AF}}{1}$, and thereby
+
+$$\mathrm{I}: \frac{\overline{GF}}{\sin(\alpha)} = \cos(\beta)$$
+
+Since $\triangle{DHE} \sim \triangle{GHF}$ it follows that $\frac{\overline{GF}}{\overline{DE}} = \frac{\overline{HF}}{\overline{HF} + \overline{FE}}$, and thereby
+
+$$\mathrm{II}: \frac{\overline{GF}}{\sin(\alpha + \beta)} = \frac{\overline{HF}}{\overline{HF} + \sin(\beta)}$$
+
+Since $\gamma$ is complementary to $\alpha$, $\cos(\alpha) = \sin(\gamma)$, and since $\sin(\gamma) = \frac{\overline{GF}}{\overline{HF}}$, it follows that
+
+$$\mathrm{III}: \cos(\alpha) = \frac{\overline{GF}}{\overline{HF}}$$
+
+By substituting $\mathrm{I}$ into $\mathrm{III}$, we get
+
+$$
+\begin{align*}
+\cos(\alpha) &= \frac{\cos(\beta) * \sin(\alpha)}{\overline{HF}} \\
+\mathrm{IV}: \overline{HF} &= \frac{\cos(\beta) * \sin(\alpha)}{\cos(\alpha)}
+\end{align*}
+$$
+
+By substituting $\mathrm{I}$ into $\mathrm{II}$, we get
+
+$$
+\begin{align*}
+\frac{\cos(\beta) * \sin(\alpha)}{\sin(\alpha + \beta)} &= \frac{\overline{HF}}{\overline{HF} + \sin(\beta)} \\
+\mathrm{V}: sin(\alpha + \beta) &= \frac{\cos(\beta) * \sin(\alpha) * (\overline{HF} + \sin(\beta))}{\overline{HF}}
+\end{align*}
+$$
+
+To finally substitute $\mathrm{IV}$ into $\mathrm{V}$
+
+$$
+\begin{align*}
+sin(\alpha + \beta) &= \frac{\cos(\beta) * \sin(\alpha) * (\frac{\cos(\beta) * \sin(\alpha)}{\cos(\alpha)} + \sin(\beta))}{\frac{\cos(\beta) * \sin(\alpha)}{\cos(\alpha)}} \\
+sin(\alpha + \beta) &= \frac{\frac{\cos(\beta) * \sin(\alpha) * \cos(\beta) * \sin(\alpha)}{\cos(\alpha)} + \cos(\beta) * \sin(\alpha) * \sin(\beta)}{\frac{\cos(\beta) * \sin(\alpha)}{\cos(\alpha)}} \\
+sin(\alpha + \beta) &= \frac{\frac{\cos(\beta) * \sin(\alpha) * \cos(\beta) * \sin(\alpha)}{\cos(\alpha)}}{\frac{\cos(\beta) * \sin(\alpha)}{\cos(\alpha)}} + \frac{\cos(\beta) * \sin(\alpha) * \sin(\beta)}{\frac{\cos(\beta) * \sin(\alpha)}{\cos(\alpha)}} \\
+sin(\alpha + \beta) &= \frac{\cancel{\cos(\beta)} * \cancel{\sin(\alpha)} * \cos(\beta) * \sin(\alpha) * \cancel{\cos(\alpha)}}{\cancel{\cos(\alpha)} * \cancel{\cos(\beta)} * \cancel{\sin(\alpha)}} + \frac{\cancel{\cos(\beta)} * \cancel{\sin(\alpha)} * \sin(\beta) * \cos(\alpha)}{\cancel{\cos(\beta)} * \cancel{\sin(\alpha)}} \\
+sin(\alpha + \beta) &= \cos(\beta) * \sin(\alpha) + \sin(\beta) * \cos(\alpha)
+\end{align*}
+$$
+
+### Cosine
+
+Since $\cos(\alpha) = \sin(\frac{\pi}{2} - \alpha)$ and with the identities of $\sin(-\alpha) = -\sin(\alpha)$, $\cos(-\alpha) = \cos(\alpha)$ in mind, it follows that
+
+$$
+\begin{align*}
+\cos(\alpha + \beta) &= \sin(\frac{\pi}{2} - (\alpha + \beta))\\
+\cos(\alpha + \beta) &= \sin((\frac{\pi}{2} - \alpha) - \beta)\\
+\cos(\alpha + \beta) &= \cos(-\beta) * \sin(\frac{\pi}{2} - \alpha) + \sin(-\beta) * \cos(\frac{\pi}{2} - \alpha) \\
+\cos(\alpha + \beta) &= \cos(\beta) * \sin(\frac{\pi}{2} - \alpha) - \sin(\beta) * \cos(\frac{\pi}{2} - \alpha) \\
+\cos(\alpha + \beta) &= \cos(\beta) * \cos(\alpha) - \sin(\beta) * \sin(\alpha)
+\end{align*}
+$$
+
+### Tangent
+
+Since $\tan(\alpha) = \frac{\sin(\alpha)}{\cos(\alpha)}$, it follows that
+
+$$
+\begin{align*}
+\tan(\alpha + \beta) &= \frac{\sin(\alpha + \beta)}{\cos(\alpha + \beta)} \\
+\tan(\alpha + \beta) &= \frac{\cos(\beta) * \sin(\alpha) + \sin(\beta) * \cos(\alpha)}{\cos(\beta) * \cos(\alpha) - \sin(\beta) * \sin(\alpha)} \\
+\tan(\alpha + \beta) &= \frac{\frac{\cos(\beta) * \sin(\alpha) + \sin(\beta) * \cos(\alpha)}{\cos(\alpha)*\cos(\beta)}}{\frac{\cos(\beta) * \cos(\alpha) - \sin(\beta) * \sin(\alpha)}{\cos(\alpha)*\cos(\beta)}} \\
+\tan(\alpha + \beta) &= \frac{\frac{\cancel{\cos(\beta)} * \sin(\alpha)}{\cos(\alpha)*\cancel{\cos(\beta)}} + \frac{\sin(\beta) * \cancel{\cos(\alpha)}}{\cancel{\cos(\alpha)}*\cos(\beta)}}{\frac{\cancel{\cos(\beta)} * \cancel{\cos(\alpha)}}{\cancel{\cos(\alpha)}*\cancel{\cos(\beta)}} - \frac{\sin(\beta) * \sin(\alpha)}{\cos(\alpha)*\cos(\beta)}} \\
+\tan(\alpha + \beta) &= \frac{\tan(\alpha) + \tan(\beta)}{1 - \tan(\alpha) * \tan(\beta)}
+\end{align*}
+$$
+
 ## Trivial Values
 
 There are a few datapoints on the fundamental trigonometric functions $sin$ and $cos$ (and, for completeness, $tan$) that can be easily derived based on simple logic and commonly known triangles. Due to [Quadrant Symmetries](#quadrant-symmetries), there is no point in finding values outside of $0 \le \alpha \le \frac{\pi}{2}$.
