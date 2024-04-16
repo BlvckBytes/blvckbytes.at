@@ -30,7 +30,8 @@
         { "title": "Shortest Path Between Two Points", "src": "/assets/markdown/math/shortest_path_between_two_points.md" },
         { "title": "Archimedes' Circle Area Proof", "src": "/assets/markdown/math/archimedes_circle_area_proof.md" },
         { "title": "The Exponential Function", "src": "/assets/markdown/math/the_exponential_function.md" },
-        { "title": "Taylor Series", "src": "/assets/markdown/math/taylor_series.md" }
+        { "title": "Taylor Series", "src": "/assets/markdown/math/taylor_series.md" },
+        { "title": "New Calculus", "src": "/assets/markdown/math/new_calculus.md" }
       ]
     },
     {
