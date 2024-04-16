@@ -49,6 +49,24 @@ const customRendererFactory = (): MarkedRenderer => {
       result = deactivateImageSource(result);
 
     return result;
+  }
+
+  const originalParagraphRenderer = renderer.paragraph;
+  renderer.paragraph = (text: string): string => {
+    return originalParagraphRenderer(text)
+      /*
+        Note to future self: this is an immensely stupid hack.
+
+        Since the tokenizer doesn't know of $ and $$ TeX markers, it interprets the
+        multiplication operator '*' or various other combinations as text formatting
+        instructions, and thereby links may end up in such a region and are considered
+        as regular plain text. I'd love to patch this on the token- instead of on
+        the renderer-level, but I cannot modify the token array itself, to inject tokens
+        when breaking such messes apart.
+
+        It's about time that I write my own parser and renderer...
+      */
+      .replace(/\[([^\[\]\n]+)\]\(([^\(\)\n]+)\)/g, `<a href="$2">$1</a>`);
   };
 
   const originalImageRenderer = renderer.image;
