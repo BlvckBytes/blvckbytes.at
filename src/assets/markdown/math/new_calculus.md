@@ -6,9 +6,9 @@ WARNING: The original source of information remains at the works of John Gabriel
 
 INFO: Explanations may be written in my own words, be copies of how John expressed them, or be a mixture of both. I tend to have to work through information by copying and understanding it at first, until I can confidently try to explain it in my own words, which is my ultimate goal. Also, by working through the subject, I collect my own ASCII-files, containing texts, links, and TeX-expressions, which I need for the final portrayal in any case.
 
-This page tries to accumulate knowledge about a mathematical concept revealed by John Gabriel (<a href="https://independent.academia.edu/JohnGabriel30" target="_blank">academia.edu</a>, <a href="https://www.youtube.com/@NewCalculus" target="_blank">YouTube</a>), called <a href="https://www.academia.edu/41616655/An_Introduction_to_the_Single_Variable_New_Calculus" target="_blank">New Calculus</a>, which is <a href="https://drive.google.com/file/d/1t6h3NX3yWft3VTONoDHqfccmapJ5ewop" target="_blank">Not Just A Tautology</a>. In essence, this concept represents a truly rigorous derivation of the derivative (slope of a tangent line on a smooth curve at a point) as well as the integral (area bounded by a smooth curve and the x-axis), all while abstaining from limit theory, infinity, infinitesimals or other made-up theories. The missing link between these two operations has also been unveiled, all while only building upon the work of Euclid's <a href="https://farside.ph.utexas.edu/books/Euclid/Elements.pdf" target="_blank">The Elements</a> and the <a href="https://oll-resources.s3.us-east-2.amazonaws.com/oll3/store/titles/1828/Archimedes_Works1332.pdf" target="_blank">The Works Of Archimedes</a>, and thereby sound geometric knowledge.
+This page tries to accumulate knowledge about a mathematical concept revealed by John Gabriel (<a href="https://independent.academia.edu/JohnGabriel30" target="_blank">academia.edu</a>, <a href="https://www.youtube.com/@NewCalculus" target="_blank">YouTube</a>, <a href="https://thenewcalculus.weebly.com" target="_blank">homepage</a>), called <a href="https://www.academia.edu/41616655/An_Introduction_to_the_Single_Variable_New_Calculus" target="_blank">New Calculus</a>, which is <a href="https://drive.google.com/file/d/1t6h3NX3yWft3VTONoDHqfccmapJ5ewop" target="_blank">Not Just A Tautology</a>. In essence, this concept represents a truly rigorous derivation of the derivative (slope of a tangent line on a smooth curve at a point) as well as the integral (area bounded by a smooth curve and the x-axis), all while abstaining from limit theory, infinity, infinitesimals or other made-up theories. The missing link between these two operations has also been unveiled, all while only building upon the work of Euclid's <a href="https://farside.ph.utexas.edu/books/Euclid/Elements.pdf" target="_blank">The Elements</a> and the <a href="https://oll-resources.s3.us-east-2.amazonaws.com/oll3/store/titles/1828/Archimedes_Works1332.pdf" target="_blank">The Works Of Archimedes</a>, and thereby sound geometric knowledge.
 
-Besides making broadly accessible what has been overcomplicated by academia for dozens of decades, John also provides further insight into concepts such as <a href="https://www.academia.edu/105399167/The_Ultimate_Book_of_Numbers" target="_blank">Measure And Number</a>, the <a href="https://www.academia.edu/101865814/Trigonometry_and_its_origins" target="_blank">Origin Of Trigonometry</a>, the <a href="https://www.academia.edu/77923497/The_Mean_Value_Theorem_explained_using_positional_derivatives" target="_blank">Mean Value Theorem</a>, the <a href="https://www.academia.edu/102530388/Symmetry_of_the_circle_defines_four_basic_arithmetic_operations_x_" target="_blank">Definition Of Arithmetic Operations</a>, <a href="https://www.academia.edu/39981684/Proof_of_the_most_important_Number_theorem_that_mainstream_mathematics_academics_never_learned" href="_blank">Expressing Magnitudes In A Radix System</a>, <a href="https://www.academia.edu/45567545/There_are_no_postulates_or_axioms_in_Greek_mathematics" target="_blank">Rejecting Postulates Or Axioms</a> and many, many more. Thereby, I strongly believe that the only right thing I can do on my part is to study his work and help to make it attainable, approachable and fully penetrable for other newcomers.
+Besides making broadly accessible what has been overcomplicated by academia for dozens of decades, John also provides further insight into concepts such as <a href="https://www.academia.edu/105399167/The_Ultimate_Book_of_Numbers" target="_blank">Measure And Number</a>, the <a href="https://www.academia.edu/101865814/Trigonometry_and_its_origins" target="_blank">Origin Of Trigonometry</a>, the <a href="https://www.academia.edu/77923497/The_Mean_Value_Theorem_explained_using_positional_derivatives" target="_blank">Mean Value Theorem</a>, the <a href="https://www.academia.edu/102530388/Symmetry_of_the_circle_defines_four_basic_arithmetic_operations_x_" target="_blank">Definition Of Arithmetic Operations</a>, <a href="https://www.academia.edu/39981684/Proof_of_the_most_important_Number_theorem_that_mainstream_mathematics_academics_never_learned" href="_blank">Expressing Magnitudes In A Radix System</a>, <a href="https://www.academia.edu/45567545/There_are_no_postulates_or_axioms_in_Greek_mathematics" target="_blank">Rejecting Postulates Or Axioms</a>, <a href="https://www.academia.edu/106488069/The_Non_fictional_Origins_and_History_of_Calculus" target="_blank">The Non-Fictional Origins And History Of Calculus</a> and many, many more. Thereby, I strongly believe that the only right thing I can do on my part is to study his work and help to make it attainable, approachable and fully penetrable for other newcomers.
 
 This process will take time and patience, and is not as easy as I'd like it to be without tools like [Arcadia](/philosophy/project-arcadia) or [Tagnet](/philosophy/connecting-minorities#solution-proposal). Still, important groundwork is to be done, so that I fully grasp these concepts and can thereby attain the potential of explaining them to others, which I currently do not possess. Thus follows, that this page is always a "Work In Progress" and will be constantly updated and extended. At the moment, it just represents an extension of my mind, and is thereby just as big of a mess, ;).
 
@@ -348,6 +348,55 @@ $$
 \end{align*}
 $$
 
+### Rules Of Derivation
+
+The following sections derive the commonly known rules of derivation, based on only the definition of the derivative, as follows:
+
+$$
+f'(x) = \frac{f(x + n) - f(x - m)}{m + n} \\
+$$
+
+TODO: Derive the remaining rules
+
+#### Power Rule
+
+$$
+\begin{align*}
+f(x) &= b*x^a \\
+\Rightarrow f'(x) &= \frac{b*(x + n)^a - b*(x - m)^a}{m + n} \\
+\end{align*}
+$$
+
+Firstly performing the [Binomial Expansion](math/binomial-expansion), then [Factorizing Sum/Difference Of Two n-th Powers](#factorizing-sumdifference-of-two-n-th-powers) yields:
+
+$$
+\begin{align*}
+f'(x) &= \frac{b*\sum_{k=0}^{a} \binom{a}{k}*x^{(a-k)}*n^{k} - b*\sum_{k=0}^{a} \binom{a}{k}*x^{(a-k)}*(-m)^{k}}{m + n} \\
+&= \frac{(\cancel{b*x^a} + b*\sum_{k=1}^{a} \binom{a}{k}*x^{(a-k)}*n^{k}) - (\cancel{b*x^a} + b*\sum_{k=1}^{a} \binom{a}{k}*x^{(a-k)}*(-m)^{k})}{m + n} \\
+&= \frac{b*\sum_{k=1}^{a} \binom{a}{k}*x^{(a-k)}*n^{k} - b*\sum_{k=1}^{a} \binom{a}{k}*x^{(a-k)}*(-m)^{k}}{m + n} \\
+&= \frac{b*\sum_{k=1}^{a} \binom{a}{k}*x^{(a-k)}*(n^{k} - (-m)^{k})}{m + n} \\
+&= \frac{b*(\binom{a}{1} * x^{a-1} * (n-(-m))) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*(n^{k} - (-m)^{k})}{m + n} \\
+&= \frac{(b * a * x^{a-1} * (n+m)) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*(n^{k} - (-m)^{k})}{m + n} \\
+&= \frac{(b * a * x^{a-1} * (n+m)) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*((m+n) * \sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j)}{m + n} \\
+&= \frac{(b * a * x^{a-1} * (n+m)) + (n+m) * b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j}{m + n} \\
+&= \frac{\cancel{(n+m)}*((b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j)}{\cancel{m + n}} \\
+&= (b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j \\
+&= (b * a * x^{a-1}) + Q(x,m,n)
+\end{align*}
+$$
+
+Let's see an example
+
+$$
+\begin{align*}
+f(x) &= 3*x^4 \Rightarrow a = 4,\, b = 3 \\
+\Rightarrow f'(x) &= (4 * 3 * x^{4-1}) + 3 * \sum_{k=2}^{4} \binom{4}{k}*x^{(4-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j \\
+&= 12 * x^3 + 3 * (6*x^{2}*(m - n) + 4*x*(m^2 - m*n + n^2) + (m^3 - m^2*n + m*n^2 - n^3)) \\
+&= 12 * x^3 + [18*x^{2}*(m - n) + 12*x*(m^2 - m*n + n^2) + 3*(m^3 - m^2*n + m*n^2 - n^3)] \\
+&= 12*x^3 + Q(x,m,n)
+\end{align*}
+$$
+
 ## New Calculus MVT
 
 It makes sense to use the New Calculus definition of [Derivative](#new-calculus-derivative) because it also shows immediately the connection between the integral and the derivative in the fundamental theorem of calculus which is derived in one step from the mean value theorem.
@@ -402,3 +451,84 @@ f'(c) &= \frac{1}{k}*(f'(\mu_1) + f'(\mu_2) + f'(\mu_3) + \dotsm + f'(\mu_{k - 1
 $$
 
 Note that it does not matter what $k$ we choose, because the arithmetic mean is always the same. Thus, for the purposes of quadrature, the seemingly impossible task of finding the arithmetic mean of innumerably many $y$-ordinates is accomplished by a reducible- or telescoping-sum.
+
+## Factorizing Sum/Difference Of Two n-th Powers
+
+Statement:
+
+$$
+\forall n \in \mathbb{N} : n \ge 2 \\
+\mathrm{I}: a^n - b^n = (a-b) * \sum_{k=0}^{n-1} a^{(n-1)-k} * b^k \\
+$$
+
+Base case ($n=2$):
+
+$$
+a^2 - b^2 = (a-b)*(a+b) = (a-b)*\sum_{k=0}^{1} a^{(2-1)-k} * b^k
+$$
+
+For $n+1$:
+
+$$
+\begin{align*}
+a^{n+1} - b^{n+1} &= (a-b) * \sum_{k=0}^{n - \cancel{1} + \cancel{1}} a^{n-k} * b^k \\
+&= (a-b) * \left(\sum_{k=0}^{n - 1} a^{n-k} * b^k + (a^{n - n} * b^n)\right) \\
+&= (a-b) * \left(\sum_{k=0}^{n - 1} a * a^{(n-1)-k} * b^k + b^n\right) \\
+&= (a-b) * \left(a*\sum_{k=0}^{n - 1} a^{(n-1)-k} * b^k + b^n\right) \\
+&= a * \textcolor{orange}{(a-b) * \sum_{k=0}^{n - 1} a^{(n-1)-k} * b^k} + (a-b)*b^n \\
+&= a*\textcolor{orange}{(a^n - b^n)} + (a-b)*b^n \\
+&= a^{n+1} - \cancel{a*b^n} + \cancel{a*b^n} - b^{n+1} \\
+&= a^{n+1} - b^{n+1} \\
+\end{align*}
+$$
+
+---
+
+Relation $\mathrm{I}$ can be partially expanded into the sum of n-th powers, by substituting $(-b)$ for $b$, as follows:
+
+$$
+a^n - (-b)^n = (a-(-b)) * \sum_{k=0}^{n-1} a^{(n-1)-k} * (-b)^k \\
+$$
+
+$b$'s negative sign will only persist on uneven powers of $n$ though, thus the following holds:
+
+$$
+\forall n \in \mathbb{N} : n \ge 3 \land 2 \nmid n \\
+\mathrm{II}: a^n + b^n = (a+b) * \sum_{k=0}^{n-1} a^{(n-1)-k} * (-b)^k \\
+$$
+
+Since the sum ranges from $k=0$ to $k=n-1$, and each summand is multiplied by $(-b)^k$, the sum will consist of summands with alternating signs, starting out positive, from left to right.
+
+$$
+a^n + b^n = (a+b) * (a^{n-1} - a^{n-2}*b + a^{n-3}*b^2 - \dotsm - a*b^{n-2} + b^{n-1})
+$$
+
+---
+
+On even powers, it becomes possible to extract $(a+b)$ instead of $(a-b)$, by modifying relation $\mathrm{I}$, as $(-b)^n$ will always be equivalent to $b$.
+
+$$
+\forall n \in \mathbb{N} : n \ge 2 \land 2 \mid n \\
+$$
+
+$$
+\begin{align*}
+a^n - b^n &= (a-b) * \sum_{k=0}^{n-1} a^{(n-1)-k} * b^k \\
+a^n - (-b)^n &= (a-(-b)) * \sum_{k=0}^{n-1} a^{(n-1)-k} * (-b)^k \\
+\mathrm{III}: a^n - b^n &= (a+b) * \sum_{k=0}^{n-1} a^{(n-1)-k} * (-b)^k \\
+\end{align*}
+$$
+
+### Summary
+
+In order to factorize expressions of the pattern $(a^n - (-b)^n)$ into $(a+b)*\dotsm$, a case-decision is to be made. Since $n=1$ and $n=2$ are obvious cases, $n \ge 3$, then
+
+* if $2 \nmid n$, the expression will simplify to $(a^n + b^n)$, where relation $\mathrm{II}$ applies.
+* if $2 \mid n$, the expression will simplify to $(a^n - b^n)$, where relation $\mathrm{III}$ applies.
+
+Since $\mathrm{II}$ and $\mathrm{III}$ both share an equivalent RHS, it follows that
+
+$$
+\forall n \in \mathbb{N} : n \ge 3 \\
+(a^n - (-b)^n) = (a+b) * \sum_{k=0}^{n-1} a^{(n-1)-k} * (-b)^k
+$$
