@@ -136,6 +136,20 @@ These are in no particular order, and I'd have many more around... If it wasn't 
 
 "It is the mark of an educated mind to be able to entertain a thought without accepting it." - Aristotle
 
+"Until we extend our circle of compassion to all living things, humanity will not find peace." - Albert Schweitzer
+
+"We will never have peace on earth as long as we have suffering and death on our tables or on our backs." - Gary L. Francione
+
+"All beings tremble before violence. All fear death, all love life. See yourself in others. Then whom can you hurt? What harm can you do?" - Buddha
+
+"If you really care about animals, then stop trying to figure out how to exploit them 'compassionately'." - Gary L. Francione
+
+"When the suffering of another creature causes you to feel pain, do not submit to the initial desire to flee from the suffering one, but on the contrary, come closer, as close as you can to him who suffers, and try to help him." - Leo Tolstoy
+
+"A lie doesn't become truth; wrong doesn't become right; and evil doesn't become good - just because it is accepted by a majority." - ?
+
+"Same as it always was, isn't it? The mind just keeps sending you back again. It's interesting how you can find comfort in any familiar situation. Even in a familiar nightmare. Wake up, it's time for the real nightmare to begin." - Dr. Romero (Nightmare House 2)
+
 ## Interests
 
 I consider myself a *world-jumper*, as I call it. There's no single interest I'm chasing all the time, but I'm rather going for "sprints" in various worlds of topics. Sometimes, these take only a few days or weeks, sometimes months. I don't constrain myself in any way, shape or form. If I don't feel inspired and motivated to work on something, I just don't do it, as I'd otherwise pollute that world with negative experiences.
