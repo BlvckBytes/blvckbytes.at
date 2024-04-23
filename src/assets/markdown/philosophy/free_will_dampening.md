@@ -76,6 +76,18 @@ Secondly, it seems like this system does not account for or take note of the fac
 
 We no longer need to honor these superficial criteria as a common notion of individual value, but rather acknowledge the importance of intellect and wisdom. We need to stop reducing our highly facetted members to their sexual organs, thereby dulling the lens, which in turn leaves one wandering through pitch black darkness, instead of unfolding their free will and finding likeminded companions to revolutionize, with united forces, our comicly absurd way of living as a species.
 
+#### Molecules Of Emotion
+
+While it was intuitively logical that emotions would manifest physically within the body through molecules of lock-and-key communication systems, and that the body may also affect the emotional state, thereby making this exchange of information bidirectional, the book "Molecules Of Emotion" by Candace Pert put some scientific insights and support behind these claims.
+
+From this directly follows, that a sick body can ruin emotional stability and well-being, as well as that chronic negative emotions can act corrosively to the whole system.
+
+#### Imprints And Associations
+
+The neural network within the brain constantly associates knowledge, experience and emotions in order to store them in an accessible manner. Habits and imprints all lead back to neuroplasticity and resemble automata which make reoccurring actions less thought-heavy, as consciousness requires a lot of resources.
+
+Once a (bad) habit or imprint is about to be dismantled, the flywheel of inertia (metaphorically speaking) becomes slowed down, and withdrawal symptoms will make themselves known. This period is to be endured in order to re-liberate one's free will. Knowing that this process is inherent to a physical body can aid the motivation of withstanding temptation.
+
 ## Missing Mental Clarity
 
 Mental clarity should be the number one goal of each and every individual on planet earth, as it gives rise to the ability of making mindful decisions.
