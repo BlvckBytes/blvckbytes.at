@@ -36,6 +36,8 @@ These are in no particular order, and I'd have many more around... If it wasn't 
 
 "Since my earliest memories I have been depressed, both due to my suffering and that of others. I cannot begin to imagine how anyone can claim to be normal and never have suffered depression. No deep thinker can avoid experiencing many bouts of depression during life’s journey. The world is a very miserable place whether one is rich or poor. In my opinion, someone who does not experience Weltschmerz is abnormal." - John Gabriel
 
+"I can only understand 'infinity' in terms of their stupidity!" - John Gabriel
+
 "Future inventions have always existed, only we cannot realise them all." - ?
 
 "I don't care that they stole my idea. I care that they don't have any of their own." - Nikola Tesla
