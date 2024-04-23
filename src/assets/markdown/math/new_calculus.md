@@ -835,7 +835,52 @@ $$
 
 ---
 
-TODO: Explore the origin of $(1 + x*n)^{\frac{1}{n}}$ and possibly revise the following stepwise expansion transformation.
+The exponential function $e^x$ is a function whose derivative equals itself.
+
+$$
+\begin{align*}
+f(x) &= a^x \\
+f'(x) &= f(x) \\
+&= \lim_{h \to 0}\left(\frac{f(x+h)-f(x)}{h}\right) \\
+&= \lim_{h \to 0}\left(\frac{a^{x+h}-a^x}{h}\right) \\
+&= \lim_{h \to 0}\left(\frac{a^x*(a^{h}-1)}{h}\right) \\
+&= a^x * \lim_{h \to 0}\left(\frac{a^{h}-1}{h}\right) \\
+&= f(x) * \lim_{h \to 0}\left(\frac{a^{h}-1}{h}\right)
+\end{align*}
+$$
+
+For the above identity of $f(x) = f'(x)$ to hold, the limes needs to evaluate to a value of $1$.
+
+$$
+\begin{align*}
+\frac{a^{h}-1}{h} &= 1 \\
+a^{h}-1 &= h \\
+a^{h} &= h + 1 \\
+a &= \sqrt[h]{h + 1} \\
+a &= \lim_{h \to 0}\left((h + 1)^{\frac{1}{h}}\right)
+\end{align*}
+$$
+
+Lets call $a=e$, known as the natural number, or "Euler's Number". The function $e^x$ will end up as follows:
+
+$$
+\begin{align*}
+e^x &= \lim_{h \to 0}\left(((h + 1)^{\frac{1}{h}})^x\right) \\
+&= \lim_{h \to 0}\left((h + 1)^{\frac{x}{h}}\right) \\
+\end{align*}
+$$
+
+Now, let $h = x*n$ and introduce the function $f(x,n)$:
+
+$$
+\begin{align*}
+f(x,n) &= \lim_{h \to 0}\left((1 + x*n)^{\frac{\cancel{x}}{\cancel{x}*n}}\right) \\
+&= \lim_{h \to 0}\left((1 + x*n)^{\frac{1}{n}}\right) \\
+&= (1 + x*n)^{\frac{1}{n}}
+\end{align*}
+$$
+
+Now, as $n \to 0$, $f(x,n) \to e^x$. As will be proven below, it is safe to set $n=0$ after binomial expansion, as no occurrence of $n$ will remain in any denominator.
 
 $$
 \begin{align*}
@@ -868,66 +913,3 @@ e &= 1 + x + \sum_{k=2}^{\infty} \frac{1^k}{k!} \\
 &= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \dotsm
 \end{align*}
 $$
-
-<!--
-$$
-\begin{align*}
-\binom{\frac{1}{n}}{1} &= \frac{\frac{1}{n}!}{(\frac{1}{n}-1)! * 1!} \\
-&= \frac{\frac{1}{n}*\cancel{\left(\frac{1}{n}-1\right)!}}{\cancel{(\frac{1}{n}-1)!} * 1!} \\
-&= \frac{1}{n}
-\end{align*}
-$$
-
-$$
-\begin{align*}
-\binom{\frac{1}{n}}{2} &= \frac{\frac{1}{n}!}{(\frac{1}{n}-2)! * 2!} \\
-&= \frac{\frac{1}{n}*\left(\frac{1}{n}-1\right)*\cancel{\left(\frac{1}{n}-2\right)!}}{\cancel{(\frac{1}{n}-2)!} * 2!} \\
-&= \frac{\frac{1}{n^2}-\frac{1}{n}}{2!} \\
-\end{align*}
-$$
-
-$$
-\begin{align*}
-\binom{\frac{1}{n}}{3} &= \frac{\frac{1}{n}!}{(\frac{1}{n}-3)! * 3!} \\
-&= \frac{\frac{1}{n}*\left(\frac{1}{n}-1\right)*\left(\frac{1}{n}-2\right)*\cancel{\left(\frac{1}{n}-3\right)!}}{\cancel{(\frac{1}{n}-3)!} * 3!} \\
-&= \frac{\left(\frac{1}{n^2}-\frac{1}{n}\right)*\left(\frac{1}{n}-2\right)}{3!} \\
-&= \frac{\frac{1}{n^3}-\frac{1}{n^2}-\frac{2}{n^2}+\frac{2}{n}}{3!} \\
-&= \frac{\frac{1}{n^3}-\frac{3}{n^2}+\frac{2}{n}}{3!} \\
-\end{align*}
-$$
-
-$$
-(\frac{1}{a}-0)*(\frac{1}{a}-1)*(\frac{1}{a}-2)*(\frac{1}{a}-3) \\
-(\frac{1}{a^2} - \frac{1}{a}) * (\frac{1}{a}-2)*(\frac{1}{a}-3) \\
-(\frac{1}{a^3} - \frac{1}{a^2} - \frac{2}{a^2} + \frac{2}{a})*(\frac{1}{a}-3) \\
-\frac{1}{a^4} - \frac{1}{a^3} - \frac{2}{a^3} + \frac{2}{a^2} - \frac{3}{a^3} + \frac{3}{a^2} + \frac{3*2}{a^2} - \frac{3*2}{a}
-$$
-
-$$
-\prod_{k=0}^{n} \frac{1}{a} - k = \frac{1}{a}*(\frac{1}{a}-1)*(\frac{1}{a}-2)*\dotsm*(\frac{1}{a}-n) \\
-$$
--->
-
-<!-- $$
-(a-1)(a-2)(a-3) \\
-a^3 - 3a^2 -2a^2 +6a -a^2 +3a +2a - 6
-a^3 -6a^2 + 11a - 6
-$$
-
-$$
-(a-1)(a-2)(a-3)(a-4)
-a^4 - 10a^3 + 35a^2 - 50a + 24
-$$ -->
-
-<!--
-1 ^4: 1
-4 ^3: (-1) + (-2) + (-3) + (-4) = -10
-6 ^2: (-3)*(-4) + (-1)*(-4) + (-1)*(-2) + (-1)*(-3) + (-2)*(-3) + (-2)*(-4) = 35
-4 ^1: (-1)*(-2)*(-3) + (-2)*(-3)*(-4) + (-3)*(-4)*(-1) + (-4)*(-1)*(-2) = -50
-1 ^0: 4!
--->
-
-<!-- $$
-(a-1)^3 = a^3 + 3a^2(-1) + 3a(-1)^2 - 1
-(a-1)^3 = a^3 - 3a^2 + 3a - 1
-$$ -->
