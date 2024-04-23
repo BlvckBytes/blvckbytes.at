@@ -404,6 +404,8 @@ f(x) &= 3*x^4 \Rightarrow a = 4,\, b = 3 \\
 \end{align*}
 $$
 
+TODO: This derivation does not include rational exponents.
+
 #### Constant Rule
 
 The constant rule is already implied by the [Power Rule](#new-calculus-derivative_rules-of-derivation_power-rule), which states the following:
@@ -722,3 +724,210 @@ $$
 \forall n \in \mathbb{N} : n \ge 3 \\
 (a^n - (-b)^n) = (a+b) * \sum_{k=0}^{n-1} a^{(n-1)-k} * (-b)^k
 $$
+
+## The Exponential Function
+
+<!-- $$
+\begin{align*}
+f(x) &= a^x \\
+f'(x) &= f(x)
+\end{align*}
+$$
+
+$$
+\begin{align*}
+f'(x) &= \frac{f(x + n) - f(x - m)}{m + n} \\
+&= \frac{a^{x + n} - a^{x - m}}{m + n} \\
+&= \frac{a^x*a^n - a^x*a^{-m}}{m + n} \\
+&= a^x*\frac{a^n - a^{-m}}{m + n} \\
+&= f(x)*\frac{a^n - a^{-m}}{m + n} \\
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\Rightarrow 1 &= \frac{a^n - a^{-m}}{m + n} \\
+&= \frac{\log_a(a^n) - \log_a(a^{-m})}{m + n} \\
+&= \frac{n*\log_a(a) - (-m)*\log_a(a)}{m + n} \\
+&= \frac{n*\log_a(a) + m*\log_a(a)}{m + n} \\
+&= \frac{\log_a(a) * \cancel{(n+m)}}{\cancel{m + n}} \\
+&= \log_a(a) \\
+&= 1
+\end{align*}
+$$
+
+--- -->
+
+When observing the theorem of binomial expansion
+
+$$
+(a+b)^n=\sum_{k=0}^{n} \binom{n}{k}*a^{(n-k)}*b^{k}
+$$
+
+it becomes apparent that whenever $a=1$, $a^{(n-k)}=1$, thereby resulting in
+
+$$
+(1+b)^n=\sum_{k=0}^{n} \binom{n}{k}*b^{k}
+$$
+
+The binomial coefficient $\binom{n}{k}$ by default only operates on natural numbers $\mathbb{N_{>0}}$, as both $n$ and $k$ are evaluated by the factorial function. When viewing it as an intermediate representation, and by cancelling the tail of $n!$, thereby turning the numerator into regular multiplication, there are no more roadblocks ahead to substitute rational numbers for $n$.
+
+$$
+\begin{align*}
+\binom{n}{k} &= \frac{n!}{(n-k)! * k!} \\
+&= \frac{n*(n-1)*(n-2)*\dotsm*\cancel{(n-k)!}}{\cancel{(n-k)!} * k!} \\
+&= \frac{n*(n-1)*(n-2)*\dotsm*(n-(k-1))!}{k!} \\
+&= \frac{\prod_{i=0}^{k-1}(n-i)}{k!} \\
+\end{align*}
+$$
+
+When $k=0$, the following applies:
+
+$$
+\begin{align*}
+\binom{n}{0} &= \frac{n!}{(n-k)! * k!} \\
+&= \frac{\cancel{n!}}{\cancel{n!} * 0!} \\
+&= \frac{\cancel{n!}}{\cancel{n!} * 1} \\
+&= 1
+\end{align*}
+$$
+
+The remaining product of terms within the numerator is called a falling factorial, which represents the beginning sequence of $n!$, with every term after $(n-k)$ cancelled out by $(n-k)!$ in the denominator. The product $(n-1)*(n-2)*\dotsm*(n-(k-1))$ is similar to binomial expansion, where the highest power of $n$ will be $k-1$ and the lowest will be $0$, just that the coefficients of the powers of $n$ are different, as the equivalent of $b$ in $(a+b)^n$ is no longer the same accross all parentheses, but rather a consequtive series of integers, starting at $1$. These coefficients are known as <a href="https://en.wikipedia.org/wiki/Stirling_numbers_of_the_first_kind" target="_blank">Stirling Numbers Of First Kind</a>, written down similarly to the binomial coefficient, but with brackets $n \brack k$.
+
+$$
+\prod_{i=0}^{k-1}(n-i) = \sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*n^i
+$$
+
+Substituting this product with its equivalent sum yields
+
+$$
+\begin{align*}
+\binom{n}{k} &= \frac{\prod_{i=0}^{k-1}(n-i)}{k!} \\
+&= \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*n^i}{k!} \\
+\end{align*}
+$$
+
+For the reciprocal of $n$, the coefficient expands to
+
+$$
+\begin{align*}
+\binom{\frac{1}{n}}{k} &= \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*(\frac{1}{n})^i}{k!} \\
+&= \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{n^i}}{k!} \\
+\end{align*}
+$$
+
+Thereby allowing for binomial expansion to the power of the reciprocal of $n$
+
+$$
+\begin{align*}
+(1+b)^{\frac{1}{n}} &= 1 + \sum_{k=1}^{\infty} \binom{\frac{1}{n}}{k}*b^{k} \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{n^i}}{k!} * b^k \\
+\end{align*}
+$$
+
+$$
+\begin{align*}
+(1+x)^{\frac{1}{x}} &= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{x^i}}{k!} * x^k \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{x^k}{x^i}}{k!} \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*x^{k - i}}{k!} \\
+\end{align*}
+$$
+
+---
+
+TODO: Explore the origin of $(1 + x*n)^{\frac{1}{n}}$ and possibly revise the following stepwise expansion transformation.
+
+$$
+\begin{align*}
+f(x,n) &= (1+x*n)^{\frac{1}{n}} \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{n^i}}{k!} * (x*n)^k \\
+&= 1 + \sum_{k=1}^{\infty} \frac{n^k*\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{n^i}}{k!} * x^k \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*n^k*\frac{1}{n^i}}{k!} * x^k \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*n^{k-i}}{k!} * x^k \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-n)^{k-i}}{k!} * x^k \\
+&= 1 + x + \sum_{k=2}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-n)^{k-i}}{k!} * x^k \\
+&= 1 + x + \sum_{k=2}^{\infty} \frac{1 + \sum_{i=1}^{k - 1}{k \brack i}*(-n)^{k-i}}{k!} * x^k \\
+&= 1 + x + \sum_{k=2}^{\infty} \left(\frac{x^k}{k!} + \frac{x^k*\sum_{i=1}^{k - 1}{k \brack i}*(-n)^{k-i}}{k!}\right) \\
+\end{align*}
+$$
+
+But $e^x = f(x,0)$, so
+
+$$
+\begin{align*}
+f(x,0) &= 1 + x + \sum_{k=2}^{\infty} \frac{x^k}{k!} \\
+&= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \dotsm
+\end{align*}
+$$
+
+and $e^1 = f(1,0)$, so
+
+$$
+\begin{align*}
+e &= 1 + x + \sum_{k=2}^{\infty} \frac{1^k}{k!} \\
+&= 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \dotsm
+\end{align*}
+$$
+
+<!--
+$$
+\begin{align*}
+\binom{\frac{1}{n}}{1} &= \frac{\frac{1}{n}!}{(\frac{1}{n}-1)! * 1!} \\
+&= \frac{\frac{1}{n}*\cancel{\left(\frac{1}{n}-1\right)!}}{\cancel{(\frac{1}{n}-1)!} * 1!} \\
+&= \frac{1}{n}
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\binom{\frac{1}{n}}{2} &= \frac{\frac{1}{n}!}{(\frac{1}{n}-2)! * 2!} \\
+&= \frac{\frac{1}{n}*\left(\frac{1}{n}-1\right)*\cancel{\left(\frac{1}{n}-2\right)!}}{\cancel{(\frac{1}{n}-2)!} * 2!} \\
+&= \frac{\frac{1}{n^2}-\frac{1}{n}}{2!} \\
+\end{align*}
+$$
+
+$$
+\begin{align*}
+\binom{\frac{1}{n}}{3} &= \frac{\frac{1}{n}!}{(\frac{1}{n}-3)! * 3!} \\
+&= \frac{\frac{1}{n}*\left(\frac{1}{n}-1\right)*\left(\frac{1}{n}-2\right)*\cancel{\left(\frac{1}{n}-3\right)!}}{\cancel{(\frac{1}{n}-3)!} * 3!} \\
+&= \frac{\left(\frac{1}{n^2}-\frac{1}{n}\right)*\left(\frac{1}{n}-2\right)}{3!} \\
+&= \frac{\frac{1}{n^3}-\frac{1}{n^2}-\frac{2}{n^2}+\frac{2}{n}}{3!} \\
+&= \frac{\frac{1}{n^3}-\frac{3}{n^2}+\frac{2}{n}}{3!} \\
+\end{align*}
+$$
+
+$$
+(\frac{1}{a}-0)*(\frac{1}{a}-1)*(\frac{1}{a}-2)*(\frac{1}{a}-3) \\
+(\frac{1}{a^2} - \frac{1}{a}) * (\frac{1}{a}-2)*(\frac{1}{a}-3) \\
+(\frac{1}{a^3} - \frac{1}{a^2} - \frac{2}{a^2} + \frac{2}{a})*(\frac{1}{a}-3) \\
+\frac{1}{a^4} - \frac{1}{a^3} - \frac{2}{a^3} + \frac{2}{a^2} - \frac{3}{a^3} + \frac{3}{a^2} + \frac{3*2}{a^2} - \frac{3*2}{a}
+$$
+
+$$
+\prod_{k=0}^{n} \frac{1}{a} - k = \frac{1}{a}*(\frac{1}{a}-1)*(\frac{1}{a}-2)*\dotsm*(\frac{1}{a}-n) \\
+$$
+-->
+
+<!-- $$
+(a-1)(a-2)(a-3) \\
+a^3 - 3a^2 -2a^2 +6a -a^2 +3a +2a - 6
+a^3 -6a^2 + 11a - 6
+$$
+
+$$
+(a-1)(a-2)(a-3)(a-4)
+a^4 - 10a^3 + 35a^2 - 50a + 24
+$$ -->
+
+<!--
+1 ^4: 1
+4 ^3: (-1) + (-2) + (-3) + (-4) = -10
+6 ^2: (-3)*(-4) + (-1)*(-4) + (-1)*(-2) + (-1)*(-3) + (-2)*(-3) + (-2)*(-4) = 35
+4 ^1: (-1)*(-2)*(-3) + (-2)*(-3)*(-4) + (-3)*(-4)*(-1) + (-4)*(-1)*(-2) = -50
+1 ^0: 4!
+-->
+
+<!-- $$
+(a-1)^3 = a^3 + 3a^2(-1) + 3a(-1)^2 - 1
+(a-1)^3 = a^3 - 3a^2 + 3a - 1
+$$ -->
