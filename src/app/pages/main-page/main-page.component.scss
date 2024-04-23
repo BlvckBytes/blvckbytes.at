@@ -20,7 +20,6 @@
     align-items: center;
     justify-content: center;
     padding: calc((4rem - 1.2rem)/2); // Match header height
-    margin-bottom: 1rem;
     user-select: none;
     background-color: var(--header-footer-color);
     transition: background-color 150ms ease-in-out;
@@ -91,9 +90,9 @@
 
   .navigation {
     position: fixed;
-    inset: 0 0 auto auto;
+    inset: 0 auto auto 0;
     height: max-content;
-    width: max-content;
+    width: 100vw;
 
     &__toggle {
       display: inline-flex;
