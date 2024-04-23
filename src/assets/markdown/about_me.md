@@ -150,6 +150,8 @@ These are in no particular order, and I'd have many more around... If it wasn't 
 
 "Same as it always was, isn't it? The mind just keeps sending you back again. It's interesting how you can find comfort in any familiar situation. Even in a familiar nightmare. Wake up, it's time for the real nightmare to begin." - Dr. Romero (Nightmare House 2)
 
+"I've made some mistakes, sacrifices, my loved ones and even myself. But I have to continue, there is no turning back now." - Dr. Romero (Nightmare House 2)
+
 ## Interests
 
 I consider myself a *world-jumper*, as I call it. There's no single interest I'm chasing all the time, but I'm rather going for "sprints" in various worlds of topics. Sometimes, these take only a few days or weeks, sometimes months. I don't constrain myself in any way, shape or form. If I don't feel inspired and motivated to work on something, I just don't do it, as I'd otherwise pollute that world with negative experiences.
