@@ -40,6 +40,8 @@ These are in no particular order, and I'd have many more around... If it wasn't 
 
 "Future inventions have always existed, only we cannot realise them all." - ?
 
+"If I have seen further than others, it is by standing upon the shoulders of giants." - Isaac Newton
+
 "I don't care that they stole my idea. I care that they don't have any of their own." - Nikola Tesla
 
 "I do not think you can name many great inventions that have been made by married men." - Nikola Tesla
