@@ -589,6 +589,67 @@ $$
 \end{align*}
 $$
 
+### Natural Logarithm Derivative
+
+For $\ln(x)$, it is much easier to use the historic geometric theorem, as follows.
+
+$$
+\begin{align*}
+\frac{\ln(x+h) - ln(x)}{h} &= f'(x) + Q(x,h) \\
+&= \frac{\ln\left(\frac{x+h}{x}\right)}{h} \\
+&= \frac{1}{h} * \ln\left(\frac{x+h}{x}\right) \\
+&= \ln\left(\left(\frac{x+h}{x}\right)^{\frac{1}{h}}\right) \\
+&= \ln\left(\left(1 + \frac{h}{x}\right)^{\frac{1}{h}}\right) \\
+\end{align*}
+$$
+
+Let's look at what the parameter of $\ln$ expands to, by performing [Rational Exponent Binomial Expansion](#rational-exponent-binomial-expansion).
+
+$$
+\begin{align*}
+\left(1 + \frac{h}{x}\right)^{\frac{1}{h}} &= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{h^i}}{k!} * \left(\frac{h}{x}\right)^k \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{h^i}}{k!} * \frac{h^k}{x^k} \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\frac{h^k}{x^k} * \sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{h^i}}{k!} \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{h^i}*\frac{h^k}{x^k}}{k!} \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{h^k}{h^i}*\frac{1}{x^k}}{k!} \\
+&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*h^{k-i}*\frac{1}{x^k}}{k!} \\
+&= 1 + \frac{1}{x} + \sum_{k=2}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*h^{k-i}*\frac{1}{x^k}}{k!} \\
+&= 1 + \frac{1}{x} + \sum_{k=2}^{\infty} \frac{\frac{1}{x^k} + \sum_{i=1}^{k-1}{k \brack i}*(-1)^{k-i}*h^{k-i}*\frac{1}{x^k}}{k!} \\
+\end{align*}
+$$
+
+But $h=0$, so
+
+$$
+\begin{align*}
+&= 1 + \frac{1}{x} + \sum_{k=2}^{\infty} \frac{\frac{1}{x^k}}{k!} \\
+&= 1 + \frac{1}{x} + \frac{\left(\frac{1}{x}\right)^2}{2!} + \frac{\left(\frac{1}{x}\right)^3}{3!} + \frac{\left(\frac{1}{x}\right)^4}{4!} + \dotsm
+\end{align*}
+$$
+
+Which is, as described in [The Exponential Function](#the-exponential-function)
+
+$$
+= e^{\frac{1}{x}}
+$$
+
+thereby making
+
+$$
+\begin{align*}
+(\ln(x))' &= \ln(e^{\frac{1}{x}}) + Q(x,h) \\
+&= \frac{1}{x} + Q(x,h) \\
+\end{align*}
+$$
+
+Since $Q(x,h)$ is just the slope difference, we can ignore it.
+
+$$
+\begin{align*}
+(\ln(x))' &= \frac{1}{x}
+\end{align*}
+$$
+
 ## New Calculus MVT
 
 It makes sense to use the New Calculus definition of [Derivative](#new-calculus-derivative) because it also shows immediately the connection between the integral and the derivative in the fundamental theorem of calculus which is derived in one step from the mean value theorem.
@@ -725,38 +786,7 @@ $$
 (a^n - (-b)^n) = (a+b) * \sum_{k=0}^{n-1} a^{(n-1)-k} * (-b)^k
 $$
 
-## The Exponential Function
-
-<!-- $$
-\begin{align*}
-f(x) &= a^x \\
-f'(x) &= f(x)
-\end{align*}
-$$
-
-$$
-\begin{align*}
-f'(x) &= \frac{f(x + n) - f(x - m)}{m + n} \\
-&= \frac{a^{x + n} - a^{x - m}}{m + n} \\
-&= \frac{a^x*a^n - a^x*a^{-m}}{m + n} \\
-&= a^x*\frac{a^n - a^{-m}}{m + n} \\
-&= f(x)*\frac{a^n - a^{-m}}{m + n} \\
-\end{align*}
-$$
-
-$$
-\begin{align*}
-\Rightarrow 1 &= \frac{a^n - a^{-m}}{m + n} \\
-&= \frac{\log_a(a^n) - \log_a(a^{-m})}{m + n} \\
-&= \frac{n*\log_a(a) - (-m)*\log_a(a)}{m + n} \\
-&= \frac{n*\log_a(a) + m*\log_a(a)}{m + n} \\
-&= \frac{\log_a(a) * \cancel{(n+m)}}{\cancel{m + n}} \\
-&= \log_a(a) \\
-&= 1
-\end{align*}
-$$
-
---- -->
+## Rational Exponent Binomial Expansion
 
 When observing the theorem of binomial expansion
 
@@ -825,15 +855,7 @@ $$
 \end{align*}
 $$
 
-$$
-\begin{align*}
-(1+x)^{\frac{1}{x}} &= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{x^i}}{k!} * x^k \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{x^k}{x^i}}{k!} \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*x^{k - i}}{k!} \\
-\end{align*}
-$$
-
----
+## The Exponential Function
 
 The exponential function $e^x$ is a function whose derivative equals itself.
 
@@ -861,7 +883,11 @@ a &= \lim_{h \to 0}\left((h + 1)^{\frac{1}{h}}\right)
 \end{align*}
 $$
 
-Lets call $a=e$, known as the natural number, or "Euler's Number". The function $e^x$ will end up as follows:
+Lets call $a=e$, known as the natural number, or "Euler's Number". This constant is realized geometrically as the attempted measure of the ratio (red line segment : blue line segment).
+
+<img src="/assets/images/new_calculus__9.png" class="half-width-image"/>
+
+The function $e^x$ will end up as follows:
 
 $$
 \begin{align*}
@@ -880,7 +906,7 @@ f(x,n) &= \lim_{h \to 0}\left((1 + x*n)^{\frac{\cancel{x}}{\cancel{x}*n}}\right)
 \end{align*}
 $$
 
-Now, as $n \to 0$, $f(x,n) \to e^x$. As will be proven below, it is safe to set $n=0$ after binomial expansion, as no occurrence of $n$ will remain in any denominator.
+Now, as $n \to 0$, $f(x,n) \to e^x$. As will be proven below, it is safe to set $n=0$ after [Rational Exponent Binomial Expansion](#rational-exponent-binomial-expansion), as no occurrence of $n$ will remain in any denominator.
 
 $$
 \begin{align*}
