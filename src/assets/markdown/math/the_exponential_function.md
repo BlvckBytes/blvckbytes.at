@@ -36,6 +36,8 @@ $exp(x) = e^x$
 
 ## Derivation
 
+INFO: A more straight forward and less "*infinity-riddled*" derivation may be found [here](/math/new-calculus#the-exponential-function).
+
 ### Base Derivation
 
 In order to derive a function which satisfies [the exponential definition](#definition_the-exponential), the following property has to be satisfied:
