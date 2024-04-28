@@ -607,14 +607,9 @@ Let's look at what the parameter of $\ln$ expands to, by performing [Rational Ex
 
 $$
 \begin{align*}
-\left(1 + \frac{h}{x}\right)^{\frac{1}{h}} &= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{h^i}}{k!} * \left(\frac{h}{x}\right)^k \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{h^i}}{k!} * \frac{h^k}{x^k} \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\frac{h^k}{x^k} * \sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{h^i}}{k!} \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{h^i}*\frac{h^k}{x^k}}{k!} \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{h^k}{h^i}*\frac{1}{x^k}}{k!} \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*h^{k-i}*\frac{1}{x^k}}{k!} \\
-&= 1 + \frac{1}{x} + \sum_{k=2}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*h^{k-i}*\frac{1}{x^k}}{k!} \\
+\left(1 + \frac{h}{x}\right)^{\frac{1}{h}} &= 1 + \frac{\frac{\cancel{h}}{x}}{\cancel{h}} + \sum_{k=2}^{\infty} \frac{\frac{\left(\frac{\cancel{h}}{x}\right)^k}{\cancel{h^k}} + \sum_{i=1}^{k-1}{k \brack i}*(-1)^{k-i}*\frac{\left(\frac{h}{x}\right)^k}{h^i}}{k!} \\
 &= 1 + \frac{1}{x} + \sum_{k=2}^{\infty} \frac{\frac{1}{x^k} + \sum_{i=1}^{k-1}{k \brack i}*(-1)^{k-i}*h^{k-i}*\frac{1}{x^k}}{k!} \\
+&= 1 + \frac{1}{x} + \sum_{k=2}^{\infty} \left(\frac{\frac{1}{x^k}}{k!} + \frac{\sum_{i=1}^{k-1}{k \brack i}*(-h)^{k-i}*\frac{1}{x^k}}{k!}\right) \\
 \end{align*}
 $$
 
@@ -852,6 +847,8 @@ $$
 \begin{align*}
 (1+b)^{\frac{1}{n}} &= 1 + \sum_{k=1}^{\infty} \binom{\frac{1}{n}}{k}*b^{k} \\
 &= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{n^i}}{k!} * b^k \\
+&= 1 + \frac{b}{n} + \sum_{k=2}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{b^k}{n^i}}{k!} \\
+&= 1 + \frac{b}{n} + \sum_{k=2}^{\infty} \frac{\frac{b^k}{n^k} + \sum_{i=1}^{k-1}{k \brack i}*(-1)^{k-i}*\frac{b^k}{n^i}}{k!} \\
 \end{align*}
 $$
 
@@ -911,14 +908,9 @@ Now, as $n \to 0$, $f(x,n) \to e^x$. As will be proven below, it is safe to set 
 $$
 \begin{align*}
 f(x,n) &= (1+x*n)^{\frac{1}{n}} \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{n^i}}{k!} * (x*n)^k \\
-&= 1 + \sum_{k=1}^{\infty} \frac{n^k*\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*\frac{1}{n^i}}{k!} * x^k \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*n^k*\frac{1}{n^i}}{k!} * x^k \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-1)^{k-i}*n^{k-i}}{k!} * x^k \\
-&= 1 + \sum_{k=1}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-n)^{k-i}}{k!} * x^k \\
-&= 1 + x + \sum_{k=2}^{\infty} \frac{\sum_{i=1}^{k}{k \brack i}*(-n)^{k-i}}{k!} * x^k \\
-&= 1 + x + \sum_{k=2}^{\infty} \frac{1 + \sum_{i=1}^{k - 1}{k \brack i}*(-n)^{k-i}}{k!} * x^k \\
-&= 1 + x + \sum_{k=2}^{\infty} \left(\frac{x^k}{k!} + \frac{x^k*\sum_{i=1}^{k - 1}{k \brack i}*(-n)^{k-i}}{k!}\right) \\
+&= 1 + \frac{x*\cancel{n}}{\cancel{n}} + \sum_{k=2}^{\infty} \frac{\frac{(x*\cancel{n})^k}{\cancel{n^k}} + \sum_{i=1}^{k-1}{k \brack i}*(-1)^{k-i}*\frac{(x*n)^k}{n^i}}{k!} \\
+&= 1 + x + \sum_{k=2}^{\infty} \frac{x^k + \sum_{i=1}^{k-1}{k \brack i}*(-1)^{k-i}*n^{k-i}*x^k}{k!} \\
+&= 1 + x + \sum_{k=2}^{\infty} \left(\frac{x^k}{k!} + \frac{\sum_{i=1}^{k-1}{k \brack i}*(-n)^{k-i}*x^k}{k!}\right) \\
 \end{align*}
 $$
 
