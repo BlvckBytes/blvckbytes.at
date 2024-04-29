@@ -404,11 +404,61 @@ f(x) &= 3*x^4 \Rightarrow a = 4,\, b = 3 \\
 \end{align*}
 $$
 
+---
+
+The above rule can be extended to negative exponents as follows.
+
+$$
+\begin{align*}
+f(x) &= b*x^{-a} \\
+\Rightarrow f'(x) &= \frac{b*(x + n)^{-a} - b*(x - m)^{-a}}{m + n} \\
+&= \frac{\frac{b}{(x + n)^a} - \frac{b}{(x - m)^a}}{m + n} \\
+&= \frac{b}{(x + n)^a*(m + n)} - \frac{b}{(x - m)^a*(m + n)} \\
+&= \frac{b*(x - m)^a}{(x + n)^a*(m + n)*(x - m)^a} - \frac{b*(x + n)^a}{(x - m)^a*(m + n)*(x + n)^a} \\
+&= \frac{b*(x - m)^a - b*(x + n)^a}{(x + n)^a*(m + n)*(x - m)^a} \\
+&= \frac{1}{(x + n)^a*(x - m)^a} * \frac{b*(x - m)^a - b*(x + n)^a}{(m + n)} \\
+&= \frac{-1}{(x + n)^a*(x - m)^a} * \left[\frac{b*(x + n)^a - b*(x - m)^a}{(m + n)}\right] \\
+\end{align*}
+$$
+
+By substituting the power-rule for positive exponents, we receive
+
+$$
+\begin{align*}
+f'(x) &= \frac{-1}{(x + n)^a*(x - m)^a} * \left[(b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j\right] \\
+&= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - \frac{b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j}{(x + n)^a*(x - m)^a} \\
+&= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - Q(x,m,n)
+\end{align*}
+$$
+
+For $m=n=0$
+
+$$
+\begin{align*}
+f'(x) &= \frac{-1 * b * a * x^{a-1}}{(x + 0)^a*(x - 0)^a} - Q(x,0,0) \\
+&= \frac{-1 * b * a * x^{a-1}}{x^a*x^a} \\
+&= \frac{-1 * b * a * x^{a-1}}{x^{2*a}} \\
+&= -1 * b * a * x^{a-1-2*a} \\
+&= b * (-a) * x^{-a-1}
+\end{align*}
+$$
+
+---
+
 TODO: This derivation does not include rational exponents.
 
 #### Constant Rule
 
-The constant rule is already implied by the [Power Rule](#new-calculus-derivative_rules-of-derivation_power-rule), which states the following:
+A $x$-independent constant will always cancel out within the numerator of the derivative.
+
+$$
+\begin{align*}
+f(x) &= b \\
+\Rightarrow f'(x) &= \frac{b - b}{m+n} = 0
+\end{align*}
+$$
+
+Alternatively, the constant rule is already implied by the [Power Rule](#new-calculus-derivative_rules-of-derivation_power-rule), which states the following:
 
 $$
 \begin{align*}
