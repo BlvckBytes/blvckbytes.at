@@ -445,7 +445,33 @@ $$
 
 ---
 
-TODO: This derivation does not include rational exponents.
+The power rule can be extended to rational numbers by making use of the [Chain Rule](#new-calculus-derivative_rules-of-derivation_chain-rule). Let $p,q \in \mathbb{N}$.
+
+$$
+f(x) = b*x^{\frac{p}{q}}
+$$
+
+Now, let $g(x) = x^q$ and $h(x) = b^q * x^p$, then
+
+$$
+g(f(x)) = h(x)
+$$
+
+but we also know that $g'(x) = q*x^{q-1}$ and $h'(x) = b^q * p*x^{p-1}$, so
+
+$$
+\begin{align*}
+(g(f(x)))' &= h'(x) \\
+g'(f(x)) * f'(x) &= b^q * p*x^{p-1} \\
+q*(f(x))^{q-1} * f'(x) &= b^q * p*x^{p-1} \\
+q*(b*x^{\frac{p}{q}})^{q-1} * f'(x) &= b^q * p*x^{p-1} \\
+q*b^{q-1}*x^{\frac{p*(q-1)}{q}} * f'(x) &= b^q * p*x^{p-1} \\
+f'(x) &= \frac{b^{\cancel{q}} * p*x^{p-1}}{q*\cancel{b^{q-1}}*x^{\frac{p*(q-1)}{q}} } \\
+f'(x) &= b * \frac{p}{q} * x^{p-1-\frac{p*(q-1)}{q}} \\
+f'(x) &= b * \frac{p}{q} * x^{\frac{\cancel{p*q}-q-\cancel{p*q}+p}{q}} \\
+f'(x) &= b * \frac{p}{q} * x^{\frac{p}{q}-1} \\
+\end{align*}
+$$
 
 #### Constant Rule
 
