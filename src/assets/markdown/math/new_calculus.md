@@ -10,6 +10,7 @@ This page tries to accumulate knowledge about a mathematical concept revealed by
 
 Besides making broadly accessible what has been overcomplicated by academia for dozens of decades, John also provides further insight into concepts such as
 
+- <a href="https://www.academia.edu/62358358/My_historic_geometric_theorem_of_January_2020" target="_blank">Historic Geometric Theorem</a>
 - <a href="https://www.academia.edu/105399167/The_Ultimate_Book_of_Numbers" target="_blank">The Ultimate Book Of Numbers</a>
 - <a href="https://www.academia.edu/101865814/Trigonometry_and_its_origins" target="_blank">Origin Of Trigonometry</a>
 - <a href="https://www.academia.edu/77923497/The_Mean_Value_Theorem_explained_using_positional_derivatives" target="_blank">Mean Value Theorem</a>
@@ -34,7 +35,7 @@ A function is continuous over a given interval if there are no disjoint paths in
 
 ### Smoothness
 
-A function is smooth over a given interval if it is [continuous](#definitions-continousness) over that interval **and** only one tangent line is possible at any point in the interval. Inflection points are excluded, because no tangent line is possible at points of inflection, only **half-tangent lines**.
+A function is smooth over a given interval if it is [continuous](#definitions_continousness) over that interval **and** only one tangent line is possible at any point in the interval. Inflection points are excluded, because no tangent line is possible at points of inflection, only **half-tangent lines**.
 
 ### Tangent Line
 
@@ -78,13 +79,147 @@ TODO: This sounds very similar to Cavalieri's principle. Is the latter essential
 
 ### Volume
 
-Analogous to [Area](#definitions-area), volume is the product of three [Arithmetic Means](#definitions_arithmetic-mean).
+Analogous to [Area](#definitions_area), volume is the product of three [Arithmetic Means](#definitions_arithmetic-mean).
 
-## Finite Difference Quotient Factor h
+### Slope
+
+Only a straight line can have a slope, defined as rise over run, also known as $\frac{\Delta y}{\Delta x}$.
+
+### Auxiliary Equation
+
+The auxiliary equation is a "byproduct" of performing the finite difference quotient on any given function, which yields the derivative (only depending on $x$), as well as the auxiliary equation (depending on the horizontal distance).
+
+For the [Historic Geometric Theorem](#historic-geometric-theorem), $Q(x,h)$ describes the difference in slope between the tangent- and a non-parallel secant-line. To receive the exact tangent-line, $h$ is set to zero, thereby discarding all difference-terms.
+
+For the [New Calculus Derivative](#new-calculus-derivative), $Q(x,m,n)$ describes the difference in slope between the tangent- and a parallel secant line. Thus follows that $Q$ is always zero. Given any two of $x$, $m$ and $n$, the remaining quantity can be solved for. Since it is always zero, terms in $m$ and $n$ can be discarded to receive the exact tangent-line.
+
+## Historic Geometric Theorem
+
+If any function $f$ is [Smooth](#definitions_smoothness) on an interval $(x;x+h)$, it is true that given any non-parallel secant line with endpoints $(x,f(x))$ and $(x+h,f(x+h))$, then the difference in slope between the non-parallel secant line $\frac{f(x+h)-f(x)}{h}$ and the tangent line $f'(x)$ is given by $Q(x,h)$ - an expression in $h$ that may also include $x$, which is never equal to zero unless $f$ is a linear function.
+
+$$
+\frac{f(x+h)-f(x)}{h} = f'(x) + Q(x,h)
+$$
+
+Let there be a [Smooth](#definitions_smoothness) curve $f(x)$ with a [Tangent Line](#definitions_tangent-line) at point $A$ and a non-parallel secant line with endpoints $A$ and $C$. The line $\overline{AB} = h$ now spans the horizontal distance travelled from point $A$ to point $C$, where $A = f(x)$ and $C = f(x+h)$. Now, [Drop A Perpendicular](/math/construction#dropping-a-perpendicular) from point $C$ onto line $\overline{AB}$, to construct a right-angled triangle $\triangle{ABC}$. The tangent line will intersect $\overline{BC}$ in point $D$, separating it into $f_1$ and $f_2$. The angle $\alpha = \angle{BAC}$ represents the angle of the non-parallel secant line with $\beta = \frac{\pi}{2} - \alpha$ being its complementary, while $\gamma = \angle{BAD}$ represents the angle of the tangent line, with $\delta = \angle{DAC} = \alpha - \gamma$ being the angle difference of the tangent- and the secant-line.
+
+<img src="/assets/images/new_calculus__10.jpg" class="half-width-image"/>
+
+Let's zoom in on that triangle, assign a few names, and construct a perpendicular line from $D$ relative to $\overline{AD} = x$, intersecting with line $\overline{AC} = z$ in $E$, thereby forming a right-angle triangle $\triangle{ADE}$, as well as a generic triangle $\triangle{DCE}$ with side $\overline{DE} = y$.
+
+<img src="/assets/images/new_calculus__11.jpg" class="half-width-image"/>
+
+Since $\varphi = \frac{\pi}{2} - \gamma$, $\theta = \pi - (\frac{\pi}{2} - \gamma) - \frac{\pi}{2} = \gamma$. Solving for the third angle within this triangle yields
+
+$$
+\begin{align*}
+\pi &= \epsilon + \beta + \theta \\
+\pi &= \epsilon + \left(\frac{\pi}{2} - \alpha\right) + \gamma \\
+\epsilon &= \pi - \left(\frac{\pi}{2} - \alpha\right) - \gamma \\
+\epsilon &= \pi - \frac{\pi}{2} + \alpha - \gamma \\
+\epsilon &= \frac{\pi}{2} + \alpha - \gamma
+\end{align*}
+$$
+
+Within $\triangle{ADE}$, $\tan(\delta) = \frac{y}{x}$, but $y$ can be described in terms of known variables.
+
+$$
+\begin{align*}
+\frac{f_1}{\sin(\epsilon)} &= \frac{y}{\sin(\beta)} \\
+\frac{f_1}{\sin(\frac{\pi}{2} + \alpha - \gamma)} &= \frac{y}{\sin(\frac{\pi}{2}-\alpha)} \\
+y &= \frac{f_1 * \sin(\frac{\pi}{2}-\alpha)}{\sin(\frac{\pi}{2} + \alpha - \gamma)} \\
+\end{align*}
+$$
+
+By making use of the [Sine Angle Sum](/math/trigonometric-functions#angle-sum_sine), $\sin(\frac{\pi}{2} + \alpha - \gamma)$ can be expressed in terms of angles within right-triangles.
+
+$$
+\begin{align*}
+\sin\left(\frac{\pi}{2} + \alpha - \gamma\right) &= \sin\left(\left(\frac{\pi}{2} - \gamma\right) + \alpha\right) \\
+&= \sin\left(\frac{\pi}{2} - \gamma\right) * \cos(\alpha) + \sin(\alpha) * \cos\left(\frac{\pi}{2} - \gamma\right)
+\end{align*}
+$$
+
+Substituting this new representation into the equation for $y$, then substituting in the ratios for all trigonometric functions.
+
+$$
+\begin{align*}
+y &= \frac{f_1 * \sin(\frac{\pi}{2}-\alpha)}{\sin(\frac{\pi}{2} + \alpha - \gamma)} \\
+y &= \frac{f_1 * (\sin(\frac{\pi}{2}-\alpha))}{\sin\left(\frac{\pi}{2} - \gamma\right) * \cos(\alpha) + \sin(\alpha) * \cos\left(\frac{\pi}{2} - \gamma\right)} \\
+y &= \frac{f_1 * \frac{h}{z}}{\frac{h}{x} * \frac{h}{z} + \frac{(f_1+f_2)}{z} * \frac{f_2}{x}} \\
+y &= \frac{f_1 * \frac{h}{z}}{\frac{h^2}{x*z} + \frac{(f_1+f_2)*f_2}{x*z}} \\
+y &= \frac{\frac{f_1*h}{z}}{\frac{h^2 + (f_1+f_2)*f_2}{x*z}} \\
+y &= \frac{f_1*h*x*\cancel{z}}{\cancel{z}*(h^2+(f_1+f_2)*f_2)} \\
+y &= \frac{f_1*h*x}{h^2+(f_1+f_2)*f_2}
+\end{align*}
+$$
+
+Now that $y$ is known, $\tan(\delta)$ can be solved for.
+
+$$
+\begin{align*}
+\tan(\delta) &= \frac{y}{x} \\
+&= \frac{\frac{f_1*h*x}{h^2+(f_1+f_2)*f_2}}{x} \\
+&= \frac{f_1*h*\cancel{x}}{\cancel{x}*(h^2+(f_1+f_2)*f_2)} \\
+&= \frac{f_1*h}{h^2+(f_1+f_2)*f_2} \\
+\end{align*}
+$$
+
+The tangent-function value of the other angle making up $\alpha$, namely $\gamma$, is simply
+
+$$
+\tan(\gamma) = \frac{f_2}{h}
+$$
+
+Let's make use of the [Tangent Angle Sum](/math/trigonometric-functions#angle-sum_tangent) on $\alpha = \gamma + \delta$.
+
+$$
+\begin{align*}
+\alpha &= \gamma + \delta \\
+\tan(\alpha) &= \tan(\gamma + \delta) \\
+&= \frac{\tan(\gamma) + \tan(\delta)}{1 - \tan(\gamma) * \tan(\delta)} \\
+&= \frac{\frac{f_2}{h} + \frac{f_1*h}{h^2+(f_1+f_2)*f_2}}{1 - \frac{f_2}{\cancel{h}} * \frac{f_1*\cancel{h}}{h^2+(f_1+f_2)*f_2}} \\
+&= \frac{\frac{f_2}{h} + \frac{f_1*h}{h^2+(f_1+f_2)*f_2}}{\frac{h^2+(f_1+f_2)*f_2}{h^2+(f_1+f_2)*f_2} - \frac{f_1*f_2}{h^2+(f_1+f_2)*f_2}} \\
+&= \frac{\frac{f_2}{h} + \frac{f_1*h}{h^2+(f_1+f_2)*f_2}}{\frac{h^2+(f_1+f_2)*f_2 - f_1*f_2}{h^2+(f_1+f_2)*f_2}} \\
+&= \frac{\frac{f_2}{h} + \frac{f_1*h}{h^2+(f_1+f_2)*f_2}}{\frac{h^2+\cancel{f_1*f_2}+f_2^2 - \cancel{f_1*f_2}}{h^2+(f_1+f_2)*f_2}} \\
+&= \frac{\frac{f_2}{h} + \frac{f_1*h}{h^2+(f_1+f_2)*f_2}}{\frac{h^2+f_2^2}{h^2+(f_1+f_2)*f_2}} \\
+&= \frac{\frac{f_2}{h}}{\frac{h^2+f_2^2}{h^2+(f_1+f_2)*f_2}} + \frac{\frac{f_1*h}{h^2+(f_1+f_2)*f_2}}{\frac{h^2+f_2^2}{h^2+(f_1+f_2)*f_2}} \\
+&= \frac{f_2*(h^2+(f_1+f_2)*f_2)}{h*(h^2+f_2^2)} + \frac{(f_1*h)*\cancel{(h^2+(f_1+f_2)*f_2)}}{\cancel{(h^2+(f_1+f_2)*f_2)}*(h^2+f_2^2)} \\
+&= \frac{f_2*(h^2+(f_1+f_2)*f_2)}{h*(h^2+f_2^2)} + \frac{f_1*h}{h^2+f_2^2} \\
+&= \frac{f_2*h^2+(f_1+f_2)*f_2^2}{h*(h^2+f_2^2)} + \frac{f_1*h^2}{h*(h^2+f_2^2)} \\
+&= \frac{f_2*h^2+(f_1+f_2)*f_2^2 + f_1*h^2}{h*(h^2+f_2^2)} \\
+&= \frac{h^2*(f_1+f_2)+(f_1+f_2)*f_2^2}{h*(h^2+f_2^2)} \\
+&= \frac{(f_1+f_2)*\cancel{(h^2+f_2^2)}}{h*\cancel{(h^2+f_2^2)}} \\
+&= \frac{f_1+f_2}{h} \\
+\end{align*}
+$$
+
+Which establishes the identity
+
+$$
+\begin{align*}
+\tan(\alpha) &= \frac{f(x+h)-f(x)}{h} \\
+\Rightarrow \frac{f(x+h)-f(x)}{h} &= \frac{f_1+f_2}{h} \\
+&= \frac{f_1}{h}+\frac{f_2}{h}
+\end{align*}
+$$
+
+We know that $\frac{f_2}{h}$ is the tangent line slope $f'(x)$, and since
+
+$$
+\begin{align*}
+\frac{f(x+h)-f(x)}{h} &= \frac{f_1}{h} + f'(x) \\
+\frac{f(x+h)-f(x)}{h} - \frac{f_1}{h} &= f'(x) \\
+\end{align*}
+$$
+
+the difference in slope between the non-parallel secant- and the tangent line is simply $\frac{f_1}{h} = Q(x,h)$. $\frac{f_2}{h}$ depends only on the value of $x$, because $f_2$ is given by any of the $y$-ordinates of the tangent line, less the perpendicular distance of the horizontal line to the $x$-axis. On the other hand, $\frac{f_1}{h}$ depends on the value of $x$ and $h$ because $f_1 = f(x+h) - f_2$.
+
+### Finite Difference Quotient Factor h
 
 <img src="/assets/images/new_calculus__1.jpg" class="half-width-image"/>
 
-Let there be any [smooth curve](#definitions-smoothness) $f(x)$, intersected twice by a secant line at endpoints $A = (x, f(x))$ and $C = (x+h, f(x+h))$. The horizontal distance $h$ is represented by the side $\overline{AB}$ of $\triangle{ABC}$, parallel to the $x$-axis, while the vertical distance, $f(x+h) - f(x)$ is represented by the side $\overline{BC}$, by [Dropping A Perpendicular](/math/construction#dropping-a-perpendicular) from point $C$ relative to line $\overline{AB}$, thereby making the angle $\angle{ABC}$ a right angle.
+Let there be any [smooth curve](#definitions_smoothness) $f(x)$, intersected twice by a secant line at endpoints $A = (x, f(x))$ and $C = (x+h, f(x+h))$. The horizontal distance $h$ is represented by the side $\overline{AB}$ of $\triangle{ABC}$, parallel to the $x$-axis, while the vertical distance, $f(x+h) - f(x)$ is represented by the side $\overline{BC}$, by [Dropping A Perpendicular](/math/construction#dropping-a-perpendicular) from point $C$ relative to line $\overline{AB}$, thereby making the angle $\angle{ABC}$ a right angle.
 
 It now follows, that
 
@@ -123,7 +258,7 @@ and thereby, that $h$ is a factor of the numerator of the finite difference quot
 
 The following will explain why the mean value theorem works, in a systematic way using the flawed apparatus available in mainstream calculus with a patch (positional derivative) which John conceived to make this possible. The proof using the New Calculus requires no patch.
 
-If $f$ is [continuous](#definitions-continousness) on the closed interval $[x, x + \omega]$, and [smooth](#definitions-smoothness) on the open interval $(x;x + \omega)$, then there exists a point $c$ in $(x;x + \omega)$ such that
+If $f$ is [continuous](#definitions_continousness) on the closed interval $[x, x + \omega]$, and [smooth](#definitions_smoothness) on the open interval $(x;x + \omega)$, then there exists a point $c$ in $(x;x + \omega)$ such that
 
 $$
 f'(c) = \frac{f(x+\omega)-f(x)}{\omega}
@@ -221,7 +356,7 @@ $$
 f'(c) = \frac{1}{b-a} * \int_{a}^{b} f'(x) \,dx
 $$
 
-Since [Area](#definitions-area) is well defined as the product of two [Arithmetic Means](#definitions_arithmetic-mean), it follows that
+Since [Area](#definitions_area) is well defined as the product of two [Arithmetic Means](#definitions_arithmetic-mean), it follows that
 
 $$
 \mathrm{Area} = f'(c) * (b - a)
@@ -309,7 +444,7 @@ f(x) &= b*x^a \\
 \end{align*}
 $$
 
-Firstly performing the [Binomial Expansion](math/binomial-expansion), then [Factorizing Sum/Difference Of Two n-th Powers](#factorizing-sumdifference-of-two-n-th-powers) yields:
+Firstly performing the [Binomial Expansion](math/binomial-expansion), then [Factorizing Sum/Difference Of Two n-th Powers](#factorizing-sum-difference-of-two-n-th-powers) yields:
 
 $$
 \begin{align*}
