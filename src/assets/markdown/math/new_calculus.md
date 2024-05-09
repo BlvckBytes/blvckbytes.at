@@ -454,10 +454,10 @@ f'(x) &= \frac{b*\sum_{k=0}^{a} \binom{a}{k}*x^{(a-k)}*n^{k} - b*\sum_{k=0}^{a} 
 &= \frac{b*\sum_{k=1}^{a} \binom{a}{k}*x^{(a-k)}*(n^{k} - (-m)^{k})}{m + n} \\
 &= \frac{b*(\binom{a}{1} * x^{a-1} * (n-(-m))) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*(n^{k} - (-m)^{k})}{m + n} \\
 &= \frac{(b * a * x^{a-1} * (n+m)) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*(n^{k} - (-m)^{k})}{m + n} \\
-&= \frac{(b * a * x^{a-1} * (n+m)) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*((m+n) * \sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j)}{m + n} \\
-&= \frac{(b * a * x^{a-1} * (n+m)) + (n+m) * b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j}{m + n} \\
-&= \frac{\cancel{(n+m)}*((b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j)}{\cancel{m + n}} \\
-&= (b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j \\
+&= \frac{(b * a * x^{a-1} * (n+m)) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*((n+m) * \sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j)}{m + n} \\
+&= \frac{(b * a * x^{a-1} * (n+m)) + (n+m) * b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j}{m + n} \\
+&= \frac{\cancel{(n+m)}*((b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j)}{\cancel{m + n}} \\
+&= (b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j \\
 &= (b * a * x^{a-1}) + Q(x,m,n)
 \end{align*}
 $$
@@ -476,9 +476,9 @@ Let's see an example
 $$
 \begin{align*}
 f(x) &= 3*x^4 \Rightarrow a = 4,\, b = 3 \\
-\Rightarrow f'(x) &= (4 * 3 * x^{4-1}) + 3 * \sum_{k=2}^{4} \binom{4}{k}*x^{(4-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j \\
-&= 12 * x^3 + 3 * (6*x^{2}*(m - n) + 4*x*(m^2 - m*n + n^2) + (m^3 - m^2*n + m*n^2 - n^3)) \\
-&= 12 * x^3 + [18*x^{2}*(m - n) + 12*x*(m^2 - m*n + n^2) + 3*(m^3 - m^2*n + m*n^2 - n^3)] \\
+\Rightarrow f'(x) &= (4 * 3 * x^{4-1}) + 3 * \sum_{k=2}^{4} \binom{4}{k}*x^{(4-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j \\
+&= 12 * x^3 + 3 * (6*x^{2}*(n - m) + 4*x*(n^2 - n*m + m^2) + (n^3 - n^2*m + n*m^2 - m^3)) \\
+&= 12 * x^3 + [18*x^{2}*(n - m) + 12*x*(n^2 - n*m + m^2) + 3*(n^3 - n^2*m + n*m^2 - m^3)] \\
 &= 12*x^3 + Q(x,m,n)
 \end{align*}
 $$
@@ -504,8 +504,8 @@ By substituting the power-rule for positive exponents, we receive
 
 $$
 \begin{align*}
-f'(x) &= \frac{-1}{(x + n)^a*(x - m)^a} * \left[(b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j\right] \\
-&= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - \frac{b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} m^{(k-1)-j} * (-n)^j}{(x + n)^a*(x - m)^a} \\
+f'(x) &= \frac{-1}{(x + n)^a*(x - m)^a} * \left[(b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j\right] \\
+&= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - \frac{b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j}{(x + n)^a*(x - m)^a} \\
 &= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - Q(x,m,n)
 \end{align*}
 $$
