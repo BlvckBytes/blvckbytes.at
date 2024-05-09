@@ -252,7 +252,7 @@ $$
 
 and thereby, that $h$ is a factor of the numerator of the finite difference quotient, namely of $f(x+h)-f(x)$.
 
-## Historic MVT
+### Historic MVT
 
 <img src="/assets/images/new_calculus__2.png" class="half-width-image"/>
 
@@ -800,7 +800,15 @@ $$
 \end{align*}
 $$
 
-## New Calculus MVT
+### New Calculus MVT
+
+Statement: Given any function $f$ within the interval $[a;b]$, then there exists a point $c \in (a;b)$ such that the slope of the secant line from point $a$ to $b$ on $f$ is equal to the slope of the derivative of $f$, namely $f'$, at point $c$.
+
+$$
+f'(c) = \frac{f(b) - f(a)}{b-a}
+$$
+
+Next up, $f'(c)$ is the [Arithmetic Mean](#definitions_arithmetic-mean) of all $y$-ordinates of $f'$ within the interval $[a;b]$, which is - as stated above - equal to the secant-line on $f$.
 
 It makes sense to use the New Calculus definition of [Derivative](#new-calculus-derivative) because it also shows immediately the connection between the integral and the derivative in the fundamental theorem of calculus which is derived in one step from the mean value theorem.
 
@@ -854,6 +862,40 @@ f'(c) &= \frac{1}{k}*(f'(\mu_1) + f'(\mu_2) + f'(\mu_3) + \dotsm + f'(\mu_{k - 1
 $$
 
 Note that it does not matter what $k$ we choose, because the arithmetic mean is always the same. Thus, for the purposes of quadrature, the seemingly impossible task of finding the arithmetic mean of innumerably many $y$-ordinates is accomplished by a reducible- or telescoping-sum.
+
+### New Calculus Integral
+
+As described by the [New Calculus MVT](#new-calculus-derivative_new-calculus-mvt), the slope of a secant-line on $f$ spanning $[a;b]$ is equal to the [Arithmetic Mean](#definitions_arithmetic-mean) of $f'$ in that same interval.
+
+From this theorem results the insight that if one wishes to determine the [Arithmetic Mean](#definitions_arithmetic-mean) of a function $f$s $y$-ordinates in order to perform quadrature, it is required to find a function which will derive to $f$, call it $F$, and calculate its secant-slope within the interval of interest. Multiplying this level magnitude by the interval width will yield the area under the curve $f$.
+
+$$
+\begin{align*}
+\int_{a}^{b} f(x) \,dx &= \frac{F(b)-F(a)}{\cancel{b-a}} * \cancel{(b-a)} \\
+&= F(b)-F(a) \\
+\Leftrightarrow \\
+\int_{a}^{b} f'(x) \,dx &= \frac{f(b)-f(a)}{\cancel{b-a}} * \cancel{(b-a)} \\
+&= f(b)-f(a) \\
+\end{align*}
+$$
+
+Due to the [Constant Rule](#new-calculus-derivative_rules-of-derivation_constant-rule), multiple functions derive to $f$, distinguished by a unique constant shift along the $y$-axis called $C$.
+
+$$
+f(x) = x^3 \\
+\Rightarrow \int f(x) \,dx = F(x) = \frac{x^4}{4} + C
+$$
+
+When calculating the area, $C$ cancels out, and has thereby no effect of the outcome.
+
+$$
+\begin{align*}
+\int_{a}^{b} f(x) \,dx &= F(b) - F(a) \\
+&= \left(\frac{b^4}{4} + C\right) - \left(\frac{a^4}{4} + C\right) \\
+&= \frac{b^4}{4} + \cancel{C} - \frac{a^4}{4} - \cancel{C} \\
+&= \frac{b^4}{4} - \frac{a^4}{4} \\
+\end{align*}
+$$
 
 ## Factorizing Sum/Difference Of Two n-th Powers
 
