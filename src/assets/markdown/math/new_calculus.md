@@ -897,6 +897,177 @@ $$
 \end{align*}
 $$
 
+### New Calculus Arc Length
+
+The following graphic again shows the working-principle of the [New Calculus MVT](#new-calculus-derivative_new-calculus-mvt).
+
+<img src="/assets/images/new_calculus__8.png" class="half-width-image"/>
+
+With $s$ being the interval index, the start- and end-points $A_x$, $A_y$, $B_x$, $B_y$ of the $s$-th interval are as follows:
+
+$$
+\begin{align*}
+A_x &= (c-m) + s * \frac{m+n}{k} \\
+B_x &= a_x + \frac{m+n}{k} = (c-m) + (s + 1) * \frac{m+n}{k} \\
+A_y &= f(a_x) = f((c-m) + s * \frac{m+n}{k}) \\
+B_y &= f(b_x) = f((c-m) + (s + 1) * \frac{m+n}{k}) \\
+\end{align*}
+$$
+
+By constructing a right-angle triangle, its hypothenuse represents the distance $l$ between $A$ and $B$.
+
+$$
+\begin{align*}
+l_s^2 &= (B_x - A_x)^2 + (B_y - A_y)^2 \\
+&= \left(\left(\cancel{(c-m)} + \left(\cancel{s} + 1\right) * \frac{m+n}{k}\right) - \left(\cancel{(c-m)} + \cancel{s * \frac{m+n}{k}}\right)\right)^2 + \left(f\left(\left(s + 1\right) * \frac{m+n}{k}\right) - f\left(s * \frac{m+n}{k}\right)\right)^2 \\
+&= \left(\frac{m+n}{k}\right)^2 + \left(f\left((c-m) + \left(s + 1\right) * \frac{m+n}{k}\right) - f\left((c-m) + s * \frac{m+n}{k}\right)\right)^2 \\
+\end{align*}
+$$
+
+But
+
+$$
+\begin{align*}
+f'(\mu_s) &= \frac{f\left((c-m) + (s+1) * \frac{m+n}{k}\right) - f\left((c-m) + s * \frac{m+n}{k}\right)}{\frac{m+n}{k}} \\
+f'(\mu_s) * \frac{m+n}{k} &= f\left((c-m) + (s+1) * \frac{m+n}{k}\right) - f\left((c-m) + s * \frac{m+n}{k}\right) \\
+\end{align*}
+$$
+
+so
+
+$$
+\begin{align*}
+l_s^2 &= \left(\frac{m+n}{k}\right)^2 + \left(f'(\mu_s) * \frac{m+n}{k}\right)^2 \\
+l_s^2 &= \left(\frac{m+n}{k}\right)^2 + (f'(\mu_s))^2 * \left(\frac{m+n}{k}\right)^2 \\
+l_s^2 &= \left(\frac{m+n}{k}\right)^2 * (1 + (f'(\mu_s))^2) \\
+l_s &= \sqrt{\left(\frac{m+n}{k}\right)^2 * (1 + (f'(\mu_s))^2)} \\
+l_s &= \frac{m+n}{k} * \sqrt{1 + (f'(\mu_s))^2} \\
+\end{align*}
+$$
+
+In order to now end up at the total length $l$, all individual segments are summed up.
+
+$$
+\begin{align*}
+l &= \sum_{s=0}^{k - 1} l_s \\
+&= \sum_{s=0}^{k - 1} \frac{m+n}{k} * \sqrt{1 + (f'(\mu_s))^2} \\
+&= \frac{m+n}{k} * \sum_{s=0}^{k - 1} \sqrt{1 + (f'(\mu_s))^2} \\
+\end{align*}
+$$
+
+From the identity
+
+$$
+\frac{m+n}{k} * \sum_{s=0}^{k-1} f'(\mu_s) = \int_{c-m}^{c+n} f'(x) \,dx
+$$
+
+follows, that
+
+$$
+\begin{align*}
+l &= \frac{m+n}{k} * \sum_{s=0}^{k - 1} \sqrt{1 + (f'(\mu_s))^2} \\
+&= \int_{c-m}^{c+n} \sqrt{1 + (f'(x))^2} \,dx
+\end{align*}
+$$
+
+---
+
+Now for an actual example. The arc length of the function
+
+$$
+f(x) = x^2 \\
+\Rightarrow f'(x) = 2*x
+$$
+
+over $(0;2)$ is given by:
+
+$$
+\begin{align*}
+l &= \int_{c-m}^{c+n} \sqrt{1 + (2*\mu_s)^2} \,dx \\
+&= \int_{c-m}^{c+n} \sqrt{1 + 4*\mu_s^2} \,dx \\
+\end{align*}
+$$
+
+Thus, if we let
+
+$$
+h'(x) = \sqrt{1 + 4*x^2}
+$$
+
+then
+
+$$
+l = h(c+n) - h(c-m)
+$$
+
+with
+
+$$
+h(x) = \int h'(x) = \frac{1}{2}*x*\sqrt{1 + 4*x^2} + \frac{1}{4}*\ln(\sqrt{4*x^2 + 1} + 2*x)
+$$
+
+The mean value of $h$ on $(0;2)$ is
+
+$$
+\begin{align*}
+\frac{h(2) - h(0)}{2-0} &= \frac{(\frac{1}{\cancel{2}}*\cancel{2}*\sqrt{1 + 4*2^2} + \frac{1}{4}*\ln(\sqrt{4*2^2 + 1} + 2*2)) - (0 + 0)}{2} \\
+&= \frac{\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4)}{2} \\
+&\approx 2.32339
+\end{align*}
+$$
+
+This mean value represents the arithmetic mean of all $y$-ordinates on $h'(x)$ in the interval $(0;2)$, so to find $\mu_0$, the corresponding abscissa on $h'(x)$, we solve
+
+$$
+\begin{align*}
+h'(x) &= \frac{h(2) - h(0)}{2-0} \\
+\sqrt{1 + 4*x^2} &= \frac{\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4)}{2} \\
+1 + 4*x^2 &= \left(\frac{\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4)}{2}\right)^2 \\
+1 + 4*x^2 &= \frac{(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2}{4} \\
+4*x^2 &= \frac{(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2}{4} - 1 \\
+4*x^2 &= \frac{(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2 - 4}{4} \\
+x^2 &= \frac{(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2 - 4}{16} \\
+x &= \frac{\sqrt{(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2 - 4}}{4} \\
+x &\approx 1.048588
+\end{align*}
+$$
+
+Plugging back into the integral
+
+$$
+\begin{align*}
+l &= \int_{c-m}^{c+n} \sqrt{1 + 4*\mu_s^2} \,dx \\
+&= \frac{m+n}{k} * \sum_{s=0}^{k-1} \sqrt{1 + 4*\left(\frac{\sqrt{(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2 - 4}}{4}\right)^2} \\
+&= \frac{m+n}{k} * \sum_{s=0}^{k-1} \sqrt{1 + 4*\frac{(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2 - 4}{16}} \\
+&= \frac{m+n}{k} * \sum_{s=0}^{k-1} \sqrt{1 + \frac{4*(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2 - 16}{16}} \\
+&= \frac{m+n}{k} * \sum_{s=0}^{k-1} \sqrt{\frac{4*(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2}{16}} \\
+&= \frac{m+n}{k} * \sum_{s=0}^{k-1} \sqrt{\frac{(\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4))^2}{4}} \\
+&= \frac{m+n}{k} * \sum_{s=0}^{k-1} \frac{\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4)}{2} \\
+\end{align*}
+$$
+
+Since $m+n=2$ and $k$ can be chosen arbitrarily, due to the telescoping sum, $k=1$ yields
+
+$$
+\begin{align*}
+l &= \frac{2}{1} * \sum_{s=0}^{1-1} \frac{\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4)}{2} \\
+&= 2* \frac{\sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4)}{2} \\
+&= \sqrt{17} + \frac{1}{4}*\ln(\sqrt{17} + 4) \\
+&\approx 4.6467838
+\end{align*}
+$$
+
+which represents the final arc-length in the interval $(0;2)$.
+
+Alternatively, plugging the upper and lower bounds of the integral into $h$ would have also yielded the result. The above provess gives a better insight into the underlying principles though.
+
+$$
+c = x = 1.048588 \\
+\Rightarrow m = c \\
+\Rightarrow n = 2 - c \\
+\Rightarrow h(c+n) - h(c-m) = h(c+2-c) - h(c-c) = h(2) \approx 4.6467838
+$$
+
 ## Factorizing Sum/Difference Of Two n-th Powers
 
 Statement:
