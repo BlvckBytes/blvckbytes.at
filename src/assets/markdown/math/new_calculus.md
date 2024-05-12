@@ -22,6 +22,7 @@ Besides making broadly accessible what has been overcomplicated by academia for 
 - <a href="https://www.academia.edu/102086348/All_about_zero" target="_blank">All About Zero</a>
 - <a href="https://www.academia.edu/105854738/The_Revised_Elements_Prologue" target="_blank">The Revised Elements - Prologue</a>
 - <a href="https://www.academia.edu/105917019/The_Revised_Elements_Book_I" target="_blank">The Revised Elements - Book 1</a>
+- <a href="https://www.academia.edu/44820487/Discovering_the_concept_of_number_a_personal_journey" target="_blank">Discovering The Concept Of Number</a>
 
 and many, many more. Thereby, I strongly believe that the only right thing I can do on my part is to study his work and help to make it attainable, approachable and fully penetrable for other newcomers.
 
@@ -704,7 +705,7 @@ $$
 (f(g(x)))' &= \frac{f(g(x+n)) - f(g(x-m))}{m+n} \\
 &= \frac{f(g(x+n)) - f(g(x-m)) * (g(x+n)-g(x-m))}{(m+n) * (g(x+n)-g(x-m))} \\
 &= \frac{f(g(x+n)) - f(g(x-m))}{(g(x+n)-g(x-m))} * \frac{g(x+n)-g(x-m)}{(m+n)} \\
-&= \frac{f(g(x+n)) - f(g(x-m))}{(g(x+n)-g(x-m))} * [g'(x) + Q(x,m,n)] \\
+&= \frac{f(g(x+n)) - f(g(x-m))}{(g(x+n)-g(x-m))} * [g'(x) + Q_g(x,m,n)] \\
 \end{align*}
 $$
 
@@ -712,8 +713,8 @@ Introducing the following substitutions
 
 $$
 \begin{align*}
-g(x+n) &= g(x) + p \\
-g(x-m) &= g(x) - q \\
+g(x+n) &= g(x) + q \Rightarrow q = g(x+n)-g(x) \\
+g(x-m) &= g(x) - p \Rightarrow p = g(x)-g(x-m) \\
 \end{align*}
 $$
 
@@ -721,10 +722,15 @@ yields
 
 $$
 \begin{align*}
-(f(g(x)))' &= \frac{f(g(x) + p) - f(g(x) - q)}{(g(x) + p -(g(x) - q))} * [g'(x) + Q(x,m,n)] \\
-&= \frac{f(g(x) + p) - f(g(x) - q)}{(\cancel{g(x)} + p - \cancel{g(x)} + q)} * [g'(x) + Q(x,m,n)] \\
-&= \frac{f(g(x) + p) - f(g(x) - q)}{p + q} * [g'(x) + Q(x,m,n)] \\
-&= [f'(g(x)) + Q(g(x),p,q)] * [g'(x) + Q(x,m,n)] \\
+(f(g(x)))' &= \frac{f(g(x) + q) - f(g(x) - p)}{(g(x) + q -(g(x) - p))} * [g'(x) + Q(x,m,n)] \\
+&= \frac{f(g(x) + q) - f(g(x) - p)}{(\cancel{g(x)} + q - \cancel{g(x)} + p)} * [g'(x) + Q(x,m,n)] \\
+&= \frac{f(g(x) + q) - f(g(x) - p)}{q + p} * [g'(x) + Q(x,m,n)] \\
+&= [f'(g(x)) + Q_f(g(x),p,q)] * [g'(x) + Q_g(x,m,n)] \\
+&= f'(g(x)) * [g'(x) + Q_g(x,m,n)] + Q_f(g(x),p,q) * [g'(x) + Q_g(x,m,n)] \\
+&= f'(g(x)) * g'(x) + [f'(g(x)) * Q_g(x,m,n) + Q_f(g(x),p,q) * g'(x) + Q_f(g(x),p,q) * Q_g(x,m,n)] \\
+&= f'(g(x)) * g'(x) + [Q_f(g(x),p,q) * (g'(x) + Q_g(x,m,n)) + f'(g(x)) * Q_g(x,m,n)] \\
+&= f'(g(x)) * g'(x) + [Q_f(g(x),g(x) - g(x-m),g(x+n) - g(x)) * (g'(x) + Q_g(x,m,n)) + f'(g(x)) * Q_g(x,m,n)] \\
+&= f'(g(x)) * g'(x) + Q(x,m,n)
 \end{align*}
 $$
 
