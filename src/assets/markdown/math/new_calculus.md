@@ -458,7 +458,7 @@ f'(x) &= \frac{b*\sum_{k=0}^{a} \binom{a}{k}*x^{(a-k)}*n^{k} - b*\sum_{k=0}^{a} 
 &= \frac{(b * a * x^{a-1} * (n+m)) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*((n+m) * \sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j)}{m + n} \\
 &= \frac{(b * a * x^{a-1} * (n+m)) + (n+m) * b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j}{m + n} \\
 &= \frac{\cancel{(n+m)}*((b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j)}{\cancel{m + n}} \\
-&= (b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j \\
+&= (b * a * x^{a-1}) + \left[b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j\right] \\
 &= (b * a * x^{a-1}) + Q(x,m,n)
 \end{align*}
 $$
@@ -496,8 +496,8 @@ f(x) &= b*x^{-a} \\
 &= \frac{b}{(x + n)^a*(m + n)} - \frac{b}{(x - m)^a*(m + n)} \\
 &= \frac{b*(x - m)^a}{(x + n)^a*(m + n)*(x - m)^a} - \frac{b*(x + n)^a}{(x - m)^a*(m + n)*(x + n)^a} \\
 &= \frac{b*(x - m)^a - b*(x + n)^a}{(x + n)^a*(m + n)*(x - m)^a} \\
-&= \frac{1}{(x + n)^a*(x - m)^a} * \frac{b*(x - m)^a - b*(x + n)^a}{(m + n)} \\
-&= \frac{-1}{(x + n)^a*(x - m)^a} * \left[\frac{b*(x + n)^a - b*(x - m)^a}{(m + n)}\right] \\
+&= \frac{1}{(x + n)^a*(x - m)^a} * \frac{b*(x - m)^a - b*(x + n)^a}{m + n} \\
+&= \frac{-1}{(x + n)^a*(x - m)^a} * \left(\frac{b*(x + n)^a - b*(x - m)^a}{m + n}\right) \\
 \end{align*}
 $$
 
@@ -505,8 +505,8 @@ By substituting the power-rule for positive exponents, we receive
 
 $$
 \begin{align*}
-f'(x) &= \frac{-1}{(x + n)^a*(x - m)^a} * \left[(b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j\right] \\
-&= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - \frac{b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j}{(x + n)^a*(x - m)^a} \\
+f'(x) &= \frac{-1}{(x + n)^a*(x - m)^a} * \left((b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j\right) \\
+&= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - \left[\frac{b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j}{(x + n)^a*(x - m)^a}\right] \\
 &= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - Q(x,m,n)
 \end{align*}
 $$
@@ -609,6 +609,8 @@ f(x) &= b*g(x) \\
 \Rightarrow f'(x) &= \frac{b*g(x+n) - b*g(x-m)}{m + n} \\
 &= b*\frac{g(x+n) - g(x-m)}{m + n} \\
 &= b*[g'(x) + Q_g(x,m,n)] \\
+&= b*g'(x) + [b*Q_g(x,m,n)] \\
+&= b*g'(x) + Q(x,m,n) \\
 \end{align*}
 $$
 
@@ -616,7 +618,7 @@ For $m=n=0$
 
 $$
 \begin{align*}
-f'(x) &= b*[g'(x) + Q_g(x,0,0)] \\
+f'(x) &= b*g'(x) + Q(x,0,0) \\
 &= b*g'(x)
 \end{align*}
 $$
@@ -630,7 +632,9 @@ $$
 &= \frac{[f(x + n) - f(x - m)] + [\pm g(x + n) \mp g(x - m)]}{m - n} \\
 &= \frac{[f(x + n) - f(x - m)] \pm [g(x + n) - g(x - m)]}{m - n} \\
 &= \frac{f(x + n) - f(x - m)}{m+n} \pm \frac{g(x + n) - g(x - m)}{m + n} \\
-&= [f'(x) + Q_f(x,m,n)] \pm [g'(x) + Q_g(x,m,n)]
+&= [f'(x) + Q_f(x,m,n)] \pm [g'(x) + Q_g(x,m,n)] \\
+&= f'(x) \pm g'(x) + [Q_f(x,m,n) \pm Q_g(x,m,n)] \\
+&= f'(x) \pm g'(x) + Q(x,m,n)
 \end{align*}
 $$
 
@@ -638,7 +642,7 @@ For $m=n=0$
 
 $$
 \begin{align*}
-(f(x) \pm g(x))' &= [f'(x) + Q_f(x,0,0)] \pm [g'(x) + Q_g(x,0,0)] \\
+(f(x) \pm g(x))' &= f'(x) \pm g'(x) + Q(x,0,0) \\
 &= f'(x) \pm g'(x)
 \end{align*}
 $$
@@ -652,6 +656,9 @@ $$
 &= \frac{f(x + n) * (g(x + n) - g(x - m)) + g(x - m)*(f(x + n) - f(x - m))}{m + n} \\
 &= f(x + n) * \frac{g(x + n) - g(x - m)}{m+n} + g(x - m) * \frac{f(x + n) - f(x - m)}{m + n} \\
 &= f(x + n) * [g'(x) + Q_g(x,m,n)] + g(x - m) * [f'(x) + Q_f(x,m,n)]\\
+&= f(x + n) * g'(x) + f(x + n) * Q_g(x,m,n) + g(x - m) * f'(x) + g(x - m) * Q_f(x,m,n)\\
+&= f(x + n) * g'(x) + g(x - m) * f'(x) + [f(x + n) * Q_g(x,m,n) + g(x - m) * Q_f(x,m,n)]\\
+&= f(x + n) * g'(x) + g(x - m) * f'(x) + Q(x,m,n)\\
 \end{align*}
 $$
 
@@ -659,19 +666,12 @@ For $m=n=0$
 
 $$
 \begin{align*}
-(f(x) * g(x))' &= f(x + 0) * [g'(x) + Q_g(x,0,0)] + g(x - 0) * [f'(x) + Q_f(x,0,0)]\\
+(f(x) * g(x))' &= f(x + 0) * g'(x) + g(x - 0) * f'(x) + Q(x,0,0)\\
 &= f(x) * g'(x) + g(x) * f'(x)
 \end{align*}
 $$
 
 #### Quotient Rule
-
-$$
-\begin{align*}
-\left(\frac{f(x)}{g(x)}\right)' &= \frac{f'(x)*g(x) - f(x)*g'(x)}{(g(x))^2} \\
-&= \frac{(\frac{f(x+n) - f(x-m)}{m+n})*g(x) - f(x)*(\frac{g(x+n) - g(x-m)}{m+n})}{(g(x))^2} \\
-\end{align*}
-$$
 
 $$
 \begin{align*}
@@ -686,6 +686,10 @@ $$
 &= \left(\frac{f(x + n)*g(x - m) - f(x-m)*g(x-m)}{m+n} - \frac{f(x - m)*g(x + n) - f(x-m)*g(x-m)}{m + n}\right) * \frac{1}{g(x+n)*g(x-m)} \\
 &= \left(g(x-m)*\frac{f(x + n) - f(x-m)}{m+n} - f(x-m)*\frac{g(x + n) - g(x-m)}{m + n}\right) * \frac{1}{g(x+n)*g(x-m)} \\
 &= \frac{g(x-m)*[f'(x) + Q_f(x,m,n)] - f(x-m)*[g'(x) + Q_g(x,m,n)]}{g(x+n)*g(x-m)} \\
+&= \frac{g(x-m)*f'(x) + g(x-m)*Q_f(x,m,n) - f(x-m)*g'(x) - f(x-m)*Q_g(x,m,n)}{g(x+n)*g(x-m)} \\
+&= \frac{g(x-m)*f'(x) - f(x-m)*g'(x) + [g(x-m)*Q_f(x,m,n) - f(x-m)*Q_g(x,m,n)]}{g(x+n)*g(x-m)} \\
+&= \frac{g(x-m)*f'(x) - f(x-m)*g'(x)}{g(x+n)*g(x-m)} + \left[\frac{g(x-m)*Q_f(x,m,n) - f(x-m)*Q_g(x,m,n)}{g(x+n)*g(x-m)}\right] \\
+&= \frac{g(x-m)*f'(x) - f(x-m)*g'(x)}{g(x+n)*g(x-m)} + Q(x,m,n) \\
 \end{align*}
 $$
 
@@ -693,7 +697,7 @@ For $m=n=0$
 
 $$
 \begin{align*}
-\left(\frac{f(x)}{g(x)}\right)' &= \frac{g(x-0)*[f'(x) + Q_f(x,0,0)] - f(x-0)*[g'(x) + Q_g(x,0,0)]}{g(x+0)*g(x-0)} \\
+\left(\frac{f(x)}{g(x)}\right)' &= \frac{g(x-0)*f'(x) - f(x-0)*g'(x)}{g(x+0)*g(x-0)} + Q(x,0,0) \\
 &= \frac{g(x)*f'(x) - f(x)*g'(x)}{g^2(x)}
 \end{align*}
 $$
@@ -738,14 +742,8 @@ For $m=n=0$
 
 $$
 \begin{align*}
-g(x+0) &= g(x) + p \Rightarrow p = 0 \\
-g(x-0) &= g(x) - q \Rightarrow q = 0
-\end{align*}
-$$
-
-$$
-\begin{align*}
-(f(g(x)))' &= [f'(g(x)) + Q(g(x),0,0)] * [g'(x) + Q(x,0,0)] \\
+(f(g(x)))' &= f'(g(x)) * g'(x) + [Q_f(g(x),g(x) - g(x-0),g(x+0) - g(x)) * (g'(x) + Q_g(x,0,0)) + f'(g(x)) * Q_g(x,0,0)] \\
+(f(g(x)))' &= f'(g(x)) * g'(x) + [0 * (g'(x) + 0) + f'(g(x)) * 0] \\
 &= f'(g(x)) * g'(x)
 \end{align*}
 $$
