@@ -726,10 +726,26 @@ export class MainPageComponent implements OnDestroy {
     const toTopButtons = markdownElement.querySelectorAll("." + MainPageComponent.HEADLINE_CLASS_TO_TOP);
     const toBottomButtons = markdownElement.querySelectorAll("." + MainPageComponent.HEADLINE_CLASS_TO_BOTTOM);
 
-    for (let i = 0; i < toTopButtons.length; ++i)
-      this.subs.sink = { unsubscribe: this.renderer.listen(toTopButtons.item(i), 'click', () => this.onPageJumpButtonClick(true)) };
+    for (let i = 0; i < toTopButtons.length; ++i) {
+      this.subs.sink = {
+        unsubscribe: this.renderer.listen(toTopButtons.item(i), 'click', (e: Event) => {
+          e.preventDefault();
+          e.stopPropagation();
 
-    for (let i = 0; i < toBottomButtons.length; ++i)
-      this.subs.sink = { unsubscribe: this.renderer.listen(toBottomButtons.item(i), 'click', () => this.onPageJumpButtonClick(false)) };
+          this.onPageJumpButtonClick(true);
+        })
+      };
+    }
+
+    for (let i = 0; i < toBottomButtons.length; ++i) {
+      this.subs.sink = {
+        unsubscribe: this.renderer.listen(toBottomButtons.item(i), 'click', (e: Event) => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          this.onPageJumpButtonClick(false);
+        })
+      };
+    }
   }
 }
