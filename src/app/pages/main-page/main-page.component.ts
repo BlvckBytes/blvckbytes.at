@@ -1,4 +1,4 @@
-import { Component, ComponentRef, ElementRef, OnDestroy, Renderer2, ViewChild, ViewContainerRef, signal } from '@angular/core';
+import { Component, ComponentRef, OnDestroy, Renderer2, ViewChild, ViewContainerRef, signal } from '@angular/core';
 import { KatexOptions, MarkdownComponent } from 'ngx-markdown';
 import { NavigationData } from '../../components/navigation/navigation-data.interface';
 import { NavigationEntry } from '../../components/navigation/navigation-entry.interface';
@@ -397,15 +397,13 @@ export class MainPageComponent implements OnDestroy {
   ) {
     for (let tocNodeIndex = 0; tocNodeIndex < tocNodes.length; ++tocNodeIndex) {
       const currentTocNode = tocNodes[tocNodeIndex];
-      const nextTocNode = tocNodeIndex == tocNodes.length - 1 ? null : tocNodes[tocNodeIndex + 1];
-      this.generateCollapsiblesSub(markdownElement, currentTocNode, nextTocNode, collapsibleContainedImages);
+      this.generateCollapsiblesSub(markdownElement, currentTocNode, collapsibleContainedImages);
     }
   }
 
   private generateCollapsiblesSub(
     markdownElement: Element,
     currentNode: TOCNode,
-    nextSibling: TOCNode | null,
     collapsibleContainedImages: HTMLImageElement[],
   ) {
     this.generateCollapsibles(markdownElement, currentNode.members, collapsibleContainedImages);
@@ -423,8 +421,18 @@ export class MainPageComponent implements OnDestroy {
       return;
     }
 
-    const nextSiblingIndex = nextSibling == null ? null : childList.indexOf(nextSibling.self[0]);
-    const lastContainedElementIndex = nextSiblingIndex == null ? childList.length - 1 : nextSiblingIndex - 1;
+    let lastContainedElementIndex: number = childList.length - 1;
+
+    // Yes... the node-tree should know about the next-in-line entry, but this has to do for now.
+    for (let i = currentElementIndex + 1; i < childList.length; ++i) {
+      const nextElement = childList[i];
+
+      if (!nextElement.classList.contains(MainPageComponent.HEADLINE_CLASS))
+        continue;
+
+      lastContainedElementIndex = i - 1;
+      break;
+    }
 
     const collapsibleContainer = document.createElement("div");
     collapsibleContainer.className = MainPageComponent.COLLAPSIBLE_CONTAINER_CLASS;
@@ -591,7 +599,7 @@ export class MainPageComponent implements OnDestroy {
       result.push({
         self: currentHeading,
         members: memberNodes,
-      } as TOCNode);
+      } satisfies TOCNode);
     }
 
     return result
