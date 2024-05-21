@@ -44,43 +44,21 @@ A tangent line is a finite straight line, such that it meets a curve in only one
 
 Since real numbers do not exist and there is no valid construction of the same, you are required to think in terms of only length magnitudes whose measure may be possible or not. Thus, the function is defined everywhere in terms of length magnitudes if there are no disjoint paths.
 
-### Arithmetic Mean
-
-The phrase "Arithmetic Mean" is really a misnomer, as it implies a "middle", but ironically, it has nothing to do with the middle of anything. "Level magnitude" would be a better name.
-
-Given any set of numbers or magnitudes, the arithmetic mean indicates a value that each number would have, if all the numbers in the set were made to be equal through a process of redistribution. An arithmetic mean leads to correct inference, if and only if, redistribution makes sense.
-
-Suppose that numbers are represented by blocks as in the following diagram:
-
-<img src="/assets/images/new_calculus__4.png" class="half-width-image"/>
-
-It's easy to see that if the green block is moved from pile 3 to pile 1, then all three piles will be level and equal.
-
-<img src="/assets/images/new_calculus__5.png" class="half-width-image"/>
-
-The arithmetic mean is clearly given by
-
-$$
-\begin{align*}
-\frac{1+2+3}{3} = \frac{6}{3} = 2
-\end{align*}
-$$
-
 ### Area
 
-Area is the product of two [Arithmetic Means](#definitions_arithmetic-mean).
+Area is the product of two [Level Magnitudes](/math/level-magnitude).
 
 <img src="/assets/images/new_calculus__3.png" class="half-width-image"/>
 
-The horizontal side length is the [Arithmetic Mean](#definitions_arithmetic-mean) of the "infinitely many" horizontal line lengths in a parallelogram. The vertical side length is the [Arithmetic Mean](#definitions_arithmetic-mean) of the infinitely many vertical line lengths in a parallelogram.
+The horizontal side length is the [Level Magnitude](/math/level-magnitude) of the "infinitely many" horizontal line lengths in a parallelogram. The vertical side length is the [Level Magnitude](/math/level-magnitude) of the infinitely many vertical line lengths in a parallelogram.
 
-The horizontal line length [Arithmetic Mean](#definitions_arithmetic-mean) is given by $\frac{k*w}{k} = w$ where $w$ is the length of each horizontal line. Similarly, the vertical line length [Arithmetic Mean](#definitions_arithmetic-mean) is given by $\frac{k*h}{k} = h$ where $h$ is the height of each vertical line.
+The horizontal line length [Level Magnitude](/math/level-magnitude) is given by $\frac{k*w}{k} = w$ where $w$ is the length of each horizontal line. Similarly, the vertical line length [Level Magnitude](/math/level-magnitude) is given by $\frac{k*h}{k} = h$ where $h$ is the height of each vertical line.
 
 TODO: This sounds very similar to Cavalieri's principle. Is the latter essentially just another representation of this concept?
 
 ### Volume
 
-Analogous to [Area](#definitions_area), volume is the product of three [Arithmetic Means](#definitions_arithmetic-mean).
+Analogous to [Area](#definitions_area), volume is the product of three [Level Magnitudes](/math/level-magnitude).
 
 ### Slope
 
@@ -309,7 +287,7 @@ $$
 \end{align*}
 $$
 
-Let's **assume** that the LHS of the Mean Value Theorem, that is, $f'(c)$, is an [Arithmetic Mean](#definitions_arithmetic-mean) of **all** the ("infinitely many") ordinates of $f'$ in the interval $(x;x+\omega)$, then
+Let's **assume** that the LHS of the Mean Value Theorem, that is, $f'(c)$, is a [Level Magnitude](/math/level-magnitude) of **all** the ("infinitely many") ordinates of $f'$ in the interval $(x;x+\omega)$, then
 
 $$
 f'(c) = \lim \limits_{n \to \infty}\left(\frac{1}{n}*\sum_{k=0}^{n - 1} f'\left(x + \frac{k*\omega}{n}\right) \right)
@@ -381,13 +359,13 @@ $$
 f'(c) = \frac{1}{b-a} * \int_{a}^{b} f'(x) \,dx
 $$
 
-Since [Area](#definitions_area) is well defined as the product of two [Arithmetic Means](#definitions_arithmetic-mean), it follows that
+Since [Area](#definitions_area) is well defined as the product of two [Level Magnitudes](/math/level-magnitude), it follows that
 
 $$
 \mathrm{Area} = f'(c) * (b - a)
 $$
 
-where $f'(c)$ is the [Arithmetic Mean](#definitions_arithmetic-mean) of all the vertical line lengths of $f'(x)$ in the inverval $(a,b)$ and $b-a$ is the [Arithmetic Mean](#definitions_arithmetic-mean) of all the horizontal line lengths or just the interval width.
+where $f'(c)$ is the [Level Magnitude](/math/level-magnitude) of all the vertical line lengths of $f'(x)$ in the inverval $(a,b)$ and $b-a$ is the [Level Magnitude](/math/level-magnitude) of all the horizontal line lengths or just the interval width.
 
 This is why we call the process of finding areas through definite integration "*quadrature*" - we essentially normalise the irregular area so that it becomes a quadrilateral.
 
@@ -1055,7 +1033,7 @@ $$
 f'(c) = \frac{f(b) - f(a)}{b-a}
 $$
 
-Next up, $f'(c)$ is the [Arithmetic Mean](#definitions_arithmetic-mean) of all $y$-ordinates of $f'$ within the interval $[a;b]$, which is - as stated above - equal to the secant-line on $f$.
+Next up, $f'(c)$ is the [Level Magnitude](/math/level-magnitude) of all $y$-ordinates of $f'$ within the interval $[a;b]$, which is - as stated above - equal to the secant-line on $f$.
 
 It makes sense to use the New Calculus definition of [Derivative](#new-calculus-derivative) because it also shows immediately the connection between the integral and the derivative in the fundamental theorem of calculus which is derived in one step from the mean value theorem.
 
@@ -1112,9 +1090,9 @@ Note that it does not matter what $k$ we choose, because the arithmetic mean is 
 
 ### New Calculus Integral
 
-As described by the [New Calculus MVT](#new-calculus-derivative_new-calculus-mvt), the slope of a secant-line on $f$ spanning $[a;b]$ is equal to the [Arithmetic Mean](#definitions_arithmetic-mean) of $f'$ in that same interval.
+As described by the [New Calculus MVT](#new-calculus-derivative_new-calculus-mvt), the slope of a secant-line on $f$ spanning $[a;b]$ is equal to the [Level Magnitude](/math/level-magnitude) of $f'$ in that same interval.
 
-From this theorem results the insight that if one wishes to determine the [Arithmetic Mean](#definitions_arithmetic-mean) of a function $f$s $y$-ordinates in order to perform quadrature, it is required to find a function which will derive to $f$, call it $F$, and calculate its secant-slope within the interval of interest. Multiplying this level magnitude by the interval width will yield the area under the curve $f$.
+From this theorem results the insight that if one wishes to determine the [Level Magnitude](/math/level-magnitude) of a function $f$s $y$-ordinates in order to perform quadrature, it is required to find a function which will derive to $f$, call it $F$, and calculate its secant-slope within the interval of interest. Multiplying this level magnitude by the interval width will yield the area under the curve $f$.
 
 $$
 \begin{align*}
