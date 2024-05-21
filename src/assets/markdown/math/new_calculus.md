@@ -94,6 +94,30 @@ For the [Historic Geometric Theorem](#historic-geometric-theorem), $Q(x,h)$ desc
 
 For the [New Calculus Derivative](#new-calculus-derivative), $Q(x,m,n)$ describes the difference in slope between the tangent- and a parallel secant line. Thus follows that $Q$ is always zero. Given any two of $x$, $m$ and $n$, the remaining quantity can be solved for. Since it is always zero, terms in $m$ and $n$ can be discarded to receive the exact tangent-line.
 
+One can **not** just pull apart fractions by multiplication or division in order to "isolate" the derivative from the auxiliary equation; quite the complicated example is up for display at [Power Rule: Negative Whole Exponents](#new-calculus-derivative_rules-of-derivation_power-rule_negative-whole-exponents).
+
+I went through these tedious generic pattern derivations because of my own curiosity; some might consider it "useless knowledge", but I like to lay these breadcrumbs down so that I can pick them back up if I ever need to. John reminded me of a much simpler way to generate an auxiliary equation for any given function, based on the identity that the finite difference quotient equals the derivative plus the slope difference, thereby making the slope difference $Q$ equal to the finite difference quotient minus the derivative, as dictated by the rules of derivation.
+
+The following list of <a href="https://www.geogebra.org" target="_blank">GeoGebra</a>-commands, one per line, computes the auxiliary equation as described above, with $f(x)$ being any given function, $f'(x)$ its automatically computed derivative, $Q(x,m,n)$ the resulting auxiliary equation, $x_t$ the x-coordinate of tangency, $t(x)$ the tangent line function, $T$ the point of tangency, $m$ the offset to the left relative from $x_t$, $A$ the first point of the parallel secant line, $n_s$ the solved-for $n$ by setting $Q=0$, $B$ the second point of the parallel secant line and $s(x)$ the actual secant line function.
+
+The degrees of freedom, so to speak, are $f(x)$, $x_t$ and $m$, which represent user-choices.
+
+```txt
+f(x) := x^2 + x^(-3)
+f'(x) := Derivative(f)
+Q(x,m,n) := (f(x + n) - f(x - m))/(m + n) - f'(x)
+x_t := -.7
+t(x) := f'(x_t) * (x - x_t) + f(x_t)
+T := (x_t, f(x_t))
+m := .5
+A := (x_t - m, f(x_t - m))
+n_s := Element(NSolutions(Q(x_t, m, n) = 0, n), 1)
+B := (x_t + n_s, f(x_t + n_s))
+s(x) := Line(A, B)
+```
+
+<img src="/assets/images/new_calculus__12.png" class="half-width-image"/>
+
 ## Historic Geometric Theorem
 
 If any function $f$ is [Smooth](#definitions_smoothness) on an interval $(x;x+h)$, it is true that given any non-parallel secant line with endpoints $(x,f(x))$ and $(x+h,f(x+h))$, then the difference in slope between the non-parallel secant line $\frac{f(x+h)-f(x)}{h}$ and the tangent line $f'(x)$ is given by $Q(x,h)$ - an expression in $h$ that may also include $x$, which is never equal to zero unless $f$ is a linear function.
@@ -438,6 +462,8 @@ $$
 
 #### Power Rule
 
+##### Positive Whole Exponents
+
 $$
 \begin{align*}
 f(x) &= b*x^a \\
@@ -484,7 +510,7 @@ f(x) &= 3*x^4 \Rightarrow a = 4,\, b = 3 \\
 \end{align*}
 $$
 
----
+##### Negative Whole Exponents
 
 The above rule can be extended to negative exponents as follows.
 
@@ -507,7 +533,48 @@ $$
 \begin{align*}
 f'(x) &= \frac{-1}{(x + n)^a*(x - m)^a} * \left((b * a * x^{a-1}) + b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j\right) \\
 &= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - \left[\frac{b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j}{(x + n)^a*(x - m)^a}\right] \\
-&= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - Q(x,m,n)
+&= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - Q_2(x,m,n) \\
+\end{align*}
+$$
+
+But the first fraction still depends on $m$ and $n$, thus the final auxiliary equation has not yet been isolated. To do so, the denominator needs to be expanded into a sum, as described in [Similar Binomial Expansion Multiplication](/math/similar-binomial-expansion-multiplication); then carry out long division once, to isolate the power of $x$, with the remainder becoming part of the auxiliary equation.
+
+$$
+\begin{align*}
+f'(x) &= \frac{-1 * b * a * x^{a-1}}{(x + n)^a*(x - m)^a} - Q_2(x,m,n) \\
+&= \frac{-1 * b * a * x^{a-1}}{\sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + \sum_{k=a+1}^{2*a} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i}} - Q_2(x,m,n) \\
+&= \frac{-1 * b * a * x^{a-1}}{\sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + [x^{2*a}*\cancel{\binom{a}{0}}*\cancel{\binom{a}{2*a-2*a-0}}*\cancel{n^0}*\cancel{(-m)^{2*a-2*a-0}}] + \sum_{k=a+1}^{2*a - 1} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i}} - Q_2(x,m,n) \\
+&= \frac{-1 * b * a * x^{a-1}}{\sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + [x^{2*a}] + \sum_{k=a+1}^{2*a - 1} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i}} - Q_2(x,m,n) \\
+\end{align*}
+$$
+
+We now want to divide the numerator by the denominator in such a way that the highest power of $x$, namely $[x^{2*a}]$ equals to the numerator when multiplying back, so that it vanishes out of the remainder.
+
+$$
+\begin{align*}
+x^{2*a} * y &= -b * a * x^{a-1} \\
+y &= \frac{-b * a * x^{a-1}}{x^{2*a}} \\
+&= -b * a * x^{a-1-2*a} \\
+&= -b * a * x^{-a-1} \\
+\end{align*}
+$$
+
+$$
+(-b * a * x^{a-1}) : \left([x^{2*a}] + \sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + \sum_{k=a+1}^{2*a - 1} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i}\right) = -b * a * x^{-a-1} \\
+-(-b * a * x^{a-1} + (-b * a * x^{-a-1}) * \left(\sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + \sum_{k=a+1}^{2*a - 1} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i}\right)) \\
+\rule{50mm}{.1mm} \\
+(b * a * x^{-a-1}) * \left(\sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + \sum_{k=a+1}^{2*a - 1} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i}\right) \\
+$$
+
+As shown above, the result is $-b * a * x^{-a-1}$, with the remainder being the sum expression right below the horizontal rule. The derivative has now been fully isolated.
+
+$$
+\begin{align*}
+f'(x) &= -b * a * x^{-a-1} + \frac{(b * a * x^{-a-1}) * (\sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + \sum_{k=a+1}^{2*a - 1} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i})}{(x+n)^a*(x-m)^a} - Q_2(x,m,n) \\
+&= -b * a * x^{-a-1} + \frac{(b * a * x^{-a-1}) * (\sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + \sum_{k=a+1}^{2*a - 1} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i})}{(x+n)^a*(x-m)^a} - \frac{b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j}{(x + n)^a*(x - m)^a} \\
+&= -b * a * x^{-a-1} + \frac{(b * a * x^{-a-1}) * (\sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + \sum_{k=a+1}^{2*a - 1} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i}) - b*\sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j}{(x+n)^a*(x-m)^a} \\
+&= -b * a * x^{-a-1} + \frac{b*((a * x^{-a-1}) * (\sum_{k=0}^{a} x^k * \sum_{i=0}^{k} \binom{a}{a-i} * \binom{a}{a-k+i} * n^{a-i} * (-m)^{a-k+i} + \sum_{k=a+1}^{2*a - 1} x^k * \sum_{i=0}^{2*a-k} \binom{a}{i} * \binom{a}{2*a-k-i} * n^i * (-m)^{2*a-k-i}) - \sum_{k=2}^{a} \binom{a}{k}*x^{(a-k)}*\sum_{j=0}^{k-1} n^{(k-1)-j} * (-m)^j)}{(x+n)^a*(x-m)^a} \\
+&= -b * a * x^{-a-1} + Q(x,m,n) \\
 \end{align*}
 $$
 
@@ -515,15 +582,189 @@ For $m=n=0$
 
 $$
 \begin{align*}
-f'(x) &= \frac{-1 * b * a * x^{a-1}}{(x + 0)^a*(x - 0)^a} - Q(x,0,0) \\
-&= \frac{-1 * b * a * x^{a-1}}{x^a*x^a} \\
-&= \frac{-1 * b * a * x^{a-1}}{x^{2*a}} \\
-&= -1 * b * a * x^{a-1-2*a} \\
-&= b * (-a) * x^{-a-1}
+f'(x) &= -b * a * x^{-a-1} + Q(x,m,n) \\
+&= -b * a * x^{-a-1} + Q(x,0,0) \\
+&= -b * a * x^{-a-1}
 \end{align*}
 $$
 
----
+###### Negative Exponent Auxiliary Generator {: .collapsible }
+
+Execute the script below using <a href="https://www.npmjs.com/package/ts-node" target="_blank">ts-node</a> in order to generate an auxiliary equation for any given $a$. While the output is extremely ugly and could use a lot of manual cleanup, it still proves the concept in question and aids in gaining an insight into the auxiliary's pattern for negative whole exponents. Note that $b$ does not matter when solving $Q(x,m,n)=0$ since it is a factor of of the whole numerator and can thereby be divided away; thus it has also been omitted within the script.
+
+The following output represents the case of $a=3$:
+
+```txt
+(
+  3 * x ^ (-3 - 1) * (
+    1 * 1 * n ^ 3 * (-1 * m) ^ 3 +
+    x * (
+      1 * 3 * n ^ 3 * (-1 * m) ^ 2 +
+      3 * n ^ 2 * (-1 * m) ^ 3
+    ) +
+    x ^ 2 * (
+      1 * 3 * n ^ 3 * -1 * m +
+      3 * 3 * n ^ 2 * (-1 * m) ^ 2 +
+      3 * n * (-1 * m) ^ 3
+    ) +
+    x ^ 3 * (
+      1 * n ^ 3 +
+      3 * 3 * n ^ 2 * -1 * m +
+      3 * 3 * n * (-1 * m) ^ 2 +
+      1 * (-1 * m) ^ 3
+    ) +
+    x ^ 4 * (
+      1 * 3 * (-1 * m) ^ 2 +
+      3 * 3 * n * -1 * m +
+      3 * n ^ 2
+    ) +
+    x ^ 5 * (
+      1 * 3 * -1 * m +
+      3 * n
+    )
+  ) - (
+    3 * x * (n * 1 + 1 * -1 * m) +
+    1 * (n ^ 2 * 1 + n * -1 * m + 1 * (-1 * m) ^ 2)
+  )
+) / ((x + n) ^ 3 * (x - m) ^ 3)
+```
+
+```typescript
+// https://mathjs.org
+import { SymbolNode, ConstantNode, MathNode, OperatorNode, parse } from 'mathjs';
+
+const factorial = (n: number): number => {
+  let result = 1;
+
+  if (n > 1) {
+    for (let i = 1; i <= n; ++i)
+      result *= i;
+  }
+
+  return result;
+};
+
+const nCr = (n: number, k: number): ConstantNode => {
+  return new ConstantNode(factorial(n) / (factorial(k) * factorial(n-k)));
+};
+
+const toThe = (variable: string, exponent: number): MathNode => {
+  if (exponent == 0)
+    return new ConstantNode(1);
+
+  let symbol: MathNode;
+
+  if (variable[0] == '-')
+    symbol = new OperatorNode("*", "multiply", [new ConstantNode(-1), new SymbolNode(variable.substring(1))])
+  else
+    symbol = new SymbolNode(variable);
+
+  if (exponent == 1)
+    return symbol;
+
+  return new OperatorNode("^", "pow", [
+    symbol,
+    new ConstantNode(exponent),
+  ]);
+};
+
+const makeSum = (elements: MathNode[]): MathNode => {
+  let current = elements[0];
+
+  for (let i = 1; i < elements.length; ++i)
+    current = new OperatorNode("+", "add", [current, elements[i]]);
+
+  return current;
+};
+
+const makeProduct = (elements: MathNode[]): MathNode => {
+  let current = elements[0];
+
+  for (let i = 1; i < elements.length; ++i) {
+    const element = elements[i];
+
+    if (element.type == "ConstantNode") {
+      if ((element as ConstantNode).value == 1)
+        continue
+    }
+
+    current = new OperatorNode("*", "multiply", [current, element]);
+  }
+
+  return current;
+};
+
+const generateDoubleSum = (
+  outerBegin: number,
+  outerEnd: number,
+  innerBegin: (k: number) => number,
+  innerEnd: (k: number) => number,
+  innerMake: (k: number, j: number) => MathNode,
+  outerMake: (k: number, innerSum: MathNode) => MathNode,
+) => {
+  let outerSummands: MathNode[] = [];
+
+  for (let k = outerBegin; k <= outerEnd; ++k) {
+    const end = innerEnd(k);
+
+    let innerSummands: MathNode[] = [];
+
+    for (let j = innerBegin(k); j <= end; ++j)
+      innerSummands.push(innerMake(k,j));
+
+    outerSummands.push(outerMake(k, makeSum(innerSummands)));
+  }
+
+  return makeSum(outerSummands);
+};
+
+const generateFirstSum = (a: number): MathNode => {
+  return makeProduct([
+    parse(`${a}*x^(-${a}-1)`),
+    makeSum([
+      generateDoubleSum(
+        0, a,
+        _ => 0, k => k,
+        (k,j) => makeProduct([nCr(a, a-j), nCr(a, a-k+j), toThe("n", a-j), toThe("-m", a-k+j)]),
+        (k, innerSum) => makeProduct([toThe("x", k), innerSum]),
+      ),
+      generateDoubleSum(
+        a+1, 2*a-1,
+        _ => 0, k => 2*a-k,
+        (k,j) => makeProduct([nCr(a, j), nCr(a, 2*a-k-j), toThe("n", j), toThe("-m", 2*a-k-j)]),
+        (k, innerSum) => makeProduct([toThe("x", k), innerSum]),
+      )
+    ])
+  ])
+};
+
+const generateSecondSum = (a: number): MathNode => {
+  return generateDoubleSum(
+    2, a,
+    _ => 0, k => k - 1,
+    (k,j) => new OperatorNode("*", "multiply", [toThe("n", (k-1)-j), toThe("-m", j)]),
+    (k, innerSum) => makeProduct([nCr(a, k), toThe("x", a-k), innerSum])
+  )
+};
+
+// a: exponent as in 1/x^a
+const generateAuxiliary = (a: number): MathNode => {
+  // The difference of the two sums, based on the two fractions
+  const numeratorDifference = new OperatorNode("-", "subtract", [
+    generateFirstSum(a),
+    generateSecondSum(a),
+  ]);
+
+  return new OperatorNode("/", "divide", [
+    numeratorDifference,
+    parse(`(x+n)^${a}*(x-m)^${a}`)
+  ]);
+};
+
+console.log(generateAuxiliary(3).toString());
+```
+
+##### Rational Exponents
 
 The power rule can be extended to rational numbers by making use of the [Chain Rule](#new-calculus-derivative_rules-of-derivation_chain-rule). Let $p,q \in \mathbb{N}$.
 
@@ -658,7 +899,6 @@ $$
 &= f(x + n) * [g'(x) + Q_g(x,m,n)] + g(x - m) * [f'(x) + Q_f(x,m,n)]\\
 &= f(x + n) * g'(x) + f(x + n) * Q_g(x,m,n) + g(x - m) * f'(x) + g(x - m) * Q_f(x,m,n)\\
 &= f(x + n) * g'(x) + g(x - m) * f'(x) + [f(x + n) * Q_g(x,m,n) + g(x - m) * Q_f(x,m,n)]\\
-&= f(x + n) * g'(x) + g(x - m) * f'(x) + Q(x,m,n)\\
 \end{align*}
 $$
 
@@ -666,7 +906,9 @@ For $m=n=0$
 
 $$
 \begin{align*}
-(f(x) * g(x))' &= f(x + 0) * g'(x) + g(x - 0) * f'(x) + Q(x,0,0)\\
+(f(x) * g(x))' &= f(x + n) * g'(x) + g(x - m) * f'(x) + [f(x + n) * Q_g(x,m,n) + g(x - m) * Q_f(x,m,n)]\\
+&= f(x + 0) * g'(x) + g(x - 0) * f'(x) + [f(x + 0) * Q_g(x,0,0) + g(x - 0) * Q_f(x,0,0)]\\
+&= f(x) * g'(x) + g(x) * f'(x) + [f(x) * 0 + g(x) * 0]\\
 &= f(x) * g'(x) + g(x) * f'(x)
 \end{align*}
 $$
@@ -689,7 +931,6 @@ $$
 &= \frac{g(x-m)*f'(x) + g(x-m)*Q_f(x,m,n) - f(x-m)*g'(x) - f(x-m)*Q_g(x,m,n)}{g(x+n)*g(x-m)} \\
 &= \frac{g(x-m)*f'(x) - f(x-m)*g'(x) + [g(x-m)*Q_f(x,m,n) - f(x-m)*Q_g(x,m,n)]}{g(x+n)*g(x-m)} \\
 &= \frac{g(x-m)*f'(x) - f(x-m)*g'(x)}{g(x+n)*g(x-m)} + \left[\frac{g(x-m)*Q_f(x,m,n) - f(x-m)*Q_g(x,m,n)}{g(x+n)*g(x-m)}\right] \\
-&= \frac{g(x-m)*f'(x) - f(x-m)*g'(x)}{g(x+n)*g(x-m)} + Q(x,m,n) \\
 \end{align*}
 $$
 
@@ -697,7 +938,9 @@ For $m=n=0$
 
 $$
 \begin{align*}
-\left(\frac{f(x)}{g(x)}\right)' &= \frac{g(x-0)*f'(x) - f(x-0)*g'(x)}{g(x+0)*g(x-0)} + Q(x,0,0) \\
+\left(\frac{f(x)}{g(x)}\right)' &= \frac{g(x-m)*f'(x) - f(x-m)*g'(x)}{g(x+n)*g(x-m)} + \left[\frac{g(x-m)*Q_f(x,m,n) - f(x-m)*Q_g(x,m,n)}{g(x+n)*g(x-m)}\right] \\
+&= \frac{g(x-0)*f'(x) - f(x-0)*g'(x)}{g(x+0)*g(x-0)} + \left[\frac{g(x-0)*Q_f(x,0,0) - f(x-0)*Q_g(x,0,0)}{g(x+0)*g(x-0)}\right] \\
+&= \frac{g(x)*f'(x) - f(x)*g'(x)}{g(x)*g(x)} + \left[\frac{g(x)*0 - f(x)*0}{g(x)*g(x)}\right] \\
 &= \frac{g(x)*f'(x) - f(x)*g'(x)}{g^2(x)}
 \end{align*}
 $$
