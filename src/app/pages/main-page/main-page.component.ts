@@ -571,7 +571,7 @@ export class MainPageComponent implements OnDestroy {
     minIndex: number = 0,
     maxIndex: number | null = null,
   ): TOCNode[] {
-    if (sizeIndex == headingSizes.length - 1)
+    if (sizeIndex == headingSizes.length)
       return [];
 
     const targetHeadings = headingsBySize[headingSizes[sizeIndex]];

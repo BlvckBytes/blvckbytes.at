@@ -93,7 +93,7 @@ markdown {
     padding: 1.33rem 0 1.33rem;
   }
 
-  h2, h3, h4 {
+  h2, h3, h4, h5, h6 {
     font-weight: bolder !important;
     text-decoration: underline;
     background: rgba(255, 255, 255, 0.1);
@@ -112,6 +112,16 @@ markdown {
   h4 {
     margin: var(--global-line-height) 0 var(--global-line-height);
     font-size: calc(var(--global-font-size) * .9);
+  }
+
+  h5 {
+    margin: var(--global-line-height) 0 var(--global-line-height);
+    font-size: calc(var(--global-font-size) * .8);
+  }
+
+  h6 {
+    margin: var(--global-line-height) 0 var(--global-line-height);
+    font-size: calc(var(--global-font-size) * .7);
   }
 
   pre {
