@@ -4,13 +4,30 @@
 
 ### Key Characteristics
 
-Mathematics is a science which deals with the objective properties of mental objects. Mental objects are constructed step by step, where the final result should not have any unwanted degrees of freedom left, to avoid differences based on interpretation.
+Mathematics is a mental science, meaning that the study regards mental objects, which are in no way bound to the physical world whatsoever. In comparison to natural sciences, where experiments performed on reality are essential to derive new knowledge, a mental science can be conducted with nothing but thought alone. The reason for why we use physical means to aid this process is twofold: on one hand, our mental capacities are severly limited, and on the other, thought is inherently fluctuating and thus needs to become captured.
 
-Mental objects can be communicated or conveyed from one mental being to another. Being A can construct an object of arbitrary complexity and - if its description is carefully and exactly crafted - being B can obtain this exact same object to then further work with it on their own. Later down the road, B can share its result with A, and they may even compare their findings.
+(The following key characteristics of proper, well-defined and rigorous mathematical concepts have been put forth by John Gabriel; you can find out more about him and his works at the [New Calculus](/math/new-calculus) page.)
 
-Mental tools used for analytic purposes may themselves become the analyzed subject. This constant change of an object from being the tool or the subject is quite common while investigating.
+Mental concepts can be communicated or conveyed from one mental being to another. Being A can construct an object of arbitrary complexity and - if its description is carefully and exactly crafted - being B can obtain this exact same object to then further work with it on their own. Later down the road, B can share its result with A, and they may even compare their findings.
 
-Surprisingly, these mental objects by themselves are not what mathematics is about. Neither are carried out calculations, as they just represent applications of various mathematical findings. Mathematics is characterized by the act of actively searching for non-obvious properties and patterns to an extent that it can be considered a science of its own. A mental science, to be exact, which does not require any interaction with the physical world, in contrast to the natural sciences, where experiments govern the scientific process.
+Such a concept is only as appealing as it is well-formed. The following four essential requirements may validate any definition:
+
+1. Must be reifiable **(R)** either intangibly or tangibly.
+2. Must be defined in terms of attributes **(A)** which it possesses, not those it lacks.
+3. Must not lead to any logical contradictions **(C)**.
+4. Must exist in a perfect Platonic form. What this means, is that it exists independently **(I)** of the human mind or any other mind, as a noumenon of course.
+
+**RACI**: **R**eifiable - **A**ttributes - No **C**ontradictions - **I**ndependence
+
+To reify means to produce an instance of the concept, so that someone who knows nothing about it, can understand it exactly the same way as any other. If one can't reify a concept, then it may possibly not exist outside of their mind. If it is impossible to get past this first step, the concept at hand is no doubt nonsensical.
+
+If a concept is not defined in terms of the attributes it posesses, then one may as well be takling about innumerably many other concepts. Thus, there is endless ambiguity. An attribute describes the boundaries or limits, the extent of the instatiated object from the concept.
+
+> Mathematicians are like artists, the objects arising from concepts in a mathematician's mind are only as appealing as they are well defined.
+
+Once a concept has been reified and defined, it has to be vetted; There are limitations to being well defined, and this is why one needs to undergo checks for contradictions, until the concept becomes *axiomatic*, meaning it established itself over a long-enough time-period of vetting. Any implications of the concept must not produce logical contradictions.
+
+The last criterion states that the concept must exist outside of the human mind, or any other mind. For example, if aliens realize the *incommensurable* constant $\pi$, they will realize it in the only logical way: the attempted measure of a circle's circumference magnitude using the diameter magnitude as a unit. Perfect concepts exist whether life exists or not. This exact knowledge is what the Greeks discovered when they were studying geometry; without any exception, all of these are perfect concepts (Platonic).
 
 ### Discovered Or Invented
 
@@ -18,11 +35,15 @@ Imagine a square, which is characterized by the fact that all of its sides are o
 
 We, as conscious, mental beings now enter the adventure to discover various properties of countless mental objects. Before this journey, we were ignorant to them, and afterwards, we gathered knowledge and broadened our horizon.
 
-There is a finite, rather comprehensible amount of basic objects which cannot be broken down any further and are thus to be considered the atoms of mathematics. Their existence cannot be proven, and we have to collectively agree on these postulates. Every theorem whose validity is provable has to now lead step by step from point A to point B, by only making use of axioms and postulates, as well as theorems which have been proven before its own existence (its predecessors, so to speak). From this then logically follows, that every constructed mathematical object, no matter its complexity, is fully constrained and leaves no room for subjective choices.
+The five requirements in the beginning of Euclid's "The Elements" should not have been called postulates or axioms, as they have not been invented; they follow directly and rigorously from the concept of a point, asking the question "Where?". The only "postulate" there is consists of assuming an empty three-dimensional universe, to which a conscious observer, as well as another point of reference are added. Perfect concepts, called noumena (singular noumenon), have always existed, will always exist and continue to do so even if no conscious being thinks about them. Once the journey of discovery is taken on, beings separated by both space- and or time will come exactly to the same conclusions, if their methods were truly rigorous. This simple fact answers the question whether aliens would use the same mathematics as we do: yes, of course! Well, at least the part of it that's well formed; if they'd ever make it here, they'd surely not fall for the infinity-riddled feverdreams modern academia considers our highest intellectual goods.
 
-Could we have made up our set of axioms in a different way? That's a hard question to answer, as it seems impossible to check every possible combination for logical coherency. On the other hand, there have been numerous occasions where axioms which were thought to be coherent proved to lead to unsolvable contradictions. This process of purification lead to the axioms which govern modern mathematics. Personally, I believe that while there may be other choices out there, they are just a different representation of the same underlying concept and are likely to be less natural to our understanding, as we - over all these hundreds of years - would have discovered them otherwise.
+Mathematics is the science of measure and number, and nothing else. There is no room for subjective choices or opinions.
 
-What has been most definitely *"invented"* is the way in which we communicate these mental objects. To use a blackboard, a piece of paper, wax tablets, or even modern computers as an extension to our mental space are choices we made, based on what was and is available within our surroundings. A circle, drawn by a compass, is not equivalent with the mental object of a circle. On a blackboard, it would merely be the residue of chalk left alongside a curved pathway, while the mental object is defined as the set of points with equal distance to the origin.
+> "Es ist nicht Vermehrung, sondern Verunstaltung der Wissenschaften, wenn man ihre Grenzen ineinanderlaufen läßt." - Immanuel Kant
+
+> ("It is not a refinement, but rather a defacement of the sciences if one allows their boundaries to converge.")
+
+What has been most definitely *"invented"* is the way in which we communicate these mental objects. To use a blackboard, a piece of paper, wax tablets, or even modern computers as an extension to our mental space are choices we made, based on what was and is available within our surroundings. A circle, drawn by a compass, is not equivalent with the mental object of a circle. On a blackboard, it would merely be the residue of chalk left alongside a curved pathway.
 
 ### Formalization
 
@@ -32,9 +53,11 @@ Next to the property of exactness, another great advantage is the fact that the 
 
 ### Applications In Reality
 
-Since mathematics is the science of mental objects and their properties, it really is a true sensation that these objects and models are applicable to processes and relations within reality all the time. If a mathematical object turns out to be a close-enough approximation to a scientific process, then all theorems which hold true for said object will also apply to the approximated process. This property allows scientists to be substantially quicker in spotting behavioral patterns within the universe which would not be visible to the naked eye alone. With all of this accumulated knowledge at our disposal, we can then run simulations of the real world, using our mental objects, and - astonishingly - attain great predictive precision.
+To re-iterate: mathematics is the science of measure and number. From this instantly follows why the theorems of this science "apply to reality". Scientists observe and measure, then make use of mathematical models, to finally derive further insights or make predictions.
 
-Personally, I think that it is of utmost importance that we do not confuse approximations with reality, no matter their apparent precision. Even if our models work well and have revolutionized our abilities as a species, we must not give in to the arrogant urge of feeling superior, feeling like we're in control, like we're the operators of reality. It seems as though many scientists believe that they are bending the universe to their will, when they - for example - *"force"* electric current to carry out calculations through the application of relays, tubes, transistors and the like. This false sense may only increase with the ascension of quantum computing, where we now reach even deeper into the inner workings of reality to *"misuse"* them for our desires. When viewed soberly, it becomes evident that no matter what we discover or *"invent"*, it was there all along, within the space of possibilities, offered freely by the universe. We cannot force it to do anything it does not already offer by itself. Only because our mental objects work well as approximations, we must not conclude that this is how reality works "under the hood", so to speak. Instead of behaving arrogantly and trying to reach beyond our insights, we should show gratitude, be open for new knowledge and acknowledge other logically sound theories which we have not yet been able to neither prove nor disprove.
+If a mathematical object turns out to be a close-enough approximation to a scientific process, then all theorems which hold true for said object will also apply to the approximated process. This property allows scientists to be substantially quicker in spotting behavioral patterns within the universe which would not be visible to the naked eye alone. With all of this accumulated knowledge at our disposal, we can then run simulations of the real world, using our models, and thereby attain great predictive precision.
+
+Personally, I think that it is of utmost importance that we do not confuse approximations with reality, no matter their apparent precision. Even if our models work well and have revolutionized our abilities as a species, we must not give in to the arrogant urge of feeling superior, feeling like we're in control, like we're the operators of reality. It seems as though many scientists believe that they are bending the universe to their will, when they - for example - *"force"* electric current to carry out calculations through the application of relays, tubes, transistors and the like. This false sense may only increase with the ascension of so-called "quantum computing", where we now reach even deeper into the inner workings of reality to *"misuse"* them for our desires. When viewed soberly, it becomes evident that no matter what we discover or *"invent"*, it was there all along, within the space of possibilities, offered freely by the universe. We cannot force it to do anything it does not already offer by itself. Only because our models work well as approximations, we must not conclude that this is how reality works "under the hood", so to speak. Instead of behaving arrogantly and trying to reach beyond our insights, we should show gratitude, be open for new knowledge and acknowledge other logically sound theories which we have not yet been able to neither prove nor disprove.
 
 ## Problematic Decisions
 
