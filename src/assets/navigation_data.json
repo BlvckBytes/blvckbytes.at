@@ -68,8 +68,7 @@
       "title": "Engineering",
       "entries": [
         { "title": "Minified URL-Safe UUIDs", "src": "/assets/markdown/engineering/minified_url_safe_uuids.md" },
-        { "title": "Customizable Tool Wall", "src": "/assets/markdown/engineering/customizable_tool_wall.md" },
-        { "title": "SLA PCB Exposure", "src": "/assets/markdown/engineering/sla_pcb_exposure.md" }
+        { "title": "Customizable Tool Wall", "src": "/assets/markdown/engineering/customizable_tool_wall.md" }
       ]
     }
   ]
