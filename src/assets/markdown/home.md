@@ -8,6 +8,8 @@ This site mostly serves as a creative outlet for myself and is **not** intended 
 
 I am adding pages and content whenever I feel the urge to and have the required time left.
 
+INFO: By now, there have been multiple cases of people who came across this page wanting to get in touch via email; each time, their inquiry got auto-flagged as spam, drowned in the sea of ads I so regularly receive and has been deleted after 30 days. If you're serious about exchanging a few words, please use Discord in order to add me as `blvckbytes`.
+
 ## Quick Links
 
 ### GitHub
