@@ -2,6 +2,10 @@
 
 ## Overview
 
+<img src="/assets/images/me.png" class="third-width-image" style="border-radius: 1rem; margin: 3rem auto .5rem auto; max-width: 80%;"/>
+
+<p style="text-align: center;">(You don't belong here.)</p>
+
 I was born in Austria (🇦🇹), right at the beginning of the year 2001 (01.01., `:)`) and have been given the name `Philip`. After some years of wandering through the web and after many trials to come up with a nickname I identify with, `BlvckBytes` was and still is what resonates the most. My nickname links two words which are of great importance to me, one of them being the standard unit in information technology - the byte - and the other being blvck, which is an obscured way of writing black, with the a being on it's head. The latter is a reference to darkness, a steady companion of mine, having turned my existence on it's head numerous times.
 
 I'm very open-minded and always give people or new concepts a neutral base to build upon, but I'd describe myself very much as a non-typical kind of person, as my interests as well as my drive in life vastly differ from those of most beings I've had a chance to meet so far. While my peers always loved to indulge in all the various stimuli and pleasures life has to offer, boasting about their "achievements", this kind of lifestyle has always repulsed me and induces a deep down feeling of sadness and disappointment. While I don't find myself attracted by physical appearances to any meaningful degree, I very much am attracted to people which haven't lost their curiosity and make use of their ability to apply logic to solve problems.
